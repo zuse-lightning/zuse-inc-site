@@ -5,7 +5,11 @@ class About extends Component {
     render() {
         return (
             <>
-                <Header as="h1">About</Header>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Header as="h1">About</Header>
+                    </Grid.Column>
+                </Grid.Row> 
             </>
         );
     }

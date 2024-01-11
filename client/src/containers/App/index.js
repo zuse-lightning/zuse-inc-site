@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Header } from "semantic-ui-react";
+import { Grid, Header } from "semantic-ui-react";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
 import Catalogs from "../../pages/Catalogs";

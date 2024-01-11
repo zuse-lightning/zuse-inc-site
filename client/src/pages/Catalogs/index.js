@@ -5,7 +5,11 @@ class Catalogs extends Component {
     render() {
         return (
             <>
-                <Header as="h1">Catalogs</Header>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Header as="h1">Catalogs</Header>
+                    </Grid.Column>
+                </Grid.Row>
             </>
         );
     }

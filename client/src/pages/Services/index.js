@@ -5,7 +5,11 @@ class Services extends Component {
     render() {
         return (
             <>
-                <Header as="h1">Services</Header>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Header as="h1">Services</Header>
+                    </Grid.Column>
+                </Grid.Row>
             </>
         );
     }

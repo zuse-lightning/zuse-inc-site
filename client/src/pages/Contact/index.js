@@ -5,7 +5,11 @@ class Contact extends Component {
     render() {
         return (
             <>
-                <Header as="h1">Contact</Header>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Header as="h1">Contact</Header>
+                    </Grid.Column>
+                </Grid.Row>
             </>
         );
     }
