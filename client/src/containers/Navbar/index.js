@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Menu, Dropdown } from "semantic-ui-react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 class Navbar extends Component {
 
