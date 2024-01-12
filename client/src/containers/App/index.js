@@ -8,6 +8,7 @@ import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import SocialLinks from "../../components/SocialLinks";
+import Footer from "../Footer";
 
 import "./style.css";
 
@@ -26,6 +27,7 @@ class App extends Component {
           </Routes>
         </Grid>
         <SocialLinks />
+        <Footer />
       </>
     );
   }

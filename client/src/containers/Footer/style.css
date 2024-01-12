@@ -1,0 +1,8 @@
+#footer-container {
+    background-color: black;
+    padding: 0 20%;
+}
+
+.footer-nav-item, #phone-icon, #phone-number, #copyright {
+    color: white!important;
+}

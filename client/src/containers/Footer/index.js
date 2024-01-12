@@ -2,7 +2,14 @@ import React, { Component } from "react";
 import { Menu, Grid, Header, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
+import "./style.css";
+
 class Footer extends Component {
+    
+    state = {};
+
+    handleItemClick = (e, { name }) => this.setState({activeItem: name });
+
     render() {
 
         const { activeItem } = this.state;
@@ -11,6 +18,7 @@ class Footer extends Component {
             <div id="footer-container">
                 <Menu secondary>
                     <Menu.Item
+                        className="footer-nav-item"
                         as={Link}
                         to="/"
                         name="home"
@@ -20,6 +28,7 @@ class Footer extends Component {
                         Home
                     </Menu.Item>
                     <Menu.Item
+                        className="footer-nav-item"
                         as={Link}
                         to="/about"
                         name="about"
@@ -28,16 +37,9 @@ class Footer extends Component {
                     >
                         About
                     </Menu.Item>
+
                     <Menu.Item
-                        as={Link}
-                        to="/catalogs"
-                        name="catalogs"
-                        active={activeItem === "catalogs"}
-                        onClick={this.handleItemClick}
-                    >
-                        Catalogs
-                    </Menu.Item>
-                    <Menu.Item
+                        className="footer-nav-item"
                         as={Link}
                         to="/services"
                         name="services"
@@ -47,6 +49,7 @@ class Footer extends Component {
                         Services
                     </Menu.Item>
                     <Menu.Item
+                        className="footer-nav-item"
                         as={Link}
                         to="/contact"
                         name="contact"
@@ -59,11 +62,10 @@ class Footer extends Component {
                 <Grid>
                     <Grid.Row>
                         <Grid.Column width={4}>
-                            <Header id="copyright" as="h4">©2024 Zuse Inc., American Contract Printing</Header>
+                            <Header id="copyright" as="h4">© 2024 Zuse Inc., American Contract Printing</Header>
                         </Grid.Column>
                         <Grid.Column width={4}>
-                            <Icon name="phone" />
-                            <Header as="h4">Call: 203-675-9550</Header>
+                            <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-675-9550</Header>
                         </Grid.Column>
                         <Grid.Column width={4}>
                             
