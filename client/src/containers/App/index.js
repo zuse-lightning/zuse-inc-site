@@ -7,6 +7,7 @@ import About from "../../pages/About";
 import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
+import SocialLinks from "../../components/SocialLinks";
 
 import "./style.css";
 
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
         </Grid>
+        <SocialLinks />
       </>
     );
   }
