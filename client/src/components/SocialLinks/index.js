@@ -1,23 +1,29 @@
 import React from "react";
 import { Grid, Header, Image } from "semantic-ui-react";
-import FacebookIcon from "../../../assets/images/facebook-icon.png";
-import InstagramIcon from "../../../assets/images/instagram-icon.png";
+import FacebookIcon from "../../assets/images/facebook-icon.png";
+import InstagramIcon from "../../assets/images/instagram-icon.png";
+
+import "./style.css";
 
 const SocialLinks = () => {
     return (
         <>
             <Grid id="social-links-container">
                 <Grid.Row centered>
-                    <Grid.Column>
+                    <Grid.Column width={2}>
                         <Header as="h4" id="social-links-header">Follow Us On Social Media</Header>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
-                    <Grid.Column width={2}>
-                        <Image className="social-icon" id="facebook-icon" size="small" src={FacebookIcon} />
+                    <Grid.Column width={1}>
+                        <div className="social-icon-wrapper">
+                            <Image className="social-icon" id="facebook-icon" src={FacebookIcon} />
+                        </div>
                     </Grid.Column>
-                    <Grid.Column width={2}>
-                        <Image className="social-icon" id="instagram-icon" size="small" src={InstagramIcon} />
+                    <Grid.Column width={1}>
+                        <div className="social-icon-wrapper">
+                            <Image className="social-icon" id="instagram-icon" src={InstagramIcon} />
+                        </div>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
