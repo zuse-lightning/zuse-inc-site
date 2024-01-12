@@ -16,7 +16,7 @@ class Footer extends Component {
 
         return (
             <div id="footer-container">
-                <Menu secondary>
+                <Menu id="footer-menu" secondary>
                     <Menu.Item
                         className="footer-nav-item"
                         as={Link}

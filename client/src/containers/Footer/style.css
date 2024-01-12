@@ -1,6 +1,10 @@
 #footer-container {
     background-color: black;
-    padding: 0 20%;
+    padding: 1.5% 20% 2%;
+}
+
+#footer-menu {
+    margin-bottom: 3%;
 }
 
 .footer-nav-item, #phone-icon, #phone-number, #copyright {

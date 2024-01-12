@@ -13,7 +13,7 @@ class Navbar extends Component {
         const { activeItem } = this.state;
         
         return (
-            <Menu>
+            <Menu id="main-menu" secondary>
                 <Menu.Item
                     as={Link}
                     to="/"
