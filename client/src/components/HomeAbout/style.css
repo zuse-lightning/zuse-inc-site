@@ -1,0 +1,14 @@
+#home-about-container {
+    background-color: #fefcfd;
+    width: 80%;
+    margin: 0 10%;
+    border: solid 1px #fefcfd;
+}
+
+#home-about-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #8b3544;
+}
+
