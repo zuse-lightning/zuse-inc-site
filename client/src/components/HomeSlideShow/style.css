@@ -1,5 +1,4 @@
 .home-slideshow {
-    margin: 0 auto;
     overflow: hidden;
     max-width: 100%;
 }
@@ -7,6 +6,7 @@
 .home-slideshow-slider {
     white-space: nowrap;
     transition: ease 1s;
+    margin-bottom: -0.25%;
 }
 
 .home-slide {
@@ -17,6 +17,9 @@
 
 .home-slideshow-dots {
     text-align: center;
+    background-color: #fefcfd;
+    width: 80%;
+    margin: 0 10%;
 }
 
 .home-slideshow-dot {

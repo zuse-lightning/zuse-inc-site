@@ -1,0 +1,26 @@
+#top-clients-container {
+    background-color: #fefcfd;
+    width: 80%;
+    margin: 0 10%;
+    border: solid 1px #fefcfd;
+    
+}
+
+#top-clients-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #8b3544;
+}
+
+#clients-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 2%;
+}
+
+.clients-img {
+    width: 50%;
+}

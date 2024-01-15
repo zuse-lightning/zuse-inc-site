@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Grid, Header } from "semantic-ui-react";
 import AnnouncementBar from "../../components/AnnouncementBar";
 import Navbar from "../../components/Navbar";
 import Home from "../../pages/Home";
@@ -19,7 +18,7 @@ class App extends Component {
       <>
         <AnnouncementBar />
         <Navbar />
-        <Grid id="main-container">
+        <div id="main-container">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
@@ -27,7 +26,7 @@ class App extends Component {
             <Route exact path="/services" element={<Services />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
-        </Grid>
+        </div>
         <SocialLinks />
         <Footer />
       </>
