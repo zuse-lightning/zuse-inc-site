@@ -1,0 +1,8 @@
+#main-menu {
+    padding: 0 10%;
+    background-color: #fefcfd;
+}
+
+.header-nav-item:hover {
+    background-color: #fefcfd!important;
+}

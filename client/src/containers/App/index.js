@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Grid, Header } from "semantic-ui-react";
 import AnnouncementBar from "../../components/AnnouncementBar";
-import Navbar from "../Navbar";
+import Navbar from "../../components/Navbar";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
 import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import SocialLinks from "../../components/SocialLinks";
-import Footer from "../Footer";
+import Footer from "../../components/Footer";
 
 import "./style.css";
 
