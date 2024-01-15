@@ -61,16 +61,16 @@ class Footer extends Component {
                 </Menu>
                 <Grid>
                     <Grid.Row>
-                        <Grid.Column width={4}>
+                        <Grid.Column className="footer-col" width={4}>
                             <Header id="copyright" as="h4">© 2024 Zuse Inc., American Contract Printing</Header>
                         </Grid.Column>
-                        <Grid.Column width={4}>
+                        <Grid.Column className="footer-col" width={4}>
                             <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-675-9550</Header>
                         </Grid.Column>
-                        <Grid.Column width={4}>
+                        <Grid.Column className="footer-col" width={4}>
                             
                         </Grid.Column>
-                        <Grid.Column width={4}>
+                        <Grid.Column className="footer-col" width={4}>
                             
                         </Grid.Column>
                     </Grid.Row>

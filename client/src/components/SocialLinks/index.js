@@ -5,7 +5,7 @@ import InstagramIcon from "../../assets/images/instagram-icon.png";
 
 import "./style.css";
 
-const SocialLinks = () => {
+const SocialLinks = (props) => {
     return (
         <>
             <Grid id="social-links-container">
@@ -17,12 +17,12 @@ const SocialLinks = () => {
                 <Grid.Row centered>
                     <Grid.Column width={1}>
                         <div className="social-icon-wrapper">
-                            <Image className="social-icon" id="facebook-icon" src={FacebookIcon} />
+                            <Image className="footer-social-icon" id="footer-facebook-icon" src={FacebookIcon} />
                         </div>
                     </Grid.Column>
                     <Grid.Column width={1}>
                         <div className="social-icon-wrapper">
-                            <Image className="social-icon" id="instagram-icon" src={InstagramIcon} />
+                            <Image className="footer-social-icon" id="footer-instagram-icon" src={InstagramIcon} />
                         </div>
                     </Grid.Column>
                 </Grid.Row>

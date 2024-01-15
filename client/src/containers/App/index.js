@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Grid, Header } from "semantic-ui-react";
+import AnnouncementBar from "../../components/AnnouncementBar";
 import Navbar from "../Navbar";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
@@ -16,6 +17,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <AnnouncementBar />
         <Navbar />
         <Grid id="main-container">
           <Routes>

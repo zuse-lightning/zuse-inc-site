@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const FORM_ENDPOINT = "https://herotofu.com/start";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     const [submitted, setSubmitted] = useState(false);
 
     const handleSubmit = (e) => {

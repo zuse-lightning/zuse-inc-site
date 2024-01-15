@@ -1,0 +1,27 @@
+#announcement-container {
+    display: grid;
+    grid-template-columns: 20% 10% 40% 5% 5%;
+    background-color: #8b3544;
+    padding: 1%;
+}
+
+#announce-phone-number {
+    color: white;
+}
+#announce-address {
+    color: white;
+}
+
+.announce-social-icon-wrapper {
+    display: flex;
+}
+
+#announce-facebook-icon {
+    width: 20%;
+    margin: 0 5%;
+}
+
+#announce-instagram-icon {
+    width: 20%;
+    margin: 0 5%;
+}
