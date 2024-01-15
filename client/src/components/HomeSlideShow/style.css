@@ -1,7 +1,7 @@
 .home-slideshow {
     margin: 0 auto;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 100%;
 }
 
 .home-slideshow-slider {
@@ -11,7 +11,7 @@
 
 .home-slide {
     display: inline-block;
-    height: 400px;
+    height: 100%;
     width: 100%;
 }
 
@@ -29,6 +29,6 @@
     background-color: #c4c4c4;
 }
 
-.home-slideshow.active {
-    background-color: #302c33;
+.home-slideshow-dot.active {
+    background-color: #838085;
 }

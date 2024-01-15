@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Image } from "semantic-ui-react";
+import MainBanner from "../../assets/images/main-banner.png";
+import Fulfillment from "../../assets/images/fulfillment-banner.png";
+import ScreenPrinting from "../../assets/images/screenprinting-banner.png";
+import Embroidery from "../../assets/images/embroidery-banner.png";
 
 import "./style.css";
 
-const banners = [];
+const banners = [MainBanner, Fulfillment, ScreenPrinting, Embroidery];
 
 const HomeSlideShow = () => {
 
@@ -20,7 +24,7 @@ const HomeSlideShow = () => {
         resetTimeout();
         timeoutRef.current = setTimeout(() => {
             setIndex(prevIndex => prevIndex === banners.length - 1 ? 0 : prevIndex + 1)
-        }, 2500);
+        }, 10000);
         return () => {
             resetTimeout();
         };
