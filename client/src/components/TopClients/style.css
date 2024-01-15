@@ -1,7 +1,7 @@
 #top-clients-container {
     background-color: #fefcfd;
-    width: 80%;
-    margin: 0 10%;
+    width: 60%;
+    margin: 0 20%;
     border: solid 1px #fefcfd;
     
 }
@@ -23,4 +23,5 @@
 
 .clients-img {
     width: 50%;
+    margin: 0 25%;
 }

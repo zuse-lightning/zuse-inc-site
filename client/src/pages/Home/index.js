@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Grid, Header, Image } from "semantic-ui-react";
 import HomeSlideShow from "../../components/HomeSlideShow";
 import TopClients from "../../components/TopClients";
+import HomeAbout from "../../components/HomeAbout";
 
 import "./style.css";
+
 
 
 class Home extends Component {
@@ -12,6 +13,7 @@ class Home extends Component {
             <>
                 <HomeSlideShow />
                 <TopClients />
+                <HomeAbout />
             </>
         );
     }

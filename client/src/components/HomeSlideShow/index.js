@@ -38,7 +38,7 @@ const HomeSlideShow = () => {
             >
                 {banners.map((banner, index) => (
                     <div className="home-slide" key={index}>
-                        <Image src={banner} />
+                        <Image fluid src={banner} />
                     </div>
                 ))}
             </div>
