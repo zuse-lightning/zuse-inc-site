@@ -4,6 +4,9 @@
     background-color: #fefcfd;
 }
 
+.header-nav-item {
+    font-size: 20px;
+}
 .header-nav-item:hover {
     background-color: #fefcfd!important;
 }
