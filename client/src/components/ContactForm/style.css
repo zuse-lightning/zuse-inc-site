@@ -1,0 +1,26 @@
+#contact-form-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: -0.2% 20% 0;
+    border: solid 1px #fefcfd;
+    padding: 2%;
+}
+
+#form-field-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.form-field-col:nth-child(-1n + 3) {
+    grid-column: span 4;
+}
+
+.form-field-col:nth-child(2) {
+    grid-row-start: 2;
+    grid-column: 3 / span 4;
+}
+
+.form-field-col:nth-child(1) {
+    grid-row-start: 2;
+    grid-column: 7 / span 4;
+}

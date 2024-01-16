@@ -24,30 +24,6 @@ const AnnouncementBar = (props) => {
             <div className="announce-col">
 
             </div>
-            {/* <Grid>
-                <Grid.Row>
-                    <Grid.Column className="announce-col" width={3}></Grid.Column>
-                    <Grid.Column className="announce-col" width={2}>
-
-                    </Grid.Column>
-                    <Grid.Column className="announce-col" width={3}>
-
-                    </Grid.Column>
-                    <Grid.Column className="announce-col" width={3}></Grid.Column>
-                    <Grid.Column width={5}>
-                        <Grid>
-                            <Grid.Row>
-                                <Grid.Column className="announce-col">
-
-                                </Grid.Column>
-                                <Grid.Column className="announce-col">
-
-                                </Grid.Column>
-                            </Grid.Row>
-                        </Grid>
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid> */}
         </div>
     );
 };

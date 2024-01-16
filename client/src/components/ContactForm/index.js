@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Header, Icon } from "semantic-ui-react";
+
+import "./style.css";
 
 const FORM_ENDPOINT = "https://herotofu.com/start";
 
@@ -44,24 +47,35 @@ const ContactForm = (props) => {
     };
 
     return (
-        <form
-            action={FORM_ENDPOINT}
-            onSubmit={handleSubmit}
-            method="POST"
-        >
-            <div>
-                <input type="text" placeholder="Your name..." name="name" required />
-            </div>
-            <div>
-                <input type="email" placeholder="Email" name="email" required />
-            </div>
-            <div>
-                <textarea placeholder="Your message..." name="name" required />
-            </div>
-            <div>
+        <div id="contact-form-container">
+            <form
+                action={FORM_ENDPOINT}
+                onSubmit={handleSubmit}
+                method="POST"
+            >
+                <div id="form-field-container">
+                    <div className="contact-col">
+                        <Header id="contact-phone-number" as="h4"><Icon id="contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
+                    </div>
+                    <div className="contact-col">
+                        <Header id="contact-address" as="h4"><Icon id="contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
+                    </div>
+                    <div className="form-field-col">
+                        <input id="name-input" type="text" placeholder="Your name..." name="name" required />
+                    </div>
+                    <div className="form-field-col">
+                        <input id="email-input" type="email" placeholder="Email" name="email" required />
+                    </div>
+                    <div className="form-field-col">
+                        <input id="phone-input" type="text" placeholder="Your phone number..." name="phone-number" required />
+                    </div>
+                    <div className="form-field-col">
+                        <textarea id="message-input" placeholder="Your message..." name="name" required />
+                    </div>
+                </div>
                 <button type="submit">Send Message</button>
-            </div>
-        </form>
+            </form>
+        </div>
     );
 };
 
