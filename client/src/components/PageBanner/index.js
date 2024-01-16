@@ -1,10 +1,11 @@
 import React from "react";
 import { Header, Breadcrumb } from "semantic-ui-react";
+import { Link, useLocation } from "react-router-dom";
 import ScreenTextless from "../../assets/images/screen-printing-banner-textless.png";
 import EmbroidTextless from "../../assets/images/embroidery-banner-textless.png";
 import FulfillTextless from "../../assets/images/fulfillment-banner-textless.png";
 import MainTextless from "../../assets/images/main-banner-textless.png";
-import CodingBackground from "../../assets/images/coding-backgroun.jpeg";
+import CodingBackground from "../../assets/images/coding-background.jpeg";
 
 import "./style.css";
 
@@ -17,21 +18,26 @@ const pageData = [
 ];
 
 const PageBanner = (props) => {
+
+    const { pathname } = useLocation();
+
     return (
-        <div id="page-banner">
-            <div className="page-banner-col">
-                <Header as="h2" id=""></Header>
-            </div>
-            <div className="page-banner-col">
-                <Breadcrumb>
-                    <Breadcrumb.Section link>Home</Breadcrumb.Section>
-                    <Breadcrumb.Divider />
-                    <Breadcrumb.Section link>Store</Breadcrumb.Section>
-                    <Breadcrumb.Divider />
-                    <Breadcrumb.Section active>T-Shirt</Breadcrumb.Section>
-                </Breadcrumb>
-            </div>
-        </div>
+        <>
+            {pathname !== "/" ? <div id="page-banner">
+                <div className="page-banner-col">
+                    <Header as="h2" id="page-banner-title">ABOUT</Header>
+                </div>
+                <div className="page-banner-col">
+                    <Breadcrumb>
+                        <Breadcrumb.Section className="breadcrumb-link" link>HOME</Breadcrumb.Section>
+                        <Breadcrumb.Divider className="breadcrumb-link-divider" />
+                        <Breadcrumb.Section className="breadcrumb-link" link>SERVICES</Breadcrumb.Section>
+                        <Breadcrumb.Divider className="breadcrumb-link-divider" />
+                        <Breadcrumb.Section className="breadcrumb-link" active>SCREEN PRINTING</Breadcrumb.Section>
+                    </Breadcrumb>
+                </div>
+            </div> : null}
+        </>
     );
 }
 
