@@ -14,6 +14,9 @@ import "./style.css";
 
 class App extends Component {
   render() {
+
+    const location = this.props.history.location.pathname;
+
     return (
       <>
         <AnnouncementBar />
@@ -21,10 +24,10 @@ class App extends Component {
         <div id="main-container">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/catalogs" element={<Catalogs />} />
-            <Route exact path="/services" element={<Services />} />
-            <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/about" element={<About location={location} />} />
+            <Route exact path="/catalogs" element={<Catalogs location={location} />} />
+            <Route exact path="/services" element={<Services location={location} />} />
+            <Route exact path="/contact" element={<Contact location={location} />} />
           </Routes>
         </div>
         <SocialLinks />

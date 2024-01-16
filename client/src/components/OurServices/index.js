@@ -10,11 +10,11 @@ import WebStoreIcon from "../../assets/images/web-stores-red.png";
 import "./style.css";
 
 const services = [
-    { image: ScreenPrintingIcon, path: "/services", title: "Screen Printing", description: "We sure do print screens." },
-    { image: EmbroideryIcon, path: "/services", title: "Embroidery", description: "We embroider a lot of things." },
-    { image: PromoItemsIcon, path: "/services", title: "Promo Items", description: "Need promo items? We GOT promo items? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, molestiae. Voluptas optio, harum dolorem laudantium minus deleniti placeat vel cupiditate quaerat doloremque reiciendis ullam facilis recusandae numquam temporibus voluptate sint." },
-    { image: FulfillmentIcon, path: "/services", title: "Fulfillment", description: "We fulfill a lot of packages 'n stuff." },
-    { image: WebStoreIcon, path: "/services", title: "Web Stores", description: "We build Shopify stores to sell your products." }
+    { image: ScreenPrintingIcon, path: "/services", title: "Screen Printing", description: "From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands out with high-quality prints that capture attention and leave a lasting impression." },
+    { image: EmbroideryIcon, path: "/services", title: "Embroidery", description: "Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories. The result? A polished finish that not only stands out visually but also adds a touch of elegance to every stitch" },
+    { image: PromoItemsIcon, path: "/services", title: "Promotional Items", description: "Need Boost brand visibility with our extensive range of promotional items. From branded merchandise to unique giveaways, we help you create memorable experiences for your audience. Maximize your marketing impact with customized promotional products that leave a lasting impression." },
+    { image: FulfillmentIcon, path: "/services", title: "Fulfillment Services", description: "Streamline your operations with our comprehensive fulfillment services. From order processing to shipping, we handle it all, ensuring your products reach customers efficiently and on time. Focus on growing your business while we take care of the logistics." },
+    { image: WebStoreIcon, path: "/services", title: "Shopify Store", description: "Take your business online with our Shopify store creation services. We design and develop an e-commerce platform tailored to your brand, providing a seamless and secure shopping experience for your customers. Elevate your potential of online sales with a professionally crafted Shopify store." }
 ];
 
 const OurServices = () => {
@@ -24,7 +24,7 @@ const OurServices = () => {
             <div id="services-container">
                 {services.map((service, index) => (
                     <div className="services-col" key={index}>
-                        <div  className="services-card">
+                        <div className="services-card">
                             <Image className="services-card-image" src={service.image} />
                             <div className="services-card-header">{service.title}</div>
                             <div className="services-card-description">{service.description}</div>

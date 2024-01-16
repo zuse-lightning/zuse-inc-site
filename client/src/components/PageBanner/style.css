@@ -1,0 +1,10 @@
+#page-banner {
+    background-image: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)
+    ),
+    /* your image */
+    url(../../assets/images/main-banner-textless.png);
+}
