@@ -1,0 +1,31 @@
+#home-trust-badges-container {
+    background-color: #8b3544;
+    padding: 2%;
+    padding-bottom: 3%;
+}
+
+#trust-badges-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    margin: 0 20%;
+}
+
+.trust-badge-col {
+    width: 80%;
+    margin: 0 10%;
+}
+
+.trust-badge-image {
+    width: 30%;
+    margin: 0 35%;
+}
+
+.trust-badge-title, .trust-badge-text {
+    text-align: center!important;
+    color: white!important;
+}
+
+.trust-badge-title {
+    font-size: 24px!important;
+}

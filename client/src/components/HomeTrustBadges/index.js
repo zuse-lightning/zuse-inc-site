@@ -11,12 +11,12 @@ const HomeTrustBadges = () => {
         <div id="home-trust-badges-container">
             <div id="trust-badges-container">
                 <div className="trust-badge-col">
-                    <Image className="trust-badge-image" src={Box} />
+                    <Image className="trust-badge-image" src={Message} />
                     <Header className="trust-badge-title" as="h3">EXCELLENT CUSTOMER SERVICE</Header>
                     <Header className="trust-badge-text" as="h5">We're here for you 24/7! Got questions? We got answers!</Header>
                 </div>
                 <div className="trust-badge-col">
-                    <Image className="trust-badge-image" src={Message} />
+                    <Image className="trust-badge-image" src={Box} />
                     <Header className="trust-badge-title" as="h3">FREE SHIPPING OVER $100</Header>
                     <Header className="trust-badge-text" as="h5">Guaranteed! Go ahead add that extra polo to the cart!</Header>
                 </div>
