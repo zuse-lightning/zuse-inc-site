@@ -1,15 +1,11 @@
 import React, { Component } from "react";
-import { Grid, Header } from "semantic-ui-react";
+import OurServices from "../../components/OurServices";
 
 class Services extends Component {
     render() {
         return (
             <>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Header as="h1">Services</Header>
-                    </Grid.Column>
-                </Grid.Row>
+                <OurServices />
             </>
         );
     }

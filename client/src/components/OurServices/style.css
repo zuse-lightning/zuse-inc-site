@@ -22,6 +22,7 @@
     column-gap: 20px;
     width: 80%;
     margin: 0 10%;
+    padding: 2%;
 }
 
 .services-card {
@@ -29,6 +30,11 @@
     border-radius: 5px;
     height: 500px;
     padding: 5%;
+    transition: transform .5s;
+}
+
+.services-card:hover {
+    transform: scale(1.05);
 }
 
 .services-card-header {

@@ -6,7 +6,16 @@
 
 .header-nav-item {
     font-size: 20px;
+    text-decoration: underline!important;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515!important;
+    transition: ease .3s!important;
 }
+
 .header-nav-item:hover {
     background-color: #fefcfd!important;
+    color: #243557;
+    text-underline-offset: 10px;
+    text-decoration-color: #243557!important;
+    transition: ease .3s!important;
 }
