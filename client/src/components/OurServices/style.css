@@ -1,3 +1,7 @@
+.ui.card>.image, .ui.cards>.card>.image {
+    background: none!important;
+}
+
 #our-services-container {
     background-color: #fefcfd;
     width: 60%;
@@ -15,5 +19,41 @@
 #services-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 20%;
+    column-gap: 20px;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.services-card {
+    border: solid 1px #d2caca;
+    border-radius: 5px;
+    height: 500px;
+    padding: 5%;
+}
+
+.services-card-header {
+    text-align: center;
+    margin: 10% 0;
+    font-size: 20px;
+}
+
+.services-card-description {
+    text-align: center;
+    height: 60%;
+}
+
+.services-card-btn {
+    background-color: #f11515!important;
+    color: white!important;
+    transition: ease 0.5s!important;
+}
+
+.services-card-btn:hover {
+    background-color: #243557!important;
+    transition: ease 0.5s!important;
+}
+
+.services-card-image {
+   width: 30%;
+   margin: 0 35%;
 }
