@@ -9,31 +9,69 @@ const HomeAbout = () => {
             <Header as="h1" id="home-about-header">About</Header>
             <div id="home-about-text-container">
                 <p className="home-about-text" id="paragraph1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ratione amet vero velit ad sapiente atque asperiores iure veritatis, aut beatae perspiciatis unde inventore molestiae delectus odit, consequuntur tempora? Harum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto laborum repudiandae cupiditate dolore ducimus asperiores maiores dignissimos provident id nulla? Deleniti, obcaecati soluta! Ipsa quod minima explicabo autem doloribus. Eos.
+                    We’re dedicated to providing personalized clothing solutions for businesses of all sizes. Our
+                    primary focus is on fulfilling our responsibilities to help you achieve your desired goals.
                 </p>
                 <br />
                 <p className="home-about-text" id="paragraph2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ratione amet vero velit ad sapiente atque asperiores iure veritatis, aut beatae perspiciatis unde inventore molestiae delectus odit, consequuntur tempora? Harum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto laborum repudiandae cupiditate dolore ducimus asperiores maiores dignissimos provident id nulla? Deleniti, obcaecati soluta! Ipsa quod minima explicabo autem doloribus. Eos.
+                    Whether it's creating branded uniforms, promotional merchandise, or other customized clothing
+                    items, we strive to deliver high-quality products that align with your brand identity.
                 </p>
                 <br />
                 <List id="home-about-list">
                     <List.Item className="home-about-list-item">
-                        <List.Icon className="home-about-list-icon" name="check" />
-                        <List.Content className="home-about-list-content">
-                            Positive quality that sets us apart from the rest of the crowd!
-                        </List.Content>
+                        <List.Header>
+                            Experience and Quality
+                        </List.Header>
+                        <List.List>
+                            <List.Item>
+                                <List.Icon className="home-about-sublist-icon" name="check" />
+                                <List.Content className="home-about-sublist-content">
+                                    With over 30 years of experience in providing the best quality custom shirts and great
+                                    customer service.
+                                </List.Content>
+                            </List.Item>
+                        </List.List>
                     </List.Item>
                     <List.Item className="home-about-list-item">
-                        <List.Icon className="home-about-list-icon" name="check" />
-                        <List.Content className="home-about-list-content">
-                            Years of business experience in the field, unmatched by the competition!
-                        </List.Content>
+                        <List.Header>
+                            Convenience
+                        </List.Header>
+                        <List.List>
+                            <List.Item>
+                                <List.Icon className="home-about-sublist-icon" name="check" />
+                                <List.Content className="home-about-sublist-content">
+                                    Give us the shirt design of your choice and we will make it for you.
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <List.Icon className="home-about-sublist-icon" name="check" />
+                                <List.Content className="home-about-sublist-content">
+                                    Our Custom Shirts have various designs to choose from, selections from shirt colors,
+                                    style, and sizes.
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <List.Icon className="home-about-sublist-icon" name="check" />
+                                <List.Content className="home-about-sublist-content">
+                                    We ship it to your home!
+                                </List.Content>
+                            </List.Item>
+                        </List.List>
                     </List.Item>
                     <List.Item className="home-about-list-item">
-                        <List.Icon className="home-about-list-icon" name="check" />
-                        <List.Content className="home-about-list-content">
-                            100% Customer Satisfaction GUARANTEED!
-                        </List.Content>
+                        <List.Header>
+                            Low Prices
+                        </List.Header>
+                        <List.List>
+                            <List.Item>
+                                <List.Icon className="home-about-sublist-icon" name="check" />
+                                <List.Content className="home-about-sublist-content">
+                                    Our competitive prices and quality are matched by few! If you do happen to find a better
+                                    deal ask us about our price match guarantee, conditions apply.
+                                </List.Content>
+                            </List.Item>
+                        </List.List>
                     </List.Item>
                 </List>
             </div>
