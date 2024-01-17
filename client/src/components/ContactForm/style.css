@@ -8,19 +8,76 @@
 
 #form-field-container {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    width: 80%;
+    margin: 0 10%;
+    height: 500px;
+    grid-template: repeat(4, 2fr) / 50% 50%;
+    column-gap: 40px;
 }
 
-.form-field-col:nth-child(-1n + 3) {
-    grid-column: span 4;
+#contact-phone-number, #contact-address {
+    text-align: center;
+    font-size: 20px;
+}
+
+#name-input, #email-input, #company-input, #phone-input {
+    width: 100%;
+    margin: 5.5% 0%;
+    font-family: "Lato", "Helvetica Neuve";
+    height: 50px;
+    font-size: 20px;
+    background-color: #f6f6f6;
+    border: solid 1px #f6f6f6;
+    padding: 0 2%;
+}
+
+#message-input {
+    width: 100%;
+    margin: 3% 0%;
+    font-family: "Lato", "Helvetica Neuve";
+    height: 100px;
+    font-size: 20px;
+    background-color: #f6f6f6;
+    border: solid 1px #f6f6f6;
+    padding: 1% 1%;
+}
+
+#submit-btn {
+    width: 40%;
+    height: 60px;
+    background-color: #f11515;
+    border: solid 1px #fefcfd;
+    color: #fefcfd;
+    font-family: "Lato", "Helvetica Neuve";
+    margin: 3% 30%;
+}
+
+/* .form-field-col:nth-child(1) {
+    background-color: blue;
 }
 
 .form-field-col:nth-child(2) {
-    grid-row-start: 2;
-    grid-column: 3 / span 4;
+    background-color: blueviolet;
 }
 
-.form-field-col:nth-child(1) {
-    grid-row-start: 2;
-    grid-column: 7 / span 4;
+.form-field-col:nth-child(3) {
+    background-color: olive;
 }
+
+.form-field-col:nth-child(4) {
+    background-color: gold;
+}
+
+.form-field-col:nth-child(5) {
+    background-color: green;
+}
+
+.form-field-col:nth-child(6) {
+    background-color: hotpink;
+} */
+
+.form-field-col:nth-child(7) {
+    /* background-color: red; */
+    grid-column: span 2;
+}
+

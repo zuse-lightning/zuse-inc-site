@@ -54,26 +54,29 @@ const ContactForm = (props) => {
                 method="POST"
             >
                 <div id="form-field-container">
-                    <div className="contact-col">
+                    <div className="form-field-col">
                         <Header id="contact-phone-number" as="h4"><Icon id="contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
                     </div>
-                    <div className="contact-col">
+                    <div className="form-field-col">
                         <Header id="contact-address" as="h4"><Icon id="contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
                     </div>
                     <div className="form-field-col">
-                        <input id="name-input" type="text" placeholder="Your name..." name="name" required />
+                        <input id="name-input" type="text" placeholder="Name (required)" name="name" required />
                     </div>
                     <div className="form-field-col">
-                        <input id="email-input" type="email" placeholder="Email" name="email" required />
+                        <input id="email-input" type="email" placeholder="Email (required)" name="email" required />
                     </div>
                     <div className="form-field-col">
-                        <input id="phone-input" type="text" placeholder="Your phone number..." name="phone-number" required />
+                        <input id="phone-input" type="text" placeholder="Phone Number" name="phone-number" />
                     </div>
                     <div className="form-field-col">
-                        <textarea id="message-input" placeholder="Your message..." name="name" required />
+                        <input id="company-input" type="text" placeholder="Company" name="company" />
+                    </div>
+                    <div className="form-field-col">
+                        <textarea id="message-input" placeholder="Message" name="name" />
                     </div>
                 </div>
-                <button type="submit">Send Message</button>
+                <button id="submit-btn" type="submit">Send Message</button>
             </form>
         </div>
     );
