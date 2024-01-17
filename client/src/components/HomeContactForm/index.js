@@ -50,39 +50,40 @@ const HomeContactForm = () => {
         <div id="home-contact-form-container">
             <Grid>
                 <Grid.Row centered>
-                    <Grid.Column width={6}>
-
+                    <Grid.Column width={7}>
+                        <Header as="h1" id="home-contact-header">Request A Call Back</Header>
+                        <Header as="h3" id="home-contact-subheader">If you have any further questions, feel free to fill out your information and let us know!</Header>
+                        <div className="home-form-field-col">
+                            <Header id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />Call: 203-775-9550</Header>
+                        </div>
+                        <div className="home-form-field-col">
+                            <Header id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
+                        </div>
                     </Grid.Column>
-                    <Grid.Column width={6}>
+                    <Grid.Column width={7}>
                         <form
                             action={FORM_ENDPOINT}
                             onSubmit={handleSubmit}
                             method="POST"
                         >
-                            <div id="form-field-container">
-                                <div className="form-field-col">
-                                    <Header id="contact-phone-number" as="h4"><Icon id="contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
+                            <div id="home-form-field-container">
+                                <div className="home-form-field-col">
+                                    <input id="home-name-input" type="text" placeholder="Name (required)" name="name" required />
                                 </div>
-                                <div className="form-field-col">
-                                    <Header id="contact-address" as="h4"><Icon id="contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
+                                <div className="home-form-field-col">
+                                    <input id="home-email-input" type="email" placeholder="Email (required)" name="email" required />
                                 </div>
-                                <div className="form-field-col">
-                                    <input id="name-input" type="text" placeholder="Name (required)" name="name" required />
+                                <div className="home-form-field-col">
+                                    <input id="home-phone-input" type="text" placeholder="Phone Number" name="phone-number" />
                                 </div>
-                                <div className="form-field-col">
-                                    <input id="email-input" type="email" placeholder="Email (required)" name="email" required />
+                                <div className="home-form-field-col">
+                                    <input id="home-company-input" type="text" placeholder="Company" name="company" />
                                 </div>
-                                <div className="form-field-col">
-                                    <input id="phone-input" type="text" placeholder="Phone Number" name="phone-number" />
-                                </div>
-                                <div className="form-field-col">
-                                    <input id="company-input" type="text" placeholder="Company" name="company" />
-                                </div>
-                                <div className="form-field-col">
-                                    <textarea id="message-input" placeholder="Message" name="name" />
+                                <div className="home-form-field-col">
+                                    <textarea id="home-message-input" placeholder="Message" name="name" />
                                 </div>
                             </div>
-                            <button id="submit-btn" type="submit">Send Message</button>
+                            <button id="home-submit-btn" type="submit">Send Message</button>
                         </form>
                     </Grid.Column>
                 </Grid.Row>
