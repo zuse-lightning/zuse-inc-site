@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import { useLocation, Routes, Route } from "react-router-dom";
 import OurServices from "../../components/OurServices";
 
-class Services extends Component {
-    render() {
-        return (
-            <>
-                <OurServices />
-            </>
-        );
-    }
+const Services = () => {
+
+    const { pathname } = useLocation();
+
+    return (
+        <>
+            {pathname === "/services" ? <OurServices /> : null}
+        </>
+    );
 }
 
 export default Services;
