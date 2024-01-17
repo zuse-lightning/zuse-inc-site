@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Image, Button, Icon } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ScreenPrintingIcon from "../../assets/images/screen-printing-red.png";
 import EmbroideryIcon from "../../assets/images/embroidery-red.png";
 import PromoItemsIcon from "../../assets/images/promo-items-red.png";
@@ -17,10 +17,15 @@ const services = [
     { image: WebStoreIcon, path: "/services", title: "Shopify Store", description: "Take your business online with our Shopify store creation services. We design and develop an e-commerce platform tailored to your brand, providing a seamless and secure shopping experience for your customers. Elevate your potential of online sales with a professionally crafted Shopify store." }
 ];
 
+
+
 const OurServices = () => {
+    
+    const { pathname } = useLocation();
+    
     return (
         <div id="our-services-container">
-            <Header as="h1" id="our-services-header">Our Services</Header>
+            {pathname !== "/services" ? <Header as="h1" id="our-services-header">Our Services</Header> : null}
             <div id="services-container">
                 {services.map((service, index) => (
                     <div className="services-col" key={index}>
