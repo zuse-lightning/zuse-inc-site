@@ -9,6 +9,13 @@ const Services = () => {
     return (
         <>
             {pathname === "/services" ? <OurServices /> : null}
+            <Routes>
+                <Route exact path="/services/screenprinting" />
+                <Route exact path="/services/embroidery" />
+                <Route exact path="/services/promo" />
+                <Route exact path="/services/screenprinting" />
+                <Route exact path="/services/screenprinting" />
+            </Routes>
         </>
     );
 }
