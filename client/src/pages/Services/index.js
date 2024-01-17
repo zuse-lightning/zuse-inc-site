@@ -12,9 +12,9 @@ const Services = () => {
             <Routes>
                 <Route exact path="/services/screenprinting" />
                 <Route exact path="/services/embroidery" />
-                <Route exact path="/services/promo" />
-                <Route exact path="/services/screenprinting" />
-                <Route exact path="/services/screenprinting" />
+                <Route exact path="/services/promo-items" />
+                <Route exact path="/services/fulfillment" />
+                <Route exact path="/services/shopify-stores" />
             </Routes>
         </>
     );

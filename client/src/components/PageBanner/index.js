@@ -9,31 +9,116 @@ import CodingBackground from "../../assets/images/coding-background.jpeg";
 
 import "./style.css";
 
-const pageData = [
-    { id: 1, image: ScreenTextless, name: "Screen Printing" },
-    { id: 2, image: EmbroidTextless, name: "Embroidery" },
-    { id: 3, image: FulfillTextless, name: "Fulfillment" },
-    { id: 4, image: MainTextless, name: "Promotional Items" },
-    { id: 5, image: CodingBackground, name: "Shopify Stores" }
-];
-
 const PageBanner = (props) => {
 
     const { pathname } = useLocation();
 
+    let pageBannerImage;
+    let pageBannerName;
+    let pageBannerBreadcrumbs;
+
+    switch (pathname) {
+        case "/about":
+            pageBannerImage = MainTextless;
+            pageBannerName = "ABOUT";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "ABOUT", link: "/about" }
+            ];
+            break;
+        case "/catalogs":
+            pageBannerImage = MainTextless;
+            pageBannerName = "CATALOGS";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CATALOGS", link: "/catalogs" }
+            ];
+            break;
+        case "/services":
+            pageBannerImage = MainTextless;
+            pageBannerName = "SERVICES";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" }
+            ];
+            break;
+        case "/contact":
+            pageBannerImage = MainTextless;
+            pageBannerName = "CONTACT";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CONTACT", link: "/contact" }
+            ];
+            break;
+        case "/services/screenprinting":
+            pageBannerImage = ScreenTextless;
+            pageBannerName = "SCREEN PRINTING";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "SCREEN PRINTING", link: "/services/screenprinting" }
+            ];
+            break;
+        case "/services/embroidery":
+            pageBannerImage = EmbroidTextless;
+            pageBannerName = "EMBROIDERY";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "EMBROIDERY", link: "/services/embroidery" }
+            ];
+            break;
+        case "/services/promo-items":
+            pageBannerImage = MainTextless;
+            pageBannerName = "PROMOTIONAL ITEMS";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "PROMOTIONAL ITEMS", link: "/services/promo-items" }
+            ];
+            break;
+        case "/services/fulfillment":
+            pageBannerImage = FulfillTextless;
+            pageBannerName = "FULFILLMENT";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "FULFILLMENT", link: "/services/fulfillment" }
+            ];
+            break;
+        case "/services/shopify-stores":
+            pageBannerImage = CodingBackground;
+            pageBannerName = "SHOPIFY STORES";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "SHOPIFY STORES", link: "/services/shopify-stores" }
+            ];
+            break;
+        default:
+            pageBannerImage = MainTextless;
+            pageBannerName = "THERE HAS BEEN AN ERROR";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" }
+            ];
+    }
+
+    console.log(pageBannerImage);
+
     return (
         <>
-            {pathname !== "/" ? <div id="page-banner">
+            {pathname !== "/" ? <div id="page-banner" style={{ backgroundImage: `linear-gradient(rgba(241, 21, 21, 0.8), rgba(241, 21, 21, 0.8)), url(${pageBannerImage})` }}>
                 <div className="page-banner-col">
-                    <Header as="h2" id="page-banner-title">ABOUT</Header>
+                    <Header as="h2" id="page-banner-title">{pageBannerName}</Header>
                 </div>
                 <div className="page-banner-col">
                     <Breadcrumb>
-                        <Breadcrumb.Section className="breadcrumb-link" link>HOME</Breadcrumb.Section>
-                        <Breadcrumb.Divider className="breadcrumb-link-divider" />
-                        <Breadcrumb.Section className="breadcrumb-link" link>SERVICES</Breadcrumb.Section>
-                        <Breadcrumb.Divider className="breadcrumb-link-divider" />
-                        <Breadcrumb.Section className="breadcrumb-link" active>SCREEN PRINTING</Breadcrumb.Section>
+                        {pageBannerBreadcrumbs.map((crumb, index) => (
+                            <>
+                                <Breadcrumb.Section as={Link} to={crumb.link} className="breadcrumb-link">{crumb.name}</Breadcrumb.Section>
+                                {index === pageBannerBreadcrumbs.length - 1 ? null : <Breadcrumb.Divider className="breadcrumb-link-divider" />}
+                            </>
+                        ))}
                     </Breadcrumb>
                 </div>
             </div> : null}
