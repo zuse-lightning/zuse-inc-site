@@ -1,0 +1,28 @@
+#top-catalogs-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    border: solid 1px #fefcfd;  
+}
+
+#top-catalogs-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
+
+#catalogs-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 2%;
+}
+
+.catalog-col:has()
+
+.catalog-img {
+    width: 50%;
+    margin: 0 25%;
+}
