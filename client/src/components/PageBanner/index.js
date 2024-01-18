@@ -34,20 +34,57 @@ const PageBanner = (props) => {
                 { name: "CATALOGS", link: "/catalogs" }
             ];
             break;
+        case "/catalogs/sanmar":
+            pageBannerImage = ScreenTextless;
+            pageBannerName = "SANMAR";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CATALOGS", link: "/catalogs" },
+                { name: "SANMAR", link: "/catalogs/sanmar" }
+            ];
+            break;
+        case "/catalogs/ssactivewear":
+            pageBannerImage = ScreenTextless;
+            pageBannerName = "S&S ACTIVEWEAR";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CATALOGS", link: "/catalogs" },
+                { name: "S&S ACTIVEWEAR", link: "/catalogs/ssactivewear" }
+            ];
+            break;
+        case "/catalogs/alphabroder":
+            pageBannerImage = ScreenTextless;
+            pageBannerName = "ALPHABRODER";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CATALOGS", link: "/catalogs" },
+                { name: "ALPHABRODER", link: "/catalogs/alphabroder" }
+            ];
+            break;
+        case "/catalogs/augusta-sportswear":
+            pageBannerImage = ScreenTextless;
+            pageBannerName = "AUGUSTA SPORTSWEAR";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CATALOGS", link: "/catalogs" },
+                { name: "AUGUSTA SPORTSWEAR", link: "/catalogs/augusta-sportswear" }
+            ];
+            break;
+        case "/catalogs/rothco":
+            pageBannerImage = ScreenTextless;
+            pageBannerName = "ROTHCO";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CATALOGS", link: "/catalogs" },
+                { name: "ROTHCO", link: "/catalogs/rothco" }
+            ];
+            break;
         case "/services":
             pageBannerImage = MainTextless;
             pageBannerName = "SERVICES";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
                 { name: "SERVICES", link: "/services" }
-            ];
-            break;
-        case "/contact":
-            pageBannerImage = MainTextless;
-            pageBannerName = "CONTACT";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CONTACT", link: "/contact" }
             ];
             break;
         case "/services/screenprinting":
@@ -93,6 +130,14 @@ const PageBanner = (props) => {
                 { name: "HOME", link: "/" },
                 { name: "SERVICES", link: "/services" },
                 { name: "SHOPIFY STORES", link: "/services/shopify-stores" }
+            ];
+            break;
+        case "/contact":
+            pageBannerImage = MainTextless;
+            pageBannerName = "CONTACT";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CONTACT", link: "/contact" }
             ];
             break;
         default:
