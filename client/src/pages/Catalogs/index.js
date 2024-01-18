@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
 import { Grid, Header } from "semantic-ui-react";
+import TopCatalogs from "../../components/TopCatalogs";
 
 const Catalogs = () => {
 
@@ -10,7 +11,7 @@ const Catalogs = () => {
         <>
             <Grid.Row>
                 <Grid.Column>
-                    <Header as="h1">Catalogs</Header>
+                    {pathname === "/catalogs" ? <TopCatalogs pathname={pathname} /> : null}
                     <Routes>
                         <Route exact path="/catalogs/sanmar" />
                         <Route exact path="/catalogs/ssactivewear" />
