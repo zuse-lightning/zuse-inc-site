@@ -24,7 +24,6 @@ const AboutSection = () => {
                     <Link to="/contact">
                         <Button id="contact-us-btn">CONTACT US</Button>
                     </Link>
-                    
                 </div>
             </div>
         </div>
