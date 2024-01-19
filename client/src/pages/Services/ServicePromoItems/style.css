@@ -1,0 +1,33 @@
+#promo-items-container {
+    background-color: #fefcfd;
+    background-size: contain;
+    width: 60%;
+    margin: -0.2% 20% 0;
+    padding: 2%;
+}
+
+#promo-items-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
+
+.promo-items-subheader {
+    padding: 2%!important;
+    text-decoration: underline;
+    text-underline-offset: 18px;
+    text-decoration-color: #f11515;
+}
+
+.promo-items-text {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 18px;
+}
+
+#promo-items-results-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}

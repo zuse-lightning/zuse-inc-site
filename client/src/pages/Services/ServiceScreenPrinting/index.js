@@ -13,10 +13,10 @@ const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, Black
 
 
 const ServiceScreenPrinting = (props) => {
-    
+
     const { pathname } = props;
     console.log(pathname);
-    
+
     return (
         <div id="screen-printing-container">
             <Header as="h1" id="screen-printing-header">Screen Printing</Header>
@@ -25,17 +25,18 @@ const ServiceScreenPrinting = (props) => {
             <Header as="h2" className="screen-printing-subheader">How It Works</Header>
             <br />
             <p className="screen-printing-text">
-                Here at Zuse Inc., we'll screen print your T-shirts till the cows come home. Literally. Those cows take a long time to get home and that's how long
-                we're gonna be printing your shirts for. Our team of hard-working screen printers say "No" to taking breaks because they are just THAT passionate
-                about carrying out your order and making sure it is the best possible quality that your sweet, delectable, SCRUMPTIOUS money can buy. Don't believe us?
-                Are you calling us liars? Then put your money where your mouth is and contact us, we'll show you what's what in the most professional manner possible!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
+                Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
+                saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
+                odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
             </p>
             <br />
             <Header as="h2" className="screen-printing-subheader">What You'll Get</Header>
             <div id="screen-printing-results-container">
                 {screenPrintingResults.map((result, index) => (
-                    <div className="result-col" key={index}>
-                        <Image className="result-img" src={result} />
+                    <div className="screen-printing-result-col" key={index}>
+                        <Image className="screen-printing-result-img" src={result} />
                     </div>
                 ))}
             </div>
