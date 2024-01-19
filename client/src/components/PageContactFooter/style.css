@@ -1,0 +1,10 @@
+#page-contact-footer {
+    background-image: url(../../assets/images/contact-footer.png);
+    background-color: #fefcfd;
+    background-size: cover;
+    width: 60%;
+    height: 500px;
+    margin: -0.2% 20% 0;
+    padding: 2%;
+    
+}

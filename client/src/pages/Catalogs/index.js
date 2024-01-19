@@ -13,11 +13,11 @@ const Catalogs = () => {
                 <Grid.Column>
                     {pathname === "/catalogs" ? <TopCatalogs pathname={pathname} /> : null}
                     <Routes>
-                        <Route exact path="/catalogs/sanmar" />
-                        <Route exact path="/catalogs/ssactivewear" />
-                        <Route exact path="/catalogs/alphabroder" />
-                        <Route exact path="/catalogs/augusta-sportswear" />
-                        <Route exact path="/catalogs/rothco" />
+                        <Route exact path="sanmar" />
+                        <Route exact path="ssactivewear" />
+                        <Route exact path="alphabroder" />
+                        <Route exact path="augusta-sportswear" />
+                        <Route exact path="rothco" />
                     </Routes>
                 </Grid.Column>
             </Grid.Row>
