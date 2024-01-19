@@ -2,9 +2,39 @@
     background-image: url(../../assets/images/contact-footer.png);
     background-color: #fefcfd;
     background-size: cover;
-    width: 60%;
+    width: 100%;
     height: 500px;
-    margin: -0.2% 20% 0;
+    margin: 5% 0% 0%;
     padding: 2%;
-    
+}
+
+#page-contact-header {
+    padding: 2%;
+    margin-top: 2%;
+    font-size: 36px;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    color: #fefcfd;
+    text-align: center;
+    text-decoration-color: #fefcfd;
+}
+
+#page-contact-subheader {
+    font-size: 24px;
+    width: 40%;
+    margin: 0 30%;
+    padding: 2%;
+    line-height: 40px;
+    color: #fefcfd;
+    text-align: center;
+}
+
+#page-contact-btn {
+    width: 25%;
+    height: 60px;
+    background-color: #f11515;
+    border: solid 1px transparent;
+    color: #fefcfd;
+    font-family: "Lato", "Helvetica Neuve";
+    margin: 2% 37.5% 0;
 }

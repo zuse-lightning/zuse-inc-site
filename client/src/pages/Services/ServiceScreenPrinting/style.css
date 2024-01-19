@@ -12,3 +12,22 @@
     text-underline-offset: 20px;
     text-decoration-color: #f11515;
 }
+
+.screen-printing-subheader {
+    padding: 2%!important;
+    text-decoration: underline;
+    text-underline-offset: 18px;
+    text-decoration-color: #f11515;
+}
+
+.screen-printing-text {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 18px;
+}
+
+#screen-printing-results-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
