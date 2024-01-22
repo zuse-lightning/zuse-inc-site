@@ -1,0 +1,14 @@
+#sanmar-container {
+    background-color: #fefcfd;
+    background-size: contain;
+    width: 60%;
+    margin: -0.2% 20% 0;
+    padding: 2%;
+}
+
+#sanmar-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
