@@ -2,6 +2,7 @@ import React from "react";
 import { Header, Image, List, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { sanmarData } from "../../../utils/sanmarData";
+import PageContactFooter from "../../../components/PageContactFooter";
 import SanmarBanner from "../../../assets/images/page-banner.png";
 
 import "./style.css";
@@ -37,6 +38,7 @@ const CatalogSanmar = () => {
                     </>
                 ))}
             </div>
+            <PageContactFooter />
         </div>
     );
 }
