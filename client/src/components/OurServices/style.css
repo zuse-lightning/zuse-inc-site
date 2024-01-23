@@ -41,21 +41,242 @@
 
 .services-card-description {
     text-align: center;
-    height: 60%;
+    height: 300px;
+    margin-bottom: 5%;
 }
 
 .services-card-btn {
-    background-color: #f11515!important;
-    color: white!important;
-    transition: ease 0.5s!important;
+    background-color: #f11515 !important;
+    color: white !important;
+    transition: ease 0.5s !important;
 }
 
 .services-card-btn:hover {
-    background-color: #243557!important;
-    transition: ease 0.5s!important;
+    background-color: #243557 !important;
+    transition: ease 0.5s !important;
 }
 
 .services-card-image {
-   width: 30%;
-   margin: 0 35%;
+    width: 30%;
+    margin: 0 35%;
+}
+
+@media (max-width: 2030px) and (min-width: 1960px) {
+    #our-services-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media (max-width: 1959px) and (min-width: 1715px) {
+    #our-services-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #services-container { 
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+
+@media (max-width: 1714px) and (min-width: 1358px) { 
+    #our-services-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #services-container { 
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1357px) and (min-width: 1200px) { 
+    #our-services-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(6, 1fr); 
+        row-gap: 20px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .services-card {
+        height: 400px;
+    }
+
+    .services-card-description {
+        height: 40%;
+    }
+
+    .services-col:nth-child(1) {
+        grid-column: span 2;
+    }
+    
+    .services-col:nth-child(2) {
+        grid-column: span 2;
+    }
+    
+    .services-col:nth-child(3) {
+        grid-column: span 2;
+    }
+    .services-col:nth-child(4) {
+        grid-row-start: 2;
+        grid-column: 2 / span 2;
+    }
+    .services-col:nth-child(5) {
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #our-services-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(6, 1fr); 
+        row-gap: 20px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .services-card {
+        height: 400px;
+    }
+
+    .services-card-description {
+        height: 50%;
+    }
+
+    .services-col:nth-child(1) {
+        grid-column: span 2;
+    }
+    
+    .services-col:nth-child(2) {
+        grid-column: span 2;
+    }
+    
+    .services-col:nth-child(3) {
+        grid-column: span 2;
+    }
+    .services-col:nth-child(4) {
+        grid-row-start: 2;
+        grid-column: 2 / span 2;
+    }
+    .services-col:nth-child(5) {
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #our-services-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(1, 1fr); 
+        row-gap: 20px;
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .services-card {
+        height: 350px;
+    }
+
+    .services-card-description {
+        height: 20%;
+    }
+
+    .services-card-image { 
+        width: 20%;
+        margin: 0 40%;
+    }
+
+    .services-card-header {
+        margin: 5% 0;
+    }
+    .services-card-btn {
+        width: 50%!important;
+        margin: 90px 25%!important;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #our-services-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(1, 1fr); 
+        row-gap: 20px;
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .services-card {
+        height: 350px;
+    }
+
+    .services-card-description {
+        height: 20%;
+    }
+
+    .services-card-image { 
+        width: 20%;
+        margin: 0 40%;
+    }
+
+    .services-card-header {
+        margin: 5% 0;
+    }
+    .services-card-btn {
+        width: 50%!important;
+        margin: 110px 25%!important;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 425px) {
+    #our-services-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(1, 1fr); 
+        row-gap: 20px;
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .services-card {
+        height: 350px;
+    }
+
+    .services-card-description {
+        height: 20%;
+    }
+
+    .services-card-image { 
+        width: 20%;
+        margin: 0 40%;
+    }
+
+    .services-card-header {
+        margin: 5% 0;
+    }
+    .services-card-btn {
+        width: 50%!important;
+        margin: 110px 25%!important;
+    }
 }
