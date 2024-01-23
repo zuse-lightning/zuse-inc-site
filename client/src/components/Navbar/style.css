@@ -19,3 +19,14 @@
     text-decoration-color: #243557!important;
     transition: ease .3s!important;
 }
+
+@media (max-width: 991px) {
+    .header-nav-item {
+        text-decoration: none!important;
+    }
+
+    .header-nav-item:hover {
+        text-decoration: none!important;
+        background-color: transparent!important;
+    }
+}
