@@ -1,0 +1,52 @@
+#alphabroder-container {
+    background-color: #fefcfd;
+    background-size: contain;
+    width: 60%;
+    margin: -0.2% 20% 0;
+    padding: 2%;
+}
+
+#alphabroder-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
+
+.alphabroder-subheader {
+    padding: 2% !important;
+    text-decoration: underline;
+    text-underline-offset: 18px;
+    text-decoration-color: #f11515;
+}
+
+#alphabroder-brands-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.alphabroder-brands-img {
+    width: 70%;
+    margin: 0 15%;
+}
+
+.alphabroder-brands-list-header {
+    font-size: 28px;
+    margin-bottom: 5%;
+}
+
+.alphabroder-brands-list-item {
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+
+.more-info-btn {
+    width: 30% !important;
+    height: 60px;
+    background-color: #f11515 !important;
+    border: solid 1px transparent !important;
+    color: #fefcfd !important;
+    font-family: "Lato", "Helvetica Neuve";
+    margin: 6% 35% 0 !important;
+}
