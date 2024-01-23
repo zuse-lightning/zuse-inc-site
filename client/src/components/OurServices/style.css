@@ -217,6 +217,10 @@
         margin: 0 15%;
     }
 
+    #our-services-header {
+        text-align: center;
+    }
+
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
         row-gap: 20px;
@@ -252,11 +256,16 @@
         margin: 0 15%;
     }
 
+    #our-services-header {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
         row-gap: 20px;
-        width: 60%;
-        margin: 0 20%;
+        width: 90%;
+        margin: 0 5%;
     }
 
     .services-card {
@@ -264,7 +273,7 @@
     }
 
     .services-card-description {
-        height: 20%;
+        height: 30%;
     }
 
     .services-card-image { 
@@ -276,7 +285,7 @@
         margin: 5% 0;
     }
     .services-card-btn {
-        width: 50%!important;
-        margin: 110px 25%!important;
+        width: 100%!important;
+        margin: 90px 0!important;
     }
 }
