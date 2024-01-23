@@ -3,31 +3,27 @@ import { Header, Image, List, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { sanmarData } from "../../../utils/sanmarData";
 import PageContactFooter from "../../../components/PageContactFooter";
-import SanmarBanner from "../../../assets/images/page-banner.png";
 
 import "./style.css";
 
 const CatalogSanmar = () => {
     return (
         <div id="sanmar-container">
-            <Header id="sanmar-header" as="h1">SanMar</Header>
-            <Image src={SanmarBanner} />
+            <Header as="h2" id="sanmar-header">Popular Brands</Header>
             <br />
-            <Header as="h2" className="sanmar-subheader">Popular Styles</Header>
-            <br />
-            <div id="sanmar-styles-container">
+            <div id="sanmar-brands-container">
                 {sanmarData.map((product) => (
                     <>
-                        <div className="sanmar-styles-col">
-                            <Image className="sanmar-styles-img" src={product.images} />
+                        <div className="sanmar-brands-col">
+                            <Image className="sanmar-brands-img" src={product.images} />
                         </div>
-                        <div className="sanmar-styles-col">
-                            <List className="sanmar-styles-list">
-                                <List.Header className="sanmar-styles-list-header">{product.names}</List.Header>
+                        <div className="sanmar-brands-col">
+                            <List className="sanmar-brands-list">
+                                <List.Header className="sanmar-brands-list-header">{product.names}</List.Header>
                                 {product.listItems.map((listItem) => (
-                                    <List.Item className="sanmar-styles-list-item">
-                                        <List.Icon className="sanmar-styles-list-icon" name="check" />
-                                        <List.Content className="sanmar-styles-list-content">{listItem}</List.Content>
+                                    <List.Item className="sanmar-brands-list-item">
+                                        <List.Icon className="sanmar-brands-list-icon" name="check" />
+                                        <List.Content className="sanmar-brands-list-content">{listItem}</List.Content>
                                     </List.Item>
                                 ))}
                             </List>

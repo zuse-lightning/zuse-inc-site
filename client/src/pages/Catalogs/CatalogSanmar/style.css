@@ -20,23 +20,23 @@
     text-decoration-color: #f11515;
 }
 
-#sanmar-styles-container {
+#sanmar-brands-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
 }
 
-.sanmar-styles-img {
+.sanmar-brands-img {
     width: 70%;
     margin: 0 15%;
 }
 
-.sanmar-styles-list-header {
+.sanmar-brands-list-header {
     font-size: 28px;
     margin-bottom: 5%;
 }
 
-.sanmar-styles-list-item {
+.sanmar-brands-list-item {
     font-size: 18px;
     margin-bottom: 3%;
 }
