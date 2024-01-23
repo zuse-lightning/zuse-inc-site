@@ -1,9 +1,8 @@
-import GildanHeavyCottonFront from "../assets/images/catalogs/sanmar/gildan-heavy-cotton/5000_black_flat_front.jpg";
-import GildanHeavyCottonBack from "../assets/images/catalogs/sanmar/gildan-heavy-cotton/5000_black_flat_back.jpg";
+import GildanHeavyCotton from "../assets/images/catalogs/sanmar/gildan-heavy-cotton.png";
 
 export const sanmarData = [
     {
-        images: [GildanHeavyCottonFront, GildanHeavyCottonBack],
+        images: GildanHeavyCotton,
         names: [
             "Gildan® - Heavy Cotton™ 100% Cotton T-Shirt"
         ],

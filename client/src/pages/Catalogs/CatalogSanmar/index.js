@@ -19,7 +19,7 @@ const CatalogSanmar = () => {
                 {sanmarData.map((product) => (
                     <>
                         <div className="sanmar-styles-col">
-                            <Image className="sanmar-styles-img" src={product.images[0]} />
+                            <Image className="sanmar-styles-img" src={product.images} />
                         </div>
                         <div className="sanmar-styles-col">
                             <List className="sanmar-styles-list">
