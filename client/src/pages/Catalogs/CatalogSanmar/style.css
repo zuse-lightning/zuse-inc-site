@@ -14,7 +14,7 @@
 }
 
 .sanmar-subheader {
-    padding: 2%!important;
+    padding: 2% !important;
     text-decoration: underline;
     text-underline-offset: 18px;
     text-decoration-color: #f11515;
@@ -42,11 +42,11 @@
 }
 
 .more-info-btn {
-    width: 30%!important;
+    width: 30% !important;
     height: 60px;
-    background-color: #f11515!important;
-    border: solid 1px transparent!important;
-    color: #fefcfd!important;
+    background-color: #f11515 !important;
+    border: solid 1px transparent !important;
+    color: #fefcfd !important;
     font-family: "Lato", "Helvetica Neuve";
-    margin: 6% 35% 0!important;
+    margin: 6% 35% 0 !important;
 }
