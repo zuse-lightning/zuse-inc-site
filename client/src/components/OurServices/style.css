@@ -250,7 +250,7 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 425px) {
+@media (max-width: 767px) and (min-width: 403px) {
     #our-services-container {
         width: 70%;
         margin: 0 15%;
@@ -274,6 +274,46 @@
 
     .services-card-description {
         height: 30%;
+    }
+
+    .services-card-image { 
+        width: 20%;
+        margin: 0 40%;
+    }
+
+    .services-card-header {
+        margin: 5% 0;
+    }
+    .services-card-btn {
+        width: 100%!important;
+        margin: 90px 0!important;
+    }
+}
+
+@media (max-width: 403px) {
+    #our-services-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #our-services-header {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(1, 1fr); 
+        row-gap: 20px;
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .services-card {
+        height: 400px;
+    }
+
+    .services-card-description {
+        height: 40%;
     }
 
     .services-card-image { 
