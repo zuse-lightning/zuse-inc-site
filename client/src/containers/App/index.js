@@ -12,23 +12,51 @@ import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
 import "./style.css";
+import { Sidebar } from "semantic-ui-react";
 
 class App extends Component {
+
+  state = {
+    screenWidth: window.innerWidth
+  }
+
+  handleResize = (e) => {
+    this.setState({ screenWidth: window.innerWidth - 14 });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+    const width = JSON.parse(window.localStorage.getItem("screenWidth"));
+    this.setState(width);
+  }
+
+  componentDidUpdate() {
+    window.localStorage.setItem("screenWidth", JSON.stringify(this.state));
+  }
+
+  componentWillUnmount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
   render() {
     return (
       <>
         <AnnouncementBar />
-        <Navbar />
-        <PageBanner />
-        <div id="main-container">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/catalogs/*" element={<Catalogs />} />
-            <Route exact path="/services/*" element={<Services />} />
-            <Route exact path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        <Sidebar.Pushable>
+          <Sidebar.Pusher>
+            <Navbar screenWidth={this.state.screenWidth} />
+            <PageBanner />
+            <div id="main-container">
+              <Routes>
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/about" element={<About />} />
+                <Route exact path="/catalogs/*" element={<Catalogs />} />
+                <Route exact path="/services/*" element={<Services />} />
+                <Route exact path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
         <SocialLinks />
         <Footer />
       </>

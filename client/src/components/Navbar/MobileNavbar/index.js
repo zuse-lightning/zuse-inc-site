@@ -8,13 +8,15 @@ import "../style.css";
 const MobileNavbar = () => {
 
     const [visible, setVisible] = useState(false);
+    console.log(visible);
 
     return (
         <Menu id="main-menu" fluid secondary>
             <Menu.Item>
-                <Icon name="bars" />
+                <Icon name="bars"
+                    onClick={(e) => setVisible(!visible)}
+                />
             </Menu.Item>
-            <Sidebar.Pushable>
                 <Sidebar
                     as={Menu}
                     animation="overlay"
@@ -25,17 +27,7 @@ const MobileNavbar = () => {
                     visible={visible}
                     width="thin"
                 >
-                    <Menu.Item
-                        className="header-nav-item"
-                        position="right"
-                        as={Link}
-                        to="/"
-                        name="home"
-                    >
-                        <div id="zuse-logo-container">
-                            <Image size="medium" id="home-btn-img" src={ZuseLogo} />
-                        </div>
-                    </Menu.Item>
+
                     <Menu.Item
                         className="header-nav-item"
                         as={Link}
@@ -69,7 +61,18 @@ const MobileNavbar = () => {
                         Contact
                     </Menu.Item>
                 </Sidebar>
-            </Sidebar.Pushable>
+            
+            <Menu.Item
+                className="header-nav-item"
+                position="right"
+                as={Link}
+                to="/"
+                name="home"
+            >
+                <div id="zuse-logo-container">
+                    <Image size="medium" id="home-btn-img" src={ZuseLogo} />
+                </div>
+            </Menu.Item>
         </Menu>
     );
 };
