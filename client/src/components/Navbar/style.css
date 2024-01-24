@@ -20,6 +20,10 @@
     transition: ease .3s!important;
 }
 
+.dropdown.icon {
+    text-decoration: none;
+}
+
 @media (max-width: 991px) {
     .header-nav-item {
         text-decoration: none!important;

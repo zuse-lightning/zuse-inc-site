@@ -5,6 +5,19 @@ import ZuseLogo from "../../../assets/images/zuse-logo.jpg";
 
 import "../style.css";
 
+const catalogs = [
+    { name: "SanMar", link: "https://sanmar.com/" },
+    { name: "S&S Activewear", link: "https://www.ssactivewear.com/" },
+    { name: "AlphaBroder", link: "https://www.alphabroder.com/home" },
+    { name: "Augusta Sportswear", link: "https://www.augustasportswear.com/" },
+    { name: "Rothco", link: "https://www.rothco.com/" },
+    { name: "Charles River Apparel", link: "https://www.charlesriverapparel.com/" },
+    { name: "Citadel Brands", link: "https://www.citadelbrands.com/home_page" },
+    { name: "Cutter and Buck", link: "https://cutterbuck.com/" },
+    { name: "Stormtech USA", link: "https://www.stormtechusa.com/" },
+    { name: "Edwards Garment", link: "https://www.edwardsgarment.com/" }
+];
+
 const DesktopNavbar = () => {
         return (
             <Menu id="main-menu" fluid secondary>
@@ -28,12 +41,16 @@ const DesktopNavbar = () => {
                     About
                 </Menu.Item>
                 <Menu.Item
+                    as={Dropdown}
                     className="header-nav-item"
-                    as={Link}
-                    to="/catalogs"
                     name="catalogs"
+                    text="Catalogs"
                 >
-                    Catalogs
+                    <Dropdown.Menu>
+                        {catalogs.map((catalog) => (
+                            <Dropdown.Item as={Link} target=":blank" to={catalog.link}>{catalog.name}</Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
                 </Menu.Item>
                 <Menu.Item
                     className="header-nav-item"
