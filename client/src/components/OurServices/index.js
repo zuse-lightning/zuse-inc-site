@@ -25,7 +25,7 @@ const OurServices = () => {
     
     return (
         <div id="our-services-container">
-            {pathname !== "/services" ? <Header as="h1" id="our-services-header">Our Services</Header> : null}
+            {<Header as="h1" id="our-services-header">Our Services</Header>}
             <div id="services-container">
                 {services.map((service, index) => (
                     <div className="services-col" key={index}>

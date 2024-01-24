@@ -16,15 +16,14 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 20px;
-    width: 80%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 3% 5%;
     padding: 2%;
 }
 
 .services-card {
     border: solid 1px #d2caca;
     border-radius: 5px;
-    height: 500px;
     padding: 5%;
     transition: transform .5s;
 }
@@ -39,12 +38,6 @@
     font-size: 20px;
 }
 
-.services-card-description {
-    text-align: center;
-    height: 300px;
-    margin-bottom: 5%;
-}
-
 .services-card-btn {
     background-color: #f11515 !important;
     color: white !important;
@@ -57,8 +50,8 @@
 }
 
 .services-card-image {
-    width: 30%;
-    margin: 0 35%;
+    width: 60%;
+    margin: 0 20%;
 }
 
 @media (max-width: 2030px) and (min-width: 1960px) {
