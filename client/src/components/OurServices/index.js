@@ -32,7 +32,7 @@ const OurServices = () => {
                         <div className="services-card">
                             <Image className="services-card-image" src={service.image} />
                             <div className="services-card-header">{service.title}</div>
-                            <Button as={Link} to={service.path} fluid className="services-card-btn">MORE <Icon className="services-card-icon" name="arrow right" /></Button>
+                            <Button as={Link} to={service.path} fluid className="services-card-btn">LEARN MORE <Icon className="services-card-icon" name="arrow right" /></Button>
                         </div>
                     </div>
                 ))}
