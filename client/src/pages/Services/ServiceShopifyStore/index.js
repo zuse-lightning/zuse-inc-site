@@ -12,7 +12,7 @@ import "./style.css";
 const shopifyResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
 
 
-const ServiceFulfillment = () => {
+const ServiceShopifyStore = () => {
     return (
         <div id="shopify-container">
             <Header as="h1" id="shopify-header">Shopify Stores</Header>
@@ -28,6 +28,19 @@ const ServiceFulfillment = () => {
                 store.
             </p>
             <br />
+            <p className="shopify-text">
+                We’ve been in the online retail business for over 5 years and have always enjoyed 
+                giving brands the potential to grow their business. Our print-on-demand services 
+                are about bringing your brand to life. Imagine having the freedom to create unique 
+                designs without dealing with any headaches communicating to other companies about 
+                crucial business decisions. We print and fulfill orders as they come in, so you don't 
+                have to worry about any stock fluctuations. You really get to decide what works best 
+                for your brand! In a crowded online marketplace, standing out is not an option; it's 
+                a necessity. Our print-on-demand services are designed to allow your brand to make a 
+                statement. Our mission is to have your customers receive products that not only meet 
+                but exceed their expectations, leaving a lasting impression that fosters brand loyalty.
+            </p>
+            <br />
             <Header as="h2" className="shopify-subheader">What You'll Get</Header>
             <div id="shopify-results-container">
                 {shopifyResults.map((result, index) => (
@@ -41,4 +54,4 @@ const ServiceFulfillment = () => {
     );
 };
 
-export default ServiceFulfillment;
+export default ServiceShopifyStore;

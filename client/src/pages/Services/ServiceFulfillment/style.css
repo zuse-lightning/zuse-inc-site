@@ -26,6 +26,29 @@
     font-size: 18px;
 }
 
+#fulfillment-list {
+    width: 60%!important;
+    margin: 3% 20%!important;
+}
+
+#fulfillment-list-header {
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+
+.fulfillment-list-item {
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+
+.fulfillment-list-icon {
+    color:#f11515;
+}
+
+.fulfillment-list-description {
+    line-height: 25px!important;
+}
+
 #fulfillment-results-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
