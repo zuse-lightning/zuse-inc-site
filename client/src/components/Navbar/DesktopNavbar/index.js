@@ -18,6 +18,14 @@ const catalogs = [
     { name: "Edwards Garment", link: "https://www.edwardsgarment.com/" }
 ];
 
+const services = [
+    { name: "Screen Printing", link: "/services/screenprinting" },
+    { name: "Embroidery", link: "/services/embroidery" },
+    { name: "Promotional Items", link: "/services/promo-items" },
+    { name: "Fulfillment", link: "/services/fulfillment" },
+    { name: "Shopify Stores", link: "/services/shopify-stores" }
+];
+
 const DesktopNavbar = () => {
         return (
             <Menu id="main-menu" fluid secondary>
@@ -53,12 +61,16 @@ const DesktopNavbar = () => {
                     </Dropdown.Menu>
                 </Menu.Item>
                 <Menu.Item
+                    as={Dropdown}
                     className="header-nav-item"
-                    as={Link}
-                    to="/services"
                     name="services"
+                    text="Services"
                 >
-                    Services
+                    <Dropdown.Menu>
+                        {services.map((service) => (
+                            <Dropdown.Item as={Link} to={service.link} >{service.name}</Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
                 </Menu.Item>
                 <Menu.Item
                     className="header-nav-item"
