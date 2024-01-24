@@ -14,7 +14,7 @@
 
 #catalogs-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 20px;
     row-gap: 20px;
     padding: 2%;
@@ -25,7 +25,23 @@
     margin-top: 7%;
 }
 
-.catalog-col:nth-child(1) {
+.catalog-col:has(#charles-river) {
+    margin-top: 3%;
+}
+
+.catalog-col:has(#citadel-brands) {
+    margin-top: 8%;
+}
+
+.catalog-col:has(#stormtech) {
+    margin-top: -9%;
+}
+
+.catalog-col:has(#edwards) {
+    margin-top: 10%;
+}
+
+/* .catalog-col:nth-child(1) {
     grid-column: span 2;
 }
 
@@ -45,7 +61,7 @@
 .catalog-col:nth-child(5) {
     grid-row-start: 2;
     grid-column: span 2;
-}
+} */
 
 .catalog-img {
     width: 50%;

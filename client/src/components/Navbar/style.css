@@ -24,6 +24,14 @@
     text-decoration: none;
 }
 
+.ui.secondary.menu .active.item {
+    background: none!important;
+}
+
+.ui.secondary.menu .active.item:hover {
+    background: none!important;
+}
+
 @media (max-width: 991px) {
     .header-nav-item {
         text-decoration: none!important;
