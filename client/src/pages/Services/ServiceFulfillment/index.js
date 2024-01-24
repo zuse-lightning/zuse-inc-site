@@ -21,11 +21,10 @@ const ServiceFulfillment = () => {
             <Header as="h2" className="fulfillment-subheader">How It Works</Header>
             <br />
             <p className="fulfillment-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                Streamline your operations with our comprehensive fulfillment services. 
+                From order processing to shipping, we handle it all, ensuring your products 
+                reach customers efficiently and on time. Focus on growing your business while 
+                we take care of the logistics.
             </p>
             <br />
             <Header as="h2" className="fulfillment-subheader">What You'll Get</Header>

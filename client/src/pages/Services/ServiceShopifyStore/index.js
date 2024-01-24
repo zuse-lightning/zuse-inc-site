@@ -21,11 +21,11 @@ const ServiceFulfillment = () => {
             <Header as="h2" className="shopify-subheader">How It Works</Header>
             <br />
             <p className="shopify-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                Take your business online with our Shopify store creation services. 
+                We design and develop an e-commerce platform tailored to your brand, 
+                providing a seamless and secure shopping experience for your customers. 
+                Elevate your potential of online sales with a professionally crafted Shopify 
+                store.
             </p>
             <br />
             <Header as="h2" className="shopify-subheader">What You'll Get</Header>

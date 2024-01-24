@@ -25,11 +25,8 @@ const ServiceScreenPrinting = (props) => {
             <Header as="h2" className="screen-printing-subheader">How It Works</Header>
             <br />
             <p className="screen-printing-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands 
+                out with high-quality prints that capture attention and leave a lasting impression.
             </p>
             <br />
             <Header as="h2" className="screen-printing-subheader">What You'll Get</Header>
