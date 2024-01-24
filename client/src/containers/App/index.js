@@ -5,7 +5,6 @@ import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
-import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import SocialLinks from "../../components/SocialLinks";
@@ -50,7 +49,6 @@ class App extends Component {
               <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/about" element={<About />} />
-                <Route exact path="/catalogs/*" element={<Catalogs />} />
                 <Route exact path="/services/*" element={<Services />} />
                 <Route exact path="/contact" element={<Contact />} />
               </Routes>

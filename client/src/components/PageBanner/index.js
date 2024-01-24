@@ -19,53 +19,6 @@ const PageBanner = (props) => {
                 { name: "ABOUT", link: "/about" }
             ];
             break;
-        case "/catalogs":
-            pageBannerName = "CATALOGS";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CATALOGS", link: "/catalogs" }
-            ];
-            break;
-        case "/catalogs/sanmar":
-            pageBannerName = "SANMAR";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CATALOGS", link: "/catalogs" },
-                { name: "SANMAR", link: "/catalogs/sanmar" }
-            ];
-            break;
-        case "/catalogs/ssactivewear":
-            pageBannerName = "S&S ACTIVEWEAR";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CATALOGS", link: "/catalogs" },
-                { name: "S&S ACTIVEWEAR", link: "/catalogs/ssactivewear" }
-            ];
-            break;
-        case "/catalogs/alphabroder":
-            pageBannerName = "ALPHABRODER";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CATALOGS", link: "/catalogs" },
-                { name: "ALPHABRODER", link: "/catalogs/alphabroder" }
-            ];
-            break;
-        case "/catalogs/augusta-sportswear":
-            pageBannerName = "AUGUSTA SPORTSWEAR";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CATALOGS", link: "/catalogs" },
-                { name: "AUGUSTA SPORTSWEAR", link: "/catalogs/augusta-sportswear" }
-            ];
-            break;
-        case "/catalogs/rothco":
-            pageBannerName = "ROTHCO";
-            pageBannerBreadcrumbs = [
-                { name: "HOME", link: "/" },
-                { name: "CATALOGS", link: "/catalogs" },
-                { name: "ROTHCO", link: "/catalogs/rothco" }
-            ];
-            break;
         case "/services":
             pageBannerName = "SERVICES";
             pageBannerBreadcrumbs = [
