@@ -26,8 +26,18 @@
     font-size: 18px;
 }
 
+.shopify-text:nth-of-type(3) {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
 #shopify-results-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+    row-gap: 20px;
+}
+
+.shopify-result-col {
+    border: solid 1px #d2caca;
 }

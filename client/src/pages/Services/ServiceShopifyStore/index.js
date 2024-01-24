@@ -1,15 +1,21 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import CodingBackground from "../../../assets/images/coding-background.jpeg";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
+import PGW from "../../../assets/screenshots/pgw-screenshot.png";
+import TheSpot from "../../../assets/screenshots/thespot-screenshot.png";
+import CTSchools from "../../../assets/screenshots/ct-schools-screenshot.png";
+import WPRA from "../../../assets/screenshots/wpra-screenshot.png";
 
 import "./style.css";
 
-const shopifyResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
+const shopifyResults = [
+    { image: PGW, link: "https://progolfwarehouse.com/" },
+    { image: TheSpot, link: "https://thespotsupplyco.com/" },
+    { image: CTSchools, link: "https://ctschoolsstore.com/" },
+    { image: WPRA, link: "https://wpra.store/" }
+];
 
 
 const ServiceShopifyStore = () => {
@@ -42,10 +48,11 @@ const ServiceShopifyStore = () => {
             </p>
             <br />
             <Header as="h2" className="shopify-subheader">What You'll Get</Header>
+            <p className="shopify-text">Select one of our Shopify sites below to see for yourself!</p>
             <div id="shopify-results-container">
                 {shopifyResults.map((result, index) => (
                     <div className="shopify-result-col" key={index}>
-                        <Image className="shopify-result-img" src={result} />
+                        <Image as={Link} to={result.link} target=":blank" className="shopify-result-img" src={result.image} />
                     </div>
                 ))}
             </div>
