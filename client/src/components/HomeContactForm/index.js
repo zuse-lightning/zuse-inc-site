@@ -80,7 +80,7 @@ const HomeContactForm = () => {
                                     <input id="home-company-input" type="text" placeholder="Company" name="company" />
                                 </div>
                                 <div className="home-form-field-col">
-                                    <textarea id="home-message-input" placeholder="Message" name="name" />
+                                    <textarea id="home-message-input" placeholder="Message" name="message" />
                                 </div>
                             </div>
                             <button id="home-submit-btn" type="submit">Send Message</button>
