@@ -21,10 +21,18 @@ const ServicePromoItems = () => {
             <Header as="h2" className="promo-items-subheader">How It Works</Header>
             <br />
             <p className="promo-items-text">
-                Need Boost brand visibility with our extensive range of promotional items. 
-                From branded merchandise to unique giveaways, we help you create memorable 
+                Need to boost brand visibility? With our extensive range of promotional items,
+                from branded merchandise to unique giveaways, we help you create memorable 
                 experiences for your audience. Maximize your marketing impact with customized 
-                promotional products that leave a lasting impression.
+                promotional products that leave a lasting impression!
+            </p>
+            <br />
+            <p className="promo-items-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
+                Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
+                saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
+                odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
             </p>
             <br />
             <Header as="h2" className="promo-items-subheader">What You'll Get</Header>
