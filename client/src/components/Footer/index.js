@@ -43,22 +43,14 @@ const Footer = () => {
                     Contact
                 </Menu.Item>
             </Menu>
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column className="footer-col" width={4}>
-                        <Header id="copyright" as="h4">© 2024 Zuse Inc., American Contract Printing</Header>
-                    </Grid.Column>
-                    <Grid.Column className="footer-col" width={4}>
-                        <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-675-9550</Header>
-                    </Grid.Column>
-                    <Grid.Column className="footer-col" width={4}>
-
-                    </Grid.Column>
-                    <Grid.Column className="footer-col" width={4}>
-
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
+            <div id="footer-contact-container">
+                <div className="footer-col">
+                    <Header id="copyright" as="h4">© 2024 Zuse Inc., American Contract Printing</Header>
+                </div>
+                <div className="footer-col">
+                    <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-675-9550</Header>
+                </div>
+            </div>
         </div>
     );
 }

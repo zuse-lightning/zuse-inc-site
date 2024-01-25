@@ -1,22 +1,29 @@
 #social-links-container {
     background-color: #fefcfd;
     padding: 2% 0;
-    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 20%;
+    margin: 0 40%;
+}
+
+.social-col:nth-child(1) {
+    grid-column: span 2;
 }
 
 #social-links-header {
     font-weight: 900;
-}
-
-.social-icon-wrapper {
-    margin: 0 -12.5%;
-    width: 100%;
+    width: 80%;
+    margin: 0 10% 5%;
+    text-align: center;
 }
 
 #footer-facebook-icon {
-    width: 50%;
+    width: 20%;
+    margin: 0 0 0 75%;
 }
 
 #footer-instagram-icon {
-    width: 50%;
+    width: 20%;
+    margin: 0 0 0 4%;
 }

@@ -54,7 +54,7 @@ const HomeContactForm = () => {
                         <Header as="h1" id="home-contact-header">Request A Call Back</Header>
                         <Header as="h3" id="home-contact-subheader">If you have any further questions, feel free to fill out your information and let us know!</Header>
                         <div className="home-form-field-col">
-                            <Header id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />Call: 203-775-9550</Header>
+                            <Header id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
                         </div>
                         <div className="home-form-field-col">
                             <Header id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>

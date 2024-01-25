@@ -7,6 +7,16 @@
     margin-bottom: 3%;
 }
 
+#footer-contact-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+}
+
+.footer-col:nth-child(1), .footer-col:nth-child(2) {
+    grid-column: span 3;
+}
+
 .footer-nav-item, #phone-icon, #phone-number, #copyright {
     color: white!important;
 }
