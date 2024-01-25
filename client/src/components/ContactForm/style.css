@@ -1,9 +1,13 @@
-#contact-form-container {
+#contact-form-container, #thank-you-container {
     background-color: #fefcfd;
     width: 60%;
     margin: -0.2% 20% 0;
     border: solid 1px #fefcfd;
     padding: 2%;
+}
+
+#thank-you-container:nth-child(1), #thank-you-container:nth-child(2) {
+    text-align: center;
 }
 
 #form-field-container {

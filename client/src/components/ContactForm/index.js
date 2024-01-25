@@ -40,8 +40,10 @@ const ContactForm = (props) => {
     if (submitted) {
         return (
             <>
-                <h2>Thank you!</h2>
-                <div>We'll be in touch soon.</div>
+                <div id="thank-you-container">
+                    <h2>Thank you!</h2>
+                    <div>We'll be in touch soon.</div>
+                </div>
             </>
         );
     };

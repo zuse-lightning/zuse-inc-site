@@ -40,8 +40,10 @@ const HomeContactForm = () => {
     if (submitted) {
         return (
             <>
-                <h2>Thank you!</h2>
-                <div>We'll be in touch soon.</div>
+                <div id="home-thank-you-container">
+                    <h2 id="thank-you">Thank you!</h2>
+                    <div id="in-touch">We'll be in touch soon.</div>
+                </div>
             </>
         );
     };

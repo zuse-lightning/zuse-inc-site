@@ -1,10 +1,15 @@
-#home-contact-form-container {
+#home-contact-form-container, #home-thank-you-container {
     background-color: #fefcfd;
     background-image: url(../../assets/images/home-contact-background.png);
     background-size: contain;
     width: 60%;
     margin: -0.2% 20% 0;
     padding: 2%;
+}
+
+#thank-you, #in-touch {
+    text-align: center;
+    color: #fefcfd;
 }
 
 #home-contact-header {
