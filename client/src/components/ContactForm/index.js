@@ -73,7 +73,7 @@ const ContactForm = (props) => {
                         <input id="company-input" type="text" placeholder="Company" name="company" />
                     </div>
                     <div className="form-field-col">
-                        <textarea id="message-input" placeholder="Message" name="name" />
+                        <textarea id="message-input" placeholder="Message" name="message" />
                     </div>
                 </div>
                 <button id="submit-btn" type="submit">Send Message</button>
