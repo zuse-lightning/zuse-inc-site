@@ -3,7 +3,7 @@ import { Grid, Header, Icon } from "semantic-ui-react";
 
 import "./style.css";
 
-const FORM_ENDPOINT = "https://herotofu.com/start";
+const FORM_ENDPOINT = "https://public.herotofu.com/v1/b47b0040-bba2-11ee-8fa9-872d80d8eac1";
 
 const HomeContactForm = () => {
     const [submitted, setSubmitted] = useState(false);
@@ -84,6 +84,9 @@ const HomeContactForm = () => {
                                 </div>
                             </div>
                             <button id="home-submit-btn" type="submit">Send Message</button>
+                            <div style={{textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute"}} aria-hidden="true">
+                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+                            </div>
                         </form>
                     </Grid.Column>
                 </Grid.Row>
