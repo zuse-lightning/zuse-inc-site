@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Header, Icon, Image } from "semantic-ui-react";
+import { Header, Icon, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import FacebookIcon from "../../assets/images/facebook-icon-white.png";
 import InstagramIcon from "../../assets/images/instagram-icon-white.png";
 
@@ -17,8 +18,12 @@ const AnnouncementBar = (props) => {
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
-                    <Image className="announce-social-icon" id="announce-facebook-icon" src={FacebookIcon} />
-                    <Image className="announce-social-icon" id="announce-instagram-icon" src={InstagramIcon} />
+                    <Link target=":blank" to="https://www.facebook.com/profile.php?id=100091589973552">
+                        <Image className="announce-social-icon" id="announce-facebook-icon" src={FacebookIcon} />
+                    </Link>
+                    <Link target=":blank" to="https://www.instagram.com/zuseincapparel/">
+                        <Image className="announce-social-icon" id="announce-instagram-icon" src={InstagramIcon} />
+                    </Link>
                 </div>
             </div>
             <div className="announce-col">
