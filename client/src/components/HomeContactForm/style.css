@@ -7,6 +7,10 @@
     padding: 2%;
 }
 
+#home-thank-you-container {
+    background-image: url(../../assets/images/home-contact-background.png);
+}
+
 #thank-you, #in-touch {
     text-align: center;
     color: #fefcfd;

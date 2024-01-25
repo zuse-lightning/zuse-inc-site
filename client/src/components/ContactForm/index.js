@@ -77,9 +77,15 @@ const ContactForm = (props) => {
                     <div className="form-field-col">
                         <textarea id="message-input" placeholder="Message" name="message" />
                     </div>
+                    {/* <div className="form-field-col">
+                        <label for="art-file">Upload Your Design:</label>
+                    </div>
+                    <div className="form-field-col">
+                        <input type="file" id="art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
+                    </div> */}
                 </div>
                 <button id="submit-btn" type="submit">Send Message</button>
-                <div style={{textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute"}} aria-hidden="true">
+                <div style={{ textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute" }} aria-hidden="true">
                     <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
                 </div>
             </form>

@@ -13,10 +13,10 @@
 #form-field-container {
     display: grid;
     width: 80%;
-    margin: 0 10%;
-    height: 500px;
-    grid-template: repeat(4, 2fr) / 50% 50%;
+    margin: 0 10% 3%;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
+    row-gap: 40px;
 }
 
 #contact-phone-number, #contact-address {
@@ -26,7 +26,6 @@
 
 #name-input, #email-input, #company-input, #phone-input {
     width: 100%;
-    margin: 5.5% 0%;
     font-family: "Lato", "Helvetica Neuve";
     height: 50px;
     font-size: 20px;
@@ -37,7 +36,6 @@
 
 #message-input {
     width: 100%;
-    margin: 3% 0%;
     font-family: "Lato", "Helvetica Neuve";
     height: 100px;
     font-size: 20px;
@@ -53,34 +51,43 @@
     border: solid 1px #fefcfd;
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
-    margin: 3% 30%;
+    margin: 0% 30% 3%;
 }
 
-/* .form-field-col:nth-child(1) {
-    background-color: blue;
+.form-field-col:nth-child(1) {
+    grid-column: span 2;
 }
 
 .form-field-col:nth-child(2) {
-    background-color: blueviolet;
+    grid-column: span 2;
 }
 
 .form-field-col:nth-child(3) {
-    background-color: olive;
+    grid-column: span 2;
 }
 
 .form-field-col:nth-child(4) {
-    background-color: gold;
+    grid-column: span 2;
 }
 
 .form-field-col:nth-child(5) {
-    background-color: green;
+    grid-column: span 2;
 }
 
 .form-field-col:nth-child(6) {
-    background-color: hotpink;
-} */
+    grid-column: span 2;
+}
 
 .form-field-col:nth-child(7) {
-    /* background-color: red; */
-    grid-column: span 2;
+    grid-column: span 4;
+}
+
+.form-field-col:nth-child(8) {
+    grid-column: 2 / span 1;
+    text-align: end;
+}
+
+.form-field-col:nth-child(9) {
+    grid-column: span 1;
+    text-align: start;
 }
