@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Header, Icon } from "semantic-ui-react";
 
 import "./style.css";
@@ -7,30 +8,24 @@ const FORM_ENDPOINT = "https://public.herotofu.com/v1/b47b0040-bba2-11ee-8fa9-87
 
 const ContactForm = (props) => {
     const [submitted, setSubmitted] = useState(false);
+    const { register } = useForm();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const inputs = e.target.elements;
-        const data = {};
+        const contactForm = document.getElementById("contact-form");       
+        const formData = new FormData(contactForm);
 
-        for (let i = 0; i < inputs.length; i++) {
-            if (inputs[i].name) {
-                data[inputs[i].name] = inputs[i].value;
-            }
-        };
+        console.log(formData);
 
-        fetch(FORM_ENDPOINT, {
+        const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
+            body: formData
         }).then((response) => {
             if (!response.ok) {
                 throw new Error("Form response was not ok");
             }
+            console.log(response);
             setSubmitted(true);
         }).catch((err) => {
             e.target.submit();
@@ -54,6 +49,7 @@ const ContactForm = (props) => {
                 action={FORM_ENDPOINT}
                 onSubmit={handleSubmit}
                 method="POST"
+                id="contact-form"
             >
                 <div id="form-field-container">
                     <div className="form-field-col">
@@ -77,12 +73,12 @@ const ContactForm = (props) => {
                     <div className="form-field-col">
                         <textarea id="message-input" placeholder="Message" name="message" />
                     </div>
-                    {/* <div className="form-field-col">
+                    <div className="form-field-col">
                         <label for="art-file">Upload Your Design:</label>
                     </div>
                     <div className="form-field-col">
-                        <input type="file" id="art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
-                    </div> */}
+                        <input type="file" {...register("file")} id="art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
+                    </div>
                 </div>
                 <button id="submit-btn" type="submit">Send Message</button>
                 <div style={{ textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute" }} aria-hidden="true">
