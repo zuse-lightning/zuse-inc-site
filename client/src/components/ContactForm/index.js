@@ -25,9 +25,6 @@ const ContactForm = (props) => {
             if (!response.ok) {
                 throw new Error("Form response was not ok");
             }
-            console.log(response);
-            alert(formData);
-            alert(response);
             setSubmitted(true);
         }).catch((err) => {
             e.target.submit();
