@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Grid, Header, Icon } from "semantic-ui-react";
+import { Grid, Header, Icon, Button } from "semantic-ui-react";
 
 import "./style.css";
 
@@ -82,7 +82,7 @@ const HomeContactForm = () => {
                                 </Grid.Row>
                                 <Grid.Row centered>
                                     <Grid.Column width={4}>
-                                        <label id="upload-label" for="art-file">Upload Your Design:</label>
+                                        <label id="upload-label" for="home-art-file">Upload Your Design:</label>
                                     </Grid.Column>
                                     <Grid.Column width={3}>
                                         <input type="file" {...register("file")} id="home-art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
