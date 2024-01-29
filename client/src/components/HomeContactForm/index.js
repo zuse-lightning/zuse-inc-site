@@ -57,6 +57,7 @@ const HomeContactForm = () => {
                             action={FORM_ENDPOINT}
                             onSubmit={handleSubmit}
                             method="POST"
+                            id="home-contact-form"
                         >
                             <Grid>
                                 <Grid.Row>
@@ -96,8 +97,6 @@ const HomeContactForm = () => {
                         </form>
                     </Grid.Column>
                 </Grid.Row>
-
-
             </Grid>
         </div>
     );
