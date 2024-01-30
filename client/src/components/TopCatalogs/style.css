@@ -58,4 +58,12 @@
         width: 80%;
         margin: 0 10%;
     }
+
+    #catalogs-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .catalog-col:has(#stormtech) {
+        grid-column: 2 / span 1;
+    }
 }

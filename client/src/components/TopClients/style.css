@@ -38,4 +38,13 @@
         width: 80%;
         margin: 0 10%;
     }
+
+    #clients-container {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 30px;
+    }
+
+    .clients-col:nth-child(9) {
+        grid-column: 2 / span 1;
+    }
 }
