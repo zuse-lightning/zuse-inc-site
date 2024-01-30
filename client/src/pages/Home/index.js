@@ -14,6 +14,9 @@ import "./style.css";
 
 class Home extends Component {
     render() {
+
+        const { screenWidth } = this.props;
+        
         return (
             <>
                 <HomeSlideShow />
@@ -22,7 +25,7 @@ class Home extends Component {
                 <HomeTrustBadges />
                 <OurServices />
                 <TopCatalogs />
-                <HomeContactForm />
+                <HomeContactForm screenWidth={screenWidth} />
             </>
         );
     }

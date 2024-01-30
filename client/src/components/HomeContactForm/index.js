@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Grid, Header, Icon, Button } from "semantic-ui-react";
 
@@ -6,10 +6,26 @@ import "./style.css";
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/b47b0040-bba2-11ee-8fa9-872d80d8eac1";
 
-const HomeContactForm = () => {
+const HomeContactForm = (props) => {
+    const { screenWidth } = props;
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
+    
+    let uploadColumn;
+    let fileColumn;
 
+    const handleGridResize = (width) => {
+        if (width <= 1699 && width >= 1200) {
+            uploadColumn = 6;
+            fileColumn = 6;
+        } else {
+            uploadColumn = 4;
+            fileColumn = 4;
+        }
+    }
+
+    handleGridResize(screenWidth);
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -82,10 +98,10 @@ const HomeContactForm = () => {
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row centered>
-                                    <Grid.Column width={4}>
+                                    <Grid.Column width={uploadColumn}>
                                         <label id="upload-label" for="home-art-file">Upload Your Design:</label>
                                     </Grid.Column>
-                                    <Grid.Column width={3}>
+                                    <Grid.Column width={fileColumn}>
                                         <input type="file" {...register("file")} id="home-art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
                                     </Grid.Column>
                                 </Grid.Row>

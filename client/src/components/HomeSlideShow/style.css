@@ -35,3 +35,10 @@
 .home-slideshow-dot.active {
     background-color: #838085;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    .home-slideshow-dots {
+        width: 80%;
+        margin: 0 10%;
+    }
+}

@@ -47,7 +47,7 @@ class App extends Component {
             <PageBanner />
             <div id="main-container">
               <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Route exact path="/" element={<Home screenWidth={this.state.screenWidth} />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/services/*" element={<Services />} />
                 <Route exact path="/contact" element={<Contact />} />

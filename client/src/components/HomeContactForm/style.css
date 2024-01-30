@@ -1,4 +1,5 @@
-#home-contact-form-container, #home-thank-you-container {
+#home-contact-form-container,
+#home-thank-you-container {
     background-color: #fefcfd;
     background-image: url(../../assets/images/home-contact-background.png);
     background-size: contain;
@@ -11,7 +12,8 @@
     background-image: url(../../assets/images/home-contact-background.png);
 }
 
-#thank-you, #in-touch {
+#thank-you,
+#in-touch {
     text-align: center;
     color: #fefcfd;
 }
@@ -91,5 +93,21 @@
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
     margin: 6% 30% 0;
-    cursor: pointer!important
+    cursor: pointer !important
+}
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+
+    #home-contact-form-container,
+    #home-thank-you-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #home-name-input,
+    #home-email-input,
+    #home-company-input,
+    #home-phone-input {
+        height: 40px;
+    }
 }

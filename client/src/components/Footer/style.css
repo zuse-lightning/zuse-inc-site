@@ -20,3 +20,9 @@
 .footer-nav-item, #phone-icon, #phone-number, #copyright {
     color: white!important;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    .footer-col:nth-child(1), .footer-col:nth-child(2) {
+        grid-column: span 5;
+    }
+}

@@ -25,3 +25,10 @@
 .home-about-sublist-icon {
     color: #f11515;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #home-about-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}

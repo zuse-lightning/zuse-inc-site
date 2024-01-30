@@ -25,3 +25,10 @@
     width: 50%;
     margin: 0 25%;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #top-clients-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
