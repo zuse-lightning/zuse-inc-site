@@ -18,6 +18,9 @@ const HomeContactForm = (props) => {
         if (width <= 1699 && width >= 1200) {
             uploadColumn = 6;
             fileColumn = 6;
+        } else if (width <= 1199 && width >= 992) {
+            uploadColumn = 7;
+            fileColumn = 9;
         } else {
             uploadColumn = 4;
             fileColumn = 4;

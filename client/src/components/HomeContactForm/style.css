@@ -97,11 +97,11 @@
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
-
     #home-contact-form-container,
     #home-thank-you-container {
         width: 80%;
         margin: 0 10%;
+        background-size: cover;
     }
 
     #home-name-input,
@@ -109,5 +109,32 @@
     #home-company-input,
     #home-phone-input {
         height: 40px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #home-contact-form-container,
+    #home-thank-you-container {
+        width: 80%;
+        margin: 0 10%;
+        background-size: cover;
+    }
+
+    #home-name-input,
+    #home-email-input,
+    #home-company-input,
+    #home-phone-input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #home-message-input {
+        font-size: 16px;
+    }
+
+    #home-submit-btn {
+        width: 50%;
+        margin: 6% 25% 0;
+        height: 50px;
     }
 }

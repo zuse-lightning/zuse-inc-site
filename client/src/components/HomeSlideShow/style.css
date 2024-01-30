@@ -42,3 +42,10 @@
         margin: 0 10%;
     }
 }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .home-slideshow-dots {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
