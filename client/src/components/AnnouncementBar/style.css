@@ -24,3 +24,9 @@
 #announce-instagram-icon {
     width: 40%;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #announcement-container {
+        grid-template-columns: 20% 15% 45% 5% 5%;
+    }
+}

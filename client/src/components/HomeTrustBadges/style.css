@@ -29,3 +29,10 @@
 .trust-badge-title {
     font-size: 24px!important;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #trust-badges-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
