@@ -98,10 +98,6 @@
         margin: 0;
     }
 
-    .services-card {
-        height: 400px;
-    }
-
     .services-card-description {
         height: 40%;
     }
@@ -140,14 +136,6 @@
         margin: 0;
     }
 
-    .services-card {
-        height: 400px;
-    }
-
-    .services-card-description {
-        height: 50%;
-    }
-
     .services-col:nth-child(1) {
         grid-column: span 2;
     }
@@ -182,14 +170,6 @@
         margin: 0 20%;
     }
 
-    .services-card {
-        height: 350px;
-    }
-
-    .services-card-description {
-        height: 20%;
-    }
-
     .services-card-image { 
         width: 20%;
         margin: 0 40%;
@@ -219,14 +199,6 @@
         row-gap: 20px;
         width: 60%;
         margin: 0 20%;
-    }
-
-    .services-card {
-        height: 350px;
-    }
-
-    .services-card-description {
-        height: 20%;
     }
 
     .services-card-image { 
@@ -261,14 +233,6 @@
         margin: 0 5%;
     }
 
-    .services-card {
-        height: 350px;
-    }
-
-    .services-card-description {
-        height: 30%;
-    }
-
     .services-card-image { 
         width: 20%;
         margin: 0 40%;
@@ -299,14 +263,6 @@
         row-gap: 20px;
         width: 90%;
         margin: 0 5%;
-    }
-
-    .services-card {
-        height: 400px;
-    }
-
-    .services-card-description {
-        height: 40%;
     }
 
     .services-card-image { 
