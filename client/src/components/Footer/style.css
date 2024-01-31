@@ -35,3 +35,12 @@
         padding: 1.5% 10% 2%
     }
 }
+
+@media (max-width: 991px) and (min-width: 801px) {
+    .footer-col:nth-child(1), .footer-col:nth-child(2){
+        grid-column: span 6;
+    }
+    #footer-container {
+        padding: 1.5% 10% 2%
+    }
+}

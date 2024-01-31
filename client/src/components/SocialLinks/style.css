@@ -34,3 +34,10 @@
         margin: 0 35%;
     }
 }
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #social-links-container {
+        width: 30%;
+        margin: 0 35%;
+    }
+}
