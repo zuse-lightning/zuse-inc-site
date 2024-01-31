@@ -97,4 +97,7 @@
     .catalog-col:has(#charles-river) {
         margin-top: 11%;
     }
+    #top-catalogs-header {
+        text-align: center;
+    }
 }

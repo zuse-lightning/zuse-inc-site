@@ -97,6 +97,7 @@
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
+
     #home-contact-form-container,
     #home-thank-you-container {
         width: 80%;
@@ -113,6 +114,7 @@
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
+
     #home-contact-form-container,
     #home-thank-you-container {
         width: 80%;
@@ -140,6 +142,7 @@
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
+
     #home-contact-form-container,
     #home-thank-you-container {
         width: 70%;
@@ -148,7 +151,7 @@
     }
 
     #home-form-field-row:nth-child(1) {
-        width: 100%!important;
+        width: 100% !important;
     }
 
     #home-name-input,
@@ -159,7 +162,8 @@
         font-size: 16px;
     }
 
-    #home-name-input, #home-phone-input {
+    #home-name-input,
+    #home-phone-input {
         margin-bottom: 28px;
     }
 
@@ -172,5 +176,47 @@
         width: 50%;
         margin: 6% 25% 0;
         height: 50px;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+
+    #home-contact-form-container,
+    #home-thank-you-container {
+        width: 70%;
+        margin: 0 15%;
+        background-size: cover;
+    }
+
+    #home-form-field-row:nth-child(1) {
+        width: 100% !important;
+    }
+
+    #home-name-input,
+    #home-email-input,
+    #home-company-input,
+    #home-phone-input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #home-name-input,
+    #home-phone-input {
+        margin-bottom: 28px;
+    }
+
+    #home-message-input {
+        font-size: 16px;
+        padding: 2% 3.5%;
+    }
+
+    #home-submit-btn {
+        width: 50%;
+        margin: 6% 25% 0;
+        height: 50px;
+    }
+
+    #home-contact-header {
+        text-align: center;
     }
 }

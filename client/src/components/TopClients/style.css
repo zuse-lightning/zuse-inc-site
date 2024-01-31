@@ -75,4 +75,9 @@
         grid-template-columns: repeat(2, 1fr);
         row-gap: 30px;
     }
+
+    #top-clients-header {
+        text-align: center;
+        margin-top: 4%;
+    }
 }

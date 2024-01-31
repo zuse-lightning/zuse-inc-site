@@ -52,4 +52,9 @@
         width: 70%;
         margin: 0 15%;
     }
+
+    #home-about-header {
+        text-align: center;
+        margin-top: 4%;
+    }
 }
