@@ -55,3 +55,10 @@
         margin: 0 20%;
     }
 }
+
+@media (max-width: 361px) {
+    #social-links-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}

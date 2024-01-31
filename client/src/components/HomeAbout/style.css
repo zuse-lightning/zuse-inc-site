@@ -70,3 +70,19 @@
         margin-top: 4%;
     }
 }
+
+@media (max-width: 361px) {
+    #home-about-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #home-about-header {
+        text-align: center;
+        margin: 4% 0 10%;
+    }
+
+    #paragraph2 {
+        margin-bottom: 0%;
+    }
+}

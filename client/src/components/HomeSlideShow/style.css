@@ -86,3 +86,13 @@
         margin-bottom: -1.1%;
     }
 }
+
+@media (max-width: 361px) {
+    .home-slideshow-dots {
+        width: 70%;
+        margin: 0 15%;
+    }
+    .home-slideshow-slider {
+        margin-bottom: -1.3%;
+    }
+}

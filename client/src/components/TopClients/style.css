@@ -99,3 +99,21 @@
         margin-bottom: 10%;
     }
 }
+
+@media (max-width: 361px) {
+    #top-clients-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #clients-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    #top-clients-header {
+        text-align: center;
+        margin-top: 4%;
+        margin-bottom: 10%;
+    }
+}

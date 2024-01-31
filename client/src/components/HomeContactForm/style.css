@@ -289,3 +289,73 @@
         text-align: center;
     }
 }
+
+@media (max-width: 361px) {
+
+    #home-contact-form-container,
+    #home-thank-you-container {
+        width: 70%;
+        margin: 0 15%;
+        background-size: cover;
+    }
+
+    #home-form-field-row:nth-child(1) {
+        width: 100% !important;
+    }
+
+    #home-name-input,
+    #home-email-input,
+    #home-company-input,
+    #home-phone-input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #home-name-input,
+    #home-phone-input {
+        margin-bottom: 28px;
+    }
+
+    #home-message-input {
+        font-size: 16px;
+        padding: 2% 3.5%;
+    }
+
+    #home-submit-btn {
+        width: 60%;
+        margin: 6% 20% 0;
+        height: 50px;
+    }
+
+    #home-contact-header {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #home-contact-subheader {
+        text-align: center;
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #home-contact-phone-number,
+    #home-contact-address {
+        font-size: 14px;
+        width: 90%;
+        margin: 5% 5% 10%;
+    }
+
+    #upload-label, #home-art-file {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .sixteen.wide.column:has(#upload-label) {
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    .sixteen.wide.column:has(#home-art-file) {
+        text-align: center;
+    }
+}
