@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Grid, Header, Icon, Button } from "semantic-ui-react";
+import { Grid, Header, Icon } from "semantic-ui-react";
 
 import "./style.css";
 
@@ -11,7 +11,12 @@ const HomeContactForm = (props) => {
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
     
+    let contactColumn;
     let requestColumn;
+    let nameColumn;
+    let emailColumn;
+    let phoneColumn;
+    let companyColumn;
     let uploadColumn;
     let fileColumn;
 
@@ -22,7 +27,22 @@ const HomeContactForm = (props) => {
         } else if (width <= 1199 && width >= 992) {
             uploadColumn = 7;
             fileColumn = 9;
+        } else if (width <= 991) {
+            requestColumn = 16;
+            contactColumn = 16;
+            nameColumn = 16;
+            emailColumn = 16;
+            phoneColumn = 16;
+            companyColumn = 16;
+            uploadColumn = 5;
+            fileColumn = 6;
         } else {
+            requestColumn = 8;
+            contactColumn = 8;
+            nameColumn = 8;
+            emailColumn = 8;
+            phoneColumn = 8;
+            companyColumn = 8;
             uploadColumn = 4;
             fileColumn = 4;
         }
@@ -66,13 +86,13 @@ const HomeContactForm = (props) => {
         <div id="home-contact-form-container">
             <Grid>
                 <Grid.Row centered>
-                    <Grid.Column width={8}>
+                    <Grid.Column width={requestColumn}>
                         <Header as="h1" id="home-contact-header">Request A Call Back</Header>
                         <Header as="h3" id="home-contact-subheader">If you have any further questions, feel free to fill out your information and let us know!</Header>
                         <Header id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
                         <Header id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
                     </Grid.Column>
-                    <Grid.Column width={8}>
+                    <Grid.Column width={contactColumn}>
                         <form
                             action={FORM_ENDPOINT}
                             onSubmit={handleSubmit}
@@ -81,18 +101,18 @@ const HomeContactForm = (props) => {
                         >
                             <Grid>
                                 <Grid.Row>
-                                    <Grid.Column width={8}>
+                                    <Grid.Column width={nameColumn}>
                                         <input id="home-name-input" type="text" placeholder="Name (required)" name="name" required />
                                     </Grid.Column>
-                                    <Grid.Column width={8}>
+                                    <Grid.Column width={emailColumn}>
                                         <input id="home-email-input" type="email" placeholder="Email (required)" name="email" required />
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row>
-                                    <Grid.Column width={8}>
+                                    <Grid.Column width={phoneColumn}>
                                         <input id="home-phone-input" type="text" placeholder="Phone Number" name="phone-number" />
                                     </Grid.Column>
-                                    <Grid.Column width={8}>
+                                    <Grid.Column width={companyColumn}>
                                         <input id="home-company-input" type="text" placeholder="Company" name="company" />
                                     </Grid.Column>
                                 </Grid.Row>

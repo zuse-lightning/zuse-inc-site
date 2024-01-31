@@ -138,3 +138,39 @@
         height: 50px;
     }
 }
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #home-contact-form-container,
+    #home-thank-you-container {
+        width: 70%;
+        margin: 0 15%;
+        background-size: cover;
+    }
+
+    #home-form-field-row:nth-child(1) {
+        width: 100%!important;
+    }
+
+    #home-name-input,
+    #home-email-input,
+    #home-company-input,
+    #home-phone-input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #home-name-input, #home-phone-input {
+        margin-bottom: 28px;
+    }
+
+    #home-message-input {
+        font-size: 16px;
+        padding: 2% 3.5%;
+    }
+
+    #home-submit-btn {
+        width: 50%;
+        margin: 6% 25% 0;
+        height: 50px;
+    }
+}
