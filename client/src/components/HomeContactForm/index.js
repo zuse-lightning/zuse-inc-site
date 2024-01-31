@@ -27,7 +27,7 @@ const HomeContactForm = (props) => {
         } else if (width <= 1199 && width >= 992) {
             uploadColumn = 7;
             fileColumn = 9;
-        } else if (width <= 991) {
+        } else if (width <= 991 && width >= 768) {
             requestColumn = 16;
             contactColumn = 16;
             nameColumn = 16;
@@ -36,6 +36,15 @@ const HomeContactForm = (props) => {
             companyColumn = 16;
             uploadColumn = 5;
             fileColumn = 6;
+        } else if (width <= 767) {
+            uploadColumn = 16;
+            fileColumn = 16;
+            requestColumn = 16;
+            contactColumn = 16;
+            nameColumn = 16;
+            emailColumn = 16;
+            phoneColumn = 16;
+            companyColumn = 16;
         } else {
             requestColumn = 8;
             contactColumn = 8;
