@@ -41,3 +41,10 @@
         margin: 0 35%;
     }
 }
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #social-links-container {
+        width: 30%;
+        margin: 0 35%;
+    }
+}

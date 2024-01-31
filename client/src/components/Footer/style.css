@@ -44,3 +44,15 @@
         padding: 1.5% 10% 2%
     }
 }
+
+@media (max-width: 800px) and (min-width: 768px) {
+    .footer-col:nth-child(1) {
+        grid-column: span 7;
+    }
+    .footer-col:nth-child(2) {
+        grid-column: span 5;
+    }
+    #footer-container {
+        padding: 1.5% 10% 2%
+    }
+}
