@@ -224,14 +224,14 @@
 
     #our-services-header {
         text-align: center;
-        margin-bottom: 10%;
+        margin: 4% 0 10%;
     }
 
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
         row-gap: 20px;
-        width: 90%;
-        margin: 0 5%;
+        width: 80%;
+        margin: 5% 10%;
     }
 
     .services-card-image { 
@@ -243,8 +243,8 @@
         margin: 5% 0;
     }
     .services-card-btn {
-        width: 100%!important;
-        margin: 90px 0!important;
+        width: 90%!important;
+        margin: 0 5%!important;
     }
 }
 

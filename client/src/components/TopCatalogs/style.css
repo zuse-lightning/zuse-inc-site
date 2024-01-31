@@ -101,3 +101,21 @@
         text-align: center;
     }
 }
+
+@media (max-width: 767px) and (min-width: 362px) {
+    #top-catalogs-container {
+        width: 70%;
+        margin: 0 15%;
+        padding-bottom: 3%;
+    }
+
+    #catalogs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .catalog-col:has(#charles-river) {
+        margin-top: 11%;
+    }
+    #top-catalogs-header {
+        text-align: center;
+    }
+}

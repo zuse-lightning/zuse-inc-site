@@ -58,3 +58,15 @@
         margin-top: 4%;
     }
 }
+
+@media (max-width: 767px) and (min-width: 362px) {
+    #home-about-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #home-about-header {
+        text-align: center;
+        margin-top: 4%;
+    }
+}
