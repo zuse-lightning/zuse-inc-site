@@ -30,3 +30,9 @@
         grid-template-columns: 20% 15% 45% 5% 5%;
     }
 }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #announcement-container {
+        grid-template-columns: 20% 20% 40% 7.5% 12.5%;
+    }
+}

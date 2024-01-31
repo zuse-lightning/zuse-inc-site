@@ -20,17 +20,19 @@ class App extends Component {
   }
 
   handleResize = (e) => {
-    this.setState({ screenWidth: window.innerWidth - 14 });
+    this.setState({ screenWidth: window.innerWidth });
   }
 
   componentDidMount() {
     window.addEventListener("resize", this.handleResize);
     const width = JSON.parse(window.localStorage.getItem("screenWidth"));
     this.setState(width);
+    console.log(this.state.screenWidth);
   }
 
   componentDidUpdate() {
     window.localStorage.setItem("screenWidth", JSON.stringify(this.state));
+    console.log(this.state.screenWidth);
   }
 
   componentWillUnmount() {

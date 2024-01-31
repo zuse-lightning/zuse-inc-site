@@ -41,3 +41,9 @@
         background-color: transparent!important;
     }
 }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #main-menu {
+        padding: 1% 5%;
+    }
+}
