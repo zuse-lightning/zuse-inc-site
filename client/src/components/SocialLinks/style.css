@@ -48,3 +48,10 @@
         margin: 0 35%;
     }
 }
+
+@media (max-width: 767px) and (min-width: 362px) {
+    #social-links-container {
+        width: 60%;
+        margin: 0 20%;
+    }
+}

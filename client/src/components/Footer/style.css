@@ -5,6 +5,8 @@
 
 #footer-menu {
     margin-bottom: 3%;
+    margin-left: 3.5%;
+    width: 80%;
 }
 
 #footer-contact-container {
@@ -51,6 +53,23 @@
     }
     .footer-col:nth-child(2) {
         grid-column: span 5;
+    }
+    #footer-container {
+        padding: 1.5% 10% 2%
+    }
+}
+
+@media (max-width: 767px) and (min-width: 362px) {
+    #footer-contact-container {
+        row-gap: 20px;
+    }
+    .footer-col:nth-child(1) {
+        grid-column: span 12;
+        text-align: center;
+    }
+    .footer-col:nth-child(2) {
+        grid-column: span 12;
+        text-align: center;
     }
     #footer-container {
         padding: 1.5% 10% 2%
