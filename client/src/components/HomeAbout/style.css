@@ -46,3 +46,10 @@
         margin: 0 15%;
     }
 }
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #home-about-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}

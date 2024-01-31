@@ -192,26 +192,27 @@
 
     #our-services-header {
         text-align: center;
+        margin-top: 4%;
     }
 
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
         row-gap: 20px;
         width: 60%;
-        margin: 0 20%;
+        margin: 4% 20%;
     }
 
     .services-card-image { 
-        width: 20%;
-        margin: 0 40%;
+        width: 40%;
+        margin: 0 30%;
     }
 
     .services-card-header {
         margin: 5% 0;
     }
     .services-card-btn {
-        width: 50%!important;
-        margin: 110px 25%!important;
+        width: 60%!important;
+        margin: 0 20%!important;
     }
 }
 
