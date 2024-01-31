@@ -43,3 +43,10 @@
         padding: 2%;
     }
 }
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #announcement-container {
+        grid-template-columns: 5% 30% 55% 10% 0%;
+        padding: 2%;
+    }
+}
