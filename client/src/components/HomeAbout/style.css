@@ -39,3 +39,10 @@
         margin: 0 10%;
     }
 }
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #home-about-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}

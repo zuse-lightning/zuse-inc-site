@@ -40,6 +40,10 @@
         text-decoration: none!important;
         background-color: transparent!important;
     }
+
+    #header-nav-stack {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {

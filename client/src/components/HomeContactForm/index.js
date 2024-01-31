@@ -11,6 +11,7 @@ const HomeContactForm = (props) => {
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
     
+    let requestColumn;
     let uploadColumn;
     let fileColumn;
 

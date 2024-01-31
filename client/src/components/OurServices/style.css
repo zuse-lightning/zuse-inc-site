@@ -171,8 +171,8 @@
     }
 
     .services-card-image { 
-        width: 20%;
-        margin: 0 40%;
+        width: 40%;
+        margin: 0 30%;
     }
 
     .services-card-header {
@@ -180,7 +180,7 @@
     }
     .services-card-btn {
         width: 50%!important;
-        margin: 90px 25%!important;
+        margin: 0 25%!important;
     }
 }
 

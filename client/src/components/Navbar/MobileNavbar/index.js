@@ -25,8 +25,18 @@ const MobileNavbar = () => {
 
     return (
         <Menu id="main-menu" fluid secondary>
-            <Menu.Item>
-                <Icon name="bars"
+            <Menu.Item
+                className="header-nav-item"
+                position="left"
+                as={Link}
+                to="/"
+                name="home"
+            >
+                <div id="zuse-logo-container">
+                    <Image size="medium" id="home-btn-img" src={ZuseLogo} />
+                </div>
+            </Menu.Item><Menu.Item>
+                <Icon id="header-nav-stack" name="bars"
                     onClick={(e) => setVisible(!visible)}
                 />
             </Menu.Item>
@@ -79,17 +89,7 @@ const MobileNavbar = () => {
                 </Menu.Item>
             </Sidebar>
 
-            <Menu.Item
-                className="header-nav-item"
-                position="right"
-                as={Link}
-                to="/"
-                name="home"
-            >
-                <div id="zuse-logo-container">
-                    <Image size="medium" id="home-btn-img" src={ZuseLogo} />
-                </div>
-            </Menu.Item>
+            
         </Menu>
     );
 };

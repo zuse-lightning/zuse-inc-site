@@ -12,8 +12,8 @@
 }
 
 .trust-badge-col {
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0 0%;
 }
 
 .trust-badge-image {
@@ -44,5 +44,14 @@
     }
     .trust-badge-title {
         font-size: 20px!important;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #trust-badges-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+        width: 80%;
+        margin: 0 10%;
     }
 }

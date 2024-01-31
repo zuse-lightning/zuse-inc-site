@@ -36,3 +36,10 @@
         grid-template-columns: 20% 20% 40% 7.5% 12.5%;
     }
 }
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #announcement-container {
+        grid-template-columns: 10% 25% 45% 10% 10%;
+        padding: 2%;
+    }
+}

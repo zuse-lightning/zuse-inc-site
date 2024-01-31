@@ -41,11 +41,28 @@
         width: 80%;
         margin: 0 10%;
     }
+
+    .home-slideshow-slider {
+        margin-bottom: -0.3%;
+    }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
     .home-slideshow-dots {
         width: 80%;
         margin: 0 10%;
+    }
+    .home-slideshow-slider {
+        margin-bottom: -0.45%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    .home-slideshow-dots {
+        width: 70%;
+        margin: 0 15%;
+    }
+    .home-slideshow-slider {
+        margin-bottom: -0.5%;
     }
 }
