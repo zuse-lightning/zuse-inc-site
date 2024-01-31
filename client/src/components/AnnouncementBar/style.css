@@ -50,3 +50,20 @@
         padding: 2%;
     }
 }
+
+@media (max-width: 767px) and (min-width: 362px) {
+    #announcement-container {
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;;
+        padding: 2%;
+    }
+    #announce-facebook-icon {
+        width: 20%;
+        margin: 0 70%;
+    }
+    
+    #announce-instagram-icon {
+        width: 20%;
+    }
+}

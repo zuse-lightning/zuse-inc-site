@@ -10,7 +10,7 @@ const Navbar = (props) => {
 
     return (
         <>
-            { screenWidth >= 992 ? <DesktopNavbar /> : <MobileNavbar /> }
+            { screenWidth >= 992 ? <DesktopNavbar /> : <MobileNavbar screenWidth={screenWidth} /> }
         </>
     );
 };

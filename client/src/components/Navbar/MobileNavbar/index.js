@@ -18,10 +18,19 @@ const catalogs = [
     { name: "Edwards Garment", link: "https://www.edwardsgarment.com/" }
 ];
 
-const MobileNavbar = () => {
+const MobileNavbar = (props) => {
 
+    const { screenWidth } = props;
     const [visible, setVisible] = useState(false);
     console.log(visible);
+
+    let logoSize;
+
+    if (screenWidth >= 768) {
+        logoSize = "medium";
+    } else {
+        logoSize = "small";
+    }
 
     return (
         <Menu id="main-menu" fluid secondary>
@@ -33,7 +42,7 @@ const MobileNavbar = () => {
                 name="home"
             >
                 <div id="zuse-logo-container">
-                    <Image size="medium" id="home-btn-img" src={ZuseLogo} />
+                    <Image size={logoSize} id="home-btn-img" src={ZuseLogo} />
                 </div>
             </Menu.Item><Menu.Item>
                 <Icon id="header-nav-stack" name="bars"

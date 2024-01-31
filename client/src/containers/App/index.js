@@ -42,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <AnnouncementBar />
+        { this.state.screenWidth >= 768 ? <AnnouncementBar /> : null }
         <Sidebar.Pushable>
           <Sidebar.Pusher>
             <Navbar screenWidth={this.state.screenWidth} />
