@@ -19,7 +19,7 @@ class Home extends Component {
         
         return (
             <>
-                <HomeSlideShow />
+                <HomeSlideShow screenWidth={screenWidth} />
                 <TopClients />
                 <HomeAbout />
                 <HomeTrustBadges />

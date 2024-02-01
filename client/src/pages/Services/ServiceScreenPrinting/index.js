@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import ScreenPrintingTemp from "../../../assets/images/screenprinting-banner.png";
+import ScreenPrintingTemp from "../../../assets/images/banners/screenprinting-banner.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";

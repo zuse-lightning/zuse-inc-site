@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import EmbroideryTemp from "../../../assets/images/embroidery-banner.png";
+import EmbroideryTemp from "../../../assets/images/banners/embroidery-banner.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";

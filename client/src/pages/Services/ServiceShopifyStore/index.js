@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import CodingBackground from "../../../assets/images/coding-background.jpeg";
+import CodingBackground from "../../../assets/images/banners/coding-background.jpeg";
 import PageContactFooter from "../../../components/PageContactFooter";
 import PGW from "../../../assets/screenshots/pgw-screenshot.png";
 import TheSpot from "../../../assets/screenshots/thespot-screenshot.png";

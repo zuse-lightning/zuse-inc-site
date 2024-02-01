@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Image } from "semantic-ui-react";
-import MainBanner from "../../assets/images/main-banner.png";
-import Fulfillment from "../../assets/images/fulfillment-banner.png";
-import ScreenPrinting from "../../assets/images/screenprinting-banner.png";
-import Embroidery from "../../assets/images/embroidery-banner.png";
+import MainBanner from "../../assets/images/banners/main-banner.png";
+import Fulfillment from "../../assets/images/banners/fulfillment-banner.png";
+import ScreenPrinting from "../../assets/images/banners/screenprinting-banner.png";
+import Embroidery from "../../assets/images/banners/embroidery-banner.png";
 
 import "./style.css";
 
+
 const banners = [MainBanner, Fulfillment, ScreenPrinting, Embroidery];
 
-const HomeSlideShow = () => {
-
+const HomeSlideShow = (props) => {
+    const { screenWidth } = props;
     const [index, setIndex] = useState(0);
     const timeoutRef = useRef(null);
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Image, List } from "semantic-ui-react";
-import FulfillmentTemp from "../../../assets/images/fulfillment-banner.png";
+import FulfillmentTemp from "../../../assets/images/banners/fulfillment-banner.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 
 import "./style.css";

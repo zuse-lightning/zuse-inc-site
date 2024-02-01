@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import PromoItemsTemp from "../../../assets/images/main-banner.png";
+import PromoItemsTemp from "../../../assets/images/banners/main-banner.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
