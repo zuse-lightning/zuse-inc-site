@@ -7,19 +7,20 @@ import ServicePromoItems from "./ServicePromoItems";
 import ServiceFulfillment from "./ServiceFulfillment";
 import ServiceShopifyStore from "./ServiceShopifyStore";
 
-const Services = () => {
+const Services = (props) => {
 
+    const { screenWidth } = props;
     const { pathname } = useLocation();
 
     return (
         <>
             {pathname === "/services" ? <OurServices /> : null}
             <Routes>
-                <Route exact path="screenprinting" element={<ServiceScreenPrinting />} />
-                <Route exact path="embroidery" element={<ServiceEmbroidery />} />
-                <Route exact path="promo-items" element={<ServicePromoItems />} />
-                <Route exact path="fulfillment" element={<ServiceFulfillment />} />
-                <Route exact path="shopify-stores" element={<ServiceShopifyStore />} />
+                <Route exact path="screenprinting" element={<ServiceScreenPrinting screenWidth={screenWidth} />} />
+                <Route exact path="embroidery" element={<ServiceEmbroidery screenWidth={screenWidth} />} />
+                <Route exact path="promo-items" element={<ServicePromoItems screenWidth={screenWidth} />} />
+                <Route exact path="fulfillment" element={<ServiceFulfillment screenWidth={screenWidth} />} />
+                <Route exact path="shopify-stores" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
             </Routes>
         </>
     );

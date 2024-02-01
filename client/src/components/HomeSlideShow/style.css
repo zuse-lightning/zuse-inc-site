@@ -36,6 +36,17 @@
     background-color: #838085;
 }
 
+@media (max-width: 2030px) and (min-width: 1700px) { 
+    .home-slideshow-dots {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .home-slideshow-slider {
+        margin-bottom: -0.3%;
+    }
+}
+
 @media (max-width: 1699px) and (min-width: 1200px) {
     .home-slideshow-dots {
         width: 80%;
