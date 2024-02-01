@@ -53,7 +53,7 @@ const HomeContactForm = (props) => {
     }
 
     handleGridResize(screenWidth);
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -63,8 +63,11 @@ const HomeContactForm = (props) => {
         console.log(formData);
 
         const response = await fetch(FORM_ENDPOINT, {
-            origin: "https://zuse-inc-site-f7c4b104cb54.herokuapp.com/",
             method: "POST",
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
             body: formData
         }).then((response) => {
             if (!response.ok) {
