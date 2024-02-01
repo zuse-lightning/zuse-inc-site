@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import ScreenPrintingTemp from "../../../assets/images/banners/screenprinting-banner.png";
+import ScreenPrinting from "../../../assets/images/banners/screenprinting.png";
+import ScreenPrintingMobile from "../../../assets/images/banners/screenprinting-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -14,13 +15,13 @@ const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, Black
 
 const ServiceScreenPrinting = (props) => {
 
-    const { pathname } = props;
+    const { pathname, screenWidth } = props;
     console.log(pathname);
 
     return (
         <div id="screen-printing-container">
             <Header as="h1" id="screen-printing-header">Screen Printing</Header>
-            <Image src={ScreenPrintingTemp} />
+            <Image fluid src={screenWidth >= 992 ? ScreenPrinting : ScreenPrintingMobile} />
             <br />
             <Header as="h2" className="screen-printing-subheader">How It Works</Header>
             <br />

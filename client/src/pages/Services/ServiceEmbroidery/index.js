@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import EmbroideryTemp from "../../../assets/images/banners/embroidery-banner.png";
+import Embroidery from "../../../assets/images/banners/embroidery.png";
+import EmbroideryMobile from "../../../assets/images/banners/embroidery-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -12,11 +13,14 @@ import "./style.css";
 const embroideryResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
 
 
-const ServiceEmbroidery = () => {
+const ServiceEmbroidery = (props) => {
+
+    const { screenWidth } = props;
+
     return (
         <div id="embroidery-container">
             <Header as="h1" id="embroidery-header">Embroidery</Header>
-            <Image src={EmbroideryTemp} />
+            <Image fluid src={screenWidth >= 992 ? Embroidery : EmbroideryMobile} />
             <br />
             <Header as="h2" className="embroidery-subheader">How It Works</Header>
             <br />
