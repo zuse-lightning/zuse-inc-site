@@ -62,7 +62,7 @@ const HomeContactForm = (props) => {
 
         console.log(formData);
 
-        await fetch(FORM_ENDPOINT, {
+        const response = await fetch(FORM_ENDPOINT, {
             origin: "https://zuse-inc-site-f7c4b104cb54.herokuapp.com/",
             method: "POST",
             body: formData
