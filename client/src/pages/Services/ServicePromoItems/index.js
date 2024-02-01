@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import PromoItemsTemp from "../../../assets/images/banners/main-banner.png";
+import PromoItems from "../../../assets/images/banners/promo-items.png";
+import PromoItemsMobile from "../../../assets/images/banners/promo-items-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -12,11 +13,14 @@ import "./style.css";
 const promoItemsResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
 
 
-const ServicePromoItems = () => {
+const ServicePromoItems = (props) => {
+
+    const { screenWidth } = props;
+
     return (
         <div id="promo-items-container">
             <Header as="h1" id="promo-items-header">Promotional Items</Header>
-            <Image src={PromoItemsTemp} />
+            <Image fluid src={screenWidth >= 992 ? PromoItems : PromoItemsMobile} />
             <br />
             <Header as="h2" className="promo-items-subheader">How It Works</Header>
             <br />

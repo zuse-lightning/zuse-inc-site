@@ -1,15 +1,19 @@
 import React from "react";
 import { Header, Image, List } from "semantic-ui-react";
-import FulfillmentTemp from "../../../assets/images/banners/fulfillment-banner.png";
+import Fulfillment from "../../../assets/images/banners/fulfillment.png";
+import FulfillmentMobile from "../../../assets/images/banners/fulfillment-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 
 import "./style.css";
 
-const ServiceFulfillment = () => {
+const ServiceFulfillment = (props) => {
+
+    const { screenWidth } = props;
+
     return (
         <div id="fulfillment-container">
             <Header as="h1" id="fulfillment-header">Fulfillment</Header>
-            <Image src={FulfillmentTemp} />
+            <Image fluid src={screenWidth >= 992 ? Fulfillment : FulfillmentMobile} />
             <br />
             <Header as="h2" className="fulfillment-subheader">How It Works</Header>
             <br />
