@@ -46,6 +46,13 @@
     margin: 0 20%;
 }
 
+@media (max-width: 2030px) and (min-width: 1700px) {
+    #top-catalogs-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
 @media (max-width: 1699px) and (min-width: 1200px) {
     #top-catalogs-container {
         width: 80%;

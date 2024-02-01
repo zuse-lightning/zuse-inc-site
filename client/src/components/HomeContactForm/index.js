@@ -21,7 +21,10 @@ const HomeContactForm = (props) => {
     }
 
     const handleGridResize = (width) => {
-        if (width <= 1699 && width >= 1200) {
+        if (width <= 2292 && width >= 2031) {
+            contactFormColumns[6] = 5;
+            contactFormColumns[7] = 5;
+        } else if (width <= 1699 && width >= 1200) {
             contactFormColumns[6] = 6;
             contactFormColumns[7] = 6;
         } else if (width <= 1199 && width >= 992) {
@@ -38,13 +41,11 @@ const HomeContactForm = (props) => {
                     contactFormColumns[index] = column;
                 }
             });
-            console.log(contactFormColumns);
         } else if (width <= 767) {
             contactFormColumns.forEach((column, index) => {
                 column = 16;
                 contactFormColumns[index] = column;
             });
-            console.log(contactFormColumns);
         } else {
             contactFormColumns[6] = 4;
             contactFormColumns[7] = 4;
@@ -52,8 +53,6 @@ const HomeContactForm = (props) => {
     }
 
     handleGridResize(screenWidth);
-
-    console.log(contactFormColumns);
     
     const handleSubmit = async (e) => {
         e.preventDefault();

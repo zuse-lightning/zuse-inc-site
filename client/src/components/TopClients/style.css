@@ -29,7 +29,7 @@
 @media (max-width: 2030px) and (min-width: 1700px) { 
     #top-clients-container {
         width: 80%;
-        margin: .1% 10% 0;
+        margin: -.1% 10% 0;
     }
 }
 

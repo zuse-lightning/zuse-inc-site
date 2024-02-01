@@ -2,7 +2,7 @@
 #home-thank-you-container {
     background-color: #fefcfd;
     background-image: url(../../assets/images/home-contact-background.png);
-    background-size: contain;
+    background-size: cover;
     width: 60%;
     margin: -0.2% 20% 0;
     padding: 4%;
@@ -95,13 +95,20 @@
     cursor: pointer !important
 }
 
+@media (max-width: 2030px) and (min-width: 1700px) {
+    #home-contact-form-container,
+    #home-thank-you-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
 @media (max-width: 1699px) and (min-width: 1200px) {
 
     #home-contact-form-container,
     #home-thank-you-container {
         width: 80%;
         margin: 0 10%;
-        background-size: cover;
     }
 
     #home-name-input,
@@ -118,7 +125,6 @@
     #home-thank-you-container {
         width: 80%;
         margin: 0 10%;
-        background-size: cover;
     }
 
     #home-name-input,
@@ -146,7 +152,6 @@
     #home-thank-you-container {
         width: 70%;
         margin: 0 15%;
-        background-size: cover;
     }
 
     #home-form-field-row:nth-child(1) {
@@ -184,7 +189,6 @@
     #home-thank-you-container {
         width: 70%;
         margin: 0 15%;
-        background-size: cover;
     }
 
     #home-form-field-row:nth-child(1) {
@@ -226,7 +230,6 @@
     #home-thank-you-container {
         width: 70%;
         margin: 0 15%;
-        background-size: cover;
     }
 
     #home-form-field-row:nth-child(1) {
@@ -296,7 +299,6 @@
     #home-thank-you-container {
         width: 70%;
         margin: 0 15%;
-        background-size: cover;
     }
 
     #home-form-field-row:nth-child(1) {
