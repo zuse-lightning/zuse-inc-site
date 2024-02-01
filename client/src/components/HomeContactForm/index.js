@@ -62,11 +62,13 @@ const HomeContactForm = (props) => {
 
         console.log(formData);
 
-        const response = await fetch(FORM_ENDPOINT, {
+        await fetch(FORM_ENDPOINT, {
+            origin: "https://zuse-inc-site-f7c4b104cb54.herokuapp.com/",
             method: "POST",
             body: formData
         }).then((response) => {
             if (!response.ok) {
+                console.log("Something went wrong");
                 throw new Error("Form response was not ok");
             }
             setSubmitted(true);
