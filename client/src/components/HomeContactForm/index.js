@@ -65,8 +65,8 @@ const HomeContactForm = (props) => {
         const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
             headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
+                Accept: 'multipart/form-data',
+                'Content-Type': 'multipart/form-data',
             },
             body: formData
         }).then((response) => {
