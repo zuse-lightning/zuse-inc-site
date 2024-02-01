@@ -87,7 +87,7 @@ const PageBanner = (props) => {
                     <Header as="h2" id="page-banner-title">{pageBannerName}</Header>
                 </div>
                 <div className="page-banner-col">
-                    <Breadcrumb>
+                    <Breadcrumb id="page-banner-breadcrumbs">
                         {pageBannerBreadcrumbs.map((crumb, index) => (
                             <>
                                 <Breadcrumb.Section as={Link} to={crumb.link} className="breadcrumb-link">{crumb.name}</Breadcrumb.Section>

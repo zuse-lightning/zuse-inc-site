@@ -4,16 +4,24 @@ import MainBanner from "../../assets/images/banners/main-banner.png";
 import Fulfillment from "../../assets/images/banners/fulfillment-banner.png";
 import ScreenPrinting from "../../assets/images/banners/screenprinting-banner.png";
 import Embroidery from "../../assets/images/banners/embroidery-banner.png";
+import MainBannerMobile from "../../assets/images/banners/main-mobile-banner.png";
+import FulfillmentMobile from "../../assets/images/banners/fulfillment-mobile-banner.png";
+import ScreenPrintingMobile from "../../assets/images/banners/screenprinting-mobile-banner.png";
+import EmbroideryMobile from "../../assets/images/banners/embroidery-mobile-banner.png";
 
 import "./style.css";
-
-
-const banners = [MainBanner, Fulfillment, ScreenPrinting, Embroidery];
 
 const HomeSlideShow = (props) => {
     const { screenWidth } = props;
     const [index, setIndex] = useState(0);
     const timeoutRef = useRef(null);
+
+    let banners;
+    if (screenWidth >= 992) {
+        banners = [MainBanner, Fulfillment, ScreenPrinting, Embroidery];
+    } else {
+        banners = [MainBannerMobile, FulfillmentMobile, ScreenPrintingMobile, EmbroideryMobile];
+    }
 
     const resetTimeout = () => {
         if(timeoutRef.current) {

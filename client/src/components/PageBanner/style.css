@@ -8,7 +8,7 @@
 
 .page-banner-col {
     width: 50%;
-    margin: 4.5% 25%;
+    margin: auto 25%;
 }
 
 #page-banner-title {
@@ -22,4 +22,70 @@
 
 .breadcrumb-link-divider {
     color: white!important;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .page-banner-col {
+        width: 60%;
+        margin: auto 20%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    .page-banner-col {
+        width: 70%;
+        margin: auto 15%;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+    .page-banner-col {
+        width: 75%;
+        margin: auto 12.5%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 423px) {
+    #page-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .page-banner-col {
+        width: 100%;
+        margin: auto 0%;
+    }
+    #page-banner-breadcrumbs {
+        width: 65%;
+        margin: 0 17.5%;
+    }
+}
+
+@media (max-width: 422px) and (min-width: 362px) {
+    #page-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .page-banner-col {
+        width: 100%;
+        margin: auto 0%;
+    }
+    #page-banner-breadcrumbs {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+@media (max-width: 361px) {
+    #page-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .page-banner-col {
+        width: 100%;
+        margin: auto 0%;
+    }
+    #page-banner-breadcrumbs {
+        width: 90%;
+        margin: 0 5%;
+    }
 }
