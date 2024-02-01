@@ -10,54 +10,50 @@ const HomeContactForm = (props) => {
     const { screenWidth } = props;
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
-    
-    let contactColumn;
-    let requestColumn;
-    let nameColumn;
-    let emailColumn;
-    let phoneColumn;
-    let companyColumn;
-    let uploadColumn;
-    let fileColumn;
+
+    let contactFormColumns = new Array(8);
+    for (let i = 0; i < contactFormColumns.length; i++) {
+        if (i >= 6) {
+            contactFormColumns[i] = 4;
+        } else {
+            contactFormColumns[i] = 8;
+        }
+    }
 
     const handleGridResize = (width) => {
         if (width <= 1699 && width >= 1200) {
-            uploadColumn = 6;
-            fileColumn = 6;
+            contactFormColumns[6] = 6;
+            contactFormColumns[7] = 6;
         } else if (width <= 1199 && width >= 992) {
-            uploadColumn = 7;
-            fileColumn = 9;
+            contactFormColumns[6] = 7;
+            contactFormColumns[7] = 9;
         } else if (width <= 991 && width >= 768) {
-            requestColumn = 16;
-            contactColumn = 16;
-            nameColumn = 16;
-            emailColumn = 16;
-            phoneColumn = 16;
-            companyColumn = 16;
-            uploadColumn = 5;
-            fileColumn = 6;
+            contactFormColumns.forEach((column, index) => {
+                column = 16;
+                if (index === 6) {
+                    contactFormColumns[index] = column - 10;
+                } else if (index === 7) {
+                    contactFormColumns[index] = column - 10;
+                } else {
+                    contactFormColumns[index] = column;
+                }
+            });
+            console.log(contactFormColumns);
         } else if (width <= 767) {
-            uploadColumn = 16;
-            fileColumn = 16;
-            requestColumn = 16;
-            contactColumn = 16;
-            nameColumn = 16;
-            emailColumn = 16;
-            phoneColumn = 16;
-            companyColumn = 16;
+            contactFormColumns.forEach((column, index) => {
+                column = 16;
+                contactFormColumns[index] = column;
+            });
+            console.log(contactFormColumns);
         } else {
-            requestColumn = 8;
-            contactColumn = 8;
-            nameColumn = 8;
-            emailColumn = 8;
-            phoneColumn = 8;
-            companyColumn = 8;
-            uploadColumn = 4;
-            fileColumn = 4;
+            contactFormColumns[6] = 4;
+            contactFormColumns[7] = 4;
         }
     }
 
     handleGridResize(screenWidth);
+
+    console.log(contactFormColumns);
     
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -95,13 +91,13 @@ const HomeContactForm = (props) => {
         <div id="home-contact-form-container">
             <Grid>
                 <Grid.Row centered>
-                    <Grid.Column width={requestColumn}>
+                    <Grid.Column width={contactFormColumns[0]}>
                         <Header as="h1" id="home-contact-header">Request A Call Back</Header>
                         <Header as="h3" id="home-contact-subheader">If you have any further questions, feel free to fill out your information and let us know!</Header>
                         <Header id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
                         <Header id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
                     </Grid.Column>
-                    <Grid.Column width={contactColumn}>
+                    <Grid.Column width={contactFormColumns[1]}>
                         <form
                             action={FORM_ENDPOINT}
                             onSubmit={handleSubmit}
@@ -110,18 +106,18 @@ const HomeContactForm = (props) => {
                         >
                             <Grid>
                                 <Grid.Row>
-                                    <Grid.Column width={nameColumn}>
+                                    <Grid.Column width={contactFormColumns[2]}>
                                         <input id="home-name-input" type="text" placeholder="Name (required)" name="name" required />
                                     </Grid.Column>
-                                    <Grid.Column width={emailColumn}>
+                                    <Grid.Column width={contactFormColumns[3]}>
                                         <input id="home-email-input" type="email" placeholder="Email (required)" name="email" required />
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row>
-                                    <Grid.Column width={phoneColumn}>
+                                    <Grid.Column width={contactFormColumns[4]}>
                                         <input id="home-phone-input" type="text" placeholder="Phone Number" name="phone-number" />
                                     </Grid.Column>
-                                    <Grid.Column width={companyColumn}>
+                                    <Grid.Column width={contactFormColumns[5]}>
                                         <input id="home-company-input" type="text" placeholder="Company" name="company" />
                                     </Grid.Column>
                                 </Grid.Row>
@@ -131,10 +127,10 @@ const HomeContactForm = (props) => {
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row centered>
-                                    <Grid.Column width={uploadColumn}>
+                                    <Grid.Column width={contactFormColumns[6]}>
                                         <label id="upload-label" for="home-art-file">Upload Your Design:</label>
                                     </Grid.Column>
-                                    <Grid.Column width={fileColumn}>
+                                    <Grid.Column width={contactFormColumns[7]}>
                                         <input type="file" {...register("file")} id="home-art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
                                     </Grid.Column>
                                 </Grid.Row>
