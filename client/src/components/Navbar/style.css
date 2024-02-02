@@ -3,20 +3,24 @@
     background-color: #fefcfd;
 }
 
+#mobile-sidebar {
+    width: 80%;
+}
+
 .header-nav-item {
     font-size: 20px;
-    text-decoration: underline!important;
+    text-decoration: underline !important;
     text-underline-offset: 20px;
-    text-decoration-color: #f11515!important;
-    transition: ease .3s!important;
+    text-decoration-color: #f11515 !important;
+    transition: ease .3s !important;
 }
 
 .header-nav-item:hover {
-    background-color: #fefcfd!important;
+    background-color: #fefcfd !important;
     color: #243557;
     text-underline-offset: 10px;
-    text-decoration-color: #243557!important;
-    transition: ease .3s!important;
+    text-decoration-color: #243557 !important;
+    transition: ease .3s !important;
 }
 
 .dropdown.icon {
@@ -24,21 +28,41 @@
 }
 
 .ui.secondary.menu .active.item {
-    background: none!important;
+    background: none !important;
 }
 
 .ui.secondary.menu .active.item:hover {
-    background: none!important;
+    background: none !important;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 991px) {
     .header-nav-item {
-        text-decoration: none!important;
+        text-decoration: none !important;
     }
 
     .header-nav-item:hover {
-        text-decoration: none!important;
-        background-color: transparent!important;
+        text-decoration: none !important;
+        background-color: transparent !important;
     }
 
     #header-nav-stack {

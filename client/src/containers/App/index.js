@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Sidebar } from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
 import AnnouncementBar from "../../components/AnnouncementBar";
 import Navbar from "../../components/Navbar";
@@ -11,7 +12,6 @@ import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
 import "./style.css";
-import { Sidebar } from "semantic-ui-react";
 
 class App extends Component {
 
@@ -43,7 +43,7 @@ class App extends Component {
     return (
       <>
         { this.state.screenWidth >= 768 ? <AnnouncementBar /> : null }
-        <Sidebar.Pushable>
+        <Sidebar.Pushable id="main-pushable">
           <Sidebar.Pusher>
             <Navbar screenWidth={this.state.screenWidth} />
             <PageBanner />

@@ -8,9 +8,30 @@ const Navbar = (props) => {
 
     const { screenWidth } = props;
 
+    const catalogs = [
+        { name: "SanMar", link: "https://sanmar.com/" },
+        { name: "S&S Activewear", link: "https://www.ssactivewear.com/" },
+        { name: "AlphaBroder", link: "https://www.alphabroder.com/home" },
+        { name: "Augusta Sportswear", link: "https://www.augustasportswear.com/" },
+        { name: "Rothco", link: "https://www.rothco.com/" },
+        { name: "Charles River Apparel", link: "https://www.charlesriverapparel.com/" },
+        { name: "Citadel Brands", link: "https://www.citadelbrands.com/home_page" },
+        { name: "Cutter and Buck", link: "https://cutterbuck.com/" },
+        { name: "Stormtech USA", link: "https://www.stormtechusa.com/" },
+        { name: "Edwards Garment", link: "https://www.edwardsgarment.com/" }
+    ];
+    
+    const services = [
+        { name: "Screen Printing", link: "/services/screenprinting" },
+        { name: "Embroidery", link: "/services/embroidery" },
+        { name: "Promotional Items", link: "/services/promo-items" },
+        { name: "Fulfillment", link: "/services/fulfillment" },
+        { name: "Shopify Stores", link: "/services/shopify-stores" }
+    ];
+
     return (
         <>
-            { screenWidth >= 992 ? <DesktopNavbar /> : <MobileNavbar screenWidth={screenWidth} /> }
+            { screenWidth >= 992 ? <DesktopNavbar catalogs={catalogs} services={services} /> : <MobileNavbar catalogs={catalogs} services={services} screenWidth={screenWidth} /> }
         </>
     );
 };
