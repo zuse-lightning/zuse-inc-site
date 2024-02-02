@@ -27,19 +27,11 @@ const MobileNavbar = (props) => {
     if (mainVisible) {
         if (catalogsVisible) {
             catalogDropdown.style.display = "block";
-            catalogDropdown.style.animation = "fadeIn";
-            catalogDropdown.style.setProperty("transition", "0.2s");
         } else if (servicesVisible) {
             serviceDropdown.style.display = "block";
-            serviceDropdown.style.animation = "fadeIn";
-            serviceDropdown.style.setProperty("transition", "0.2s");
         } else {
             catalogDropdown.style.display = "none";
-            catalogDropdown.style.animation = "fade";
-            catalogDropdown.style.setProperty("transition", "0.2s");
             serviceDropdown.style.display = "none";
-            serviceDropdown.style.animation = "fade";
-            serviceDropdown.style.setProperty("transition", "0.2s");
         }
     }
 
