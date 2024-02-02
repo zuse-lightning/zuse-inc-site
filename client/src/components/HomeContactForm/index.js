@@ -60,8 +60,6 @@ const HomeContactForm = (props) => {
         const homeContactForm = document.getElementById("home-contact-form");
         const formData = new FormData(homeContactForm);
 
-        console.log(formData);
-
         const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
             headers: {
@@ -76,20 +74,21 @@ const HomeContactForm = (props) => {
             }
             setSubmitted(true);
         }).catch((err) => {
+            console.log(err);
             e.target.submit();
         });
     };
 
-    if (submitted) {
-        return (
-            <>
-                <div id="home-thank-you-container">
-                    <h2>Thank you!</h2>
-                    <div>We'll be in touch soon.</div>
-                </div>
-            </>
-        );
-    };
+    // if (submitted) {
+    //     return (
+    //         <>
+    //             <div id="home-thank-you-container">
+    //                 <h2>Thank you!</h2>
+    //                 <div>We'll be in touch soon.</div>
+    //             </div>
+    //         </>
+    //     );
+    // };
 
     return (
         <div id="home-contact-form-container">
