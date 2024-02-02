@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Helmet } from "react-helmet-async";
 import HomeSlideShow from "../../components/HomeSlideShow";
 import TopClients from "../../components/TopClients";
 import HomeAbout from "../../components/HomeAbout";
@@ -19,6 +20,10 @@ class Home extends Component {
         
         return (
             <>
+                <Helmet>
+                    <title>Zuse Inc. - Custom Apparel, Promotional Items, and Web Stores</title>
+                    <meta name="description" content="Manufacturing company that offers screen printed or embroidered custom apparel, promotional items, and web stores for various companies, organizations, and special events." />
+                </Helmet>
                 <HomeSlideShow screenWidth={screenWidth} />
                 <TopClients />
                 <HomeAbout />
