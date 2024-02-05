@@ -1,5 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
+import { Helmet } from "react-helmet-async";
 import Embroidery from "../../../assets/images/banners/embroidery.png";
 import EmbroideryMobile from "../../../assets/images/banners/embroidery-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
