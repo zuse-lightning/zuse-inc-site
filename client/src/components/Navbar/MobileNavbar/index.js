@@ -22,7 +22,6 @@ const MobileNavbar = (props) => {
 
     const catalogDropdown = document.getElementById("catalog-dropdown");
     const serviceDropdown = document.getElementById("service-dropdown");
-    console.log(catalogDropdown);
 
     if (mainVisible) {
         if (catalogsVisible) {

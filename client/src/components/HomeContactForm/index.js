@@ -61,8 +61,6 @@ const HomeContactForm = (props) => {
         const homeContactForm = document.getElementById("home-contact-form");
         const formData = new FormData(homeContactForm);
 
-        console.log(formData);
-
         const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
             headers: {
