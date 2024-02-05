@@ -65,7 +65,10 @@ const HomeContactForm = (props) => {
         const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
             headers: {
-                "Access-Control-Allow-Origin": "https://zuse-inc-site-f7c4b104cb54.herokuapp.com/"
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": true,
+                "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
             },
             body: formData
         }).then((response) => {
