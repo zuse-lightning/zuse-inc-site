@@ -56,26 +56,28 @@ const HomeContactForm = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        e.isDefaultPrevented();
         const homeContactForm = document.getElementById("home-contact-form");
         const formData = new FormData(homeContactForm);
+
+        console.log(formData);
 
         const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
             headers: {
-                Accept: 'multipart/form-data',
-                'Content-Type': 'multipart/form-data',
+                "Access-Control-Allow-Origin": "https://zuse-inc-site-f7c4b104cb54.herokuapp.com/"
             },
             body: formData
         }).then((response) => {
             if (!response.ok) {
                 console.log("Something went wrong");
+                console.log(response.body);
                 throw new Error("Form response was not ok");
             }
             setSubmitted(true);
         }).catch((err) => {
             console.log(err);
-            e.target.submit();
+            // e.target.submit();
         });
     };
 
