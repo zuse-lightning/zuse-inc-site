@@ -12,6 +12,8 @@ const MobileNavbar = (props) => {
     const [catalogsVisible, setCatalogsVisible] = useState(false);
     const [servicesVisible, setServicesVisible] = useState(false);
 
+    console.log(mainVisible, catalogsVisible, servicesVisible);
+
     let logoSize;
 
     if (screenWidth >= 768) {
@@ -80,14 +82,16 @@ const MobileNavbar = (props) => {
                     Catalogs
                     <Dropdown.Menu id="catalog-dropdown" visible={catalogsVisible}>
                         {catalogs.map((catalog) => (
-                            <Dropdown.Item 
-                                as={Link} 
-                                onClick={(e) => setMainVisible(!mainVisible)} 
-                                className="catalog-dropdown-item" 
-                                target=":blank" 
-                                to={catalog.link}>
+                            <div className="mobile-dropdown-wrapper">
+                                <Dropdown.Item
+                                    as={Link}
+                                    onClick={(e) => setMainVisible(!mainVisible)}
+                                    className="catalog-dropdown-item"
+                                    target=":blank"
+                                    to={catalog.link}>
                                     {catalog.name}
-                            </Dropdown.Item>
+                                </Dropdown.Item>
+                            </div>
                         ))}
                     </Dropdown.Menu>
                 </Menu.Item>
@@ -100,13 +104,15 @@ const MobileNavbar = (props) => {
                     Services
                     <Dropdown.Menu id="service-dropdown" visible={servicesVisible}>
                         {services.map((service) => (
-                            <Dropdown.Item 
-                                as={Link} 
-                                onClick={(e) => setMainVisible(!mainVisible)} 
-                                className="service-dropdown-item" 
-                                to={service.link}>
+                            <div className="mobile-dropdown-wrapper">
+                                <Dropdown.Item
+                                    as={Link}
+                                    onClick={(e) => setMainVisible(!mainVisible)}
+                                    className="service-dropdown-item"
+                                    to={service.link}>
                                     {service.name}
-                            </Dropdown.Item>
+                                </Dropdown.Item>
+                            </div>
                         ))}
                     </Dropdown.Menu>
                 </Menu.Item>
