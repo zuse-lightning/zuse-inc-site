@@ -4,7 +4,7 @@ import { Header, Icon } from "semantic-ui-react";
 
 import "./style.css";
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/b47b0040-bba2-11ee-8fa9-872d80d8eac1";
+const FORM_ENDPOINT = "https://www.formbackend.com/f/83494e28d94f6b77";
 
 const ContactForm = (props) => {
     const [submitted, setSubmitted] = useState(false);
@@ -12,14 +12,19 @@ const ContactForm = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        e.isDefaultPrevented();
 
         const contactForm = document.getElementById("contact-form");       
         const formData = new FormData(contactForm);
 
-        console.log(formData);
-
         const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": true,
+                "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+            },
             body: formData
         }).then((response) => {
             if (!response.ok) {

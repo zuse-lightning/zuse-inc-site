@@ -4,7 +4,7 @@ import { Grid, Header, Icon } from "semantic-ui-react";
 
 import "./style.css";
 
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/b47b0040-bba2-11ee-8fa9-872d80d8eac1";
+const FORM_ENDPOINT = "https://www.formbackend.com/f/83494e28d94f6b77";
 
 const HomeContactForm = (props) => {
     const { screenWidth } = props;
@@ -57,6 +57,7 @@ const HomeContactForm = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         e.isDefaultPrevented();
+
         const homeContactForm = document.getElementById("home-contact-form");
         const formData = new FormData(homeContactForm);
 
@@ -68,32 +69,31 @@ const HomeContactForm = (props) => {
                 "Access-Control-Allow-Origin": "*",
                 "Access-Control-Allow-Credentials": true,
                 "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
-                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
             },
             body: formData
         }).then((response) => {
             if (!response.ok) {
                 console.log("Something went wrong");
-                console.log(response.body);
                 throw new Error("Form response was not ok");
             }
             setSubmitted(true);
         }).catch((err) => {
             console.log(err);
-            // e.target.submit();
+            e.target.submit();
         });
     };
 
-    // if (submitted) {
-    //     return (
-    //         <>
-    //             <div id="home-thank-you-container">
-    //                 <h2>Thank you!</h2>
-    //                 <div>We'll be in touch soon.</div>
-    //             </div>
-    //         </>
-    //     );
-    // };
+    if (submitted) {
+        return (
+            <>
+                <div id="home-thank-you-container">
+                    <h2 id="thank-you">Thank you!</h2>
+                    <div id="in-touch">We'll be in touch soon.</div>
+                </div>
+            </>
+        );
+    };
 
     return (
         <div id="home-contact-form-container">
