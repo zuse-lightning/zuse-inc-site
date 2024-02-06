@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, Dropdown, Icon, Image, Sidebar } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import ZuseLogo from "../../../assets/images/zuse-logo.jpg";
@@ -7,12 +7,8 @@ import "../style.css";
 
 const MobileNavbar = (props) => {
 
-    const { screenWidth, catalogs, services } = props;
+    const { screenWidth } = props;
     const [mainVisible, setMainVisible] = useState(false);
-    const [catalogsVisible, setCatalogsVisible] = useState(false);
-    const [servicesVisible, setServicesVisible] = useState(false);
-
-    console.log(mainVisible, catalogsVisible, servicesVisible);
 
     let logoSize;
 
@@ -21,21 +17,6 @@ const MobileNavbar = (props) => {
     } else {
         logoSize = "small";
     }
-
-    const catalogDropdown = document.getElementById("catalog-dropdown");
-    const serviceDropdown = document.getElementById("service-dropdown");
-
-    if (mainVisible) {
-        if (catalogsVisible) {
-            catalogDropdown.style.display = "block";
-        } else if (servicesVisible) {
-            serviceDropdown.style.display = "block";
-        } else {
-            catalogDropdown.style.display = "none";
-            serviceDropdown.style.display = "none";
-        }
-    }
-
 
     return (
         <Menu id="main-menu" fluid secondary>
@@ -74,47 +55,20 @@ const MobileNavbar = (props) => {
                     About
                 </Menu.Item>
                 <Menu.Item
+                    as={Link}
+                    to="/catalogs"
                     className="header-nav-item"
                     name="catalogs"
-                    text="Catalogs"
-                    onClick={(e) => setCatalogsVisible(!catalogsVisible)}
                 >
                     Catalogs
-                    <Dropdown.Menu id="catalog-dropdown" visible={catalogsVisible}>
-                        {catalogs.map((catalog) => (
-                            <div className="mobile-dropdown-wrapper">
-                                <Dropdown.Item
-                                    as={Link}
-                                    onClick={(e) => setMainVisible(!mainVisible)}
-                                    className="catalog-dropdown-item"
-                                    target=":blank"
-                                    to={catalog.link}>
-                                    {catalog.name}
-                                </Dropdown.Item>
-                            </div>
-                        ))}
-                    </Dropdown.Menu>
                 </Menu.Item>
                 <Menu.Item
-                    className="header-nav-item"
+                    as={Link}
                     to="/services"
+                    className="header-nav-item"
                     name="services"
-                    onClick={(e) => setServicesVisible(!servicesVisible)}
                 >
                     Services
-                    <Dropdown.Menu id="service-dropdown" visible={servicesVisible}>
-                        {services.map((service) => (
-                            <div className="mobile-dropdown-wrapper">
-                                <Dropdown.Item
-                                    as={Link}
-                                    onClick={(e) => setMainVisible(!mainVisible)}
-                                    className="service-dropdown-item"
-                                    to={service.link}>
-                                    {service.name}
-                                </Dropdown.Item>
-                            </div>
-                        ))}
-                    </Dropdown.Menu>
                 </Menu.Item>
                 <Menu.Item
                     className="header-nav-item"

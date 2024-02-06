@@ -12,6 +12,7 @@ import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
 import "./style.css";
+import TopCatalogs from "../../components/TopCatalogs";
 
 class App extends Component {
 
@@ -51,6 +52,7 @@ class App extends Component {
               <Routes>
                 <Route exact path="/" element={<Home screenWidth={this.state.screenWidth} />} />
                 <Route exact path="/about" element={<About />} />
+                <Route exact path="/catalogs" element={<TopCatalogs />} />
                 <Route exact path="/services/*" element={<Services screenWidth={this.state.screenWidth} />} />
                 <Route exact path="/contact" element={<Contact />} />
               </Routes>
