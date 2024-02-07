@@ -20,7 +20,7 @@ const Navbar = (props) => {
     const stickNavbar = () => {
         if (window !== undefined) {
             let windowHeight = window.scrollY;
-            windowHeight > 0.3 * screenHeight ? setStickyClass("sticky") : setStickyClass("");
+            windowHeight > 0.2 * screenHeight ? setStickyClass("sticky") : setStickyClass("");
         }
     }
 
