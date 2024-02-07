@@ -1,7 +1,7 @@
 #announcement-container {
     display: grid;
     grid-template-columns: 20% 10% 40% 5% 5%;
-    background-color: #000000;
+    background-color: #243557;
     padding: 1%;
 }
 
