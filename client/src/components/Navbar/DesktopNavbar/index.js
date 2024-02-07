@@ -7,10 +7,10 @@ import "../style.css";
 
 const DesktopNavbar = (props) => {
 
-    const { catalogs, services } = props;
+    const { catalogs, services, sticky } = props;
     
         return (
-            <Menu id="main-menu" fluid secondary>
+            <Menu className={sticky} id="main-menu" fluid secondary>
                 <Menu.Item
                     className="header-nav-item"
                     position="left"

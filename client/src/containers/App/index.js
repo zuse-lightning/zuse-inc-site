@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Sidebar } from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
-import AnnouncementBar from "../../components/AnnouncementBar";
 import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
@@ -17,23 +16,28 @@ import TopCatalogs from "../../components/TopCatalogs";
 class App extends Component {
 
   state = {
-    screenWidth: window.innerWidth
+    screenWidth: window.innerWidth,
+    screenHeight: window.innerHeight
   }
 
   handleResize = (e) => {
     this.setState({ screenWidth: window.innerWidth });
+    this.setState({ screenHeight: window.innerHeight });
   }
 
   componentDidMount() {
     window.addEventListener("resize", this.handleResize);
     const width = JSON.parse(window.localStorage.getItem("screenWidth"));
+    const height = JSON.parse(window.localStorage.getItem("screenHeight"));
     this.setState(width);
-    console.log(this.state.screenWidth);
+    this.setState(height);
+    console.log(this.state.screenWidth, this.state.screenHeight);
   }
 
   componentDidUpdate() {
     window.localStorage.setItem("screenWidth", JSON.stringify(this.state));
-    console.log(this.state.screenWidth);
+    window.localStorage.setItem("screenHeight", JSON.stringify(this.state));
+    console.log(this.state.screenWidth, this.state.screenHeight);
   }
 
   componentWillUnmount() {
@@ -43,10 +47,9 @@ class App extends Component {
   render() {
     return (
       <>
-        { this.state.screenWidth >= 768 ? <AnnouncementBar /> : null }
+        <Navbar screenWidth={this.state.screenWidth} screenHeight={this.state.screenHeight} />
         <Sidebar.Pushable id="main-pushable">
           <Sidebar.Pusher>
-            <Navbar screenWidth={this.state.screenWidth} />
             <PageBanner />
             <div id="main-container">
               <Routes>

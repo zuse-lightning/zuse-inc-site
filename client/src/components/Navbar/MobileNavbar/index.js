@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Menu, Dropdown, Icon, Image, Sidebar } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Menu, Icon, Image, Sidebar } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import ZuseLogo from "../../../assets/images/zuse-logo.jpg";
 
@@ -19,7 +19,7 @@ const MobileNavbar = (props) => {
     }
 
     return (
-        <Menu id="main-menu" fluid secondary>
+        <Menu id="mobile-main-menu" fluid secondary>
             <Menu.Item
                 className="header-nav-item"
                 position="left"

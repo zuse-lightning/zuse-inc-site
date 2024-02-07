@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import AnnouncementBar from "../AnnouncementBar";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 
@@ -6,7 +7,24 @@ import "./style.css";
 
 const Navbar = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, screenHeight } = props;
+    const [stickyClass, setStickyClass] = useState("");
+
+    useEffect(() => {
+        window.addEventListener("scroll", stickNavbar);
+        return () => {
+            window.removeEventListener("scroll", stickNavbar);
+        }
+    }, []);
+
+    const stickNavbar = () => {
+        if (window !== undefined) {
+            let windowHeight = window.scrollY;
+            windowHeight > 0.3 * screenHeight ? setStickyClass("sticky") : setStickyClass("");
+        }
+    }
+
+    console.log(stickyClass);
 
     const catalogs = [
         { name: "SanMar", link: "https://sanmar.com/" },
@@ -31,7 +49,10 @@ const Navbar = (props) => {
 
     return (
         <>
-            { screenWidth >= 992 ? <DesktopNavbar catalogs={catalogs} services={services} /> : <MobileNavbar screenWidth={screenWidth} /> }
+            <div className={`header-container ${stickyClass}`}>
+                {screenWidth >= 768 ? <AnnouncementBar /> : null}
+                { screenWidth >= 992 ? <DesktopNavbar catalogs={catalogs} services={services} /> : <MobileNavbar screenWidth={screenWidth} /> }
+            </div>
         </>
     );
 };
