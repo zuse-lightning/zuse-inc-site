@@ -12,6 +12,7 @@ class Contact extends Component {
                     <title>Zuse Inc. - Contact</title>
                     <meta name="description" content="Call us or send us a message with your info and a potential design" />
                     <meta name="keywords" content="Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"/>
+                    <meta name="robots" content="index, follow" />
                 </Helmet>
                 <iframe
                     id="zuse-location"

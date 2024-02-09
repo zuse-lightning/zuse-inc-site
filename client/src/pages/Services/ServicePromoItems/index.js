@@ -25,6 +25,7 @@ const ServicePromoItems = (props) => {
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />
                 <meta name="keywords" content="Promotional Items, Branford, New Haven, CT, Fulfillment, Custom Apparel, Mugs, Hats, Accessories, T-Shirts, Hoodies, Stationary" />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             <div id="promo-items-container">
                 <Header as="h1" id="promo-items-header">Promotional Items</Header>

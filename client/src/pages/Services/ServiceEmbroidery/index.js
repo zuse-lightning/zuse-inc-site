@@ -23,6 +23,7 @@ const ServiceEmbroidery = (props) => {
                 <title>Zuse Inc. - Embroidery</title>
                 <meta name="description" content="Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories." />
                 <meta name="keywords" content="Embroidery, Branford, New Haven, CT, Fulfillment, Patches, Hats, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             <div id="embroidery-container">
                 <Header as="h1" id="embroidery-header">Embroidery</Header>

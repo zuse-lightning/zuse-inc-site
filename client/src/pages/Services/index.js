@@ -19,6 +19,7 @@ const Services = (props) => {
                 <title>Zuse Inc. - Services</title>
                 <meta name="description" content="We offer 5 main services, Screen Printing, Embroidery, Promotional Items, Fulfillment, and Shopify Stores." />
                 <meta name="keywords" content="Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel" />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             {pathname === "/services" ? <OurServices /> : null}
             <Routes>

@@ -28,6 +28,7 @@ const ServiceShopifyStore = () => {
                     We design and develop an e-commerce platform tailored to your brand,
                     providing a seamless and secure shopping experience for your customers." />
                 <meta name="keywords" content="Shopify Stores, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, Web Development, E-Commerce, Online Store" />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             <div id="shopify-container">
                 <Header as="h1" id="shopify-header">Shopify Stores</Header>

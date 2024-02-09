@@ -19,6 +19,7 @@ const ServiceFulfillment = (props) => {
                     services. From order processing to shipping, we handle it all, ensuring your
                     products reach customers efficiently and on time." />
                 <meta name="keywords" content="Fulfillment, Branford, New Haven, CT, Custom Apparel, Fast Delivery, Efficient Processing" />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             <div id="fulfillment-container">
                 <Header as="h1" id="fulfillment-header">Fulfillment</Header>
