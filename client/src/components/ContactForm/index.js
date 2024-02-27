@@ -81,7 +81,7 @@ const ContactForm = (props) => {
                         <label for="art-file">Upload Your Design:</label>
                     </div>
                     <div className="form-field-col">
-                        <input type="file" {...register("file")} id="art-file" name="artFile" accept="image/png, image/jpeg, image/jpg" multiple />
+                        <input type="file" {...register("file")} id="art-file" name="artFile" accept="image/png, image/ai, image/psd" multiple />
                     </div>
                 </div>
                 <button id="submit-btn" type="submit">Send Message</button>
