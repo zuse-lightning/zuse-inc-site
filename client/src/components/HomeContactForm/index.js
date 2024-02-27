@@ -137,7 +137,7 @@ const HomeContactForm = (props) => {
                                         <label id="upload-label" for="home-art-file">Upload Your Design:</label>
                                     </Grid.Column>
                                     <Grid.Column width={contactFormColumns[7]}>
-                                        <input type="file" {...register("file")} id="home-art-file" name="artFile" accept="image/png, image/ai, image/psd" multiple />
+                                        <input type="file" {...register("file")} id="home-art-file" name="artFile" accept=".png, .ai, .psd" multiple />
                                     </Grid.Column>
                                 </Grid.Row>
                             </Grid>
