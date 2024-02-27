@@ -2,7 +2,8 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import CodingBackground from "../../../assets/images/banners/coding-background.jpeg";
+import ShopifyStores from "../../../assets/images/banners/shopify-banner.png";
+import ShopifyStoresMobile from "../../../assets/images/banners/shopify-banner-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import PGW from "../../../assets/screenshots/pgw-screenshot.png";
 import TheSpot from "../../../assets/screenshots/thespot-screenshot.png";
@@ -19,7 +20,10 @@ const shopifyResults = [
 ];
 
 
-const ServiceShopifyStore = () => {
+const ServiceShopifyStore = (props) => {
+
+    const { screenWidth } = props;
+
     return (
         <>
             <Helmet>
@@ -32,7 +36,7 @@ const ServiceShopifyStore = () => {
             </Helmet>
             <div id="shopify-container">
                 <Header as="h1" id="shopify-header">Shopify Stores</Header>
-                <Image src={CodingBackground} />
+                <Image fluid src={screenWidth >= 992 ? ShopifyStores : ShopifyStoresMobile} />
                 <br />
                 <Header as="h2" className="shopify-subheader">How It Works</Header>
                 <br />
