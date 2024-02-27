@@ -38,3 +38,23 @@
     font-family: "Lato", "Helvetica Neuve";
     margin: 2% 37.5% 0;
 }
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #page-contact-header {
+        margin-top: 7%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #page-contact-header {
+        margin-top: 12%
+    }
+    #page-contact-subheader {
+        width: 60%;
+        margin: 0 20%;
+    }
+    #page-contact-btn { 
+        width: 40%;
+        margin: 2% 30% 0;
+    }
+}
