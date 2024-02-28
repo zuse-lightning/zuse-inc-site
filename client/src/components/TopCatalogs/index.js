@@ -3,7 +3,7 @@ import { Image, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Sanmar from "../../assets/images/catalogs/sanmar.png";
 import SSActivewear from "../../assets/images/catalogs/ssactivewear.webp";
-import AlphaBroder from "../../assets/images/catalogs/alphabroder.webp";
+import Gemline from "../../assets/images/catalogs/gemline.png";
 import AugustaSportswear from "../../assets/images/catalogs/augusta-sportswear.png";
 import Rothco from "../../assets/images/catalogs/rothco.png";
 import CharlesRiver from "../../assets/images/catalogs/charles-river.png";
@@ -21,7 +21,7 @@ const TopCatalogs = (props) => {
     const catalogs = [
         { id: "sanmar", image: Sanmar, link: "https://sanmar.com/" },
         { id: "ssactivewear", image: SSActivewear, link: "https://www.ssactivewear.com/" },
-        { id: "alphabroder", image: AlphaBroder, link: "https://www.alphabroder.com/home" },
+        { id: "gemline", image: Gemline, link: "https://gemline.com/s/" },
         { id: "augusta-sportswear", image: AugustaSportswear, link: "https://www.augustasportswear.com/" },
         { id: "rothco", image: Rothco, link: "https://www.rothco.com/" },
         { id: "charles-river", image: CharlesRiver, link: "https://www.charlesriverapparel.com/" },
