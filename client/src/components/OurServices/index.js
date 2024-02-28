@@ -1,11 +1,11 @@
 import React from "react";
 import { Header, Image, Button, Icon } from "semantic-ui-react";
 import { Link, useLocation } from "react-router-dom";
-import ScreenPrintingIcon from "../../assets/images/screen-printing-red.png";
-import EmbroideryIcon from "../../assets/images/embroidery-red.png";
-import PromoItemsIcon from "../../assets/images/promo-items-red.png";
-import FulfillmentIcon from "../../assets/images/fulfillment-red.png";
-import WebStoreIcon from "../../assets/images/web-stores-red.png";
+import ScreenPrintingIcon from "../../assets/images/screen-printing-blue.png";
+import EmbroideryIcon from "../../assets/images/embroidery-blue.png";
+import PromoItemsIcon from "../../assets/images/promo-items-blue.png";
+import FulfillmentIcon from "../../assets/images/fulfillment-blue.png";
+import WebStoreIcon from "../../assets/images/web-stores-blue.png";
 
 import "./style.css";
 
@@ -16,8 +16,6 @@ const services = [
     { image: FulfillmentIcon, path: "/services/fulfillment", title: "Fulfillment Services" },
     { image: WebStoreIcon, path: "/services/shopify-stores", title: "Shopify Store" }
 ];
-
-
 
 const OurServices = () => {
     
