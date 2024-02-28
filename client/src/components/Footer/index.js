@@ -48,7 +48,7 @@ const Footer = () => {
                     <Header id="copyright" as="h4">© 2024 Zuse Inc., American Contract Printing</Header>
                 </div>
                 <div className="footer-col">
-                    <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-675-9550</Header>
+                    <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-458-3295</Header>
                 </div>
             </div>
         </div>

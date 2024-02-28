@@ -11,7 +11,7 @@ const AnnouncementBar = (props) => {
         <div id="announcement-container">
             <div className="announce-col"></div>
             <div className="announce-col">
-                <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />Call: 203-675-9550</Header>
+                <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />Call: 203-458-3295</Header>
             </div>
             <div className="announce-col">
                 <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>

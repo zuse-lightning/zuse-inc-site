@@ -57,7 +57,7 @@ const ContactForm = (props) => {
             >
                 <div id="form-field-container">
                     <div className="form-field-col">
-                        <Header id="contact-phone-number" as="h4"><Icon id="contact-phone-icon" name="phone" />Call: 203-675-9550</Header>
+                        <Header id="contact-phone-number" as="h4"><Icon id="contact-phone-icon" name="phone" />Call: 203-458-3295</Header>
                     </div>
                     <div className="form-field-col">
                         <Header id="contact-address" as="h4"><Icon id="contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
