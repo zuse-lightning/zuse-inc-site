@@ -1,41 +1,33 @@
 #home-contact-form-container,
 #home-thank-you-container {
     background-color: #fefcfd;
-    background-image: url(../../assets/images/home-contact-background.png);
     background-size: cover;
     width: 60%;
     margin: -0.2% 20% 0;
     padding: 4%;
 }
 
-#home-thank-you-container {
-    background-image: url(../../assets/images/home-contact-background.png);
-}
-
 #thank-you,
 #in-touch {
     text-align: center;
-    color: #fefcfd;
+    color: #000000;
 }
 
 #home-contact-header {
     padding: 2%;
     text-decoration: underline;
     text-underline-offset: 20px;
-    color: #fefcfd;
-    text-decoration-color: #fefcfd;
+    text-decoration-color: #f11515;
 }
 
 #home-contact-subheader {
     padding: 2%;
     width: 80%;
     line-height: 40px;
-    color: #fefcfd;
 }
 
 #home-contact-phone-number,
 #home-contact-address {
-    color: #fefcfd;
     margin: 5% 0;
     font-size: 20px;
 }
@@ -48,11 +40,9 @@
     width: 100%;
     height: 50px;
     font-size: 20px;
-    background-color: transparent;
-    border: solid 1px #fefcfd;
+    border: solid 1px #000000;
     padding: 0 4%;
     border-radius: 5px;
-    color: #fefcfd;
 }
 
 #home-message-input {
@@ -61,11 +51,10 @@
     height: 100px;
     resize: none;
     font-size: 20px;
-    background-color: transparent;
-    border: solid 1px #fefcfd;
+    border: solid 1px #000000;
     padding: 2%;
     border-radius: 5px;
-    color: #fefcfd;
+    color: #000000;
 }
 
 #home-name-input::placeholder,
@@ -73,15 +62,15 @@
 #home-company-input::placeholder,
 #home-phone-input::placeholder,
 #home-message-input::placeholder {
-    color: #fefcfd;
+    color: #000000;
 }
 
 #upload-label {
-    color: #fefcfd;
+    color: #000000;
 }
 
 #home-art-file {
-    color: #fefcfd;
+    color: #000000;
 }
 
 #home-submit-btn {
