@@ -27,7 +27,7 @@ const Navbar = (props) => {
     const catalogs = [
         { name: "SanMar", link: "https://sanmar.com/" },
         { name: "S&S Activewear", link: "https://www.ssactivewear.com/" },
-        { name: "AlphaBroder", link: "https://www.alphabroder.com/home" },
+        { name: "Gemline", link: "https://gemline.com/s/" },
         { name: "Augusta Sportswear", link: "https://www.augustasportswear.com/" },
         { name: "Rothco", link: "https://www.rothco.com/" },
         { name: "Charles River Apparel", link: "https://www.charlesriverapparel.com/" },
