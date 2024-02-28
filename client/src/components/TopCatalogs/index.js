@@ -9,7 +9,7 @@ import Rothco from "../../assets/images/catalogs/rothco.png";
 import CharlesRiver from "../../assets/images/catalogs/charles-river.png";
 import CitadelBrands from "../../assets/images/catalogs/citadel-brands.jpg";
 import CutterBuck from "../../assets/images/catalogs/cutter-buck.png";
-import Stormtech from "../../assets/images/catalogs/stormtech.png";
+import Stormtech from "../../assets/images/catalogs/stormtech-blue.png";
 import Edwards from "../../assets/images/catalogs/edwards.png";
 
 import "./style.css";
