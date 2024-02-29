@@ -1,5 +1,6 @@
 #announcement-container {
     display: grid;
+    width: 100%;
     grid-template-columns: 20% 10% 40% 5% 5%;
     background-color: #243557;
     padding: 1%;
@@ -53,7 +54,7 @@
 
 @media (max-width: 767px) and (min-width: 362px) {
     #announcement-container {
-        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-columns: 20% 20% 20% 20% 20%; */
         column-gap: 20px;
         row-gap: 20px;;
         padding: 2%;
@@ -62,7 +63,6 @@
         width: 20%;
         margin: 0 70%;
     }
-    
     #announce-instagram-icon {
         width: 20%;
     }

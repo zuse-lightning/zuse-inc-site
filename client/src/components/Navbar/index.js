@@ -48,7 +48,7 @@ const Navbar = (props) => {
     return (
         <>
             <div className={`header-container`}>
-                {screenWidth >= 768 ? <AnnouncementBar /> : null}
+                <AnnouncementBar screenWidth={screenWidth} />
                 { screenWidth >= 992 ? <DesktopNavbar catalogs={catalogs} services={services} /> : <MobileNavbar screenWidth={screenWidth} /> }
             </div>
         </>

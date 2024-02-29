@@ -1,72 +1,68 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { Sidebar } from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
+import TopCatalogs from "../../components/TopCatalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
 import "./style.css";
-import TopCatalogs from "../../components/TopCatalogs";
 
-class App extends Component {
-
-  state = {
-    screenWidth: window.innerWidth,
-    screenHeight: window.innerHeight
+const getWindowDimensions = () => {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
   }
+}
 
-  handleResize = (e) => {
-    this.setState({ screenWidth: window.innerWidth });
-    this.setState({ screenHeight: window.innerHeight });
-  }
+export const useWindowDimensions = () => {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
-  componentDidMount() {
-    window.addEventListener("resize", this.handleResize);
-    const width = JSON.parse(window.localStorage.getItem("screenWidth"));
-    const height = JSON.parse(window.localStorage.getItem("screenHeight"));
-    this.setState(width);
-    this.setState(height);
-    console.log(this.state.screenWidth, this.state.screenHeight);
-  }
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowDimensions(getWindowDimensions());
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  componentDidUpdate() {
-    window.localStorage.setItem("screenWidth", JSON.stringify(this.state));
-    window.localStorage.setItem("screenHeight", JSON.stringify(this.state));
-    console.log(this.state.screenWidth, this.state.screenHeight);
-  }
+  return windowDimensions;
+}
 
-  componentWillUnmount() {
-    window.addEventListener("resize", this.handleResize);
-  }
+const App = () => {
 
-  render() {
-    return (
-      <>
-        <Navbar screenWidth={this.state.screenWidth} screenHeight={this.state.screenHeight} />
-        <Sidebar.Pushable id="main-pushable">
-          <Sidebar.Pusher>
-            <PageBanner />
-            <div id="main-container">
-              <Routes>
-                <Route exact path="/" element={<Home screenWidth={this.state.screenWidth} />} />
-                <Route exact path="/about" element={<About />} />
-                <Route exact path="/catalogs" element={<TopCatalogs />} />
-                <Route exact path="/services/*" element={<Services screenWidth={this.state.screenWidth} />} />
-                <Route exact path="/contact" element={<Contact />} />
-              </Routes>
-            </div>
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
-        <SocialLinks />
-        <Footer />
-      </>
-    );
-  }
+  const { height, width } = useWindowDimensions();
+
+  console.log(width);
+  
+  return (
+    <>
+      <Navbar screenWidth={width} />
+      <Sidebar.Pushable id="main-pushable">
+        <Sidebar.Pusher>
+          <PageBanner />
+          <div id="main-container">
+            <Routes>
+              <Route exact path="/" element={<Home screenWidth={width} />} />
+              <Route exact path="/about" element={<About />} />
+              <Route exact path="/catalogs" element={<TopCatalogs />} />
+              <Route exact path="/services/*" element={<Services screenWidth={width} />} />
+              <Route exact path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </Sidebar.Pusher>
+      </Sidebar.Pushable>
+      <SocialLinks />
+      <Footer />
+    </>
+  );
+
 }
 
 export default App;

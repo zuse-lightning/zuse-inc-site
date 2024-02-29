@@ -7,6 +7,9 @@ import InstagramIcon from "../../assets/images/instagram-icon-white.png";
 import "./style.css";
 
 const AnnouncementBar = (props) => {
+
+    const { screenWidth } = props;
+
     return (
         <div id="announcement-container">
             <div className="announce-col"></div>
@@ -26,9 +29,7 @@ const AnnouncementBar = (props) => {
                     </Link>
                 </div>
             </div>
-            <div className="announce-col">
-
-            </div>
+            <div className="announce-col"></div>
         </div>
     );
 };
