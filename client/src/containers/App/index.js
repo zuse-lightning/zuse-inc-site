@@ -14,7 +14,8 @@ import Footer from "../../components/Footer";
 import "./style.css";
 
 const getWindowDimensions = () => {
-  const { innerWidth: width, innerHeight: height } = window;
+  const page = document.querySelector("html");
+  const { clientWidth: width, clientHeight: height } = page;
   return {
     width,
     height
@@ -23,7 +24,7 @@ const getWindowDimensions = () => {
 
 export const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
+  
   useEffect(() => {
     const handleResize = () => {
       setWindowDimensions(getWindowDimensions());
@@ -38,9 +39,8 @@ export const useWindowDimensions = () => {
 const App = () => {
 
   const { height, width } = useWindowDimensions();
-
   console.log(width);
-  
+
   return (
     <>
       <Navbar screenWidth={width} />
