@@ -49,6 +49,7 @@ const MobileNavbar = (props) => {
                 <Menu.Item
                     className="header-nav-item"
                     as={Link}
+                    onClick={(e) => setMainVisible(false)}
                     to="/about"
                     name="about"
                 >
@@ -56,6 +57,7 @@ const MobileNavbar = (props) => {
                 </Menu.Item>
                 <Menu.Item
                     as={Link}
+                    onClick={(e) => setMainVisible(false)}
                     to="/catalogs"
                     className="header-nav-item"
                     name="catalogs"
@@ -64,6 +66,7 @@ const MobileNavbar = (props) => {
                 </Menu.Item>
                 <Menu.Item
                     as={Link}
+                    onClick={(e) => setMainVisible(false)}
                     to="/services"
                     className="header-nav-item"
                     name="services"
@@ -73,6 +76,7 @@ const MobileNavbar = (props) => {
                 <Menu.Item
                     className="header-nav-item"
                     as={Link}
+                    onClick={(e) => setMainVisible(false)}
                     to="/contact"
                     name="contact"
                 >
