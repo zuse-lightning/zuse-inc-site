@@ -53,6 +53,7 @@
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
     margin: 0% 30% 3%;
+    cursor: pointer !important;
 }
 
 .form-field-col:nth-child(1) {
