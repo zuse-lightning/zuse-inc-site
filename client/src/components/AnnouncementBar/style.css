@@ -1,9 +1,20 @@
 #announcement-container {
     display: grid;
-    width: 100%;
-    grid-template-columns: 20% 10% 40% 5% 5%;
+    grid-template-columns: repeat(12, 1fr);
     background-color: #243557;
     padding: 1%;
+}
+
+.announce-col:nth-child(1) {
+    grid-column: 4 / span 1;
+}
+
+.announce-col:nth-child(2) {
+    grid-column: span 4;
+}
+
+.announce-col:nth-child(3) {
+    grid-column: span 1;
 }
 
 #announce-phone-number {
@@ -18,46 +29,95 @@
 }
 
 #announce-facebook-icon {
-    width: 40%;
+    width: 10%;
     margin: 0 5%;
 }
 
 #announce-instagram-icon {
-    width: 40%;
+    width: 10%;
+}
+
+@media (max-width: 2053px) and (min-width: 1700px) {
+    .announce-col:nth-child(1) {
+        grid-column: 3 / span 2;
+    }
+    
+    .announce-col:nth-child(2) {
+        grid-column: span 5;
+    }
+    
+    .announce-col:nth-child(3) {
+        grid-column: span 1;
+    }
+    #announce-facebook-icon {
+        width: 15%;
+        margin: 0 5%;
+    }
+    
+    #announce-instagram-icon {
+        width: 15%;
+    }
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
-    #announcement-container {
-        grid-template-columns: 20% 15% 45% 5% 5%;
+    .announce-col:nth-child(1) {
+        grid-column: 3 / span 2;
+    }
+    
+    .announce-col:nth-child(2) {
+        grid-column: span 5;
+    }
+    
+    .announce-col:nth-child(3) {
+        grid-column: span 2;
     }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    #announcement-container {
-        grid-template-columns: 20% 20% 40% 7.5% 12.5%;
+    .announce-col:nth-child(1) {
+        grid-column: 3 / span 2;
+    }
+    
+    .announce-col:nth-child(2) {
+        grid-column: span 5;
+    }
+    
+    .announce-col:nth-child(3) {
+        grid-column: span 2;
     }
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
-    #announcement-container {
-        grid-template-columns: 10% 25% 45% 10% 10%;
-        padding: 2%;
+    .announce-col:nth-child(1) {
+        grid-column: 3 / span 2;
+    }
+    
+    .announce-col:nth-child(2) {
+        grid-column: span 5;
+    }
+    
+    .announce-col:nth-child(3) {
+        grid-column: span 2;
     }
 }
 
 @media (max-width: 800px) and (min-width: 768px) {
-    #announcement-container {
-        grid-template-columns: 5% 30% 55% 10% 0%;
-        padding: 2%;
+    .announce-col:nth-child(1) {
+        grid-column: 3 / span 2;
+    }
+    
+    .announce-col:nth-child(2) {
+        grid-column: span 5;
+    }
+    
+    .announce-col:nth-child(3) {
+        grid-column: span 2;
     }
 }
 
 @media (max-width: 767px) and (min-width: 362px) {
-    #announcement-container {
-        /* grid-template-columns: 20% 20% 20% 20% 20%; */
-        column-gap: 20px;
-        row-gap: 20px;;
-        padding: 2%;
+    .announce-col:has(#announce-address) {
+        display: none;
     }
     #announce-facebook-icon {
         width: 20%;
