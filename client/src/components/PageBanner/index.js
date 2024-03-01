@@ -73,6 +73,46 @@ const PageBanner = (props) => {
                 { name: "E-COMMERCE", link: "/services/ecommerce" }
             ];
             break;
+        case "/services/dtg-dtf":
+            pageBannerName = "DIRECT TRANSFER";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "DIRECT TRANSFER", link: "/services/dtg-dtf" }
+            ];
+            break;
+        case "/services/sewing":
+            pageBannerName = "SEWING";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "SEWING", link: "/services/sewing" }
+            ];
+            break;
+        case "/services/dye-sublimation":
+            pageBannerName = "DYE SUBLIMATION";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "DYE SUBLIMATION", link: "/services/dye-sublimation" }
+            ];
+            break;
+        case "/services/on-demand-printing":
+            pageBannerName = "ON-DEMAND PRINTING";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "ON-DEMAND PRINTING", link: "/services/on-demand-printing" }
+            ];
+            break;
+        case "/services/graphic-design":
+            pageBannerName = "GRAPHIC DESIGN";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "SERVICES", link: "/services" },
+                { name: "GRAPHIC DESIGN", link: "/services/graphic-design" }
+            ];
+            break;
         case "/contact":
             pageBannerName = "CONTACT";
             pageBannerBreadcrumbs = [

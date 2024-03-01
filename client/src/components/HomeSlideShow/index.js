@@ -6,7 +6,7 @@ import ScreenPrinting from "../../assets/images/banners/screenprinting-banner.pn
 import Embroidery from "../../assets/images/banners/embroidery-banner.png";
 import GraphicDesign from "../../assets/images/banners/graphic-design-banner.png";
 import PrintOnDemand from "../../assets/images/banners/print-on-demand-banner.png";
-import DTGDTF from "../../assets/images/banners/DTG_DTF-banner.png";
+import DirectTransfer from "../../assets/images/banners/DTG_DTF-banner.png";
 import DyeSub from "../../assets/images/banners/dye-sublimation-banner.png";
 import Sewing from "../../assets/images/banners/sewing-banner.png";
 import MainBannerMobile from "../../assets/images/banners/new-main-banner-mobile.png";
@@ -15,7 +15,7 @@ import ScreenPrintingMobile from "../../assets/images/banners/screenprinting-mob
 import EmbroideryMobile from "../../assets/images/banners/embroidery-mobile-banner.png";
 import GraphicDesignMobile from "../../assets/images/banners/graphic-design-banner-mobile.png";
 import PrintOnDemandMobile from "../../assets/images/banners/print-on-demand-banner-mobile.png";
-import DTGDTFMobile from "../../assets/images/banners/DTG_DTF-banner-mobile.png";
+import DirectTransferMobile from "../../assets/images/banners/DTG_DTF-banner-mobile.png";
 import DyeSubMobile from "../../assets/images/banners/dye-sublimation-banner-mobile.png";
 import SewingMobile from "../../assets/images/banners/sewing-banner-mobile.png";
 
@@ -35,7 +35,7 @@ const HomeSlideShow = (props) => {
             Embroidery, 
             GraphicDesign, 
             PrintOnDemand, 
-            DTGDTF,
+            DirectTransfer,
             DyeSub,
             Sewing
         ];
@@ -47,7 +47,7 @@ const HomeSlideShow = (props) => {
             EmbroideryMobile, 
             GraphicDesignMobile, 
             PrintOnDemandMobile, 
-            DTGDTFMobile,
+            DirectTransferMobile,
             DyeSubMobile,
             SewingMobile
         ];
