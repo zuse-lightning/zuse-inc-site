@@ -27,7 +27,7 @@ const ServiceShopifyStore = (props) => {
     return (
         <>
             <Helmet>
-                <title>Zuse Inc. - Shopify Stores</title>
+                <title>Zuse Inc. - E-Commerce</title>
                 <meta name="description" content="Take your business online with our Shopify store creation services.
                     We design and develop an e-commerce platform tailored to your brand,
                     providing a seamless and secure shopping experience for your customers." />
@@ -35,7 +35,7 @@ const ServiceShopifyStore = (props) => {
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div id="shopify-container">
-                <Header as="h1" id="shopify-header">Shopify Stores</Header>
+                <Header as="h1" id="shopify-header">E-Commerce</Header>
                 <Image fluid src={screenWidth >= 992 ? ShopifyStores : ShopifyStoresMobile} />
                 <br />
                 <Header as="h2" className="shopify-subheader">How It Works</Header>

@@ -14,7 +14,7 @@ const services = [
     { image: EmbroideryIcon, path: "/services/embroidery", title: "Embroidery" },
     { image: PromoItemsIcon, path: "/services/promo-items", title: "Promotional Items" },
     { image: FulfillmentIcon, path: "/services/fulfillment", title: "Fulfillment Services" },
-    { image: WebStoreIcon, path: "/services/shopify-stores", title: "Shopify Store" }
+    { image: WebStoreIcon, path: "/services/ecommerce", title: "E-Commerce" }
 ];
 
 const OurServices = () => {

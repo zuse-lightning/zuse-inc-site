@@ -65,12 +65,12 @@ const PageBanner = (props) => {
                 { name: "FULFILLMENT", link: "/services/fulfillment" }
             ];
             break;
-        case "/services/shopify-stores":
-            pageBannerName = "SHOPIFY STORES";
+        case "/services/ecommerce":
+            pageBannerName = "E-COMMERCE";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
                 { name: "SERVICES", link: "/services" },
-                { name: "SHOPIFY STORES", link: "/services/shopify-stores" }
+                { name: "E-COMMERCE", link: "/services/ecommerce" }
             ];
             break;
         case "/contact":

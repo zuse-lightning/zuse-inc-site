@@ -42,7 +42,7 @@ const Navbar = (props) => {
         { name: "Embroidery", link: "/services/embroidery" },
         { name: "Promotional Items", link: "/services/promo-items" },
         { name: "Fulfillment", link: "/services/fulfillment" },
-        { name: "Shopify Stores", link: "/services/shopify-stores" }
+        { name: "E-Commerce", link: "/services/ecommerce" }
     ];
 
     return (

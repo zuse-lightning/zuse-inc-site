@@ -27,7 +27,12 @@ const Services = (props) => {
                 <Route exact path="embroidery" element={<ServiceEmbroidery screenWidth={screenWidth} />} />
                 <Route exact path="promo-items" element={<ServicePromoItems screenWidth={screenWidth} />} />
                 <Route exact path="fulfillment" element={<ServiceFulfillment screenWidth={screenWidth} />} />
-                <Route exact path="shopify-stores" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
+                <Route exact path="ecommerce" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
+                <Route exact path="graphic-design" />
+                <Route exact path="dtg-dtf" />
+                <Route exact path="on-demand-printing" />
+                <Route exact path="dye-sublimation" />
+                <Route exact path="sewing" />
             </Routes>
         </>
     );
