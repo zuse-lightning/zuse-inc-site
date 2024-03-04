@@ -9,6 +9,7 @@ import ServiceFulfillment from "./ServiceFulfillment";
 import ServiceShopifyStore from "./ServiceShopifyStore";
 import ServiceGraphicDesign from "./ServiceGraphicDesign";
 import ServiceOnDemand from "./ServiceOnDemand";
+import ServiceSewing from "./ServiceSewing";
 
 const Services = (props) => {
 
@@ -34,7 +35,7 @@ const Services = (props) => {
                 <Route exact path="dtg-dtf" />
                 <Route exact path="print-on-demand" element={<ServiceOnDemand screenWidth={screenWidth} />} />
                 <Route exact path="dye-sublimation" />
-                <Route exact path="sewing" />
+                <Route exact path="sewing" element={<ServiceSewing screenWidth={screenWidth} />} />
             </Routes>
         </>
     );
