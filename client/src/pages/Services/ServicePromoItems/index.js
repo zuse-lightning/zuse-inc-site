@@ -41,11 +41,24 @@ const ServicePromoItems = (props) => {
                 </p>
                 <br />
                 <p className="promo-items-text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                    Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                    saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                    odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                    optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                    Our process begins with a consultation to understand your branding goals and target 
+                    audience. Whether you're looking for giveaways for a trade show, employee incentives, 
+                    or customer appreciation gifts, we'll work closely with you to select the perfect 
+                    promotional items that align with your brand identity and objectives.
+                </p>
+                <br />
+                <p className="promo-items-text">
+                    Once we've identified the right products for your needs, our skilled team will assist you 
+                    in customizing them to reflect your brand. Whether it's screen printing, embroidery, DTG 
+                    printing, or other customization methods, we have the expertise and technology to ensure 
+                    that your logo or artwork looks sharp and professional on each item.
+                </p>
+                <br />
+                <p className="promo-items-text">
+                    We offer a wide range of promotional items to suit every budget and marketing strategy. 
+                    From apparel and accessories to tech gadgets and office supplies, we have something for 
+                    every occasion and audience. Plus, with our fast turnaround times and reliable delivery 
+                    service, you can trust that your promotional items will be ready when you need them.
                 </p>
                 <br />
                 <Header as="h2" className="promo-items-subheader">What You'll Get</Header>
