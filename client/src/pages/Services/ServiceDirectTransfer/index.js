@@ -35,16 +35,30 @@ const ServiceDirectTransfer = (props) => {
                 <Header as="h2" className="dtg-dtf-subheader">How It Works</Header>
                 <br />
                 <p className="dtg-dtf-text">
-                    From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression.
+                    Our DTG process involves printing directly onto garments using specialized InkJet technology. From T-shirts and hoodies to tote bags and hats, DTG allows for vibrant, high-quality prints 
+                    with intricate details and vibrant colors. 
                 </p>
                 <br />
                 <p className="dtg-dtf-text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                    Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                    saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                    odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                    optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                    On the other hand, our DTF process utilizes a transfer film to apply designs onto various surfaces, including textiles, plastics, and more. With both DTG and DTF printing, the possibilities 
+                    are endless for creating personalized apparel, promotional items, and branded merchandise.
+                </p>
+                <br />
+                <p className="dtg-dtf-text">
+                    The process for both DTG and DTF printing begins with digital design preparation. Whether you have your own design or need assistance creating one, our expert team will ensure that your artwork 
+                    is optimized for printing. Once the design is ready, we proceed with printing using our state-of-the-art equipment, ensuring precise color reproduction and image clarity. For DTG printing, the 
+                    garment is loaded onto the printer, and the design is directly printed onto the fabric. For DTF printing, the design is printed onto a transfer film, which is then applied to the desired surface 
+                    using a heat press.
+                </p>
+                <br />
+                <p className="dtg-dtf-text">
+                    Quality is paramount in our printing process. We carefully inspect each print to ensure that colors are vibrant, details are sharp, and the overall quality meets our standards. With our commitment 
+                    to excellence, you can trust that your printed products will exceed expectations.
+                </p>
+                <br />
+                <p className="dtg-dtf-text">
+                    Whether you're looking to create custom apparel for your business, personalized gifts for an event, or branded merchandise for your brand, our DTG and DTF printing services offer fast, reliable, and 
+                    high-quality solutions. Let us bring your designs to life with precision and expertise.
                 </p>
                 <br />
                 <Header as="h2" className="dtg-dtf-subheader">What You'll Get</Header>

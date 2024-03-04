@@ -35,16 +35,20 @@ const ServiceDyeSub = (props) => {
                 <Header as="h2" className="dye-sub-subheader">How It Works</Header>
                 <br />
                 <p className="dye-sub-text">
-                    From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression.
+                    Our dye sublimation process begins working closely with our clients to understand their vision and requirements for their printed products. Once the design concept is finalized, our 
+                    skilled graphic designers prepare the digital artwork, ensuring it's optimized for vibrant colors and high-resolution printing. 
                 </p>
                 <br />
                 <p className="dye-sub-text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                    Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                    saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                    odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                    optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                    With the digital design ready, we prepare the sublimation printer and heat press for printing, selecting the appropriate sublimation ink and transfer paper for the specific substrate 
+                    and design specifications. Using heat and pressure, we transfer the sublimation ink from the transfer paper onto the substrate, causing it to sublimate into a gas and permeate the surface, 
+                    resulting in vivid and durable color reproduction. 
+                </p>
+                <br />
+                <p className="dye-sub-text">
+                    After printing, the substrate is allowed to cool, ensuring the colors are permanently embedded into the material. Depending on the product, additional finishing techniques such as cutting, 
+                    sewing, or assembly may be performed. Each finished product undergoes a rigorous quality check to ensure vibrant colors, sharp prints, and overall quality meet our standards. Finally, we 
+                    carefully package the finished products and deliver them to our clients, offering prompt and reliable delivery service. 
                 </p>
                 <br />
                 <Header as="h2" className="dye-sub-subheader">What You'll Get</Header>

@@ -35,8 +35,9 @@ const ServiceSewing = (props) => {
                 <Header as="h2" className="sewing-subheader">How It Works</Header>
                 <br />
                 <p className="sewing-text">
-                    From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression.
+                    We're here to make your sewing projects a breeze. Whether you need alterations, repairs, or custom creations, we've got you covered. Just tell us what you need, and we'll take care of the 
+                    rest. Our skilled team of seamstresses and tailors will ensure that every stitch is perfect and every detail is just right. From fabric selection to final delivery, we work closely with our 
+                    clients to ensure that their sewing projects are completed to ensure your satisfaction.
                 </p>
                 <br />
                 <p className="sewing-text">
