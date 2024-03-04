@@ -7,6 +7,7 @@ import ServiceEmbroidery from "./ServiceEmbroidery";
 import ServicePromoItems from "./ServicePromoItems";
 import ServiceFulfillment from "./ServiceFulfillment";
 import ServiceShopifyStore from "./ServiceShopifyStore";
+import ServiceGraphicDesign from "./ServiceGraphicDesign";
 
 const Services = (props) => {
 
@@ -28,7 +29,7 @@ const Services = (props) => {
                 <Route exact path="promo-items" element={<ServicePromoItems screenWidth={screenWidth} />} />
                 <Route exact path="fulfillment" element={<ServiceFulfillment screenWidth={screenWidth} />} />
                 <Route exact path="ecommerce" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
-                <Route exact path="graphic-design" />
+                <Route exact path="graphic-design" element={<ServiceGraphicDesign screenWidth={screenWidth} />} />
                 <Route exact path="dtg-dtf" />
                 <Route exact path="on-demand-printing" />
                 <Route exact path="dye-sublimation" />
