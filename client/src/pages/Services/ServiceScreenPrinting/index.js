@@ -40,11 +40,26 @@ const ServiceScreenPrinting = (props) => {
                 </p>
                 <br />
                 <p className="screen-printing-text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae.
-                    Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque
-                    saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolorum eaque, nesciunt iste autem
-                    odio animi doloremque delectus ipsum ex reiciendis libero fuga, amet repudiandae. Rerum consequuntur pariatur magnam maxime. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                    optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
+                    Whether you have existing artwork or need assistance creating a custom design, our skilled team 
+                    ensures that your vision is brought to life with precision and clarity. Once the design is finalized, 
+                    we create screens for each color in your design, allowing for vibrant and detailed prints.
+                </p>
+                <br />
+                <p className="screen-printing-text">
+                    Using high-quality inks and advanced equipment, we carefully apply each color layer onto the material, 
+                    resulting in bold, long-lasting prints that make a statement. Whether you're printing on cotton, polyester, 
+                    or specialty fabrics, our screen printing process delivers consistent results with exceptional color accuracy 
+                    and detail.
+                </p>
+                <br />
+                <p className="screen-printing-text">
+                    Quality is our top priority. We conduct thorough inspections throughout the printing process to ensure that each 
+                    print meets our strict standards for clarity, color consistency, and durability. With our attention to detail and 
+                    commitment to excellence, you can trust that your printed products will exceed expectations.
+                </p>
+                <br />
+                <p className="screen-printing-text">
+                    Whether you're looking to create custom apparel for your team, promotional items for your business, or branded merchandise for your event, our screen printing services offer a reliable and cost-effective solution.
                 </p>
                 <br />
                 <Header as="h2" className="screen-printing-subheader">What You'll Get</Header>
