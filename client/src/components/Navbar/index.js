@@ -43,7 +43,8 @@ const Navbar = (props) => {
         { name: "Promotional Items", link: "/services/promo-items" },
         { name: "Fulfillment", link: "/services/fulfillment" },
         { name: "E-Commerce", link: "/services/ecommerce" },
-        { name: "Graphic Design", link: "/services/graphic-design" }
+        { name: "Graphic Design", link: "/services/graphic-design" },
+        { name: "Print On-Demand", link: "/services/print-on-demand" }
     ];
 
     return (

@@ -97,12 +97,12 @@ const PageBanner = (props) => {
                 { name: "DYE SUBLIMATION", link: "/services/dye-sublimation" }
             ];
             break;
-        case "/services/on-demand-printing":
-            pageBannerName = "ON-DEMAND PRINTING";
+        case "/services/print-on-demand":
+            pageBannerName = "PRINT ON-DEMAND";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
                 { name: "SERVICES", link: "/services" },
-                { name: "ON-DEMAND PRINTING", link: "/services/on-demand-printing" }
+                { name: "PRINT ON-DEMAND", link: "/services/print-on-demand" }
             ];
             break;
         case "/services/graphic-design":
