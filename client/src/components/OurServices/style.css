@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: 20px;
+    row-gap: 20px;
     width: 90%;
     margin: 3% 5%;
     padding: 2%;
@@ -74,7 +75,6 @@
 
     #services-container {
         grid-template-columns: repeat(5, 1fr); 
-        row-gap: 20px;
         width: 100%;
         margin: 0;
     }
@@ -91,30 +91,13 @@
     }
 
     #services-container {
-        grid-template-columns: repeat(6, 1fr); 
-        row-gap: 20px;
+        grid-template-columns: repeat(3, 1fr); 
         width: 100%;
         margin: 0;
     }
 
-    .services-col:nth-child(1) {
-        grid-column: span 2;
-    }
-    
-    .services-col:nth-child(2) {
-        grid-column: span 2;
-    }
-    
-    .services-col:nth-child(3) {
-        grid-column: span 2;
-    }
-    .services-col:nth-child(4) {
-        grid-row-start: 2;
-        grid-column: 2 / span 2;
-    }
-    .services-col:nth-child(5) {
-        grid-row-start: 2;
-        grid-column: span 2;
+    .services-col:nth-child(10) {
+        grid-column: 2 / span 1;
     }
 }
 
@@ -126,7 +109,6 @@
 
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
-        row-gap: 20px;
         width: 60%;
         margin: 0 20%;
     }
@@ -158,7 +140,6 @@
 
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
-        row-gap: 20px;
         width: 60%;
         margin: 4% 20%;
     }
@@ -190,7 +171,6 @@
 
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
-        row-gap: 20px;
         width: 80%;
         margin: 5% 10%;
     }
@@ -223,7 +203,6 @@
 
     #services-container {
         grid-template-columns: repeat(1, 1fr); 
-        row-gap: 20px;
         width: 90%;
         margin: 0 5%;
     }
