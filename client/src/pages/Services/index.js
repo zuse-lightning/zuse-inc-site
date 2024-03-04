@@ -10,6 +10,8 @@ import ServiceShopifyStore from "./ServiceShopifyStore";
 import ServiceGraphicDesign from "./ServiceGraphicDesign";
 import ServiceOnDemand from "./ServiceOnDemand";
 import ServiceSewing from "./ServiceSewing";
+import ServiceDyeSub from "./ServiceDyeSub";
+import ServiceDirectTransfer from "./ServiceDirectTransfer";
 
 const Services = (props) => {
 
@@ -32,9 +34,9 @@ const Services = (props) => {
                 <Route exact path="fulfillment" element={<ServiceFulfillment screenWidth={screenWidth} />} />
                 <Route exact path="ecommerce" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
                 <Route exact path="graphic-design" element={<ServiceGraphicDesign screenWidth={screenWidth} />} />
-                <Route exact path="dtg-dtf" />
+                <Route exact path="dtg-dtf" element={<ServiceDirectTransfer screenWidth={screenWidth} />} />
                 <Route exact path="print-on-demand" element={<ServiceOnDemand screenWidth={screenWidth} />} />
-                <Route exact path="dye-sublimation" />
+                <Route exact path="dye-sublimation" element={<ServiceDyeSub screenWidth={screenWidth} />} />
                 <Route exact path="sewing" element={<ServiceSewing screenWidth={screenWidth} />} />
             </Routes>
         </>
