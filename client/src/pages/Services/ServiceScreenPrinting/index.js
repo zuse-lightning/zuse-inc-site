@@ -30,7 +30,7 @@ const ServiceScreenPrinting = (props) => {
             </Helmet>
             <div id="screen-printing-container">
                 <Header as="h1" id="screen-printing-header">Screen Printing</Header>
-                <Image fluid src={screenWidth >= 992 ? ScreenPrinting : ScreenPrintingMobile} />
+                <Image fluid src={ScreenPrinting} />
                 <br />
                 <Header as="h2" className="screen-printing-subheader">How It Works</Header>
                 <br />
