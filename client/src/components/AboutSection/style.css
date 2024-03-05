@@ -13,8 +13,7 @@
 }
 
 #zuse-building-img {
-    width: 80%;
-    margin: 0 10%;
+    width: 100%;
 }
 
 #about-header {
@@ -40,12 +39,27 @@
     margin: 6% 35% 0;
 }
 
+@media (min-width: 1700px) {
+    #zuse-building-img {
+        margin-top: 10%;
+        margin-left: -2%;
+    }
+}
+
+
 @media (max-width: 2030px) and (min-width: 1700px),
 (max-width: 1699px) and (min-width: 1200px),
 (max-width: 1199px) and (min-width: 992px) { 
     #about-page-container {
         width: 80%;
         margin: 0 10%;
+    }
+}
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #about-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
     }
 }
 
