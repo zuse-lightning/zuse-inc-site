@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import ScreenPrinting from "../../../assets/images/banners/screenprinting.png";
+import ScreenPrinting from "../../../assets/images/banners/screenprinting.jpg";
 import ScreenPrintingMobile from "../../../assets/images/banners/screenprinting-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";

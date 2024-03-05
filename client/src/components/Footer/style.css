@@ -14,7 +14,11 @@
     column-gap: 20px;
 }
 
-.footer-col:nth-child(1), .footer-col:nth-child(2) {
+.footer-col:nth-child(1) {
+    grid-column: span 2;
+}
+
+.footer-col:nth-child(2) {
     grid-column: span 3;
 }
 
@@ -23,14 +27,22 @@
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
-    .footer-col:nth-child(1), .footer-col:nth-child(2) {
-        grid-column: span 5;
+    .footer-col:nth-child(1) {
+        grid-column: span 3;
+    }
+    
+    .footer-col:nth-child(2) {
+        grid-column: span 4;
     }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    .footer-col:nth-child(1), .footer-col:nth-child(2){
-        grid-column: span 5;
+    .footer-col:nth-child(1) {
+        grid-column: span 3;
+    }
+    
+    .footer-col:nth-child(2) {
+        grid-column: span 4;
     }
     #footer-container {
         padding: 1.5% 10% 2%
@@ -38,8 +50,12 @@
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
-    .footer-col:nth-child(1), .footer-col:nth-child(2){
-        grid-column: span 6;
+    .footer-col:nth-child(1) {
+        grid-column: span 3;
+    }
+    
+    .footer-col:nth-child(2) {
+        grid-column: span 4;
     }
     #footer-container {
         padding: 1.5% 10% 2%
@@ -48,10 +64,10 @@
 
 @media (max-width: 800px) and (min-width: 768px) {
     .footer-col:nth-child(1) {
-        grid-column: span 7;
+        grid-column: span 3;
     }
     .footer-col:nth-child(2) {
-        grid-column: span 5;
+        grid-column: span 4;
     }
     #footer-container {
         padding: 1.5% 10% 2%
