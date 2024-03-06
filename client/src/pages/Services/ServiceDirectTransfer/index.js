@@ -1,8 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import DirectTransfer from "../../../assets/images/banners/dtg-dtf-banner.png";
-import DirectTransferMobile from "../../../assets/images/banners/dtg-dtf-banner-mobile.png";
+import DirectTransfer from "../../../assets/images/banners/dtg-dtf-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -16,7 +15,7 @@ const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, Black
 
 const ServiceDirectTransfer = (props) => {
 
-    const { pathname, screenWidth } = props;
+    const { pathname } = props;
     console.log(pathname);
 
     return (
@@ -30,7 +29,7 @@ const ServiceDirectTransfer = (props) => {
             </Helmet>
             <div id="dtg-dtf-container">
                 <Header as="h1" id="dtg-dtf-header">Direct Transfer</Header>
-                <Image fluid src={screenWidth >= 992 ? DirectTransfer : DirectTransferMobile} />
+                <Image fluid src={DirectTransfer} />
                 <br />
                 <Header as="h2" className="dtg-dtf-subheader">How It Works</Header>
                 <br />

@@ -4,6 +4,7 @@ import MainBanner from "../../assets/images/banners/new-main-banner.png";
 import Fulfillment from "../../assets/images/banners/fulfillment-banner.png";
 import ScreenPrinting from "../../assets/images/banners/screenprinting-banner.png";
 import Embroidery from "../../assets/images/banners/embroidery-banner.png";
+import Ecommerce from "../../assets/images/banners/ecommerce-banner.png";
 import GraphicDesign from "../../assets/images/banners/graphic-design-banner.png";
 import PrintOnDemand from "../../assets/images/banners/print-on-demand-banner.png";
 import DirectTransfer from "../../assets/images/banners/dtg-dtf-banner.png";
@@ -13,6 +14,7 @@ import MainBannerMobile from "../../assets/images/banners/new-main-banner-mobile
 import FulfillmentMobile from "../../assets/images/banners/fulfillment-mobile-banner.png";
 import ScreenPrintingMobile from "../../assets/images/banners/screenprinting-mobile-banner.png";
 import EmbroideryMobile from "../../assets/images/banners/embroidery-mobile-banner.png";
+import EcommerceMobile from "../../assets/images/banners/ecommerce-banner-mobile.png";
 import GraphicDesignMobile from "../../assets/images/banners/graphic-design-banner-mobile.png";
 import PrintOnDemandMobile from "../../assets/images/banners/print-on-demand-banner-mobile.png";
 import DirectTransferMobile from "../../assets/images/banners/dtg-dtf-banner-mobile.png";
@@ -30,26 +32,28 @@ const HomeSlideShow = (props) => {
     if (screenWidth >= 992) {
         banners = [
             MainBanner, 
-            Fulfillment, 
             ScreenPrinting, 
-            Embroidery, 
+            Embroidery,
+            Fulfillment,
+            Ecommerce, 
             GraphicDesign, 
             PrintOnDemand, 
-            DirectTransfer,
+            Sewing,
             DyeSub,
-            Sewing
+            DirectTransfer
         ];
     } else {
         banners = [
             MainBannerMobile, 
-            FulfillmentMobile, 
             ScreenPrintingMobile, 
-            EmbroideryMobile, 
+            EmbroideryMobile,
+            FulfillmentMobile,
+            EcommerceMobile, 
             GraphicDesignMobile, 
             PrintOnDemandMobile, 
-            DirectTransferMobile,
+            SewingMobile,
             DyeSubMobile,
-            SewingMobile
+            DirectTransferMobile
         ];
     }
 

@@ -2,7 +2,6 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import ScreenPrinting from "../../../assets/images/banners/screenprinting.jpg";
-import ScreenPrintingMobile from "../../../assets/images/banners/screenprinting-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -16,7 +15,7 @@ const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, Black
 
 const ServiceScreenPrinting = (props) => {
 
-    const { pathname, screenWidth } = props;
+    const { pathname } = props;
     console.log(pathname);
 
     return (

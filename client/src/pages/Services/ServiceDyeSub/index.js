@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import DyeSub from "../../../assets/images/banners/dye-sub-banner.png";
-import DyeSubMobile from "../../../assets/images/banners/dye-sub-banner-mobile.png";
+import DyeSubMobile from "../../../assets/images/banners/dye-sub-textless-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";

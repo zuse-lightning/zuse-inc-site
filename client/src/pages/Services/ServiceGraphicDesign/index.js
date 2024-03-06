@@ -1,8 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import GraphicDesign from "../../../assets/images/banners/graphic-design-banner.png";
-import GraphicDesignMobile from "../../../assets/images/banners/graphic-design-banner-mobile.png";
+import GraphicDesign from "../../../assets/images/banners/graphic-design-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -16,7 +15,7 @@ const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, Black
 
 const ServiceGraphicDesign = (props) => {
 
-    const { pathname, screenWidth } = props;
+    const { pathname } = props;
     console.log(pathname);
 
     return (
@@ -30,7 +29,7 @@ const ServiceGraphicDesign = (props) => {
             </Helmet>
             <div id="graphic-design-container">
                 <Header as="h1" id="graphic-design-header">Graphic Design</Header>
-                <Image fluid src={screenWidth >= 992 ? GraphicDesign : GraphicDesignMobile} />
+                <Image fluid src={GraphicDesign} />
                 <br />
                 <Header as="h2" className="graphic-design-subheader">How It Works</Header>
                 <br />

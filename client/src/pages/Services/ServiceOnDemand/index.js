@@ -1,8 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import OnDemand from "../../../assets/images/banners/print-on-demand-banner.png";
-import OnDemandMobile from "../../../assets/images/banners/print-on-demand-banner-mobile.png";
+import OnDemand from "../../../assets/images/banners/on-demand-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import BlackUtility from "../../../assets/proxy/black-utility.png";
 import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
@@ -16,7 +15,7 @@ const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, Black
 
 const ServiceOnDemand = (props) => {
 
-    const { pathname, screenWidth } = props;
+    const { pathname } = props;
     console.log(pathname);
 
     return (
@@ -30,7 +29,7 @@ const ServiceOnDemand = (props) => {
             </Helmet>
             <div id="on-demand-container">
                 <Header as="h1" id="on-demand-header">Print On-Demand</Header>
-                <Image fluid src={screenWidth >= 992 ? OnDemand : OnDemandMobile} />
+                <Image fluid src={OnDemand} />
                 <br />
                 <Header as="h2" className="on-demand-subheader">How It Works</Header>
                 <br />
