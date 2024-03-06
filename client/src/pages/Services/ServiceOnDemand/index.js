@@ -3,15 +3,8 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import OnDemand from "../../../assets/images/banners/on-demand-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
 
 import "./style.css";
-
-const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
-
 
 const ServiceOnDemand = (props) => {
 
@@ -49,14 +42,6 @@ const ServiceOnDemand = (props) => {
                     creative visions to life with speed and precision.
                 </p>
                 <br />
-                {/* <Header as="h2" className="on-demand-subheader">What You'll Get</Header>
-                <div id="on-demand-results-container">
-                    {screenPrintingResults.map((result, index) => (
-                        <div className="on-demand-result-col" key={index}>
-                            <Image className="on-demand-result-img" src={result} />
-                        </div>
-                    ))}
-                </div> */}
                 <PageContactFooter />
             </div>
         </>

@@ -3,19 +3,12 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import Sewing from "../../../assets/images/banners/sewing-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
 
 import "./style.css";
 
-const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
-
-
 const ServiceSewing = (props) => {
 
-    const { pathname, screenWidth } = props;
+    const { pathname } = props;
     console.log(pathname);
 
     return (
@@ -39,14 +32,6 @@ const ServiceSewing = (props) => {
                     clients to ensure that their sewing projects are completed to ensure your satisfaction.
                 </p>
                 <br />
-                {/* <Header as="h2" className="sewing-subheader">What You'll Get</Header>
-                <div id="sewing-results-container">
-                    {screenPrintingResults.map((result, index) => (
-                        <div className="sewing-result-col" key={index}>
-                            <Image className="sewing-result-img" src={result} />
-                        </div>
-                    ))}
-                </div> */}
                 <PageContactFooter />
             </div>
         </>

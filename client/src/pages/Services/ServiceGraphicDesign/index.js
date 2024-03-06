@@ -3,14 +3,14 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import GraphicDesign from "../../../assets/images/banners/graphic-design-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
+// import BlackUtility from "../../../assets/proxy/black-utility.png";
+// import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
+// import GreyUtility from "../../../assets/proxy/grey-utility.png";
+// import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
 
 import "./style.css";
 
-const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
+// const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
 
 
 const ServiceGraphicDesign = (props) => {
@@ -46,14 +46,14 @@ const ServiceGraphicDesign = (props) => {
                     optio nam neque assumenda alias voluptatibus maiores accusantium? Fugiat, cumque saepe eius incidunt quod, suscipit distinctio a labore, accusantium officiis non!
                 </p>
                 <br />
-                <Header as="h2" className="graphic-design-subheader">What You'll Get</Header>
+                {/* <Header as="h2" className="graphic-design-subheader">What You'll Get</Header>
                 <div id="graphic-design-results-container">
                     {screenPrintingResults.map((result, index) => (
                         <div className="graphic-design-result-col" key={index}>
                             <Image className="graphic-design-result-img" src={result} />
                         </div>
                     ))}
-                </div>
+                </div> */}
                 <PageContactFooter />
             </div>
         </>

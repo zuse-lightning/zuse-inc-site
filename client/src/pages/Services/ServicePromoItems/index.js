@@ -4,15 +4,8 @@ import { Helmet } from "react-helmet-async";
 import PromoItems from "../../../assets/images/banners/promo-items.png";
 import PromoItemsMobile from "../../../assets/images/banners/promo-items-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
 
 import "./style.css";
-
-const promoItemsResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
-
 
 const ServicePromoItems = (props) => {
 
@@ -61,14 +54,6 @@ const ServicePromoItems = (props) => {
                     service, you can trust that your promotional items will be ready when you need them.
                 </p>
                 <br />
-                {/* <Header as="h2" className="promo-items-subheader">What You'll Get</Header>
-                <div id="promo-items-results-container">
-                    {promoItemsResults.map((result, index) => (
-                        <div className="promo-items-result-col" key={index}>
-                            <Image className="promo-items-result-img" src={result} />
-                        </div>
-                    ))}
-                </div> */}
                 <PageContactFooter />
             </div>
         </>

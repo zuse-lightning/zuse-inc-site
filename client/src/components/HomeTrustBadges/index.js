@@ -1,8 +1,8 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import Delivery from "../../assets/images/fast-delivery-white.png";
-import Message from "../../assets/proxy/trust-badge-message.png";
-import Quality from "../../assets/proxy/trust-badge-quality.png";
+import Message from "../../assets/images/trust-badge-message.png";
+import Quality from "../../assets/images/trust-badge-quality.png";
 
 import "./style.css";
 
