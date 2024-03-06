@@ -3,15 +3,27 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import ScreenPrinting from "../../../assets/images/banners/screenprinting.jpg";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
+import Screen1 from "../../../assets/images/examples/Screen1.jpg";
+import Screen3 from "../../../assets/images/examples/Screen3.jpg";
+import Screen5 from "../../../assets/images/examples/Screen5.jpg";
+import Screen6 from "../../../assets/images/examples/Screen6.jpg";
+import Screen7 from "../../../assets/images/examples/Screen7.jpg";
+import Screen8 from "../../../assets/images/examples/Screen8.jpg";
+import Screen9 from "../../../assets/images/examples/Screen9.jpg";
+import Screen10 from "../../../assets/images/examples/Screen10.jpg";
 
 import "./style.css";
 
-const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
-
+const screenPrintingResults = [
+    Screen1, 
+    Screen3, 
+    Screen5, 
+    Screen6, 
+    Screen7, 
+    Screen8, 
+    Screen9, 
+    Screen10
+];
 
 const ServiceScreenPrinting = (props) => {
 
