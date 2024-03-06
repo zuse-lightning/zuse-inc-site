@@ -3,15 +3,19 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import DirectTransfer from "../../../assets/images/banners/dtg-dtf-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
+import DTG1 from "../../../assets/images/examples/DTG1.jpg";
+import DTG2 from "../../../assets/images/examples/DTG2.jpg";
+import DTG3 from "../../../assets/images/examples/DTG3.jpg";
+import DTG4 from "../../../assets/images/examples/DTG4.jpg";
+import DTF1 from "../../../assets/images/examples/DTF1.jpg";
+import DTF2 from "../../../assets/images/examples/DTF2.jpg";
+import DTF3 from "../../../assets/images/examples/DTF3.jpg";
+import DTF4 from "../../../assets/images/examples/DTF4.jpg";
 
 import "./style.css";
 
-const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
-
+const DTGResults = [DTG1, DTG2, DTG3, DTG4];
+const DTFResults = [DTF1, DTF2, DTF3, DTF4];
 
 const ServiceDirectTransfer = (props) => {
 
@@ -60,9 +64,17 @@ const ServiceDirectTransfer = (props) => {
                     high-quality solutions. Let us bring your designs to life with precision and expertise.
                 </p>
                 <br />
-                <Header as="h2" className="dtg-dtf-subheader">What You'll Get</Header>
-                <div id="dtg-dtf-results-container">
-                    {screenPrintingResults.map((result, index) => (
+                <Header as="h2" className="dtg-dtf-subheader">What You'll Get With DTG</Header>
+                <div className="dtg-dtf-results-container">
+                    {DTGResults.map((result, index) => (
+                        <div className="dtg-dtf-result-col" key={index}>
+                            <Image className="dtg-dtf-result-img" src={result} />
+                        </div>
+                    ))}
+                </div>
+                <Header as="h2" className="dtg-dtf-subheader">What You'll Get With DTF</Header>
+                <div className="dtg-dtf-results-container">
+                    {DTFResults.map((result, index) => (
                         <div className="dtg-dtf-result-col" key={index}>
                             <Image className="dtg-dtf-result-img" src={result} />
                         </div>

@@ -1,22 +1,15 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import DyeSub from "../../../assets/images/banners/dye-sub-banner.png";
 import DyeSubMobile from "../../../assets/images/banners/dye-sub-textless-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
 
 import "./style.css";
-
-const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
 
 
 const ServiceDyeSub = (props) => {
 
-    const { pathname, screenWidth } = props;
+    const { pathname } = props;
     console.log(pathname);
 
     return (
@@ -51,14 +44,6 @@ const ServiceDyeSub = (props) => {
                     carefully package the finished products and deliver them to our clients, offering prompt and reliable delivery service. 
                 </p>
                 <br />
-                <Header as="h2" className="dye-sub-subheader">What You'll Get</Header>
-                <div id="dye-sub-results-container">
-                    {screenPrintingResults.map((result, index) => (
-                        <div className="dye-sub-result-col" key={index}>
-                            <Image className="dye-sub-result-img" src={result} />
-                        </div>
-                    ))}
-                </div>
                 <PageContactFooter />
             </div>
         </>

@@ -27,10 +27,14 @@
     font-size: 18px;
 }
 
-#dtg-dtf-results-container {
+.dtg-dtf-results-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;
+}
+
+.dtg-dtf-result-img {
+    height: 100%;
 }
 
 @media (max-width: 2030px) and (min-width: 1700px),
