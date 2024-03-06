@@ -4,14 +4,28 @@ import { Helmet } from "react-helmet-async";
 import Embroidery from "../../../assets/images/banners/embroidery.png";
 import EmbroideryMobile from "../../../assets/images/banners/embroidery-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import BlackUtility from "../../../assets/proxy/black-utility.png";
-import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-import GreyUtility from "../../../assets/proxy/grey-utility.png";
-import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
+import Embroider1 from "../../../assets/images/examples/Embroider1.jpg";
+import Embroider2 from "../../../assets/images/examples/Embroider2.jpg";
+import Embroider6 from "../../../assets/images/examples/Embroider6.jpg";
+import Embroider10 from "../../../assets/images/examples/Embroider10.jpg";
+import Embroider12 from "../../../assets/images/examples/Embroider12.jpg";
+import Embroider14 from "../../../assets/images/examples/Embroider14.jpg";
+import Embroider16 from "../../../assets/images/examples/Embroider16.jpg";
+import Embroider20 from "../../../assets/images/examples/Embroider20.jpg";
 
 import "./style.css";
 
-const embroideryResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
+const embroideryResults = [
+    Embroider1,
+    Embroider6,
+    Embroider2,
+    Embroider10,
+    Embroider12,
+    Embroider20,
+    Embroider14,
+    Embroider16,
+    
+];
 
 const ServiceEmbroidery = (props) => {
 

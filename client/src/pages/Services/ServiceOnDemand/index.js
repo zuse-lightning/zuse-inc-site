@@ -49,14 +49,14 @@ const ServiceOnDemand = (props) => {
                     creative visions to life with speed and precision.
                 </p>
                 <br />
-                <Header as="h2" className="on-demand-subheader">What You'll Get</Header>
+                {/* <Header as="h2" className="on-demand-subheader">What You'll Get</Header>
                 <div id="on-demand-results-container">
                     {screenPrintingResults.map((result, index) => (
                         <div className="on-demand-result-col" key={index}>
                             <Image className="on-demand-result-img" src={result} />
                         </div>
                     ))}
-                </div>
+                </div> */}
                 <PageContactFooter />
             </div>
         </>

@@ -61,14 +61,14 @@ const ServicePromoItems = (props) => {
                     service, you can trust that your promotional items will be ready when you need them.
                 </p>
                 <br />
-                <Header as="h2" className="promo-items-subheader">What You'll Get</Header>
+                {/* <Header as="h2" className="promo-items-subheader">What You'll Get</Header>
                 <div id="promo-items-results-container">
                     {promoItemsResults.map((result, index) => (
                         <div className="promo-items-result-col" key={index}>
                             <Image className="promo-items-result-img" src={result} />
                         </div>
                     ))}
-                </div>
+                </div> */}
                 <PageContactFooter />
             </div>
         </>
