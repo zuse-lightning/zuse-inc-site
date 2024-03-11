@@ -9,9 +9,6 @@ import "./style.css";
 
 const ServiceDyeSub = (props) => {
 
-    const { pathname } = props;
-    console.log(pathname);
-
     return (
         <>
             <Helmet>

@@ -27,9 +27,6 @@ const screenPrintingResults = [
 
 const ServiceScreenPrinting = (props) => {
 
-    const { pathname } = props;
-    console.log(pathname);
-
     return (
         <>
             <Helmet>

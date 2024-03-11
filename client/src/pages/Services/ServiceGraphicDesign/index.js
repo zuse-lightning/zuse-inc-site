@@ -3,15 +3,8 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import GraphicDesign from "../../../assets/images/banners/graphic-design-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-// import BlackUtility from "../../../assets/proxy/black-utility.png";
-// import BlackWomenUnion from "../../../assets/proxy/black-women-union.png";
-// import GreyUtility from "../../../assets/proxy/grey-utility.png";
-// import WhiteWomenUnion from "../../../assets/proxy/white-women-union.png";
 
 import "./style.css";
-
-// const screenPrintingResults = [BlackUtility, WhiteWomenUnion, GreyUtility, BlackWomenUnion];
-
 
 const ServiceGraphicDesign = (props) => {
 
@@ -53,14 +46,6 @@ const ServiceGraphicDesign = (props) => {
                     With our attention to detail, creativity, and dedication to customer satisfaction, you can trust that your graphic design needs are in good hands.
                 </p>
                 <br />
-                {/* <Header as="h2" className="graphic-design-subheader">What You'll Get</Header>
-                <div id="graphic-design-results-container">
-                    {screenPrintingResults.map((result, index) => (
-                        <div className="graphic-design-result-col" key={index}>
-                            <Image className="graphic-design-result-img" src={result} />
-                        </div>
-                    ))}
-                </div> */}
                 <PageContactFooter />
             </div>
         </>

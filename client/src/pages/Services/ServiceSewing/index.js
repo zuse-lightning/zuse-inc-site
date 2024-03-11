@@ -8,9 +8,6 @@ import "./style.css";
 
 const ServiceSewing = (props) => {
 
-    const { pathname } = props;
-    console.log(pathname);
-
     return (
         <>
             <Helmet>
