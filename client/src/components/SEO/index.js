@@ -5,7 +5,7 @@ export default ({title, description, keywords, type, image, url}) => {
         <Helmet>
             <title>{title}</title>
             <meta name="decription" content={description} />
-            <meta name="keywords" contetn={keywords} />
+            <meta name="keywords" content={keywords} />
             <meta property="og:type" content={type} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
