@@ -11,17 +11,17 @@ const HomeTrustBadges = () => {
         <div id="home-trust-badges-container">
             <div id="trust-badges-container">
                 <div className="trust-badge-col">
-                    <Image className="trust-badge-image" src={Message} />
+                    <Image className="trust-badge-image" draggable="false" src={Message} />
                     <Header className="trust-badge-title" as="h3">EXCELLENT CUSTOMER SERVICE</Header>
                     <Header className="trust-badge-text" as="h5">We're here for you 24/7! Got questions? We got answers!</Header>
                 </div>
                 <div className="trust-badge-col">
-                    <Image className="trust-badge-image" src={Delivery} />
+                    <Image className="trust-badge-image" draggable="false" src={Delivery} />
                     <Header className="trust-badge-title" as="h3">LIGHTNING-FAST SHIPPING</Header>
                     <Header className="trust-badge-text" as="h5">Your order will be on your doorstep before you know it! That's the Zuse guarantee!</Header>
                 </div>
                 <div className="trust-badge-col">
-                    <Image className="trust-badge-image" src={Quality} />
+                    <Image className="trust-badge-image" draggable="false" src={Quality} />
                     <Header className="trust-badge-title" as="h3">PREMIUM QUALITY</Header>
                     <Header className="trust-badge-text" as="h5">Apparel and accesories of the utmost quality-standard!</Header>
                 </div>

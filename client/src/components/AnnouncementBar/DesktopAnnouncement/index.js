@@ -20,8 +20,8 @@ const DesktopAnnouncment = (props) => {
             </div>}
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
-                    <Image as={Link} target=":blank" to="https://www.facebook.com/profile.php?id=100091589973552" className="announce-social-icon" id="announce-facebook-icon" src={FacebookIcon} />
-                    <Image as={Link} target=":blank" to="https://www.instagram.com/zuseincapparel/" className="announce-social-icon" id="announce-instagram-icon" src={InstagramIcon} />
+                    <Image as={Link} target=":blank" to="https://www.facebook.com/profile.php?id=100091589973552" draggable="false" className="announce-social-icon" id="announce-facebook-icon" src={FacebookIcon} />
+                    <Image as={Link} target=":blank" to="https://www.instagram.com/zuseincapparel/" draggable="false" className="announce-social-icon" id="announce-instagram-icon" src={InstagramIcon} />
                 </div>
             </div>
 

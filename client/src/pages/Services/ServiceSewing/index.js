@@ -19,7 +19,7 @@ const ServiceSewing = (props) => {
             </Helmet>
             <div id="sewing-container">
                 <Header as="h1" id="sewing-header">Sewing</Header>
-                <Image fluid src={Sewing} />
+                <Image draggable="false" fluid src={Sewing} />
                 <br />
                 <Header as="h2" className="sewing-subheader">How It Works</Header>
                 <br />

@@ -37,7 +37,7 @@ const TopCatalogs = (props) => {
             <div id="catalogs-container">
                 {catalogs.map((catalog, index) => (
                     <div className="catalog-col" key={index}>
-                        <Image as={Link} target=":blank" to={catalog.link} className="catalog-img" id={catalog.id} src={catalog.image} />
+                        <Image as={Link} target=":blank" to={catalog.link} draggable="false" className="catalog-img" id={catalog.id} src={catalog.image} />
                     </div>
                 ))}
             </div>

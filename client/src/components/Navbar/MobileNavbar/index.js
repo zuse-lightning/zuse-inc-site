@@ -28,7 +28,7 @@ const MobileNavbar = (props) => {
                 name="home"
             >
                 <div id="zuse-logo-container">
-                    <Image size={logoSize} id="home-btn-img" src={ZuseLogo} />
+                    <Image size={logoSize} draggable="false" id="home-btn-img" src={ZuseLogo} />
                 </div>
             </Menu.Item>
             <Menu.Item>

@@ -65,7 +65,7 @@ const ServiceDirectTransfer = (props) => {
                 <div className="dtg-dtf-results-container">
                     {DTGResults.map((result, index) => (
                         <div className="dtg-dtf-result-col" key={index}>
-                            <Image className="dtg-dtf-result-img" src={result} />
+                            <Image className="dtg-dtf-result-img" draggable="false" src={result} />
                         </div>
                     ))}
                 </div>
@@ -73,7 +73,7 @@ const ServiceDirectTransfer = (props) => {
                 <div className="dtg-dtf-results-container">
                     {DTFResults.map((result, index) => (
                         <div className="dtg-dtf-result-col" key={index}>
-                            <Image className="dtg-dtf-result-img" src={result} />
+                            <Image className="dtg-dtf-result-img" draggable="false" src={result} />
                         </div>
                     ))}
                 </div>

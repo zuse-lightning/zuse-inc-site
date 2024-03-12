@@ -36,7 +36,7 @@ const ServiceShopifyStore = (props) => {
             </Helmet>
             <div id="shopify-container">
                 <Header as="h1" id="shopify-header">E-Commerce</Header>
-                <Image fluid src={screenWidth >= 992 ? ShopifyStores : ShopifyStoresMobile} />
+                <Image draggable="false" fluid src={screenWidth >= 992 ? ShopifyStores : ShopifyStoresMobile} />
                 <br />
                 <Header as="h2" className="shopify-subheader">How It Works</Header>
                 <br />
@@ -66,7 +66,7 @@ const ServiceShopifyStore = (props) => {
                 <div id="shopify-results-container">
                     {shopifyResults.map((result, index) => (
                         <div className="shopify-result-col" key={index}>
-                            <Image as={Link} to={result.link} target=":blank" className="shopify-result-img" src={result.image} />
+                            <Image as={Link} to={result.link} target=":blank" className="shopify-result-img" draggable="false" src={result.image} />
                         </div>
                     ))}
                 </div>

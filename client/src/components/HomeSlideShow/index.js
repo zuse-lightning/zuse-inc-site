@@ -81,7 +81,7 @@ const HomeSlideShow = (props) => {
             >
                 {banners.map((banner, index) => (
                     <div className="home-slide" key={index}>
-                        <Image fluid src={banner} />
+                        <Image draggable="false" fluid src={banner} />
                     </div>
                 ))}
             </div>

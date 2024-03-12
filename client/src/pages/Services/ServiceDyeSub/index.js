@@ -20,7 +20,7 @@ const ServiceDyeSub = (props) => {
             </Helmet>
             <div id="dye-sub-container">
                 <Header as="h1" id="dye-sub-header">Dye Sublimation</Header>
-                <Image fluid src={DyeSubMobile} />
+                <Image draggable="false" fluid src={DyeSubMobile} />
                 <br />
                 <Header as="h2" className="dye-sub-subheader">How It Works</Header>
                 <br />

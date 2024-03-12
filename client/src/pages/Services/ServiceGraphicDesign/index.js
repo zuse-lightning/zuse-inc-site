@@ -22,7 +22,7 @@ const ServiceGraphicDesign = (props) => {
             </Helmet>
             <div id="graphic-design-container">
                 <Header as="h1" id="graphic-design-header">Graphic Design</Header>
-                <Image fluid src={GraphicDesign} />
+                <Image draggable="false" fluid src={GraphicDesign} />
                 <br />
                 <Header as="h2" className="graphic-design-subheader">How It Works</Header>
                 <br />

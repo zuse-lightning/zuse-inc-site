@@ -19,7 +19,7 @@ const DesktopNavbar = (props) => {
                     name="home"
                 >
                     <div id="zuse-logo-container">
-                        <Image size="medium" id="home-btn-img" src={ZuseLogo} />
+                        <Image draggable="false" size="medium" id="home-btn-img" src={ZuseLogo} />
                     </div>
                 </Menu.Item>
                 <Menu.Item

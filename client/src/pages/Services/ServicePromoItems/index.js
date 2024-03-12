@@ -22,7 +22,7 @@ const ServicePromoItems = (props) => {
             </Helmet>
             <div id="promo-items-container">
                 <Header as="h1" id="promo-items-header">Promotional Items</Header>
-                <Image fluid src={screenWidth >= 992 ? PromoItems : PromoItemsMobile} />
+                <Image draggable="false" fluid src={screenWidth >= 992 ? PromoItems : PromoItemsMobile} />
                 <br />
                 <Header as="h2" className="promo-items-subheader">How It Works</Header>
                 <br />

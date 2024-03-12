@@ -19,7 +19,7 @@ const ServiceOnDemand = (props) => {
             </Helmet>
             <div id="on-demand-container">
                 <Header as="h1" id="on-demand-header">Print On-Demand</Header>
-                <Image fluid src={OnDemand} />
+                <Image draggable="false" fluid src={OnDemand} />
                 <br />
                 <Header as="h2" className="on-demand-subheader">How It Works</Header>
                 <br />

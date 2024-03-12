@@ -23,7 +23,7 @@ const ServiceFulfillment = (props) => {
             </Helmet>
             <div id="fulfillment-container">
                 <Header as="h1" id="fulfillment-header">Fulfillment</Header>
-                <Image fluid src={screenWidth >= 992 ? Fulfillment : FulfillmentMobile} />
+                <Image draggable="false" fluid src={screenWidth >= 992 ? Fulfillment : FulfillmentMobile} />
                 <br />
                 <Header as="h2" className="fulfillment-subheader">How It Works</Header>
                 <br />

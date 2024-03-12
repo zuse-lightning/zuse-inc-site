@@ -38,7 +38,7 @@ const OurServices = () => {
                 {services.map((service, index) => (
                     <div className="services-col" key={index}>
                         <div className="services-card">
-                            <Image className="services-card-image" src={service.image} />
+                            <Image className="services-card-image" draggable="false" src={service.image} />
                             <div className="services-card-header">{service.title}</div>
                             <Button as={Link} to={service.path} fluid className="services-card-btn">LEARN MORE <Icon className="services-card-icon" name="arrow right" /></Button>
                         </div>

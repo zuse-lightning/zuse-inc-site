@@ -41,7 +41,7 @@ const ServiceEmbroidery = (props) => {
             </Helmet>
             <div id="embroidery-container">
                 <Header as="h1" id="embroidery-header">Embroidery</Header>
-                <Image fluid src={screenWidth >= 992 ? Embroidery : EmbroideryMobile} />
+                <Image draggable="false" fluid src={screenWidth >= 992 ? Embroidery : EmbroideryMobile} />
                 <br />
                 <Header as="h2" className="embroidery-subheader">How It Works</Header>
                 <br />

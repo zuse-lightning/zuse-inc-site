@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Grid, Header, Icon } from "semantic-ui-react";
+import { Menu, Header, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import "./style.css";

@@ -10,7 +10,7 @@ const AboutSection = () => {
         <div id="about-page-container">
             <div id="about-container">
                 <div className="about-col">
-                    <Image id="zuse-building-img" src={ZuseBuilding} />
+                    <Image draggable="false" id="zuse-building-img" src={ZuseBuilding} />
                 </div>
                 <div className="about-col">
                     <Header as="h1" id="about-header">We Make Your Designs Reality</Header>

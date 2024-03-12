@@ -22,7 +22,7 @@ const TopClients = (props) => {
             <div id="clients-container">
                 {clients.map((client, index) => (
                     <div className="clients-col" key={index}>
-                        <Image className="clients-img" src={client} />
+                        <Image className="clients-img" draggable="false" src={client} />
                     </div>
                 ))}
             </div>
