@@ -8,9 +8,6 @@ import "./style.css";
 
 const ServiceGraphicDesign = (props) => {
 
-    const { pathname } = props;
-    console.log(pathname);
-
     return (
         <>
             <Helmet>
