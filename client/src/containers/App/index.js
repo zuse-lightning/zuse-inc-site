@@ -39,20 +39,6 @@ const useCurrentUrl = () => {
   return currentUrl;
 }
 
-const ChangeFavicon = (url) => {
-  useEffect(() => {
-    let link = document.querySelector("link[rel~='icon']");
-    const zuseIcon = "%PUBLIC_URL%/temp-favicon.png";
-    const acpIcon = "%PUBLIC_URL%/ACP-favicon.png";
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = 'icon';
-      document.getElementsByTagName("head")[0].appendChild(link);
-    }
-    url.includes("www.thecustomtfactory.com") ? link.href = acpIcon : link.href = zuseIcon;
-  }, [])
-}
-
 export const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
@@ -70,8 +56,7 @@ export const useWindowDimensions = () => {
 const App = () => {
 
   const { height, width } = useWindowDimensions();
-  ChangeFavicon(useCurrentUrl());
-
+  
   return (
     <>
       <Navbar location={useCurrentUrl()} screenWidth={width} />
