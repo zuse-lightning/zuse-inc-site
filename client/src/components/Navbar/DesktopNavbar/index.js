@@ -8,8 +8,8 @@ import "../style.css";
 
 const DesktopNavbar = (props) => {
 
-    const { catalogs, services, sticky, path } = props;
-    console.log(path);
+    const { catalogs, services, sticky, location } = props;
+    console.log(location);
 
     return (
         <Menu className={sticky} id="main-menu" fluid secondary>
@@ -21,7 +21,7 @@ const DesktopNavbar = (props) => {
                 name="home"
             >
                 <div id="zuse-logo-container">
-                    <Image draggable="false" size="medium" id="home-btn-img" src={path.includes("www.thecustomtfactory.com") ? ACPLogo : ZuseLogo} />
+                    <Image draggable="false" size="medium" id="home-btn-img" src={location.includes("www.thecustomtfactory.com") ? ACPLogo : ZuseLogo} />
                 </div>
             </Menu.Item>
             <Menu.Item

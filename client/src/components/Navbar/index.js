@@ -7,7 +7,7 @@ import "./style.css";
 
 const Navbar = (props) => {
 
-    const { screenWidth, screenHeight, path } = props;
+    const { screenWidth, screenHeight, location } = props;
     // const [stickyClass, setStickyClass] = useState("");
 
     // useEffect(() => {
@@ -54,7 +54,7 @@ const Navbar = (props) => {
         <>
             <div className={`header-container`}>
                 <AnnouncementBar screenWidth={screenWidth} />
-                { screenWidth >= 992 ? <DesktopNavbar path={path} catalogs={catalogs} services={services} /> : <MobileNavbar path={path} screenWidth={screenWidth} /> }
+                { screenWidth >= 992 ? <DesktopNavbar location={location} catalogs={catalogs} services={services} /> : <MobileNavbar location={location} screenWidth={screenWidth} /> }
             </div>
         </>
     );

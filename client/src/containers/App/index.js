@@ -38,19 +38,19 @@ export const useWindowDimensions = () => {
 
 const App = () => {
 
-  const { pathname } = useLocation();
-  console.log(pathname);
+  let location = useLocation();
+  console.log(location);
   const { height, width } = useWindowDimensions();
 
   return (
     <>
-      <Navbar path={pathname} screenWidth={width} />
+      <Navbar location={location} screenWidth={width} />
       <Sidebar.Pushable id="main-pushable">
         <Sidebar.Pusher>
           <PageBanner />
           <div id="main-container">
             <Routes>
-              <Route exact path="/" element={<Home path={pathname} screenWidth={width} />} />
+              <Route exact path="/" element={<Home location={location} screenWidth={width} />} />
               <Route exact path="/about" element={<About />} />
               <Route exact path="/catalogs" element={<TopCatalogs />} />
               <Route exact path="/services/*" element={<Services screenWidth={width} />} />
