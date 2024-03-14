@@ -66,8 +66,8 @@ const App = () => {
           <PageBanner />
           <div id="main-container">
             <Routes>
-              <Route exact path="/" element={<Home location={useCurrentUrl()} screenWidth={width} />} />
-              <Route exact path="/about" element={<About />} />
+              <Route exact path="/" element={<Home screenWidth={width} />} />
+              <Route exact path="/about" element={<About location={useCurrentUrl()}/>} />
               <Route exact path="/catalogs" element={<TopCatalogs />} />
               <Route exact path="/services/*" element={<Services screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact />} />
@@ -76,7 +76,7 @@ const App = () => {
         </Sidebar.Pusher>
       </Sidebar.Pushable>
       <SocialLinks />
-      <Footer />
+      <Footer location={useCurrentUrl()} />
     </>
   );
 

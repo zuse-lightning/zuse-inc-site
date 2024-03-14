@@ -4,6 +4,9 @@ import AboutSection from "../../components/AboutSection";
 
 class About extends Component {
     render() {
+
+        const { location } = this.props;
+
         return (
             <>
                 <Helmet>
@@ -12,7 +15,7 @@ class About extends Component {
                     <meta name="keywords" content="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items" />
                     <meta name="robots" content="index, follow" />
                 </Helmet>
-                <AboutSection />
+                <AboutSection location={location} />
             </>
         );
     }

@@ -18,7 +18,7 @@ const HomeTrustBadges = () => {
                 <div className="trust-badge-col">
                     <Image className="trust-badge-image" draggable="false" src={Delivery} />
                     <Header className="trust-badge-title" as="h3">LIGHTNING-FAST SHIPPING</Header>
-                    <Header className="trust-badge-text" as="h5">Your order will be on your doorstep before you know it! That's the Zuse guarantee!</Header>
+                    <Header className="trust-badge-text" as="h5">Your order will be on your doorstep before you know it!</Header>
                 </div>
                 <div className="trust-badge-col">
                     <Image className="trust-badge-image" draggable="false" src={Quality} />

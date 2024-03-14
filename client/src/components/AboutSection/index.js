@@ -5,7 +5,10 @@ import ZuseBuilding from "../../assets/images/zuse-building.jpg";
 
 import "./style.css";
 
-const AboutSection = () => {
+const AboutSection = (props) => {
+
+    const { location } = props;
+
     return (
         <div id="about-page-container">
             <div id="about-container">
@@ -21,7 +24,7 @@ const AboutSection = () => {
                     <p id="about-text">
                         While there are other companies in the market like Printful and similar services, what distinguishes us 
                         is our unwavering commitment to our clients' success. We understand that building a brand is more than 
-                        just printing designs on garments… Zuse Inc is about creating a lasting impression and forging meaningful 
+                        just printing designs on garments… {location.includes("www.thecustomtfactory.com") ? "American Contract Printing" : "Zuse Inc." } is about creating a lasting impression and forging meaningful 
                         connections with your audience. That's why we offer a wide variety of services tailored to meet the unique 
                         needs of each brand we work with.
                     </p>

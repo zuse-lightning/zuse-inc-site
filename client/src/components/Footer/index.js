@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 
 import "./style.css";
 
-const Footer = () => {
+const Footer = (props) => {
+
+    const { location } = props;
+
     return (
         <div id="footer-container">
             <Menu id="footer-menu" secondary>
@@ -45,7 +48,7 @@ const Footer = () => {
             </Menu>
             <div id="footer-contact-container">
                 <div className="footer-col">
-                    <Header id="copyright" as="h4">© 2024 Zuse Inc.</Header>
+                    <Header id="copyright" as="h4">© 2024 {location.includes("www.thecustomtfactory.com") ? "American Contract Printing" : "Zuse Inc." }</Header>
                 </div>
                 <div className="footer-col">
                     <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-458-3295</Header>
