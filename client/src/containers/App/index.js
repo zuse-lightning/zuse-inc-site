@@ -22,6 +22,23 @@ const getWindowDimensions = () => {
   }
 }
 
+const useCurrentUrl = () => {
+  const [currentUrl, setCurrentUrl] = useState(window.location.href);
+
+  console.log(currentUrl);
+
+  useEffect(() => {
+    const handlePageLoad = () => {
+      setCurrentUrl(window.location.href);
+    }
+    window.addEventListener("load", handlePageLoad);
+    return window.removeEventListener("load", handlePageLoad);
+  }, []);
+
+  console.log(currentUrl);
+  return currentUrl;
+}
+
 export const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   
@@ -38,19 +55,18 @@ export const useWindowDimensions = () => {
 
 const App = () => {
 
-  let location = useLocation();
-  console.log(location);
+  
   const { height, width } = useWindowDimensions();
 
   return (
     <>
-      <Navbar location={location} screenWidth={width} />
+      <Navbar location={useCurrentUrl()} screenWidth={width} />
       <Sidebar.Pushable id="main-pushable">
         <Sidebar.Pusher>
           <PageBanner />
           <div id="main-container">
             <Routes>
-              <Route exact path="/" element={<Home location={location} screenWidth={width} />} />
+              <Route exact path="/" element={<Home location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/about" element={<About />} />
               <Route exact path="/catalogs" element={<TopCatalogs />} />
               <Route exact path="/services/*" element={<Services screenWidth={width} />} />
