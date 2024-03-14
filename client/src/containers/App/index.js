@@ -63,7 +63,7 @@ const App = () => {
       <Navbar location={useCurrentUrl()} screenWidth={width} />
       <Sidebar.Pushable id="main-pushable">
         <Sidebar.Pusher>
-          <PageBanner />
+          <PageBanner location={useCurrentUrl()} />
           <div id="main-container">
             <Routes>
               <Route exact path="/" element={<Home screenWidth={width} />} />

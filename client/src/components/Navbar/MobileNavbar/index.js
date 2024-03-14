@@ -8,7 +8,7 @@ import "../style.css";
 
 const MobileNavbar = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
     const [mainVisible, setMainVisible] = useState(false);
 
     let logoSize;
