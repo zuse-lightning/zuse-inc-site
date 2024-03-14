@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "semantic-ui-react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
