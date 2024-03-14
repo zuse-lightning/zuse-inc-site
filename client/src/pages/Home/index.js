@@ -16,13 +16,7 @@ import "./style.css";
 class Home extends Component {
     render() {
 
-        const { screenWidth, path } = this.props;
-
-        if (path.includes("www.customtfactory.com")) {
-            console.log("zuse");
-        } else if (path.includes("www.thecustomtfactory.com")) {
-            console.log("american contract printing")
-        };
+        const { screenWidth } = this.props;
         
         return (
             <>

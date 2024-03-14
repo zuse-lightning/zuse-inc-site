@@ -39,11 +39,12 @@ export const useWindowDimensions = () => {
 const App = () => {
 
   const { pathname } = useLocation();
+  console.log(pathname);
   const { height, width } = useWindowDimensions();
 
   return (
     <>
-      <Navbar screenWidth={width} />
+      <Navbar path={pathname} screenWidth={width} />
       <Sidebar.Pushable id="main-pushable">
         <Sidebar.Pusher>
           <PageBanner />
