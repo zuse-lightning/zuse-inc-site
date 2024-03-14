@@ -55,7 +55,7 @@ export const useWindowDimensions = () => {
 
 const App = () => {
 
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   
   return (
     <>
