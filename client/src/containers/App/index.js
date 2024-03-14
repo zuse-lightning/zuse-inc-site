@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "semantic-ui-react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
@@ -38,6 +38,7 @@ export const useWindowDimensions = () => {
 
 const App = () => {
 
+  const { pathname } = useLocation();
   const { height, width } = useWindowDimensions();
 
   return (
@@ -48,7 +49,7 @@ const App = () => {
           <PageBanner />
           <div id="main-container">
             <Routes>
-              <Route exact path="/" element={<Home screenWidth={width} />} />
+              <Route exact path="/" element={<Home path={pathname} screenWidth={width} />} />
               <Route exact path="/about" element={<About />} />
               <Route exact path="/catalogs" element={<TopCatalogs />} />
               <Route exact path="/services/*" element={<Services screenWidth={width} />} />
