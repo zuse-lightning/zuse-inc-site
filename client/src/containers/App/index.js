@@ -25,8 +25,6 @@ const getWindowDimensions = () => {
 const useCurrentUrl = () => {
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
 
-  console.log(currentUrl);
-
   useEffect(() => {
     const handlePageLoad = () => {
       setCurrentUrl(window.location.href);
@@ -35,7 +33,6 @@ const useCurrentUrl = () => {
     return window.removeEventListener("load", handlePageLoad);
   }, []);
 
-  console.log(currentUrl);
   return currentUrl;
 }
 

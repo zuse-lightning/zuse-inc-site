@@ -9,7 +9,6 @@ import "../style.css";
 const DesktopNavbar = (props) => {
 
     const { catalogs, services, sticky, location } = props;
-    console.log(location);
 
     return (
         <Menu className={sticky} id="main-menu" fluid secondary>
