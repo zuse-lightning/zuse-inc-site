@@ -21,7 +21,7 @@ const DesktopNavbar = (props) => {
                 name="home"
             >
                 <div id="zuse-logo-container">
-                    <Image draggable="false" size="medium" id="home-btn-img" src={ZuseLogo} />
+                    <Image draggable="false" size="medium" id="home-btn-img" src={location.includes("www.thecustomtfactory.com") ? ACPLogo : ZuseLogo} />
                 </div>
             </Menu.Item>
             <Menu.Item
