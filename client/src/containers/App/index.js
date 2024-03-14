@@ -70,7 +70,7 @@ const App = () => {
               <Route exact path="/about" element={<About location={useCurrentUrl()}/>} />
               <Route exact path="/catalogs" element={<TopCatalogs />} />
               <Route exact path="/services/*" element={<Services screenWidth={width} />} />
-              <Route exact path="/contact" element={<Contact />} />
+              <Route exact path="/contact" element={<Contact location={useCurrentUrl()} />} />
             </Routes>
           </div>
         </Sidebar.Pusher>
