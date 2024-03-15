@@ -2,6 +2,7 @@ import React from "react";
 import { Header, Image, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import ZuseBuilding from "../../assets/images/zuse-building.jpg";
+import ACPBuilding from "../../assets/images/American-Contract-Printing.jpg";
 
 import "./style.css";
 
@@ -13,7 +14,7 @@ const AboutSection = (props) => {
         <div id="about-page-container">
             <div id="about-container">
                 <div className="about-col">
-                    <Image draggable="false" id="zuse-building-img" src={ZuseBuilding} />
+                    <Image draggable="false" id="zuse-building-img" src={location.includes("www.thecustomtfactory.com") ? ACPBuilding : ZuseBuilding } />
                 </div>
                 <div className="about-col">
                     <Header as="h1" id="about-header">We Make Your Designs Reality</Header>
