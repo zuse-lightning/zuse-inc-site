@@ -33,7 +33,7 @@ const OurServices = () => {
     
     return (
         <div id="our-services-container">
-            {<Header as="h1" id="our-services-header">Our Services</Header>}
+            {pathname !== "/services" ? <Header as="h1" id="our-services-header">Our Services</Header> : null}
             <div id="services-container">
                 {services.map((service, index) => (
                     <div className="services-col" key={index}>
