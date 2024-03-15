@@ -38,7 +38,7 @@
 }
 
 .dropdown.icon {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .ui.secondary.menu .active.item {
