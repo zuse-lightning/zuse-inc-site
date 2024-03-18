@@ -20,16 +20,36 @@ import PrintOnDemandMobile from "../../assets/images/banners/print-on-demand-ban
 import DirectTransferMobile from "../../assets/images/banners/dtg-dtf-banner-mobile.png";
 import DyeSubMobile from "../../assets/images/banners/dye-sub-banner-mobile.png";
 import SewingMobile from "../../assets/images/banners/sewing-banner-mobile.png";
+import ACPDirectTransfer from "../../assets/images/banners/ACP-DTG-DTF.png";
+import ACPDirectTransferMobile from "../../assets/images/banners/ACP-DTG-DTF-Mobile.png";
+import ACPDyeSub from "../../assets/images/banners/ACP-Dye-Sub.png";
+import ACPDyeSubMobile from "../../assets/images/banners/ACP-Dye-Sub-Mobile.png";
+import ACPEcommerce from "../../assets/images/banners/ACP-Ecommerce.png";
+import ACPEcommerceMobile from "../../assets/images/banners/ACP-Ecommerce-Mobile.png";
+import ACPEmbroidery from "../../assets/images/banners/ACP-Embroidery.png";
+import ACPEmbroideryMobile from "../../assets/images/banners/ACP-Embroidery-Mobile.png";
+import ACPFulfillment from "../../assets/images/banners/ACP-Fulfillment.png";
+import ACPFulfillmentMobile from "../../assets/images/banners/ACP-Fulfillment-Mobile.png";
+import ACPGraphicDesign from "../../assets/images/banners/ACP-Graphic-Design.png";
+import ACPGraphicDesignMobile from "../../assets/images/banners/ACP-Graphic-Design-Mobile.png";
+import ACPMain from "../../assets/images/banners/ACP-Main.png";
+import ACPMainMobile from "../../assets/images/banners/ACP-Main-Mobile.png";
+import ACPPrintOnDemand from "../../assets/images/banners/ACP-On-Demand.png";
+import ACPPrintOnDemandMobile from "../../assets/images/banners/ACP-On-Demand-Mobile.png";
+import ACPScreenPrinting from "../../assets/images/banners/ACP-Screenprinting.png";
+import ACPScreenPrintingMobile from "../../assets/images/banners/ACP-Screenprinting-Mobile.png";
+import ACPSewing from "../../assets/images/banners/ACP-Sewing.png";
+import ACPSewingMobile from "../../assets/images/banners/ACP-Sewing-Mobile.png";
 
 import "./style.css";
 
 const HomeSlideShow = (props) => {
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
     const [index, setIndex] = useState(0);
     const timeoutRef = useRef(null);
 
     let banners;
-    if (screenWidth >= 992) {
+    if (screenWidth >= 992 && location.includes("www.customtfactory.com")) {
         banners = [
             MainBanner, 
             ScreenPrinting, 
@@ -42,7 +62,7 @@ const HomeSlideShow = (props) => {
             DyeSub,
             DirectTransfer
         ];
-    } else {
+    } else if (screenWidth <= 991 && location.includes("www.customtfactory.com")) {
         banners = [
             MainBannerMobile, 
             ScreenPrintingMobile, 
@@ -54,6 +74,32 @@ const HomeSlideShow = (props) => {
             SewingMobile,
             DyeSubMobile,
             DirectTransferMobile
+        ];
+    } else if (screenWidth >= 992 && location.includes("www.thecustomtfactory.com")) {
+        banners = [
+            ACPMain, 
+            ACPScreenPrinting, 
+            ACPEmbroidery,
+            ACPFulfillment,
+            ACPEcommerce, 
+            ACPGraphicDesign, 
+            ACPPrintOnDemand, 
+            ACPSewing,
+            ACPDyeSub,
+            ACPDirectTransfer
+        ];
+    } else if (screenWidth <= 991 && location.includes("www.thecustomtfactory.com")) {
+        banners = [
+            ACPMainMobile, 
+            ACPScreenPrintingMobile, 
+            ACPEmbroideryMobile,
+            ACPFulfillmentMobile,
+            ACPEcommerceMobile, 
+            ACPGraphicDesignMobile, 
+            ACPPrintOnDemandMobile, 
+            ACPSewingMobile,
+            ACPDyeSubMobile,
+            ACPDirectTransferMobile
         ];
     }
 

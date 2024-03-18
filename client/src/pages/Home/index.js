@@ -16,7 +16,7 @@ import "./style.css";
 class Home extends Component {
     render() {
 
-        const { screenWidth } = this.props;
+        const { screenWidth, location } = this.props;
         
         return (
             <>
@@ -26,7 +26,7 @@ class Home extends Component {
                     <meta name="keywords" content="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items" />
                     <meta name="robots" content="index, follow" />
                 </Helmet>
-                <HomeSlideShow screenWidth={screenWidth} />
+                <HomeSlideShow location={location} screenWidth={screenWidth} />
                 <TopClients />
                 <HomeAbout />
                 <HomeTrustBadges />

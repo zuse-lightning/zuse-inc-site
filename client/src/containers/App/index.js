@@ -62,7 +62,7 @@ const App = () => {
           <PageBanner location={useCurrentUrl()} />
           <div id="main-container">
             <Routes>
-              <Route exact path="/" element={<Home screenWidth={width} />} />
+              <Route exact path="/" element={<Home location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/about" element={<About location={useCurrentUrl()} />} />
               <Route exact path="/catalogs" element={<TopCatalogs />} />
               <Route exact path="/services/*" element={<Services screenWidth={width} />} />
