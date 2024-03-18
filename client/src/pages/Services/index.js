@@ -15,7 +15,7 @@ import ServiceDirectTransfer from "./ServiceDirectTransfer";
 
 const Services = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
     const { pathname } = useLocation();
 
     return (
@@ -30,7 +30,7 @@ const Services = (props) => {
             <Routes>
                 <Route exact path="screenprinting" element={<ServiceScreenPrinting screenWidth={screenWidth} />} />
                 <Route exact path="embroidery" element={<ServiceEmbroidery screenWidth={screenWidth} />} />
-                <Route exact path="promo-items" element={<ServicePromoItems screenWidth={screenWidth} />} />
+                <Route exact path="promo-items" element={<ServicePromoItems location={location} screenWidth={screenWidth} />} />
                 <Route exact path="fulfillment" element={<ServiceFulfillment screenWidth={screenWidth} />} />
                 <Route exact path="ecommerce" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
                 <Route exact path="graphic-design" element={<ServiceGraphicDesign screenWidth={screenWidth} />} />

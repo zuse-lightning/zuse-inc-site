@@ -2,6 +2,7 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import PromoItems from "../../../assets/images/banners/promo-items.png";
+import ACPPromoItems from "../../../assets/images/banners/ACP-Promo-Items.png";
 import PromoItemsMobile from "../../../assets/images/banners/promo-items-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 
@@ -9,7 +10,14 @@ import "./style.css";
 
 const ServicePromoItems = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
+
+    let desktopBanner;
+    if (location.includes("www.customtfactory.com")) {
+        desktopBanner = PromoItems;
+    } else if (location.includes("www.thecustomtfactory.com")) {
+        desktopBanner = ACPPromoItems;
+    }
 
     return (
         <>
@@ -22,7 +30,7 @@ const ServicePromoItems = (props) => {
             </Helmet>
             <div id="promo-items-container">
                 <Header as="h1" id="promo-items-header">Promotional Items</Header>
-                <Image draggable="false" fluid src={screenWidth >= 992 ? PromoItems : PromoItemsMobile} />
+                <Image draggable="false" fluid src={screenWidth >= 992 ? desktopBanner : PromoItemsMobile} />
                 <br />
                 <Header as="h2" className="promo-items-subheader">How It Works</Header>
                 <br />
