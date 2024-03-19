@@ -10,7 +10,7 @@ const HomeSlideShow = (props) => {
     const timeoutRef = useRef(null);
 
     let banners;
-    if ((screenWidth >= 992 && location.includes("www.customtfactory.com")) || (screenWidth >= 992 && location.includes("localhost"))) {
+    if ((screenWidth >= 992 && location.includes("www.zuse.com")) || (screenWidth >= 992 && location.includes("localhost"))) {
         banners = [
             webBanners.MainBanner, 
             webBanners.ScreenPrinting, 
@@ -23,7 +23,7 @@ const HomeSlideShow = (props) => {
             webBanners.DyeSub,
             webBanners.DirectTransfer
         ];
-    } else if (screenWidth <= 991 && location.includes("www.customtfactory.com") || (screenWidth <= 991 && location.includes("localhost"))) {
+    } else if (screenWidth <= 991 && location.includes("www.zuse.com") || (screenWidth <= 991 && location.includes("localhost"))) {
         banners = [
             webBanners.MainBannerMobile, 
             webBanners.ScreenPrintingMobile, 
@@ -36,7 +36,7 @@ const HomeSlideShow = (props) => {
             webBanners.DyeSubMobile,
             webBanners.DirectTransferMobile
         ];
-    } else if (screenWidth >= 992 && location.includes("www.thecustomtfactory.com")) {
+    } else if (screenWidth >= 992 && location.includes("www.americancontractprinting.com")) {
         banners = [
             webBanners.ACPMain, 
             webBanners.ACPScreenPrinting, 
@@ -49,7 +49,7 @@ const HomeSlideShow = (props) => {
             webBanners.ACPDyeSub,
             webBanners.ACPDirectTransfer
         ];
-    } else if (screenWidth <= 991 && location.includes("www.thecustomtfactory.com")) {
+    } else if (screenWidth <= 991 && location.includes("www.americancontractprinting.com")) {
         banners = [
             webBanners.ACPMainMobile, 
             webBanners.ACPScreenPrintingMobile, 

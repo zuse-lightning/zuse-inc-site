@@ -13,10 +13,12 @@ const ServicePromoItems = (props) => {
     const { screenWidth, location } = props;
 
     let desktopBanner;
-    if (location.includes("www.customtfactory.com")) {
+    if (location.includes("www.zuse.com")) {
         desktopBanner = PromoItems;
-    } else if (location.includes("www.thecustomtfactory.com")) {
+    } else if (location.includes("www.americancontractprinting.com")) {
         desktopBanner = ACPPromoItems;
+    } else {
+        desktopBanner = PromoItems;
     }
 
     return (
