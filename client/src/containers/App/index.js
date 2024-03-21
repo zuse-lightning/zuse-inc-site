@@ -36,7 +36,7 @@ const useCurrentUrl = () => {
   return currentUrl;
 }
 
-export const useWindowDimensions = () => {
+const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
