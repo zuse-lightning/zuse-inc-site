@@ -9,7 +9,7 @@ import "./style.css";
 
 const ServiceFulfillment = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
 
     return (
         <>

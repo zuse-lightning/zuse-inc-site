@@ -8,6 +8,8 @@ import "./style.css";
 
 const ServiceOnDemand = (props) => {
 
+    const { location } = props;
+
     return (
         <>
             <Helmet>

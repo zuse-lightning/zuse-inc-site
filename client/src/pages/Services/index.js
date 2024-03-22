@@ -28,16 +28,16 @@ const Services = (props) => {
             </Helmet>
             {pathname === "/services" ? <OurServices /> : null}
             <Routes>
-                <Route exact path="screenprinting" element={<ServiceScreenPrinting screenWidth={screenWidth} />} />
-                <Route exact path="embroidery" element={<ServiceEmbroidery screenWidth={screenWidth} />} />
+                <Route exact path="screenprinting" element={<ServiceScreenPrinting location={location} screenWidth={screenWidth} />} />
+                <Route exact path="embroidery" element={<ServiceEmbroidery location={location} screenWidth={screenWidth} />} />
                 <Route exact path="promo-items" element={<ServicePromoItems location={location} screenWidth={screenWidth} />} />
-                <Route exact path="fulfillment" element={<ServiceFulfillment screenWidth={screenWidth} />} />
-                <Route exact path="ecommerce" element={<ServiceShopifyStore screenWidth={screenWidth} />} />
-                <Route exact path="graphic-design" element={<ServiceGraphicDesign screenWidth={screenWidth} />} />
-                <Route exact path="dtg-dtf" element={<ServiceDirectTransfer screenWidth={screenWidth} />} />
-                <Route exact path="print-on-demand" element={<ServiceOnDemand screenWidth={screenWidth} />} />
-                <Route exact path="dye-sublimation" element={<ServiceDyeSub screenWidth={screenWidth} />} />
-                <Route exact path="sewing" element={<ServiceSewing screenWidth={screenWidth} />} />
+                <Route exact path="fulfillment" element={<ServiceFulfillment location={location} screenWidth={screenWidth} />} />
+                <Route exact path="ecommerce" element={<ServiceShopifyStore location={location} screenWidth={screenWidth} />} />
+                <Route exact path="graphic-design" element={<ServiceGraphicDesign location={location} screenWidth={screenWidth} />} />
+                <Route exact path="dtg-dtf" element={<ServiceDirectTransfer location={location} screenWidth={screenWidth} />} />
+                <Route exact path="print-on-demand" element={<ServiceOnDemand location={location} screenWidth={screenWidth} />} />
+                <Route exact path="dye-sublimation" element={<ServiceDyeSub location={location} screenWidth={screenWidth} />} />
+                <Route exact path="sewing" element={<ServiceSewing location={location} screenWidth={screenWidth} />} />
             </Routes>
         </>
     );

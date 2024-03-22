@@ -29,7 +29,7 @@ const embroideryResults = [
 
 const ServiceEmbroidery = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
 
     return (
         <>

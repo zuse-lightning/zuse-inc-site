@@ -27,6 +27,8 @@ const screenPrintingResults = [
 
 const ServiceScreenPrinting = (props) => {
 
+    const { location } = props;
+
     return (
         <>
             <Helmet>

@@ -8,6 +8,8 @@ import "./style.css";
 
 const ServiceGraphicDesign = (props) => {
 
+    const { location } = props;
+
     return (
         <>
             <Helmet>

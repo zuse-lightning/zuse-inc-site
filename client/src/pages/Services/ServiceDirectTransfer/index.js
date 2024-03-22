@@ -19,6 +19,8 @@ const DTFResults = [DTF1, DTF2, DTF3, DTF4];
 
 const ServiceDirectTransfer = (props) => {
 
+    const { location } = props;
+
     return (
         <>
             <Helmet>

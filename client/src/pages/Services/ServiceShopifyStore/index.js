@@ -22,7 +22,7 @@ const shopifyResults = [
 
 const ServiceShopifyStore = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, location } = props;
 
     return (
         <>

@@ -9,6 +9,8 @@ import "./style.css";
 
 const ServiceDyeSub = (props) => {
 
+    const { location } = props;
+
     return (
         <>
             <Helmet>

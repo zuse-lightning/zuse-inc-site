@@ -8,6 +8,8 @@ import "./style.css";
 
 const ServiceSewing = (props) => {
 
+    const { location } = props;
+    
     return (
         <>
             <Helmet>
