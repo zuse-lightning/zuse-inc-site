@@ -7,8 +7,8 @@ import HomeTrustBadges from "../../components/HomeTrustBadges";
 import OurServices from "../../components/OurServices";
 import TopCatalogs from "../../components/TopCatalogs";
 import HomeContactForm from "../../components/HomeContactForm";
-import ZuseFavicon from "../../../public/temp-favicon.png";
-import ACPFavicon from "../../../public/ACP-favicon.png";
+import ZuseFavicon from "../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../assets/images/acp-favicon.png";
 
 import "./style.css";
 
