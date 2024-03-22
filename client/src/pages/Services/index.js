@@ -12,6 +12,8 @@ import ServiceOnDemand from "./ServiceOnDemand";
 import ServiceSewing from "./ServiceSewing";
 import ServiceDyeSub from "./ServiceDyeSub";
 import ServiceDirectTransfer from "./ServiceDirectTransfer";
+import ZuseFavicon from "../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../assets/images/ACP-favicon.png";
 
 const Services = (props) => {
 
@@ -21,6 +23,7 @@ const Services = (props) => {
     return (
         <>
             <Helmet>
+                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
                 <title>Zuse Inc. - Services</title>
                 <meta name="description" content="We offer 5 main services, Screen Printing, Embroidery, Promotional Items, Fulfillment, and Shopify Stores." />
                 <meta name="keywords" content="Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel" />

@@ -9,6 +9,8 @@ import PGW from "../../../assets/screenshots/pgw-screenshot.png";
 import TheSpot from "../../../assets/screenshots/thespot-screenshot.png";
 import CTSchools from "../../../assets/screenshots/ct-schools-screenshot.png";
 import WPRA from "../../../assets/screenshots/wpra-screenshot.png";
+import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
@@ -27,7 +29,8 @@ const ServiceShopifyStore = (props) => {
     return (
         <>
             <Helmet>
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - E-Commerce</title>
+                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - E-Commerce</title>
                 <meta name="description" content="Take your business online with our Shopify store creation services.
                     We design and develop an e-commerce platform tailored to your brand,
                     providing a seamless and secure shopping experience for your customers." />

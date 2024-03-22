@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet-async";
 import ContactForm from "../../components/ContactForm";
+import ZuseFavicon from "../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
@@ -13,7 +15,8 @@ class Contact extends Component {
         return (
             <>
                 <Helmet>
-                    <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Contact</title>
+                    {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
+                    <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Contact</title>
                     <meta name="description" content="Call us or send us a message with your info and a potential design" />
                     <meta name="keywords" content="Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel" />
                     <meta name="robots" content="index, follow" />

@@ -3,6 +3,8 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import DyeSubMobile from "../../../assets/images/banners/dye-sub-textless-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
+import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
@@ -14,6 +16,7 @@ const ServiceDyeSub = (props) => {
     return (
         <>
             <Helmet>
+                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
                 <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Dye Sublimation</title>
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />

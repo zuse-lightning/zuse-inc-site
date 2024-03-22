@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import Fulfillment from "../../../assets/images/banners/fulfillment.png";
 import FulfillmentMobile from "../../../assets/images/banners/fulfillment-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
+import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
@@ -14,7 +16,8 @@ const ServiceFulfillment = (props) => {
     return (
         <>
             <Helmet>
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Fulfillment</title>
+                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Fulfillment</title>
                 <meta name="description" content="At Zuse Inc., we streamline your operations with our comprehensive fulfillment
                     services. From order processing to shipping, we handle it all, ensuring your
                     products reach customers efficiently and on time." />

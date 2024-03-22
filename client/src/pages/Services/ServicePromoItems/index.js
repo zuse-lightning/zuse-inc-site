@@ -5,6 +5,8 @@ import PromoItems from "../../../assets/images/banners/promo-items.png";
 import ACPPromoItems from "../../../assets/images/banners/ACP-Promo-Items.png";
 import PromoItemsMobile from "../../../assets/images/banners/promo-items-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
+import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
@@ -24,7 +26,8 @@ const ServicePromoItems = (props) => {
     return (
         <>
             <Helmet>
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Promotional Items</title>
+                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Promotional Items</title>
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />
                 <meta name="keywords" content="Promotional Items, Branford, New Haven, CT, Fulfillment, Custom Apparel, Mugs, Hats, Accessories, T-Shirts, Hoodies, Stationary" />
@@ -44,23 +47,23 @@ const ServicePromoItems = (props) => {
                 </p>
                 <br />
                 <p className="promo-items-text">
-                    Our process begins with a consultation to understand your branding goals and target 
-                    audience. Whether you're looking for giveaways for a trade show, employee incentives, 
-                    or customer appreciation gifts, we'll work closely with you to select the perfect 
+                    Our process begins with a consultation to understand your branding goals and target
+                    audience. Whether you're looking for giveaways for a trade show, employee incentives,
+                    or customer appreciation gifts, we'll work closely with you to select the perfect
                     promotional items that align with your brand identity and objectives.
                 </p>
                 <br />
                 <p className="promo-items-text">
-                    Once we've identified the right products for your needs, our skilled team will assist you 
-                    in customizing them to reflect your brand. Whether it's screen printing, embroidery, DTG 
-                    printing, or other customization methods, we have the expertise and technology to ensure 
+                    Once we've identified the right products for your needs, our skilled team will assist you
+                    in customizing them to reflect your brand. Whether it's screen printing, embroidery, DTG
+                    printing, or other customization methods, we have the expertise and technology to ensure
                     that your logo or artwork looks sharp and professional on each item.
                 </p>
                 <br />
                 <p className="promo-items-text">
-                    We offer a wide range of promotional items to suit every budget and marketing strategy. 
-                    From apparel and accessories to tech gadgets and office supplies, we have something for 
-                    every occasion and audience. Plus, with our fast turnaround times and reliable delivery 
+                    We offer a wide range of promotional items to suit every budget and marketing strategy.
+                    From apparel and accessories to tech gadgets and office supplies, we have something for
+                    every occasion and audience. Plus, with our fast turnaround times and reliable delivery
                     service, you can trust that your promotional items will be ready when you need them.
                 </p>
                 <br />

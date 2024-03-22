@@ -11,6 +11,8 @@ import DTF1 from "../../../assets/images/examples/DTF1.jpg";
 import DTF2 from "../../../assets/images/examples/DTF2.jpg";
 import DTF3 from "../../../assets/images/examples/DTF3.jpg";
 import DTF4 from "../../../assets/images/examples/DTF4.jpg";
+import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
@@ -24,6 +26,7 @@ const ServiceDirectTransfer = (props) => {
     return (
         <>
             <Helmet>
+                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}    
                 <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Direct Transfer</title>
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />
