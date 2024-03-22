@@ -35,7 +35,7 @@ class Home extends Component {
                 <HomeTrustBadges />
                 <OurServices />
                 <TopCatalogs />
-                <HomeContactForm screenWidth={screenWidth} />
+                <HomeContactForm location={location} screenWidth={screenWidth} />
             </>
         );
     }
