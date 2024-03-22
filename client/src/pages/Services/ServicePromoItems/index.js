@@ -15,7 +15,7 @@ const ServicePromoItems = (props) => {
     let desktopBanner;
     if (location.includes("www.zuse.com")) {
         desktopBanner = PromoItems;
-    } else if (location.includes("www.americancontractprinting.com")) {
+    } else if (location.includes("americancontractprinting.com")) {
         desktopBanner = ACPPromoItems;
     } else {
         desktopBanner = PromoItems;

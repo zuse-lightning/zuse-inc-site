@@ -14,7 +14,7 @@ const AboutSection = (props) => {
         <div id="about-page-container">
             <div id="about-container">
                 <div className="about-col">
-                    <Image draggable="false" id="zuse-building-img" src={location.includes("www.americancontractprinting.com") ? ACPBuilding : ZuseBuilding } />
+                    <Image draggable="false" id="zuse-building-img" src={location.includes("americancontractprinting.com") ? ACPBuilding : ZuseBuilding } />
                 </div>
                 <div className="about-col">
                     <Header as="h1" id="about-header">We Make Your Designs Reality</Header>
@@ -25,7 +25,7 @@ const AboutSection = (props) => {
                     <p id="about-text">
                         While there are other companies in the market like Printful and similar services, what distinguishes us 
                         is our unwavering commitment to our clients' success. We understand that building a brand is more than 
-                        just printing designs on garments… {location.includes("www.americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } is about creating a lasting impression and forging meaningful 
+                        just printing designs on garments… {location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } is about creating a lasting impression and forging meaningful 
                         connections with your audience. That's why we offer a wide variety of services tailored to meet the unique 
                         needs of each brand we work with.
                     </p>

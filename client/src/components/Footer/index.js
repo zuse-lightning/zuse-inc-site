@@ -48,7 +48,7 @@ const Footer = (props) => {
             </Menu>
             <div id="footer-contact-container">
                 <div className="footer-col">
-                    <Header id="copyright" as="h4">© 2024 {location.includes("www.americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." }</Header>
+                    <Header id="copyright" as="h4">© 2024 {location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." }</Header>
                 </div>
                 <div className="footer-col">
                     <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-458-3295</Header>

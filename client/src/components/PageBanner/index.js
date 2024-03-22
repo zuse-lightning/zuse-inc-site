@@ -130,7 +130,7 @@ const PageBanner = (props) => {
 
     return (
         <>
-            {pathname !== "/" ? <div className={location.includes("www.americancontractprinting.com") ? "acp" : "zuse"} id="page-banner">
+            {pathname !== "/" ? <div className={location.includes("americancontractprinting.com") ? "acp" : "zuse"} id="page-banner">
                 <div className="page-banner-col">
                     <Header as="h2" id="page-banner-title">{pageBannerName}</Header>
                 </div>

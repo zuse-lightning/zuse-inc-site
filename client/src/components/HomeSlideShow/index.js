@@ -36,7 +36,7 @@ const HomeSlideShow = (props) => {
             webBanners.DyeSubMobile,
             webBanners.DirectTransferMobile
         ];
-    } else if (screenWidth >= 992 && location.includes("www.americancontractprinting.com")) {
+    } else if (screenWidth >= 992 && location.includes("americancontractprinting.com")) {
         banners = [
             webBanners.ACPMain, 
             webBanners.ACPScreenPrinting, 
@@ -49,7 +49,7 @@ const HomeSlideShow = (props) => {
             webBanners.ACPDyeSub,
             webBanners.ACPDirectTransfer
         ];
-    } else if (screenWidth <= 991 && location.includes("www.americancontractprinting.com")) {
+    } else if (screenWidth <= 991 && location.includes("americancontractprinting.com")) {
         banners = [
             webBanners.ACPMainMobile, 
             webBanners.ACPScreenPrintingMobile, 
