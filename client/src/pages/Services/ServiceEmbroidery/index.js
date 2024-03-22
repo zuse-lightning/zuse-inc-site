@@ -34,7 +34,7 @@ const ServiceEmbroidery = (props) => {
     return (
         <>
             <Helmet>
-                <title>Zuse Inc. - Embroidery</title>
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Embroidery</title>
                 <meta name="description" content="Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories." />
                 <meta name="keywords" content="Embroidery, Branford, New Haven, CT, Fulfillment, Patches, Hats, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
                 <meta name="robots" content="index, follow" />

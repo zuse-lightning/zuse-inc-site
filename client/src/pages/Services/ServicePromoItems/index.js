@@ -24,7 +24,7 @@ const ServicePromoItems = (props) => {
     return (
         <>
             <Helmet>
-                <title>Zuse Inc. - Promotional Items</title>
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Promotional Items</title>
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />
                 <meta name="keywords" content="Promotional Items, Branford, New Haven, CT, Fulfillment, Custom Apparel, Mugs, Hats, Accessories, T-Shirts, Hoodies, Stationary" />

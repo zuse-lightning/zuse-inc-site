@@ -27,7 +27,7 @@ const ServiceShopifyStore = (props) => {
     return (
         <>
             <Helmet>
-                <title>Zuse Inc. - E-Commerce</title>
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - E-Commerce</title>
                 <meta name="description" content="Take your business online with our Shopify store creation services.
                     We design and develop an e-commerce platform tailored to your brand,
                     providing a seamless and secure shopping experience for your customers." />

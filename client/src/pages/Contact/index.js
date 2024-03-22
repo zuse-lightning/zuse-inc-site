@@ -13,7 +13,7 @@ class Contact extends Component {
         return (
             <>
                 <Helmet>
-                    <title>Zuse Inc. - Contact</title>
+                    <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Contact</title>
                     <meta name="description" content="Call us or send us a message with your info and a potential design" />
                     <meta name="keywords" content="Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel" />
                     <meta name="robots" content="index, follow" />

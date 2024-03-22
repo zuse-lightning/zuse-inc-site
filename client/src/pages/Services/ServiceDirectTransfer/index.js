@@ -22,7 +22,7 @@ const ServiceDirectTransfer = (props) => {
     return (
         <>
             <Helmet>
-                <title>Zuse Inc. - Direct Transfer</title>
+                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Direct Transfer</title>
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />
                 <meta name="keywords" content="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
