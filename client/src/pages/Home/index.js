@@ -8,7 +8,7 @@ import OurServices from "../../components/OurServices";
 import TopCatalogs from "../../components/TopCatalogs";
 import HomeContactForm from "../../components/HomeContactForm";
 import ZuseFavicon from "../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../assets/images/acp-favicon.png";
+import ACPFavicon from "../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
