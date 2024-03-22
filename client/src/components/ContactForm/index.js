@@ -4,11 +4,23 @@ import { Header, Icon } from "semantic-ui-react";
 
 import "./style.css";
 
-const FORM_ENDPOINT = "https://www.formbackend.com/f/83494e28d94f6b77";
+const ZUSE_ENDPOINT = "https://www.formbackend.com/f/83494e28d94f6b77";
+const ACP_ENDPOINT = "https://www.formbackend.com/f/8869acfa911e5be3";
 
 const ContactForm = (props) => {
+
+    const { location } = props;
+
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
+    
+    let FORM_ENDPOINT;
+
+    if (location.includes("americancontractprinting.com")) {
+        FORM_ENDPOINT = ACP_ENDPOINT;
+    } else {
+        FORM_ENDPOINT = ZUSE_ENDPOINT;
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();

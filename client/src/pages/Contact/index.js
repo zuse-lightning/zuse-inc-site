@@ -37,7 +37,7 @@ class Contact extends Component {
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>}
-                <ContactForm />
+                <ContactForm location={location} />
             </>
         );
     }
