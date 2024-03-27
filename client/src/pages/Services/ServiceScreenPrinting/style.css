@@ -35,7 +35,8 @@
 }
 
 .screen-printing-result-img {
-    height: 187px;
+    width: 80%!important;
+    height: auto!important;
 }
 
 @media (max-width: 2030px) and (min-width: 1700px),
