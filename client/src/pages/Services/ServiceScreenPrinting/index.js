@@ -3,6 +3,7 @@ import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import ScreenPrinting from "../../../assets/images/banners/screenprinting.jpg";
 import PageContactFooter from "../../../components/PageContactFooter";
+import SEO from "../../../components/SEO";
 import Screen1 from "../../../assets/images/examples/Screen1.jpg";
 import Screen3 from "../../../assets/images/examples/Screen3.jpg";
 import Screen5 from "../../../assets/images/examples/Screen5.jpg";
@@ -39,6 +40,11 @@ const ServiceScreenPrinting = (props) => {
                 <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
                     out with high-quality prints that capture attention and leave a lasting impression." />
                 <meta name="keywords" content="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Screen Printing" />
+                <meta property="og:description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands out with high-quality prints that capture attention and leave a lasting impression." />
+                <meta property="og:image" content="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Screenprinting.png" />
+                <meta property="og:url" content="https://www.zuse.com/services/screenprinting" />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div id="screen-printing-container">

@@ -1,8 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-export default ({title, description, keywords, type, image, url}) => {
+import ZuseFavicon from "../../assets/images/zuse-favicon.png";
+import ACPFavicon from "../../assets/images/ACP-favicon.png";
+
+export default (props, {title, description, keywords, type, image, url}) => {
+
+    const { location } = props;
+
     return (
         <Helmet>
+            {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
             <title>{title}</title>
             <meta name="decription" content={description} />
             <meta name="keywords" content={keywords} />
@@ -11,6 +18,7 @@ export default ({title, description, keywords, type, image, url}) => {
             <meta property="og:description" content={description} />
             <meta property="og:image" content={image} />
             <meta property="og:url" content={url} />
+            <meta name="robots" content="index, follow" />
         </Helmet>
     );
 };
