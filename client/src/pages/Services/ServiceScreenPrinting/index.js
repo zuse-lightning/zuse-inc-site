@@ -48,7 +48,7 @@ const ServiceScreenPrinting = (props) => {
             </Helmet>
             <div id="screen-printing-container">
                 <Header as="h1" id="screen-printing-header">Screen Printing</Header>
-                <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/screenprinting.jpg" />
+                <Image draggable="false" fluid src={ScreenPrinting} />
                 <br />
                 <Header as="h2" className="screen-printing-subheader">How It Works</Header>
                 <br />
