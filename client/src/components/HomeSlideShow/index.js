@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Image } from "semantic-ui-react";
-import * as webBanners from "../../assets/images/banners";
+import {
+    zuseSlides,
+    zuseSlidesMobile,
+    ACPSlides,
+    ACPSlidesMobile
+} from "../../assets";
 
 import "./style.css";
 
@@ -11,57 +16,13 @@ const HomeSlideShow = (props) => {
 
     let banners;
     if ((screenWidth >= 992 && location.includes("www.zuse.com")) || (screenWidth >= 992 && location.includes("localhost"))) {
-        banners = [
-            webBanners.MainBanner, 
-            webBanners.ScreenPrinting, 
-            webBanners.Embroidery,
-            webBanners.Fulfillment,
-            webBanners.Ecommerce, 
-            webBanners.GraphicDesign, 
-            webBanners.PrintOnDemand, 
-            webBanners.Sewing,
-            webBanners.DyeSub,
-            webBanners.DirectTransfer
-        ];
+        banners = zuseSlides;
     } else if (screenWidth <= 991 && location.includes("www.zuse.com") || (screenWidth <= 991 && location.includes("localhost"))) {
-        banners = [
-            webBanners.MainBannerMobile, 
-            webBanners.ScreenPrintingMobile, 
-            webBanners.EmbroideryMobile,
-            webBanners.FulfillmentMobile,
-            webBanners.EcommerceMobile, 
-            webBanners.GraphicDesignMobile, 
-            webBanners.PrintOnDemandMobile, 
-            webBanners.SewingMobile,
-            webBanners.DyeSubMobile,
-            webBanners.DirectTransferMobile
-        ];
+        banners = zuseSlidesMobile;
     } else if (screenWidth >= 992 && location.includes("americancontractprinting.com")) {
-        banners = [
-            webBanners.ACPMain, 
-            webBanners.ACPScreenPrinting, 
-            webBanners.ACPEmbroidery,
-            webBanners.ACPFulfillment,
-            webBanners.ACPEcommerce, 
-            webBanners.ACPGraphicDesign, 
-            webBanners.ACPPrintOnDemand, 
-            webBanners.ACPSewing,
-            webBanners.ACPDyeSub,
-            webBanners.ACPDirectTransfer
-        ];
+        banners = ACPSlides;
     } else if (screenWidth <= 991 && location.includes("americancontractprinting.com")) {
-        banners = [
-            webBanners.ACPMainMobile, 
-            webBanners.ACPScreenPrintingMobile, 
-            webBanners.ACPEmbroideryMobile,
-            webBanners.ACPFulfillmentMobile,
-            webBanners.ACPEcommerceMobile, 
-            webBanners.ACPGraphicDesignMobile, 
-            webBanners.ACPPrintOnDemandMobile, 
-            webBanners.ACPSewingMobile,
-            webBanners.ACPDyeSubMobile,
-            webBanners.ACPDirectTransferMobile
-        ];
+        banners = ACPSlidesMobile;
     };
 
     const resetTimeout = () => {
