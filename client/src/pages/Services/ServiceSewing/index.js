@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import Sewing from "../../../assets/images/banners/sewing-textless.png";
+// import Sewing from "../../../assets/images/banners/sewing-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
@@ -24,7 +24,7 @@ const ServiceSewing = (props) => {
             </Helmet>
             <div id="sewing-container">
                 <Header as="h1" id="sewing-header">Sewing</Header>
-                <Image draggable="false" fluid src={Sewing} />
+                <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/sewing-textless.png" />
                 <br />
                 <Header as="h2" className="sewing-subheader">How It Works</Header>
                 <br />
