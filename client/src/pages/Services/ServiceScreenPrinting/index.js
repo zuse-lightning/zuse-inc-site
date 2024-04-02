@@ -2,28 +2,20 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import Screen1 from "../../../assets/images/examples/Screen1.jpg";
-import Screen3 from "../../../assets/images/examples/Screen3.jpg";
-import Screen5 from "../../../assets/images/examples/Screen5.jpg";
-import Screen6 from "../../../assets/images/examples/Screen6.jpg";
-import Screen7 from "../../../assets/images/examples/Screen7.jpg";
-import Screen8 from "../../../assets/images/examples/Screen8.jpg";
-import Screen9 from "../../../assets/images/examples/Screen9.jpg";
-import Screen10 from "../../../assets/images/examples/Screen10.jpg";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
 const screenPrintingResults = [
-    Screen1,
-    Screen3,
-    Screen5,
-    Screen6,
-    Screen7,
-    Screen8,
-    Screen9,
-    Screen10
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen1.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen3.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen5.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen6.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen7.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen8.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen9.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen10.jpg"
 ];
 
 const ServiceScreenPrinting = (props) => {

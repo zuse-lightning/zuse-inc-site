@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import GraphicDesign from "../../../assets/images/banners/graphic-design-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
@@ -24,7 +23,7 @@ const ServiceGraphicDesign = (props) => {
             </Helmet>
             <div id="graphic-design-container">
                 <Header as="h1" id="graphic-design-header">Graphic Design</Header>
-                <Image draggable="false" fluid src={GraphicDesign} />
+                <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/graphic-design-textless.png" />
                 <br />
                 <Header as="h2" className="graphic-design-subheader">How It Works</Header>
                 <br />

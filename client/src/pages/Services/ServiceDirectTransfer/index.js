@@ -1,23 +1,24 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import DirectTransfer from "../../../assets/images/banners/dtg-dtf-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import DTG1 from "../../../assets/images/examples/DTG1.jpg";
-import DTG2 from "../../../assets/images/examples/DTG2.jpg";
-import DTG3 from "../../../assets/images/examples/DTG3.jpg";
-import DTG4 from "../../../assets/images/examples/DTG4.jpg";
-import DTF1 from "../../../assets/images/examples/DTF1.jpg";
-import DTF2 from "../../../assets/images/examples/DTF2.jpg";
-import DTF3 from "../../../assets/images/examples/DTF3.jpg";
-import DTF4 from "../../../assets/images/examples/DTF4.jpg";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
-const DTGResults = [DTG1, DTG2, DTG3, DTG4];
-const DTFResults = [DTF1, DTF2, DTF3, DTF4];
+const DTGResults = [
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTG1.jpg", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTG2.jpg", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTG3.jpg", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTG4.jpg"
+];
+const DTFResults = [
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTF1.jpg", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTF2.jpg", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTF3.jpg", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTF4.jpg"
+];
 
 const ServiceDirectTransfer = (props) => {
 
@@ -35,7 +36,7 @@ const ServiceDirectTransfer = (props) => {
             </Helmet>
             <div id="dtg-dtf-container">
                 <Header as="h1" id="dtg-dtf-header">Direct Transfer</Header>
-                <Image fluid src={DirectTransfer} />
+                <Image fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/dtg-dtf-textless.png" />
                 <br />
                 <Header as="h2" className="dtg-dtf-subheader">How It Works</Header>
                 <br />

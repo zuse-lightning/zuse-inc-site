@@ -1,8 +1,6 @@
 import React from "react";
 import { Header, Image, List } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import Fulfillment from "../../../assets/images/banners/fulfillment.png";
-import FulfillmentMobile from "../../../assets/images/banners/fulfillment-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
@@ -12,6 +10,7 @@ import "./style.css";
 const ServiceFulfillment = (props) => {
 
     const { screenWidth, location } = props;
+    let fulfillmentBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment-mobile.png";
 
     return (
         <>
@@ -26,7 +25,7 @@ const ServiceFulfillment = (props) => {
             </Helmet>
             <div id="fulfillment-container">
                 <Header as="h1" id="fulfillment-header">Fulfillment</Header>
-                <Image draggable="false" fluid src={screenWidth >= 992 ? Fulfillment : FulfillmentMobile} />
+                <Image draggable="false" fluid src={fulfillmentBanner} />
                 <br />
                 <Header as="h2" className="fulfillment-subheader">How It Works</Header>
                 <br />

@@ -1,37 +1,28 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import Embroidery from "../../../assets/images/banners/embroidery.png";
-import EmbroideryMobile from "../../../assets/images/banners/embroidery-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import Embroider1 from "../../../assets/images/examples/Embroider1.jpg";
-import Embroider2 from "../../../assets/images/examples/Embroider2.jpg";
-import Embroider6 from "../../../assets/images/examples/Embroider6.jpg";
-import Embroider10 from "../../../assets/images/examples/Embroider10.jpg";
-import Embroider12 from "../../../assets/images/examples/Embroider12.jpg";
-import Embroider14 from "../../../assets/images/examples/Embroider14.jpg";
-import Embroider16 from "../../../assets/images/examples/Embroider16.jpg";
-import Embroider20 from "../../../assets/images/examples/Embroider20.jpg";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
 const embroideryResults = [
-    Embroider1,
-    Embroider6,
-    Embroider2,
-    Embroider10,
-    Embroider12,
-    Embroider20,
-    Embroider14,
-    Embroider16,
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider1.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider6.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider2.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider10.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider12.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider20.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider14.jpg",
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider16.jpg",
 
 ];
 
 const ServiceEmbroidery = (props) => {
 
     const { screenWidth, location } = props;
+    let embroideryBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/embroidery.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/embroidery-mobile.png";
 
     return (
         <>
@@ -44,7 +35,7 @@ const ServiceEmbroidery = (props) => {
             </Helmet>
             <div id="embroidery-container">
                 <Header as="h1" id="embroidery-header">Embroidery</Header>
-                <Image draggable="false" fluid src={screenWidth >= 992 ? Embroidery : EmbroideryMobile} />
+                <Image draggable="false" fluid src={embroideryBanner} />
                 <br />
                 <Header as="h2" className="embroidery-subheader">How It Works</Header>
                 <br />

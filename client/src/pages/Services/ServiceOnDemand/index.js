@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import OnDemand from "../../../assets/images/banners/on-demand-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
@@ -24,7 +23,7 @@ const ServiceOnDemand = (props) => {
             </Helmet>
             <div id="on-demand-container">
                 <Header as="h1" id="on-demand-header">Print On-Demand</Header>
-                <Image draggable="false" fluid src={OnDemand} />
+                <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/on-demand-textless.png" />
                 <br />
                 <Header as="h2" className="on-demand-subheader">How It Works</Header>
                 <br />

@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-// import Sewing from "../../../assets/images/banners/sewing-textless.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";

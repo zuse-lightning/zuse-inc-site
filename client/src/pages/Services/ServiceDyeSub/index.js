@@ -1,7 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
-import DyeSubMobile from "../../../assets/images/banners/dye-sub-textless-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
@@ -25,7 +24,7 @@ const ServiceDyeSub = (props) => {
             </Helmet>
             <div id="dye-sub-container">
                 <Header as="h1" id="dye-sub-header">Dye Sublimation</Header>
-                <Image draggable="false" fluid src={DyeSubMobile} />
+                <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/dye-sub-textless-mobile.png" />
                 <br />
                 <Header as="h2" className="dye-sub-subheader">How It Works</Header>
                 <br />

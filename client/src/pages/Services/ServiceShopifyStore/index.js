@@ -2,29 +2,24 @@ import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ShopifyStores from "../../../assets/images/banners/shopify-banner.png";
-import ShopifyStoresMobile from "../../../assets/images/banners/shopify-banner-mobile.png";
 import PageContactFooter from "../../../components/PageContactFooter";
-import PGW from "../../../assets/screenshots/pgw-screenshot.png";
-import TheSpot from "../../../assets/screenshots/thespot-screenshot.png";
-import CTSchools from "../../../assets/screenshots/ct-schools-screenshot.png";
-import WPRA from "../../../assets/screenshots/wpra-screenshot.png";
 import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../../assets/images/ACP-favicon.png";
 
 import "./style.css";
 
 const shopifyResults = [
-    { image: PGW, link: "https://progolfwarehouse.com/" },
-    { image: TheSpot, link: "https://thespotsupplyco.com/" },
-    { image: CTSchools, link: "https://ctschoolsstore.com/" },
-    { image: WPRA, link: "https://wpra.store/" }
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/pgw-screenshot.png", link: "https://progolfwarehouse.com/" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/thespot-screenshot.png", link: "https://thespotsupplyco.com/" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/ct-schools-screenshot.png", link: "https://ctschoolsstore.com/" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/wpra-screenshot.png", link: "https://wpra.store/" }
 ];
 
 
 const ServiceShopifyStore = (props) => {
 
     const { screenWidth, location } = props;
+    let shopifyBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/shopify-banner.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/shopify-banner-mobile.png";
 
     return (
         <>
@@ -39,7 +34,7 @@ const ServiceShopifyStore = (props) => {
             </Helmet>
             <div id="shopify-container">
                 <Header as="h1" id="shopify-header">E-Commerce</Header>
-                <Image draggable="false" fluid src={screenWidth >= 992 ? ShopifyStores : ShopifyStoresMobile} />
+                <Image draggable="false" fluid src={shopifyBanner} />
                 <br />
                 <Header as="h2" className="shopify-subheader">How It Works</Header>
                 <br />
