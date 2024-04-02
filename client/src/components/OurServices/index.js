@@ -1,30 +1,20 @@
 import React from "react";
 import { Header, Image, Button, Icon } from "semantic-ui-react";
 import { Link, useLocation } from "react-router-dom";
-import ScreenPrintingIcon from "../../assets/images/screen-printing-blue.png";
-import EmbroideryIcon from "../../assets/images/embroidery-blue.png";
-import PromoItemsIcon from "../../assets/images/promo-items-blue.png";
-import FulfillmentIcon from "../../assets/images/fulfillment-blue.png";
-import WebStoreIcon from "../../assets/images/web-stores-blue.png";
-import DirectTransferIcon from "../../assets/images/dtg-dtf-blue.png";
-import DyeSubIcon from "../../assets/images/dye-sublimation-blue.png";
-import GraphicDesignIcon from "../../assets/images/graphic-design-blue.png";
-import SewingIcon from "../../assets/images/sewing-blue.png";
-import OnDemandIcon from "../../assets/images/print-on-demand-blue.png";
 
 import "./style.css";
 
 const services = [
-    { image: ScreenPrintingIcon, path: "/services/screenprinting", title: "Screen Printing" },
-    { image: EmbroideryIcon, path: "/services/embroidery", title: "Embroidery" },
-    { image: PromoItemsIcon, path: "/services/promo-items", title: "Promotional Items" },
-    { image: FulfillmentIcon, path: "/services/fulfillment", title: "Fulfillment Services" },
-    { image: WebStoreIcon, path: "/services/ecommerce", title: "E-Commerce" },
-    { image: GraphicDesignIcon, path: "/services/graphic-design", title: "Graphic Design" },
-    { image: OnDemandIcon, path: "/services/print-on-demand", title: "Print On-Demand" },
-    { image: SewingIcon, path: "/services/sewing", title: "Sewing" },
-    { image: DyeSubIcon, path: "/services/dye-sublimation", title: "Dye Sublimation" },
-    { image: DirectTransferIcon, path: "/services/dtg-dtf", title: "Direct Transfer" }
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/screen-printing-blue.png", path: "/services/screenprinting", title: "Screen Printing" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/embroidery-blue.png", path: "/services/embroidery", title: "Embroidery" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/promo-items-blue.png", path: "/services/promo-items", title: "Promotional Items" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/fulfillment-blue.png", path: "/services/fulfillment", title: "Fulfillment Services" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/web-stores-blue.png", path: "/services/ecommerce", title: "E-Commerce" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/graphic-design-blue.png", path: "/services/graphic-design", title: "Graphic Design" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/print-on-demand-blue.png", path: "/services/print-on-demand", title: "Print On-Demand" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/sewing-blue.png", path: "/services/sewing", title: "Sewing" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/dye-sublimation-blue.png", path: "/services/dye-sublimation", title: "Dye Sublimation" },
+    { image: "https://zuse-inc-bucket.s3.amazonaws.com/dtg-dtf-blue.png", path: "/services/dtg-dtf", title: "Direct Transfer" }
 ];
 
 const OurServices = () => {

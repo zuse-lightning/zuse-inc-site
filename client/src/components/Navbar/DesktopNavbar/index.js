@@ -1,8 +1,6 @@
 import React from "react";
 import { Menu, Dropdown, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import ZuseLogo from "../../../assets/images/zuse-logo.jpg";
-import ACPLogo from "../../../assets/images/ACP-logo.png";
 
 import "../style.css";
 
@@ -20,7 +18,12 @@ const DesktopNavbar = (props) => {
                 name="home"
             >
                 <div id="zuse-logo-container">
-                    <Image draggable="false" size="medium" id="home-btn-img" src={location.includes("americancontractprinting.com") ? ACPLogo : ZuseLogo} />
+                    <Image 
+                        draggable="false" 
+                        size="medium" 
+                        id="home-btn-img" 
+                        src={location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-logo.png" : "https://zuse-inc-bucket.s3.amazonaws.com/zuse-logo.jpg"}
+                    />
                 </div>
             </Menu.Item>
             <Menu.Item

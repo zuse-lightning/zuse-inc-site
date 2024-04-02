@@ -1,8 +1,6 @@
 import React from "react";
 import { Header, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import FacebookIcon from "../../../assets/images/facebook-icon-white.png";
-import InstagramIcon from "../../../assets/images/instagram-icon-white.png";
 
 import "../style.css";
 
@@ -17,8 +15,24 @@ const MobileAnnouncment = (props) => {
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
-                    <Image as={Link} target=":blank" to="https://www.facebook.com/profile.php?id=100091589973552" draggable="false" className="announce-social-icon" id="announce-facebook-icon" src={FacebookIcon} />
-                    <Image as={Link} target=":blank" to="https://www.instagram.com/zuseincapparel/" draggable="false" className="announce-social-icon" id="announce-instagram-icon" src={InstagramIcon} />
+                    <Image
+                        as={Link}
+                        target=":blank"
+                        to="https://www.facebook.com/profile.php?id=100091589973552"
+                        draggable="false"
+                        className="announce-social-icon"
+                        id="announce-facebook-icon"
+                        src="https://zuse-inc-bucket.s3.amazonaws.com/facebook-icon-white.png"
+                    />
+                    <Image
+                        as={Link}
+                        target=":blank"
+                        to="https://www.instagram.com/zuseincapparel/"
+                        draggable="false"
+                        className="announce-social-icon"
+                        id="announce-instagram-icon"
+                        src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon-white.png"
+                    />
                 </div>
             </div>
 

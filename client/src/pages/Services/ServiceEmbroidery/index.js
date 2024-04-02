@@ -15,8 +15,7 @@ const embroideryResults = [
     "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider12.jpg",
     "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider20.jpg",
     "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider14.jpg",
-    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider16.jpg",
-
+    "https://zuse-inc-bucket.s3.amazonaws.com/examples/Embroider16.jpg"
 ];
 
 const ServiceEmbroidery = (props) => {

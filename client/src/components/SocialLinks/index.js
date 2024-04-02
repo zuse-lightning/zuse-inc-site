@@ -15,12 +15,22 @@ const SocialLinks = (props) => {
                 </div>
                 <div className="social-col">
                     <Link to="https://www.facebook.com/profile.php?id=100091589973552" target=":blank">
-                        <Image draggable="false" className="footer-social-icon" id="footer-facebook-icon" src={FacebookIcon} />
+                        <Image 
+                            draggable="false" 
+                            className="footer-social-icon" 
+                            id="footer-facebook-icon" 
+                            src="https://zuse-inc-bucket.s3.amazonaws.com/facebook-icon.png" 
+                        />
                     </Link>
                 </div>
                 <div className="social-col">
                     <Link to="https://www.instagram.com/zuseincapparel/" target=":blank">
-                        <Image draggable="false" className="footer-social-icon" id="footer-instagram-icon" src={InstagramIcon} />
+                        <Image 
+                            draggable="false" 
+                            className="footer-social-icon" 
+                            id="footer-instagram-icon" 
+                            src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon.png" 
+                        />
                     </Link>
                 </div>
             </div>
