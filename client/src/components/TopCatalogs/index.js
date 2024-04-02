@@ -1,16 +1,6 @@
 import React from "react";
 import { Image, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import Sanmar from "../../assets/images/catalogs/sanmar.png";
-import SSActivewear from "../../assets/images/catalogs/ssactivewear.webp";
-import Gemline from "../../assets/images/catalogs/gemline.png";
-import AugustaSportswear from "../../assets/images/catalogs/augusta-sportswear.png";
-import Rothco from "../../assets/images/catalogs/rothco.png";
-import CharlesRiver from "../../assets/images/catalogs/charles-river.png";
-import CitadelBrands from "../../assets/images/catalogs/citadel-brands.jpg";
-import CutterBuck from "../../assets/images/catalogs/cutter-buck.png";
-import Stormtech from "../../assets/images/catalogs/stormtech-blue.png";
-import Edwards from "../../assets/images/catalogs/edwards.png";
 
 import "./style.css";
 
@@ -19,16 +9,16 @@ const TopCatalogs = (props) => {
     const { pathname } = props;
 
     const catalogs = [
-        { id: "sanmar", image: Sanmar, link: "https://sanmar.com/" },
-        { id: "ssactivewear", image: SSActivewear, link: "https://www.ssactivewear.com/" },
-        { id: "gemline", image: Gemline, link: "https://gemline.com/s/" },
-        { id: "augusta-sportswear", image: AugustaSportswear, link: "https://www.augustasportswear.com/" },
-        { id: "rothco", image: Rothco, link: "https://www.rothco.com/" },
-        { id: "charles-river", image: CharlesRiver, link: "https://www.charlesriverapparel.com/" },
-        { id: "citadel-brands", image: CitadelBrands, link: "https://www.citadelbrands.com/home_page" },
-        { id: "cutter-buck", image: CutterBuck, link: "https://cutterbuck.com/" },
-        { id: "stormtech", image: Stormtech, link: "https://www.stormtechusa.com/" },
-        { id: "edwards", image: Edwards, link: "https://www.edwardsgarment.com/"}
+        { id: "sanmar", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/sanmar.png", link: "https://sanmar.com/" },
+        { id: "ssactivewear", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/ssactivewear.webp", link: "https://www.ssactivewear.com/" },
+        { id: "gemline", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/gemline.png", link: "https://gemline.com/s/" },
+        { id: "augusta-sportswear", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/augusta-sportswear.png", link: "https://www.augustasportswear.com/" },
+        { id: "rothco", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/rothco.png", link: "https://www.rothco.com/" },
+        { id: "charles-river", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/charles-river.png", link: "https://www.charlesriverapparel.com/" },
+        { id: "citadel-brands", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/citadel-brands.jpg", link: "https://www.citadelbrands.com/home_page" },
+        { id: "cutter-buck", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/cutter-buck.png", link: "https://cutterbuck.com/" },
+        { id: "stormtech", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/stormtech-blue.png", link: "https://www.stormtechusa.com/" },
+        { id: "edwards", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/edwards.png", link: "https://www.edwardsgarment.com/"}
     ];
 
     return (

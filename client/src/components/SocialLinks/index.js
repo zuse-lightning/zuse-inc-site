@@ -1,8 +1,6 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import FacebookIcon from "../../assets/images/facebook-icon.png";
-import InstagramIcon from "../../assets/images/instagram-icon.png";
 
 import "./style.css";
 

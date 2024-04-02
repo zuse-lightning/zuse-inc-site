@@ -1,19 +1,20 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import Adidas from "../../assets/images/clients/adidas.png";
-import Brand47 from "../../assets/images/clients/47-brand.png";
-import Dunkin from "../../assets/images/clients/dunkin.png";
-import Fanatics from "../../assets/images/clients/fanatics.png";
-import Lego from "../../assets/images/clients/lego.png";
-import MLB from "../../assets/images/clients/mlb.png";
-import NBA from "../../assets/images/clients/nba.png";
-import NCAA from "../../assets/images/clients/ncaa.png";
-import NFL from "../../assets/images/clients/nfl.png";
-import Nike from "../../assets/images/clients/nike.png";
 
 import "./style.css";
 
-const clients = [Fanatics, NFL, MLB, Brand47, NCAA, Lego, Dunkin, Nike, NBA, Adidas];
+const clients = [
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/fanatics.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/nfl.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/mlb.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/47-brand.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/ncaa.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/lego.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/dunkin.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/nike.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/nba.png", 
+    "https://zuse-inc-bucket.s3.amazonaws.com/clients/adidas.png"
+];
 
 const TopClients = (props) => {
     return (
