@@ -4,6 +4,8 @@ import ZuseFavicon from "../../assets/images/zuse-favicon.png";
 import ACPFavicon from "../../assets/images/ACP-favicon.png";
 
 export default ({location, title, description, keywords, type, image, url}) => {
+
+    console.log(location, title, description, keywords, type, image, url);
     return (
         <Helmet>
             {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
