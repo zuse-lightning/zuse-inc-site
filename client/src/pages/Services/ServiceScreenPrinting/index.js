@@ -1,9 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
 
@@ -24,19 +22,15 @@ const ServiceScreenPrinting = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Screen Printing</title>
-                <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression." />
-                <meta name="keywords" content="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Screen Printing" />
-                <meta property="og:description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands out with high-quality prints that capture attention and leave a lasting impression." />
-                <meta property="og:image" content="https://zuse-inc-bucket.s3.amazonaws.com/banners/screenprinting.jpg" />
-                <meta property="og:url" content="https://www.zuse.com/services/screenprinting" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO 
+                location={location}
+                title="Screen Printing"
+                description="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands out with high-quality prints that capture attention and leave a lasting impression."
+                keywords="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/banners/screenprinting.jpg"
+                url="https://www.zuse.com/services/screenprinting"
+            />
             <div id="screen-printing-container">
                 <Header as="h1" id="screen-printing-header">Screen Printing</Header>
                 <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/screenprinting.jpg" />

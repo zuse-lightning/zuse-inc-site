@@ -64,7 +64,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<Home location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/about" element={<About location={useCurrentUrl()} />} />
-              <Route exact path="/catalogs" element={<TopCatalogs />} />
+              <Route exact path="/catalogs" element={<TopCatalogs location={useCurrentUrl()} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} />} />
             </Routes>

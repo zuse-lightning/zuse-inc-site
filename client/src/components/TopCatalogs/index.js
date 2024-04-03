@@ -1,12 +1,13 @@
 import React from "react";
 import { Image, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import SEO from "../SEO";
 
 import "./style.css";
 
 const TopCatalogs = (props) => {
 
-    const { pathname } = props;
+    const { pathname, location } = props;
 
     const catalogs = [
         { id: "sanmar", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/sanmar.png", link: "https://sanmar.com/" },
@@ -18,20 +19,31 @@ const TopCatalogs = (props) => {
         { id: "citadel-brands", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/citadel-brands.jpg", link: "https://www.citadelbrands.com/home_page" },
         { id: "cutter-buck", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/cutter-buck.png", link: "https://cutterbuck.com/" },
         { id: "stormtech", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/stormtech-blue.png", link: "https://www.stormtechusa.com/" },
-        { id: "edwards", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/edwards.png", link: "https://www.edwardsgarment.com/"}
+        { id: "edwards", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/edwards.png", link: "https://www.edwardsgarment.com/" }
     ];
 
     return (
-        <div id="top-catalogs-container">
-            {pathname !== "/catalogs" ? <Header id="top-catalogs-header" as="h1">Our Top Catalogs</Header> : null}
-            <div id="catalogs-container">
-                {catalogs.map((catalog, index) => (
-                    <div className="catalog-col" key={index}>
-                        <Image as={Link} target=":blank" to={catalog.link} draggable="false" className="catalog-img" id={catalog.id} src={catalog.image} />
-                    </div>
-                ))}
+        <>
+            <SEO 
+                location={location}
+                title="Catalogs"
+                description="Browse our top catalogs for your ideal product bases."
+                keywords="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png"
+                url="https://www.zuse.com/catalogs"
+            />
+            <div id="top-catalogs-container">
+                {pathname !== "/catalogs" ? <Header id="top-catalogs-header" as="h1">Our Top Catalogs</Header> : null}
+                <div id="catalogs-container">
+                    {catalogs.map((catalog, index) => (
+                        <div className="catalog-col" key={index}>
+                            <Image as={Link} target=":blank" to={catalog.link} draggable="false" className="catalog-img" id={catalog.id} src={catalog.image} />
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 
