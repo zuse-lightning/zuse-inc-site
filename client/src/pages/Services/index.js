@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
-import { Helmet } from "react-helmet-async"
 import OurServices from "../../components/OurServices";
 import ServiceScreenPrinting from "./ServiceScreenPrinting";
 import ServiceEmbroidery from "./ServiceEmbroidery";
@@ -12,8 +11,7 @@ import ServiceOnDemand from "./ServiceOnDemand";
 import ServiceSewing from "./ServiceSewing";
 import ServiceDyeSub from "./ServiceDyeSub";
 import ServiceDirectTransfer from "./ServiceDirectTransfer";
-import ZuseFavicon from "../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../assets/images/ACP-favicon.png";
+import SEO from "../../components/SEO";
 
 const Services = (props) => {
 
@@ -22,13 +20,15 @@ const Services = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>Zuse Inc. - Services</title>
-                <meta name="description" content="We offer 5 main services, Screen Printing, Embroidery, Promotional Items, Fulfillment, and Shopify Stores." />
-                <meta name="keywords" content="Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO 
+                location={location}
+                title="Services"
+                description="We offer 10 main services, Screen Printing, Embroidery, Promotional Items, Fulfillment, E-Commerce, Graphic Design, Print On-Demand, Sewing, Dye Sublimation, and Direct Transfer."
+                keywords="Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Services.png"
+                url="https://www.zuse.com/services"
+            />
             {pathname === "/services" ? <OurServices /> : null}
             <Routes>
                 <Route exact path="screenprinting" element={<ServiceScreenPrinting location={location} screenWidth={screenWidth} />} />
