@@ -1,9 +1,7 @@
 import React from "react";
 import { Header, Image, List } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
 
@@ -14,15 +12,17 @@ const ServiceFulfillment = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Fulfillment</title>
-                <meta name="description" content="At Zuse Inc., we streamline your operations with our comprehensive fulfillment
+            <SEO 
+                location={location}
+                title="Fulfillment"
+                description="At Zuse Inc., we streamline your operations with our comprehensive fulfillment
                     services. From order processing to shipping, we handle it all, ensuring your
-                    products reach customers efficiently and on time." />
-                <meta name="keywords" content="Fulfillment, Branford, New Haven, CT, Custom Apparel, Fast Delivery, Efficient Processing" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+                    products reach customers efficiently and on time."
+                keywords="Fulfillment, Branford, New Haven, CT, Order Processing, Shipping, Logistics, Precision, Efficiency, Real-Time Updates, Tracking, Carriers, Delivery, Assembly, Tagging, Wrapping, Packaging, Freight Management, Zuse Inc."
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png"
+                url="https://www.zuse.com/services/fulfillment"
+            />
             <div id="fulfillment-container">
                 <Header as="h1" id="fulfillment-header">Fulfillment</Header>
                 <Image draggable="false" fluid src={fulfillmentBanner} />

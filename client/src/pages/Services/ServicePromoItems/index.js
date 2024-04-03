@@ -1,9 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
 
@@ -20,14 +18,17 @@ const ServicePromoItems = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Promotional Items</title>
-                <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression." />
-                <meta name="keywords" content="Promotional Items, Branford, New Haven, CT, Fulfillment, Custom Apparel, Mugs, Hats, Accessories, T-Shirts, Hoodies, Stationary" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO
+                location={location}
+                title="Promotional Items"
+                description="Need to boost brand visibility? With our extensive range of promotional items,
+                from branded merchandise to unique giveaways, we help you create memorable
+                experiences for your audience."
+                keywords="Promotional Items, Branford, New Haven, CT, Custom Apparel, Branding, Marketing, Giveaways, Trade Shows, Employee Incentives, Customer Appreciation, Screen Printing, Embroidery, DTG Printing, Apparel, Accessories, Tech Gadgets, Office Supplies"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Promo-Items.png"
+                url="https://www.zuse.com/services/promo-items"
+            />
             <div id="promo-items-container">
                 <Header as="h1" id="promo-items-header">Promotional Items</Header>
                 <Image draggable="false" fluid src={screenWidth >= 992 ? desktopBanner : "https://zuse-inc-bucket.s3.amazonaws.com/banners/promo-items-mobile.png"} />

@@ -1,9 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
 
@@ -25,13 +23,15 @@ const ServiceEmbroidery = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Embroidery</title>
-                <meta name="description" content="Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories." />
-                <meta name="keywords" content="Embroidery, Branford, New Haven, CT, Fulfillment, Patches, Hats, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO 
+                location={location}
+                title="Embroidery"
+                description="Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories."
+                keywords="Embroidery, Branford, New Haven, CT, Custom Apparel, Hats, Patches, Polos, Precision, Professionalism, Elegance, Sophistication"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Embroidery.png"
+                url="https://www.zuse.com/services/embroidery"
+            />
             <div id="embroidery-container">
                 <Header as="h1" id="embroidery-header">Embroidery</Header>
                 <Image draggable="false" fluid src={embroideryBanner} />

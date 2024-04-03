@@ -1,9 +1,7 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
 
@@ -13,14 +11,16 @@ const ServiceGraphicDesign = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Graphic Design</title>
-                <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression." />
-                <meta name="keywords" content="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO 
+                location={location}
+                title="Graphic Design"
+                description="The designing process begins with a thorough understanding for your design goals, target audience, and brand identity. We'll work closely with you to brainstorm ideas, discuss concepts,
+                and explore different design options until we have a clear understanding of your vision."
+                keywords="Graphic Design, Branford, New Haven, CT, Custom Apparel, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png"
+                url="https://www.zuse.com/services/graphic-design"
+            />
             <div id="graphic-design-container">
                 <Header as="h1" id="graphic-design-header">Graphic Design</Header>
                 <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/graphic-design-textless.png" />

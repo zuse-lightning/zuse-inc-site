@@ -1,10 +1,8 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
 
@@ -23,15 +21,15 @@ const ServiceShopifyStore = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - E-Commerce</title>
-                <meta name="description" content="Take your business online with our Shopify store creation services.
-                    We design and develop an e-commerce platform tailored to your brand,
-                    providing a seamless and secure shopping experience for your customers." />
-                <meta name="keywords" content="Shopify Stores, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, Web Development, E-Commerce, Online Store" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO 
+                location={location}
+                title="E-Commerce"
+                description="Take your business online with our Shopify store creation services."
+                keywords="E-Commerce, Branford, Web Development, New Haven, CT, Shopify, Store, Creation, Online, Sales, Print-On-Demand, Brand, Designs, Stock, Fluctuations, Marketplace, Brand Loyalty, Zuse Inc."
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Ecommerce.png"
+                url="https://www.zuse.com/services/ecommerce"
+            />
             <div id="shopify-container">
                 <Header as="h1" id="shopify-header">E-Commerce</Header>
                 <Image draggable="false" fluid src={shopifyBanner} />

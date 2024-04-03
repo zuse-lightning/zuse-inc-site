@@ -1,11 +1,10 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
+
 
 const DTGResults = [
     "https://zuse-inc-bucket.s3.amazonaws.com/examples/DTG1.jpg", 
@@ -26,14 +25,15 @@ const ServiceDirectTransfer = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}    
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } - Direct Transfer</title>
-                <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression." />
-                <meta name="keywords" content="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO 
+                location={location}
+                title="Direct Transfer"
+                description="Our DTG process involves printing directly onto garments using specialized InkJet technology. From T-shirts and hoodies to tote bags and hats, DTG allows for vibrant, high-quality prints with intricate details and vibrant colors."
+                keywords="DTG, DTF, Direct Transfer, Direct to Garment, Direct to Film, Printing, InkJet, Apparel, T-Shirts, Hoodies, Tote Bags, Hats"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Direct-Transfer.png"
+                url="https://www.zuse.com/services/dtg-dtf"
+            />
             <div id="dtg-dtf-container">
                 <Header as="h1" id="dtg-dtf-header">Direct Transfer</Header>
                 <Image fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/dtg-dtf-textless.png" />

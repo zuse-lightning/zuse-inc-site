@@ -1,11 +1,10 @@
 import React from "react";
 import { Header, Image } from "semantic-ui-react";
-import { Helmet } from "react-helmet-async";
 import PageContactFooter from "../../../components/PageContactFooter";
-import ZuseFavicon from "../../../assets/images/zuse-favicon.png";
-import ACPFavicon from "../../../assets/images/ACP-favicon.png";
+import SEO from "../../../components/SEO";
 
 import "./style.css";
+
 
 const ServiceOnDemand = (props) => {
 
@@ -13,14 +12,16 @@ const ServiceOnDemand = (props) => {
 
     return (
         <>
-            <Helmet>
-                {location.includes("americancontractprinting.com") ? <link rel="icon" href={ACPFavicon} /> : <link rel="icon" href={ZuseFavicon} />}
-                <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - Print On-Demand</title>
-                <meta name="description" content="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands
-                    out with high-quality prints that capture attention and leave a lasting impression." />
-                <meta name="keywords" content="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies" />
-                <meta name="robots" content="index, follow" />
-            </Helmet>
+            <SEO
+                location={location}
+                title="Print On-Demand"
+                description="We offer fast and high-quality printing solutions to meet the diverse needs of our clients. Through our streamlined process, customers can easily place orders through our user-friendly
+                online platform or directly with our dedicated team."
+                keywords="Print On-Demand, Branford, New Haven, CT, Fulfillment, Custom Apparel, T-Shirts, Hoodies, Stationary, Printing, On-Demand, Customization, Quality Control, Fast Turnaround, Shipping, Packaging, Customer Service"
+                type="website"
+                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png"
+                url="https://www.zuse.com/services/print-on-demand"
+            />
             <div id="on-demand-container">
                 <Header as="h1" id="on-demand-header">Print On-Demand</Header>
                 <Image draggable="false" fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/on-demand-textless.png" />
