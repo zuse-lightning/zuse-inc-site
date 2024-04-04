@@ -19,6 +19,8 @@ const screenPrintingResults = [
 const ServiceScreenPrinting = (props) => {
 
     const { location } = props;
+    const screenPrintingImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-ScreenPrinting.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Screenprinting.png");
+    const screenPrintingURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/screenprinting" : "https://www.zuse.com/services/screenprinting");
 
     return (
         <>
@@ -28,8 +30,8 @@ const ServiceScreenPrinting = (props) => {
                 description="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands out with high-quality prints that capture attention and leave a lasting impression."
                 keywords="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies"
                 type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/banners/screenprinting.jpg"
-                url="https://www.zuse.com/services/screenprinting"
+                image={screenPrintingImage}
+                url={screenPrintingURL}
             />
             <div id="screen-printing-container">
                 <Header as="h1" id="screen-printing-header">Screen Printing</Header>

@@ -9,6 +9,8 @@ class Contact extends Component {
     render() {
 
         const { location } = this.props;
+        const contactImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Contact.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Contact.png");
+        const contactURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/contact" : "https://www.zuse.com/contact");
 
         return (
             <>
@@ -18,8 +20,8 @@ class Contact extends Component {
                     description="Call us or send us a message with your info and a potential design."
                     keywords="Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"
                     type="website"
-                    image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Contact.png"
-                    url="https://www.zuse.com/contact"
+                    image={contactImage}
+                    url={contactURL}
                 />
                 {location.includes("www.americancontractprinting.com") ? <iframe
                     id="acp-location"

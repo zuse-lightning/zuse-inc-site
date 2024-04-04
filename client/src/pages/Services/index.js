@@ -17,6 +17,8 @@ const Services = (props) => {
 
     const { screenWidth, location } = props;
     const { pathname } = useLocation();
+    const servicesImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Services.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Services.png");
+    const servicesURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services" : "https://www.zuse.com/services");
 
     return (
         <>
@@ -26,8 +28,8 @@ const Services = (props) => {
                 description="We offer 10 main services, Screen Printing, Embroidery, Promotional Items, Fulfillment, E-Commerce, Graphic Design, Print On-Demand, Sewing, Dye Sublimation, and Direct Transfer."
                 keywords="Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"
                 type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Services.png"
-                url="https://www.zuse.com/services"
+                image={servicesImage}
+                url={servicesURL}
             />
             {pathname === "/services" ? <OurServices /> : null}
             <Routes>

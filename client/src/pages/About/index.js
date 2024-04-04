@@ -6,6 +6,8 @@ class About extends Component {
     render() {
 
         const { location } = this.props;
+        const aboutImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-About.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png");
+        const aboutURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/about" : "https://www.zuse.com/about");
 
         return (
             <>
@@ -15,8 +17,8 @@ class About extends Component {
                     description="Manufacturing company that offers screen printed or embroidered custom apparel, promotional items, and web stores for various companies, organizations, and special events."
                     keywords="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
                     type="website"
-                    image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png"
-                    url="https://www.zuse.com/about"
+                    image={aboutImage}
+                    url={aboutURL}
                 />
                 <AboutSection location={location} />
             </>

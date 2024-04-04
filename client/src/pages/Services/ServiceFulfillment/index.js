@@ -9,6 +9,8 @@ const ServiceFulfillment = (props) => {
 
     const { screenWidth, location } = props;
     let fulfillmentBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment-mobile.png";
+    const fulfillmentImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png");
+    const fulfillmentURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/fulfillment" : "https://www.zuse.com/services/fulfillment");
 
     return (
         <>
@@ -20,8 +22,8 @@ const ServiceFulfillment = (props) => {
                     products reach customers efficiently and on time."
                 keywords="Fulfillment, Branford, New Haven, CT, Order Processing, Shipping, Logistics, Precision, Efficiency, Real-Time Updates, Tracking, Carriers, Delivery, Assembly, Tagging, Wrapping, Packaging, Freight Management, Zuse Inc."
                 type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png"
-                url="https://www.zuse.com/services/fulfillment"
+                image={fulfillmentImage}
+                url={fulfillmentURL}
             />
             <div id="fulfillment-container">
                 <Header as="h1" id="fulfillment-header">Fulfillment</Header>

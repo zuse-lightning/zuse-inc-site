@@ -9,6 +9,8 @@ import "./style.css";
 const ServiceOnDemand = (props) => {
 
     const { location } = props;
+    const onDemandImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-On-Demand.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png");
+    const onDemandURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/print-on-demand" : "https://www.zuse.com/services/print-on-demand");
 
     return (
         <>
@@ -19,8 +21,8 @@ const ServiceOnDemand = (props) => {
                 online platform or directly with our dedicated team."
                 keywords="Print On-Demand, Branford, New Haven, CT, Fulfillment, Custom Apparel, T-Shirts, Hoodies, Stationary, Printing, On-Demand, Customization, Quality Control, Fast Turnaround, Shipping, Packaging, Customer Service"
                 type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png"
-                url="https://www.zuse.com/services/print-on-demand"
+                image={onDemandImage}
+                url={onDemandURL}
             />
             <div id="on-demand-container">
                 <Header as="h1" id="on-demand-header">Print On-Demand</Header>

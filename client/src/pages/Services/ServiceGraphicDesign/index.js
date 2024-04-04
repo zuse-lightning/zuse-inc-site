@@ -8,6 +8,8 @@ import "./style.css";
 const ServiceGraphicDesign = (props) => {
 
     const { location } = props;
+    const graphicDesignImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Graphic-Design.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png");
+    const graphicDesignURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/graphic-design" : "https://www.zuse.com/services/graphic-design");
 
     return (
         <>
@@ -18,8 +20,8 @@ const ServiceGraphicDesign = (props) => {
                 and explore different design options until we have a clear understanding of your vision."
                 keywords="Graphic Design, Branford, New Haven, CT, Custom Apparel, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
                 type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png"
-                url="https://www.zuse.com/services/graphic-design"
+                image={graphicDesignImage}
+                url={graphicDesignURL}
             />
             <div id="graphic-design-container">
                 <Header as="h1" id="graphic-design-header">Graphic Design</Header>

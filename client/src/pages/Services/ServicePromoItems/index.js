@@ -16,6 +16,9 @@ const ServicePromoItems = (props) => {
         desktopBanner = "https://zuse-inc-bucket.s3.amazonaws.com/banners/promo-items.png";
     }
 
+    const promoItemsImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Promo-Items.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Promo-Items.png");
+    const promoItemsURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/promo-items" : "https://www.zuse.com/services/promo-items");
+
     return (
         <>
             <SEO
@@ -26,8 +29,8 @@ const ServicePromoItems = (props) => {
                 experiences for your audience."
                 keywords="Promotional Items, Branford, New Haven, CT, Custom Apparel, Branding, Marketing, Giveaways, Trade Shows, Employee Incentives, Customer Appreciation, Screen Printing, Embroidery, DTG Printing, Apparel, Accessories, Tech Gadgets, Office Supplies"
                 type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Promo-Items.png"
-                url="https://www.zuse.com/services/promo-items"
+                image={promoItemsImage}
+                url={promoItemsURL}
             />
             <div id="promo-items-container">
                 <Header as="h1" id="promo-items-header">Promotional Items</Header>
