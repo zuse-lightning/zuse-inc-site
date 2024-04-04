@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
 import About from "../../pages/About";
-import TopCatalogs from "../../components/TopCatalogs";
+import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import SocialLinks from "../../components/SocialLinks";
@@ -64,7 +64,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<Home location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/about" element={<About location={useCurrentUrl()} />} />
-              <Route exact path="/catalogs" element={<TopCatalogs location={useCurrentUrl()} />} />
+              <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} />} />
             </Routes>

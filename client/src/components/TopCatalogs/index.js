@@ -1,7 +1,6 @@
 import React from "react";
 import { Image, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import SEO from "../SEO";
 
 import "./style.css";
 
@@ -24,15 +23,6 @@ const TopCatalogs = (props) => {
 
     return (
         <>
-            <SEO 
-                location={location}
-                title="Catalogs"
-                description="Browse our top catalogs for your ideal product bases."
-                keywords="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
-                type="website"
-                image="https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png"
-                url="https://www.zuse.com/catalogs"
-            />
             <div id="top-catalogs-container">
                 {pathname !== "/catalogs" ? <Header id="top-catalogs-header" as="h1">Our Top Catalogs</Header> : null}
                 <div id="catalogs-container">
