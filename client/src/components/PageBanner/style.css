@@ -6,11 +6,11 @@
 }
 
 .zuse {
-    background-image: linear-gradient(rgba(241, 21, 21, 0.8), rgba(241, 21, 21, 0.8)), url(../../assets/images/banners/page-banner.png);
+    background-image: linear-gradient(rgba(241, 21, 21, 0.8), rgba(241, 21, 21, 0.8)), url(https://zuse-inc-bucket.s3.amazonaws.com/banners/page-banner.png);
 }
 
 .acp {
-    background-image: linear-gradient(rgba(241, 21, 21, 0.8), rgba(241, 21, 21, 0.8)), url(../../assets/images/banners/main-banner-textless.png);
+    background-image: linear-gradient(rgba(241, 21, 21, 0.8), rgba(241, 21, 21, 0.8)), url(https://zuse-inc-bucket.s3.amazonaws.com/banners/main-banner-textless.png);
 }
 
 .page-banner-col {
