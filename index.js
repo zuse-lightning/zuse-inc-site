@@ -2,7 +2,7 @@ const express = require("express");
 // const helmet = require("helmet");
 
 const app = express();
-app.use(helmet());
+// app.use(helmet());
 const server = require("http").createServer(app);
 const path = require("path");
 
