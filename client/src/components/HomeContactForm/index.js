@@ -6,19 +6,14 @@ import "./style.css";
 
 const ZUSE_ENDPOINT = "https://www.formbackend.com/f/83494e28d94f6b77";
 const ACP_ENDPOINT = "https://www.formbackend.com/f/8869acfa911e5be3";
+const UNION_ENDPOINT = "https://www.formbackend.com/f/31f579beef4d1de8";
 
 const HomeContactForm = (props) => {
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
 
-    let FORM_ENDPOINT;
-
-    if (location.includes("americancontractprinting.com")) {
-        FORM_ENDPOINT = ACP_ENDPOINT;
-    } else {
-        FORM_ENDPOINT = ZUSE_ENDPOINT;
-    }
+    const FORM_ENDPOINT = whichWebsite(location, ZUSE_ENDPOINT, ACP_ENDPOINT, UNION_ENDPOINT);
 
     let contactFormColumns = new Array(8);
     for (let i = 0; i < contactFormColumns.length; i++) {

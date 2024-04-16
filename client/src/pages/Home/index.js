@@ -13,9 +13,9 @@ import "./style.css";
 class Home extends Component {
     render() {
 
-        const { screenWidth, location } = this.props;
-        const homeImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Home.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png");
-        const homeURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com" : "https://www.zuse.com");
+        const { screenWidth, location, whichWebsite } = this.props;
+        const homeImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png");
+        const homeURL = whichWebsite(location, "https://www.zuse.com", "https://www.americancontractprinting.com", "https://www.americanunionprint.com");
         
         return (
             <>
@@ -28,13 +28,13 @@ class Home extends Component {
                     image={homeImage}
                     url={homeURL}
                 />
-                <HomeSlideShow location={location} screenWidth={screenWidth} />
+                <HomeSlideShow location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />
                 <TopClients />
                 <HomeAbout />
                 <HomeTrustBadges />
                 <OurServices />
                 <TopCatalogs />
-                <HomeContactForm location={location} screenWidth={screenWidth} />
+                <HomeContactForm location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />
             </>
         );
     }

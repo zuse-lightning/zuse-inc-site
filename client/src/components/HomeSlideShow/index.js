@@ -23,6 +23,8 @@ const HomeSlideShow = (props) => {
         banners = ACPSlides;
     } else if (screenWidth <= 991 && location.includes("americancontractprinting.com")) {
         banners = ACPSlidesMobile;
+    } else {
+        banners = zuseSlides;
     };
 
     const resetTimeout = () => {
