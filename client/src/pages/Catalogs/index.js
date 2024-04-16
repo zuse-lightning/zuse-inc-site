@@ -5,9 +5,9 @@ import SEO from "../../components/SEO";
 class Catalogs extends Component {
     render() {
 
-        const { location } = this.props;
-        const catalogsImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Catalogs.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png");
-        const catalogsURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/catalogs" : "https://www.zuse.com/catalogs");
+        const { location, whichWebsite } = this.props;
+        const catalogsImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Catalogs.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png");
+        const catalogsURL = whichWebsite(location, "https://www.zuse.com/catalogs", "https://www.americancontractprinting.com/catalogs", "https://www.americanunionprint.com/catalogs");
 
         return (
             <>

@@ -6,21 +6,16 @@ import "./style.css";
 
 const ZUSE_ENDPOINT = "https://www.formbackend.com/f/83494e28d94f6b77";
 const ACP_ENDPOINT = "https://www.formbackend.com/f/8869acfa911e5be3";
+const UNION_ENDPOINT = "https://www.formbackend.com/f/31f579beef4d1de8";
 
 const ContactForm = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
 
     const [submitted, setSubmitted] = useState(false);
     const { register } = useForm();
     
-    let FORM_ENDPOINT;
-
-    if (location.includes("americancontractprinting.com")) {
-        FORM_ENDPOINT = ACP_ENDPOINT;
-    } else {
-        FORM_ENDPOINT = ZUSE_ENDPOINT;
-    }
+    const FORM_ENDPOINT = whichWebsite(location, ZUSE_ENDPOINT, ACP_ENDPOINT, UNION_ENDPOINT);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

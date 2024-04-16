@@ -8,9 +8,9 @@ class Contact extends Component {
 
     render() {
 
-        const { location } = this.props;
-        const contactImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Contact.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Contact.png");
-        const contactURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/contact" : "https://www.zuse.com/contact");
+        const { location, whichWebsite } = this.props;
+        const contactImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Contact.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Contact.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Contact.png");
+        const contactURL = whichWebsite(location, "https://www.zuse.com/contact", "https://www.americancontractprinting.com/contact", "https://www.americanunionprint.com/contact");
 
         return (
             <>
@@ -39,7 +39,7 @@ class Contact extends Component {
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
                 }
-                <ContactForm location={location} />
+                <ContactForm location={location} whichWebsite={whichWebsite} />
             </>
         );
     }
