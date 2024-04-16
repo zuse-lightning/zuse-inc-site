@@ -7,7 +7,6 @@ const app = express();
 const server = require("http").createServer(app);
 const path = require("path");
 const routes = require("./routes");
-console.log(routes);
 const PORT = process.env.PORT || 3001;
 
 //Middlewares

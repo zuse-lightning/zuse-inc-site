@@ -8,6 +8,9 @@ import About from "../../pages/About";
 import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
+import Login from "../../pages/Login";
+import Register from "../../pages/Register";
+import Reviews from "../../pages/Reviews";
 import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
@@ -67,6 +70,9 @@ const App = () => {
               <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} />} />
+              <Route exact path="/register" element={<Register />} />
+              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/reviews" element={<Reviews />} />
             </Routes>
           </div>
         </Sidebar.Pusher>
