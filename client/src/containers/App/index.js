@@ -70,9 +70,9 @@ const App = () => {
               <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} />} />
-              <Route exact path="/register" element={<Register />} />
+              {/* <Route exact path="/register" element={<Register />} />
               <Route exact path="/login" element={<Login />} />
-              <Route exact path="/reviews" element={<Reviews />} />
+              <Route exact path="/reviews" element={<Reviews />} /> */}
             </Routes>
           </div>
         </Sidebar.Pusher>
