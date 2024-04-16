@@ -39,6 +39,22 @@ const useCurrentUrl = () => {
   return currentUrl;
 }
 
+const whichWebsite = (url, zuseElement, contractElement, unionElement) => {
+  if (url.includes("zuse.com")) {
+    console.log("The function is working on Zuse.");
+    return zuseElement;
+  } else if (url.includes("americancontractprinting.com")) {
+    console.log("The function is working on American Contract Printing.");
+    return contractElement;
+  } else if (url.includes("americanunionprint.com")) {
+    console.log("The function is working on American Union Print.");
+    return unionElement;
+  } else if (url.includes("localhost")) {
+    console.log("The function is working locally.");
+    return zuseElement;
+  }
+};
+
 const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
@@ -65,11 +81,11 @@ const App = () => {
           <PageBanner location={useCurrentUrl()} />
           <div id="main-container">
             <Routes>
-              <Route exact path="/" element={<Home location={useCurrentUrl()} screenWidth={width} />} />
-              <Route exact path="/about" element={<About location={useCurrentUrl()} />} />
-              <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} />} />
-              <Route exact path="/services/*" element={<Services location={useCurrentUrl()} screenWidth={width} />} />
-              <Route exact path="/contact" element={<Contact location={useCurrentUrl()} />} />
+              <Route exact path="/" element={<Home location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
+              <Route exact path="/about" element={<About location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
+              <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
+              <Route exact path="/services/*" element={<Services location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
+              <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               {/* <Route exact path="/register" element={<Register />} />
               <Route exact path="/login" element={<Login />} />
               <Route exact path="/reviews" element={<Reviews />} /> */}

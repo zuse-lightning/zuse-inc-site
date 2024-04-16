@@ -6,8 +6,8 @@ import "./style.css";
 
 const AboutSection = (props) => {
 
-    const { location } = props;
-    let buildingImage = location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/American-Contract-Printing.jpg" : "https://zuse-inc-bucket.s3.amazonaws.com/zuse-building.jpg";
+    const { location, whichWebsite } = props;
+    let buildingImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/zuse-building.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/American-Contract-Printing.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/zuse-building.jpg");
 
     return (
         <div id="about-page-container">
@@ -24,7 +24,7 @@ const AboutSection = (props) => {
                     <p id="about-text">
                         While there are other companies in the market like Printful and similar services, what distinguishes us 
                         is our unwavering commitment to our clients' success. We understand that building a brand is more than 
-                        just printing designs on garments… {location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc." } is about creating a lasting impression and forging meaningful 
+                        just printing designs on garments… {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} is about creating a lasting impression and forging meaningful 
                         connections with your audience. That's why we offer a wide variety of services tailored to meet the unique 
                         needs of each brand we work with.
                     </p>

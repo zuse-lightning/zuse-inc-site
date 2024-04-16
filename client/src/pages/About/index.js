@@ -5,9 +5,9 @@ import SEO from "../../components/SEO";
 class About extends Component {
     render() {
 
-        const { location } = this.props;
-        const aboutImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-About.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png");
-        const aboutURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/about" : "https://www.zuse.com/about");
+        const { location, whichWebsite } = this.props;
+        const aboutImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-About.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png");
+        const aboutURL = whichWebsite(location, "https://www.zuse.com/about", "https://www.americancontractprinting.com/about", "https://www.americanunionprint.com/about");
 
         return (
             <>
@@ -20,7 +20,7 @@ class About extends Component {
                     image={aboutImage}
                     url={aboutURL}
                 />
-                <AboutSection location={location} />
+                <AboutSection location={location} whichWebsite={whichWebsite} />
             </>
         );
     }
