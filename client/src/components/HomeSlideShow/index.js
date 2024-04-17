@@ -28,7 +28,7 @@ const HomeSlideShow = (props) => {
     };
 
     const resetTimeout = () => {
-        if(timeoutRef.current) {
+        if (timeoutRef.current) {
             clearTimeout(timeoutRef.current);
         }
     };
@@ -45,9 +45,9 @@ const HomeSlideShow = (props) => {
 
     return (
         <div className="home-slideshow">
-            <div 
+            <div
                 className="home-slideshow-slider"
-                style={{ transform: `translate3d(${-index * 100}%, 0, 0)`}}
+                style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
                 {banners.map((banner, index) => (
                     <div className="home-slide" key={index}>
@@ -56,16 +56,16 @@ const HomeSlideShow = (props) => {
                 ))}
             </div>
             <div className="home-slideshow-dots">
-                    {banners.map((_, idx) => (
-                        <div 
-                            key={idx} 
-                            className={`home-slideshow-dot${index === idx ? " active" : ""}`}
-                            onClick={() => {
-                                setIndex(idx);
-                            }}
-                        >    
-                        </div>
-                    ))}
+                {banners.map((_, idx) => (
+                    <div
+                        key={idx}
+                        className={`home-slideshow-dot${index === idx ? " active" : ""}`}
+                        onClick={() => {
+                            setIndex(idx);
+                        }}
+                    >
+                    </div>
+                ))}
             </div>
         </div>
     );
