@@ -8,7 +8,7 @@ export default ({location, whichWebsite, title, description, keywords, type, ima
                 location, 
                 <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/zuse-favicon.png" />, 
                 <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/ACP-favicon.png" />, 
-                <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/Union-Logo.png" />
+                <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/Union-favicon.png" />
             )}
             <title>{whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} - {title}</title>
             <meta name="decription" content={description} />
