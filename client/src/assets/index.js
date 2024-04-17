@@ -49,3 +49,7 @@ export const ACPSlidesMobile = [
     "https://zuse-inc-bucket.s3.amazonaws.com/banners/ACP-Dye-Sub-Mobile.png",
     "https://zuse-inc-bucket.s3.amazonaws.com/banners/ACP-DTG-DTF-Mobile.png"
 ];
+
+export const unionSlides = [];
+
+export const unionSlidesMobile = [];
