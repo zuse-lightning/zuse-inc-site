@@ -8,8 +8,8 @@ import "./style.css";
 const ServiceSewing = (props) => {
 
     const { location, whichWebsite } = props;
-    const sewingImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Sewing.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Sewing.png");
-    const sewingURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/sewing" : "https://www.zuse.com/services/sewing");
+    const sewingImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Sewing.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Sewing.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Sewing.png");
+    const sewingURL = whichWebsite(location, "https://www.zuse.com/services/sewing", "https://www.americancontractprinting.com/services/sewing", "https://www.americanunionprint.com/services/sewing");
 
     return (
         <>

@@ -10,8 +10,7 @@ export default ({location, whichWebsite, title, description, keywords, type, ima
                 <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/ACP-favicon.png" />, 
                 <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/Union-Logo.png" />
             )}
-            {/* {location.includes("americancontractprinting.com") ? <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/ACP-favicon.png" /> : <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/zuse-favicon.png" />} */}
-            <title>{location.includes("americancontractprinting.com") ? "American Contract Printing" : "Zuse Inc."} - {title}</title>
+            <title>{whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} - {title}</title>
             <meta name="decription" content={description} />
             <meta name="keywords" content={keywords} />
             <meta property="og:type" content={type} />

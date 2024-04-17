@@ -9,8 +9,8 @@ const ServiceFulfillment = (props) => {
 
     const { screenWidth, location, whichWebsite } = props;
     let fulfillmentBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment-mobile.png";
-    const fulfillmentImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png");
-    const fulfillmentURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/fulfillment" : "https://www.zuse.com/services/fulfillment");
+    const fulfillmentImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Fulfillment.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png");
+    const fulfillmentURL = whichWebsite(location, "https://www.zuse.com/services/fulfillment", "https://www.americancontractprinting.com/services/fulfillment", "https://www.americanunionprint.com/services/fulfillment");
 
     return (
         <>

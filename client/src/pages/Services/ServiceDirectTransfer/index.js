@@ -22,8 +22,8 @@ const DTFResults = [
 const ServiceDirectTransfer = (props) => {
 
     const { location, whichWebsite } = props;
-    const directTransferImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-DirectTransfer.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Direct-Transfer.png");
-    const directTransferURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/dtg-dtf" : "https://www.zuse.com/services/dtg-dtf");
+    const directTransferImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Direct-Transfer.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-DirectTransfer.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Direct-Transfer.png");
+    const directTransferURL = whichWebsite(location,  "https://www.zuse.com/services/dtg-dtf", "https://www.americancontractprinting.com/services/dtg-dtf", "https://www.americanunionprint.com/services/dtg-dtf");
 
     return (
         <>

@@ -20,8 +20,8 @@ const ServiceEmbroidery = (props) => {
 
     const { screenWidth, location, whichWebsite } = props;
     let embroideryBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/embroidery.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/embroidery-mobile.png";
-    const embroideryImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Embroidery.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Embroidery.png");
-    const embroideryURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/embroidery" : "https://www.zuse.com/services/embroidery");
+    const embroideryImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Embroidery.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Embroidery.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Embroidery.png");
+    const embroideryURL = whichWebsite(location, "https://www.zuse.com/services/embroidery", "https://www.americancontractprinting.com/services/embroidery", "https://www.americanunionprint.com/services/embroidery");
 
     return (
         <>
