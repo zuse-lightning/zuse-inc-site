@@ -8,7 +8,7 @@ import "./style.css";
 
 const ServiceOnDemand = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
     const onDemandImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-On-Demand.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png");
     const onDemandURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/print-on-demand" : "https://www.zuse.com/services/print-on-demand");
 
@@ -16,6 +16,7 @@ const ServiceOnDemand = (props) => {
         <>
             <SEO
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Print On-Demand"
                 description="We offer fast and high-quality printing solutions to meet the diverse needs of our clients. Through our streamlined process, customers can easily place orders through our user-friendly
                 online platform or directly with our dedicated team."

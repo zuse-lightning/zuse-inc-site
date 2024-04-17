@@ -13,6 +13,7 @@ class Catalogs extends Component {
             <>
                 <SEO
                     location={location}
+                    whichWebsite={whichWebsite}
                     title="Catalogs"
                     description="Browse our top catalogs for your ideal product bases."
                     keywords="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"

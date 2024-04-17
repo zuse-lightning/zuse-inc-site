@@ -21,7 +21,7 @@ const DTFResults = [
 
 const ServiceDirectTransfer = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
     const directTransferImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-DirectTransfer.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Direct-Transfer.png");
     const directTransferURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/dtg-dtf" : "https://www.zuse.com/services/dtg-dtf");
 
@@ -29,6 +29,7 @@ const ServiceDirectTransfer = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Direct Transfer"
                 description="Our DTG process involves printing directly onto garments using specialized InkJet technology. From T-shirts and hoodies to tote bags and hats, DTG allows for vibrant, high-quality prints with intricate details and vibrant colors."
                 keywords="DTG, DTF, Direct Transfer, Direct to Garment, Direct to Film, Printing, InkJet, Apparel, T-Shirts, Hoodies, Tote Bags, Hats"

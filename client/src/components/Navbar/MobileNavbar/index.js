@@ -6,7 +6,7 @@ import "../style.css";
 
 const MobileNavbar = (props) => {
 
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
     const [mainVisible, setMainVisible] = useState(false);
 
     let logoSize;
@@ -31,7 +31,7 @@ const MobileNavbar = (props) => {
                         size={logoSize} 
                         draggable="false" 
                         id="home-btn-img" 
-                        src={location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-logo.png" : "https://zuse-inc-bucket.s3.amazonaws.com/zuse-logo.jpg"} 
+                        src={whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/zuse-logo.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-logo.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Logo.png")} 
                     />
                 </div>
             </Menu.Item>

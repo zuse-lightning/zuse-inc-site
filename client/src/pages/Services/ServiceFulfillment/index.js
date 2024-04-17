@@ -7,7 +7,7 @@ import "./style.css";
 
 const ServiceFulfillment = (props) => {
 
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
     let fulfillmentBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/fulfillment-mobile.png";
     const fulfillmentImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Fulfillment.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Fulfillment.png");
     const fulfillmentURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/fulfillment" : "https://www.zuse.com/services/fulfillment");
@@ -16,6 +16,7 @@ const ServiceFulfillment = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Fulfillment"
                 description="At Zuse Inc., we streamline your operations with our comprehensive fulfillment
                     services. From order processing to shipping, we handle it all, ensuring your

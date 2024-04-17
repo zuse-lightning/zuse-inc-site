@@ -6,7 +6,7 @@ import "../style.css";
 
 const DesktopNavbar = (props) => {
 
-    const { catalogs, services, sticky, location } = props;
+    const { catalogs, services, sticky, location, whichWebsite } = props;
 
     return (
         <Menu className={sticky} id="main-menu" fluid secondary>
@@ -22,7 +22,7 @@ const DesktopNavbar = (props) => {
                         draggable="false" 
                         size="medium" 
                         id="home-btn-img" 
-                        src={location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-logo.png" : "https://zuse-inc-bucket.s3.amazonaws.com/zuse-logo.jpg"}
+                        src={whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/zuse-logo.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-logo.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Logo.png")}
                     />
                 </div>
             </Menu.Item>

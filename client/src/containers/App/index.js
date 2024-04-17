@@ -75,10 +75,10 @@ const App = () => {
   
   return (
     <>
-      <Navbar location={useCurrentUrl()} screenWidth={width} />
+      <Navbar location={useCurrentUrl()} screenWidth={width} whichWebsite={whichWebsite} />
       <Sidebar.Pushable id="main-pushable">
         <Sidebar.Pusher>
-          <PageBanner location={useCurrentUrl()} />
+          <PageBanner location={useCurrentUrl()} whichWebsite={whichWebsite} />
           <div id="main-container">
             <Routes>
               <Route exact path="/" element={<Home location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
@@ -94,7 +94,7 @@ const App = () => {
         </Sidebar.Pusher>
       </Sidebar.Pushable>
       <SocialLinks />
-      <Footer location={useCurrentUrl()} />
+      <Footer location={useCurrentUrl()} whichWebsite={whichWebsite} />
     </>
   );
 

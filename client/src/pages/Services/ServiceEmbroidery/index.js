@@ -18,7 +18,7 @@ const embroideryResults = [
 
 const ServiceEmbroidery = (props) => {
 
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
     let embroideryBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/embroidery.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/embroidery-mobile.png";
     const embroideryImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Embroidery.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Embroidery.png");
     const embroideryURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/embroidery" : "https://www.zuse.com/services/embroidery");
@@ -27,6 +27,7 @@ const ServiceEmbroidery = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Embroidery"
                 description="Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories."
                 keywords="Embroidery, Branford, New Haven, CT, Custom Apparel, Hats, Patches, Polos, Precision, Professionalism, Elegance, Sophistication"

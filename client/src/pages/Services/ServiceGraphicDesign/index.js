@@ -7,7 +7,7 @@ import "./style.css";
 
 const ServiceGraphicDesign = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
     const graphicDesignImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Graphic-Design.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png");
     const graphicDesignURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/graphic-design" : "https://www.zuse.com/services/graphic-design");
 
@@ -15,6 +15,7 @@ const ServiceGraphicDesign = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Graphic Design"
                 description="The designing process begins with a thorough understanding for your design goals, target audience, and brand identity. We'll work closely with you to brainstorm ideas, discuss concepts,
                 and explore different design options until we have a clear understanding of your vision."

@@ -7,7 +7,7 @@ import "./style.css";
 
 const ServicePromoItems = (props) => {
 
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
 
     let desktopBanner;
     if (location.includes("americancontractprinting.com")) {
@@ -23,6 +23,7 @@ const ServicePromoItems = (props) => {
         <>
             <SEO
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Promotional Items"
                 description="Need to boost brand visibility? With our extensive range of promotional items,
                 from branded merchandise to unique giveaways, we help you create memorable

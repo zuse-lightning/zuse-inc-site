@@ -7,7 +7,7 @@ import "./style.css";
 
 const ServiceSewing = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
     const sewingImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Sewing.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Sewing.png");
     const sewingURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/sewing" : "https://www.zuse.com/services/sewing");
 
@@ -15,6 +15,7 @@ const ServiceSewing = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Sewing"
                 description="We're here to make your sewing projects a breeze. Whether you need alterations, repairs, or custom creations, we've got you covered."
                 keywords="Sewing, Alterations, Repairs, Custom Creations, Seamstresses, Tailors, Fabric Selection, Delivery"

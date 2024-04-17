@@ -16,7 +16,7 @@ const shopifyResults = [
 
 const ServiceShopifyStore = (props) => {
 
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
     let shopifyBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/shopify-banner.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/shopify-banner-mobile.png";
     const ecommerceImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Ecommerce.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Ecommerce.png");
     const ecommerceURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/ecommerce" : "https://www.zuse.com/services/ecommerce");
@@ -25,6 +25,7 @@ const ServiceShopifyStore = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="E-Commerce"
                 description="Take your business online with our Shopify store creation services."
                 keywords="E-Commerce, Branford, Web Development, New Haven, CT, Shopify, Store, Creation, Online, Sales, Print-On-Demand, Brand, Designs, Stock, Fluctuations, Marketplace, Brand Loyalty, Zuse Inc."

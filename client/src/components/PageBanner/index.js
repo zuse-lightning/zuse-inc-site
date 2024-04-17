@@ -6,7 +6,7 @@ import "./style.css";
 
 const PageBanner = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
     const { pathname } = useLocation();
 
     let pageBannerName;
@@ -130,7 +130,7 @@ const PageBanner = (props) => {
 
     return (
         <>
-            {pathname !== "/" ? <div className={location.includes("americancontractprinting.com") ? "acp" : "zuse"} id="page-banner">
+            {pathname !== "/" ? <div className={whichWebsite(location, "zuse", "acp", "union-print")} id="page-banner">
                 <div className="page-banner-col">
                     <Header as="h2" id="page-banner-title">{pageBannerName}</Header>
                 </div>

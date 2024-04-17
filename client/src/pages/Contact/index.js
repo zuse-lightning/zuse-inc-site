@@ -16,6 +16,7 @@ class Contact extends Component {
             <>
                 <SEO 
                     location={location}
+                    whichWebsite={whichWebsite}
                     title="Contact"
                     description="Call us or send us a message with your info and a potential design."
                     keywords="Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"

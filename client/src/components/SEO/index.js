@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default ({location, title, description, keywords, type, image, url}) => {
+export default ({location, whichWebsite, title, description, keywords, type, image, url}) => {
     return (
         <Helmet>
             {location.includes("americancontractprinting.com") ? <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/ACP-favicon.png" /> : <link rel="icon" href="https://zuse-inc-bucket.s3.amazonaws.com/zuse-favicon.png" />}

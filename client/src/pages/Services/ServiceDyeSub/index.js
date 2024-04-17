@@ -8,7 +8,7 @@ import "./style.css";
 
 const ServiceDyeSub = (props) => {
 
-    const { location } = props;
+    const { location, whichWebsite } = props;
     const dyeSubImage = (location.includes("americancontractprinting.com") ? "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Dye-Sub.png" : "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Dye-Sub.png");
     const dyeSubURL = (location.includes("americancontractprinting.com") ? "https://www.americancontractprinting.com/services/dye-sublimation" : "https://www.zuse.com/services/dye-sublimation");
 
@@ -16,6 +16,7 @@ const ServiceDyeSub = (props) => {
         <>
             <SEO 
                 location={location}
+                whichWebsite={whichWebsite}
                 title="Dye Sublimation"
                 description="Our dye sublimation process begins working closely with our clients to understand their vision and requirements for their printed products."
                 keywords="Dye Sublimation, Sublimation Printer, Heat Press, Sublimation Ink, Transfer Paper, Substrate, Vibrant Colors, High-Resolution Printing"
