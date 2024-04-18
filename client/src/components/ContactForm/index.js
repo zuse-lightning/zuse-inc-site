@@ -85,7 +85,7 @@ const ContactForm = (props) => {
                         <textarea id="message-input" placeholder="Message" name="message" />
                     </div>
                     <div className="form-field-col">
-                        <label for="art-file">Upload Your Design:</label>
+                        <label htmlFor="art-file">Upload Your Design:</label>
                     </div>
                     <div className="form-field-col">
                         <input type="file" {...register("file")} id="art-file" name="artFile" accept=".png, .ai, .psd" multiple />
@@ -93,7 +93,7 @@ const ContactForm = (props) => {
                 </div>
                 <button id="submit-btn" type="submit">Send Message</button>
                 <div style={{ textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute" }} aria-hidden="true">
-                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+                    <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
                 </div>
             </form>
         </div>

@@ -41,8 +41,8 @@ const DesktopNavbar = (props) => {
                 text="Catalogs"
             >
                 <Dropdown.Menu>
-                    {catalogs.map((catalog) => (
-                        <Dropdown.Item as={Link} target=":blank" to={catalog.link}>{catalog.name}</Dropdown.Item>
+                    {catalogs.map((catalog, index) => (
+                        <Dropdown.Item key={index} as={Link} target=":blank" to={catalog.link}>{catalog.name}</Dropdown.Item>
                     ))}
                 </Dropdown.Menu>
             </Menu.Item>
@@ -53,8 +53,8 @@ const DesktopNavbar = (props) => {
                 text="Services"
             >
                 <Dropdown.Menu>
-                    {services.map((service) => (
-                        <Dropdown.Item as={Link} to={service.link} >{service.name}</Dropdown.Item>
+                    {services.map((service, index) => (
+                        <Dropdown.Item key={index} as={Link} to={service.link} >{service.name}</Dropdown.Item>
                     ))}
                 </Dropdown.Menu>
             </Menu.Item>

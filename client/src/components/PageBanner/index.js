@@ -135,14 +135,14 @@ const PageBanner = (props) => {
                     <Header as="h2" id="page-banner-title">{pageBannerName}</Header>
                 </div>
                 <div className="page-banner-col">
-                    <Breadcrumb id="page-banner-breadcrumbs">
+                    <>
                         {pageBannerBreadcrumbs.map((crumb, index) => (
-                            <>
+                            <Breadcrumb id="page-banner-breadcrumbs" key={index}>
                                 <Breadcrumb.Section as={Link} to={crumb.link} className="breadcrumb-link">{crumb.name}</Breadcrumb.Section>
                                 {index === pageBannerBreadcrumbs.length - 1 ? null : <Breadcrumb.Divider className="breadcrumb-link-divider" />}
-                            </>
+                            </Breadcrumb>
                         ))}
-                    </Breadcrumb>
+                    </>
                 </div>
             </div> : null}
         </>

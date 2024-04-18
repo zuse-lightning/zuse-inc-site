@@ -138,7 +138,7 @@ const HomeContactForm = (props) => {
                                 </Grid.Row>
                                 <Grid.Row centered>
                                     <Grid.Column width={contactFormColumns[6]}>
-                                        <label id="upload-label" for="home-art-file">Upload Your Design:</label>
+                                        <label id="upload-label" htmlFor="home-art-file">Upload Your Design:</label>
                                     </Grid.Column>
                                     <Grid.Column width={contactFormColumns[7]}>
                                         <input type="file" {...register("file")} id="home-art-file" name="artFile" accept=".png, .ai, .psd" multiple />
@@ -147,7 +147,7 @@ const HomeContactForm = (props) => {
                             </Grid>
                             <button id="home-submit-btn" type="submit">Send Message</button>
                             <div style={{ textIndent: "-99999px", whiteSpace: "nowrap", overflow: "hidden", position: "absolute" }} aria-hidden="true">
-                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+                                <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
                             </div>
                         </form>
                     </Grid.Column>
