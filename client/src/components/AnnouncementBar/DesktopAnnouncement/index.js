@@ -6,18 +6,18 @@ import "../style.css";
 
 const DesktopAnnouncment = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, currentUser } = props;
 
     return (
         <div id="announcement-container">
             <div className="announce-col">
                 <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />Call: 203-458-3295</Header>
             </div>
-            {<div className="announce-col">
-                <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
-            </div>}
             <div className="announce-col">
-                <div className="announce-social-icon-wrapper">
+                <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
+            </div>
+            <div className="announce-col">
+                {/* <div className="announce-social-icon-wrapper">
                     <Image
                         as={Link}
                         target=":blank"
@@ -36,7 +36,8 @@ const DesktopAnnouncment = (props) => {
                         id="announce-instagram-icon"
                         src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon-white.png"
                     />
-                </div>
+                </div> */}
+                <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header>
             </div>
 
         </div>

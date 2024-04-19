@@ -16,7 +16,6 @@ const Footer = (props) => {
                     as={Link}
                     to="/"
                     name="home"
-
                 >
                     Home
                 </Menu.Item>

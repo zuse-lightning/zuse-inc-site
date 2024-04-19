@@ -4,12 +4,12 @@ import MobileAnnouncment from "./MobileAnnouncement";
 
 const AnnouncementBar = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, currentUser } = props;
 
     return (
         <>
-            {screenWidth >= 768 ? <DesktopAnnouncment screenWidth={screenWidth} /> : null}
-            {screenWidth <= 767 ? <MobileAnnouncment screenWidth={screenWidth} /> : null}
+            {screenWidth >= 768 ? <DesktopAnnouncment currentUser={currentUser} screenWidth={screenWidth} /> : null}
+            {screenWidth <= 767 ? <MobileAnnouncment currentUser={currentUser} screenWidth={screenWidth} /> : null}
         </>
     );
 };

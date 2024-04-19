@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Sidebar } from "semantic-ui-react";
 import { Route, Routes } from "react-router-dom";
+import { AuthContext } from "../../context/authContext";
 import Navbar from "../../components/Navbar";
 import PageBanner from "../../components/PageBanner";
 import Home from "../../pages/Home";
@@ -69,13 +70,16 @@ const useWindowDimensions = () => {
   return windowDimensions;
 }
 
+
+
 const App = () => {
 
   const { width } = useWindowDimensions();
-  
+  const auth = useContext(AuthContext);
+
   return (
     <>
-      <Navbar location={useCurrentUrl()} screenWidth={width} whichWebsite={whichWebsite} />
+      <Navbar location={useCurrentUrl()} screenWidth={width} whichWebsite={whichWebsite} auth={auth} />
       <Sidebar.Pushable id="main-pushable">
         <Sidebar.Pusher>
           <PageBanner location={useCurrentUrl()} whichWebsite={whichWebsite} />

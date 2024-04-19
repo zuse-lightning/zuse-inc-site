@@ -7,6 +7,7 @@ import "../style.css";
 const DesktopNavbar = (props) => {
 
     const { catalogs, services, sticky, location, whichWebsite } = props;
+    const { currentUser, logout } = props.auth;
 
     return (
         <Menu className={sticky} id="main-menu" fluid secondary>
@@ -18,10 +19,10 @@ const DesktopNavbar = (props) => {
                 name="home"
             >
                 <div id="zuse-logo-container">
-                    <Image 
-                        draggable="false" 
-                        size="medium" 
-                        id="home-btn-img" 
+                    <Image
+                        draggable="false"
+                        size="medium"
+                        id="home-btn-img"
                         src={whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/zuse-logo.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-logo.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Logo.png")}
                     />
                 </div>
@@ -66,9 +67,9 @@ const DesktopNavbar = (props) => {
             >
                 Contact
             </Menu.Item>
-            <Menu.Item>
-                
-            </Menu.Item>
+            {currentUser ?
+                <Menu.Item className="header-nav-item" onClick={logout}>Log Out</Menu.Item> :
+                <Menu.Item className="header-nav-item" as={Link} to="/login" name="login">Login</Menu.Item>}
         </Menu>
     );
 };
