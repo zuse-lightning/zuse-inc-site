@@ -7,7 +7,6 @@ import "../style.css";
 const DesktopNavbar = (props) => {
 
     const { catalogs, services, sticky, location, whichWebsite } = props;
-    const { currentUser, logout } = props.auth;
 
     return (
         <Menu className={sticky} id="main-menu" fluid secondary>
@@ -67,9 +66,6 @@ const DesktopNavbar = (props) => {
             >
                 Contact
             </Menu.Item>
-            {currentUser ?
-                <Menu.Item className="header-nav-item" onClick={logout}>Log Out</Menu.Item> :
-                <Menu.Item className="header-nav-item" as={Link} to="/login" name="login">Login</Menu.Item>}
         </Menu>
     );
 };

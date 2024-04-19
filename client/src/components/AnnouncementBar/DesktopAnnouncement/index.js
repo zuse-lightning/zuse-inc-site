@@ -6,7 +6,8 @@ import "../style.css";
 
 const DesktopAnnouncment = (props) => {
 
-    const { screenWidth, currentUser } = props;
+    const { screenWidth } = props;
+    const { currentUser, logout } = props.auth;
 
     return (
         <div id="announcement-container">
@@ -37,9 +38,11 @@ const DesktopAnnouncment = (props) => {
                         src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon-white.png"
                     />
                 </div> */}
-                <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header>
+                {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
             </div>
-
+            <div className="announce-col">
+                {currentUser ? <span id="logout-btn" onClick={logout}>Log Out</span> : <Link id="login-btn" to="/login">Log In</Link>}
+            </div>
         </div>
     );
 };

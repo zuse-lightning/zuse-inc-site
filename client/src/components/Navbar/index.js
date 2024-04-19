@@ -53,20 +53,18 @@ const Navbar = (props) => {
     return (
         <>
             <div className={`header-container`}>
-                <AnnouncementBar currentUser={auth.currentUser} screenWidth={screenWidth} />
+                <AnnouncementBar auth={auth} screenWidth={screenWidth} />
                 { screenWidth >= 992 ? 
                     <DesktopNavbar 
                         location={location} 
                         catalogs={catalogs} 
                         services={services}
                         whichWebsite={whichWebsite}
-                        auth={auth}
                     /> : 
                     <MobileNavbar 
                         location={location} 
                         screenWidth={screenWidth}
-                        whichWebsite={whichWebsite}
-                        auth={auth} 
+                        whichWebsite={whichWebsite} 
                     /> }
             </div>
         </>
