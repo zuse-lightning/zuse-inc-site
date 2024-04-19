@@ -1,11 +1,11 @@
 const db = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { getUsersByEmail, setUserData, getUser } = require("../../models/users");
+const { getUserByEmail, setUserData, getUser } = require("../../models/users");
 
 module.exports = {
     register: (req, res) => {
-        db.query(getUsersByEmail, [req.body.email], (err, data) => {
+        db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return console.log(err);
             if (data.length) return res.json("User already exists");
 
@@ -30,7 +30,7 @@ module.exports = {
         });
     },
     login: (req, res) => {
-        db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
+        db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
 
