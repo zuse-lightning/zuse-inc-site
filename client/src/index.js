@@ -10,14 +10,15 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const helmetContext = {};
 root.render(
-  <AuthContextProvider>
+  
     <HelmetProvider context={helmetContext}>
       <Router>
         <ScrollToTop />
-        <App />
+        <AuthContextProvider>
+          <App />
+        </AuthContextProvider>
       </Router>
     </HelmetProvider>
-  </AuthContextProvider>
 );
 
 reportWebVitals();

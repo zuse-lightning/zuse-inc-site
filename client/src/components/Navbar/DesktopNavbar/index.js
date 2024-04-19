@@ -66,6 +66,9 @@ const DesktopNavbar = (props) => {
             >
                 Contact
             </Menu.Item>
+            <Menu.Item>
+                
+            </Menu.Item>
         </Menu>
     );
 };

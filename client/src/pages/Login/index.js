@@ -1,6 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Button, Header, Message } from "semantic-ui-react";
 import { AuthContext } from "../../context/authContext";
+
+import "./style.css";
 
 const Login = () => {
 
@@ -8,7 +11,6 @@ const Login = () => {
     const [err, setError] = useState(null);
     const navigate = useNavigate();
     const { login } = useContext(AuthContext);
-    console.log(login);
 
     const handleChange = (e) => {
         setInputs(prev => ({ ...prev, [e.target.placeholder]: e.target.value }));
@@ -26,7 +28,16 @@ const Login = () => {
 
     return (
         <div id="login-container">
-            <h1>Login</h1>
+            <Header id="login-header" as="h1">Login</Header>
+            <form onSubmit={handleSubmit} id="login-form">
+                <input required onChange={handleChange} value={inputs.email} name="email" type="email" placeholder="email" />
+                <input required onChange={handleChange} value={inputs.password} name="password" type="password" placeholder="password" />
+                <Button type="submit">Login</Button>
+                <Message>
+                    Don't have an account? <Link to="/register">Register</Link>
+                </Message>
+                {err ? <Message error>{err}</Message> : null}
+            </form>
         </div>
     );
 };

@@ -6,8 +6,10 @@ const { getUsersByEmail, setUserData, getUser } = require("../../models/users");
 module.exports = {
     register: (req, res) => {
         db.query(getUsersByEmail, [req.body.email], (err, data) => {
-            if (err) return res.json(err);
+            if (err) return console.log(err);
             if (data.length) return res.json("User already exists");
+
+            console.log(data);
 
             const salt = bcrypt.genSaltSync(10);
             const hash = bcrypt.hashSync(req.body.password, salt);
@@ -18,6 +20,8 @@ module.exports = {
                 req.body.email,
                 hash
             ];
+
+            console.log(values);
 
             db.query(setUserData, [values], (err, data) => {
                 if (err) return res.json(err);
@@ -46,5 +50,8 @@ module.exports = {
             sameSite: "none",
             secure: true
         }).status(200).json("User logged out");
+    },
+    test: (req, res) => {
+        res.json("Test route");
     }
 };
