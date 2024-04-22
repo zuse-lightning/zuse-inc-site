@@ -7,7 +7,7 @@ import "./style.css";
 const AboutSection = (props) => {
 
     const { location, whichWebsite } = props;
-    let buildingImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/zuse-building.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/American-Contract-Printing.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/zuse-building.jpg");
+    let buildingImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/zuse-building.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/American-Contract-Printing.jpg", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Building.png");
 
     return (
         <div id="about-page-container">

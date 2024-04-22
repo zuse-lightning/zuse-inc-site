@@ -18,11 +18,8 @@ const Register = () => {
     const navigate = useNavigate();
 
     const handleChange = async (e) => {
-        setInputs(prev => ({ ...prev, [e.target.placeholder]: e.target.value }));
+        setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
-
-    // const test = axios.get("/auth/test");
-    // console.log(test);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,10 +37,10 @@ const Register = () => {
         <div id="register-container">
             <Header id="register-header" as="h1">Register</Header>
             <form onSubmit={handleSubmit} id="register-form">
-                <input onChange={handleChange} name="first_name" type="text" placeholder="first_name" />
-                <input onChange={handleChange} name="last_name" type="text" placeholder="last_name" />
-                <input onChange={handleChange} name="email" type="email" placeholder="email" />
-                <input onChange={handleChange} name="password" type="password" placeholder="password" />
+                <input onChange={handleChange} name="first_name" type="text" placeholder="First Name" />
+                <input onChange={handleChange} name="last_name" type="text" placeholder="Last Name" />
+                <input onChange={handleChange} name="email" type="email" placeholder="Email" />
+                <input onChange={handleChange} name="password" type="password" placeholder="Password" />
                 <Button type="submit">Register</Button>
                 <Message>
                     Already have an account? <Link to="/login">Login</Link>

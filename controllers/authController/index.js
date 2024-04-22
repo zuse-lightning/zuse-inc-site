@@ -5,8 +5,9 @@ const { getUserByEmail, setUserData, getUser } = require("../../models/users");
 
 module.exports = {
     register: (req, res) => {
-        db.query(getUserByEmail, [req.body.email], (err, data) => {
+        db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
             if (err) return console.log(err);
+            if (!req.body.first_name || !req.body.last_name) console.log("Didn't get a first or last name, somehow");
             if (data.length) return res.json("User already exists");
 
             console.log(data);
