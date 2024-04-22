@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("currentUser")) || null);
+    const navigate = useNavigate();
 
     const login = async (inputs) => {
         const res = await axios.post("/auth/login", inputs);
@@ -14,6 +16,7 @@ export const AuthContextProvider = ({ children }) => {
     const logout = async () => {
         await axios.post("/auth/logout/");
         setCurrentUser(null);
+        navigate("/");
     };
 
     useEffect(() => {

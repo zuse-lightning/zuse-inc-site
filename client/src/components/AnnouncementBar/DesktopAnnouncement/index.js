@@ -1,6 +1,7 @@
 import React from "react";
-import { Header, Icon, Image } from "semantic-ui-react";
+import { Header, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import LogoutModal from "../../LogoutModal";
 
 import "../style.css";
 
@@ -41,7 +42,7 @@ const DesktopAnnouncment = (props) => {
                 {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
             </div>
             <div className="announce-col">
-                {currentUser ? <span id="logout-btn" onClick={logout}>Log Out</span> : <Link id="login-btn" to="/login">Log In</Link>}
+                {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
             </div>
         </div>
     );
