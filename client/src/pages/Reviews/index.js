@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 
-const Reviews = () => {
+const Reviews = (props) => {
     
+    const { currentUser, notAuthorized } = props.auth;
     const [reviews, setReviews] = useState([]);
     
     useEffect(() => {
@@ -16,6 +17,10 @@ const Reviews = () => {
             };
         };
     }, []);
+
+    useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
     
     const getText = (html) => {
         const doc = new DOMParser().parseFromString(html, "text/html");

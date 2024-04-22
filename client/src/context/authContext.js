@@ -8,6 +8,12 @@ export const AuthContextProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("currentUser")) || null);
     const navigate = useNavigate();
 
+    const notAuthorized = () => {
+        if(!currentUser) {
+            navigate("/");
+        }
+    };
+
     const login = async (inputs) => {
         const res = await axios.post("/auth/login", inputs);
         setCurrentUser(res.data);
@@ -24,7 +30,7 @@ export const AuthContextProvider = ({ children }) => {
     }, [currentUser]);
 
     return (
-        <AuthContext.Provider value={{ currentUser, login, logout }}>
+        <AuthContext.Provider value={{ currentUser, login, logout, notAuthorized }}>
             {children}
         </AuthContext.Provider>
     );

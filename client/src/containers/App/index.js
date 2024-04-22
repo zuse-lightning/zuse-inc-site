@@ -92,7 +92,7 @@ const App = () => {
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/register" element={<Register />} />
               <Route exact path="/login" element={<Login />} />
-              <Route exact path="/reviews" element={<Reviews />} />
+              <Route exact path="/reviews" element={<Reviews auth={auth} />} />
             </Routes>
           </div>
         </Sidebar.Pusher>
