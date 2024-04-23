@@ -66,8 +66,6 @@ const useWindowDimensions = () => {
   return windowDimensions;
 }
 
-
-
 const App = () => {
 
   const { width } = useWindowDimensions();
