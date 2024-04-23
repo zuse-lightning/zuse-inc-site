@@ -4,27 +4,23 @@ import {
     zuseSlides,
     zuseSlidesMobile,
     ACPSlides,
-    ACPSlidesMobile
+    ACPSlidesMobile,
+    unionSlides,
+    unionSlidesMobile
 } from "../../assets";
 
 import "./style.css";
 
 const HomeSlideShow = (props) => {
-    const { screenWidth, location } = props;
+    const { screenWidth, location, whichWebsite } = props;
     const [index, setIndex] = useState(0);
     const timeoutRef = useRef(null);
 
     let banners;
-    if ((screenWidth >= 992 && location.includes("www.zuse.com")) || (screenWidth >= 992 && location.includes("localhost"))) {
-        banners = zuseSlides;
-    } else if (screenWidth <= 991 && location.includes("www.zuse.com") || (screenWidth <= 991 && location.includes("localhost"))) {
-        banners = zuseSlidesMobile;
-    } else if (screenWidth >= 992 && location.includes("americancontractprinting.com")) {
-        banners = ACPSlides;
-    } else if (screenWidth <= 991 && location.includes("americancontractprinting.com")) {
-        banners = ACPSlidesMobile;
-    } else {
-        banners = zuseSlides;
+    if (screenWidth >= 992) { 
+        banners = whichWebsite(location, zuseSlides, ACPSlides, unionSlides);
+    } else if (screenWidth <= 991) {
+        banners = whichWebsite(location, zuseSlidesMobile, ACPSlidesMobile, unionSlidesMobile);
     };
 
     const resetTimeout = () => {
