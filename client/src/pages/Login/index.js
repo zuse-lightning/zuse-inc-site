@@ -1,16 +1,16 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Header, Message } from "semantic-ui-react";
 import { AuthContext } from "../../context/authContext";
 
 import "./style.css";
 
-const Login = () => {
+const Login = (props) => {
 
+    const { currentUser, notAuthorized, login } = props.auth;
     const [inputs, setInputs] = useState({ email: "", password: "" });
     const [err, setError] = useState(null);
     const navigate = useNavigate();
-    const { login } = useContext(AuthContext);
 
     const handleChange = (e) => {
         setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -25,6 +25,10 @@ const Login = () => {
             setError(err.response.data);
         };
     };
+
+    useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
 
     return (
         <div id="login-container">

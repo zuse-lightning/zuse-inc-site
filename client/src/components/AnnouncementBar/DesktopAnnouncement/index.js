@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Icon } from "semantic-ui-react";
+import { Header, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import LogoutModal from "../../LogoutModal";
 
@@ -19,7 +19,7 @@ const DesktopAnnouncment = (props) => {
                 <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
             </div>
             <div className="announce-col">
-                {/* <div className="announce-social-icon-wrapper">
+                <div className="announce-social-icon-wrapper">
                     <Image
                         as={Link}
                         target=":blank"
@@ -38,11 +38,11 @@ const DesktopAnnouncment = (props) => {
                         id="announce-instagram-icon"
                         src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon-white.png"
                     />
-                </div> */}
-                {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
+                </div>
+                {/* {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null} */}
             </div>
             <div className="announce-col">
-                {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
+                {/* {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>} */}
             </div>
         </div>
     );

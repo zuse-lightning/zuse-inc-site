@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Header, Button, Message } from "semantic-ui-react";
 import axios from "axios";
 
 import "./style.css";
 
-const Register = () => {
+const Register = (props) => {
 
+    const { currentUser, notAuthorized } = props.auth;
     const [inputs, setInputs] = useState({ 
         first_name: "", 
         last_name: "", 
@@ -32,6 +33,10 @@ const Register = () => {
             setError(err.response.data);
         };
     };
+
+    useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
 
     return (
         <div id="register-container">

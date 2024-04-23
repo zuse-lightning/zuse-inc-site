@@ -90,8 +90,8 @@ const App = () => {
               <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
-              <Route exact path="/register" element={<Register />} />
-              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/register" element={<Register auth={auth} />} />
+              <Route exact path="/login" element={<Login auth={auth} />} />
               <Route exact path="/reviews" element={<Reviews auth={auth} />} />
             </Routes>
           </div>
