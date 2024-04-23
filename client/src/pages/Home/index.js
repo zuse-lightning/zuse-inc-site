@@ -14,7 +14,7 @@ class Home extends Component {
     render() {
 
         const { screenWidth, location, whichWebsite } = this.props;
-        const homeImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png");
+        const homeImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Home.png");
         const homeURL = whichWebsite(location, "https://www.zuse.com", "https://www.americancontractprinting.com", "https://www.americanunionprint.com");
         
         return (

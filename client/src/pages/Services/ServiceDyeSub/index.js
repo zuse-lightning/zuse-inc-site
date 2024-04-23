@@ -9,7 +9,7 @@ import "./style.css";
 const ServiceDyeSub = (props) => {
 
     const { location, whichWebsite } = props;
-    const dyeSubImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Dye-Sub.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Dye-Sub.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Dye-Sub.png");
+    const dyeSubImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Dye-Sub.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Dye-Sub.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Dye-Sub.png");
     const dyeSubURL = whichWebsite(location, "https://www.zuse.com/services/dye-sublimation", "https://www.americancontractprinting.com/services/dye-sublimation", "https://www.americanunionprint.com/services/dye-sublimation");
 
     return (

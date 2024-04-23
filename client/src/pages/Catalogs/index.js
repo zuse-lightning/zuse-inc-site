@@ -6,7 +6,7 @@ class Catalogs extends Component {
     render() {
 
         const { location, whichWebsite } = this.props;
-        const catalogsImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Catalogs.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png");
+        const catalogsImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Catalogs.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Catalogs.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Catalogs.png");
         const catalogsURL = whichWebsite(location, "https://www.zuse.com/catalogs", "https://www.americancontractprinting.com/catalogs", "https://www.americanunionprint.com/catalogs");
 
         return (

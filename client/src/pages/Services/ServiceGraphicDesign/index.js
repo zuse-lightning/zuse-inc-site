@@ -8,7 +8,7 @@ import "./style.css";
 const ServiceGraphicDesign = (props) => {
 
     const { location, whichWebsite } = props;
-    const graphicDesignImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Graphic-Design.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png");
+    const graphicDesignImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Graphic-Design.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Graphic-Design.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Graphic-Design.png");
     const graphicDesignURL = whichWebsite(location, "https://www.zuse.com/services/graphic-design", "https://www.americancontractprinting.com/services/graphic-design", "https://www.americanunionprint.com/services/graphic-design");
 
     return (

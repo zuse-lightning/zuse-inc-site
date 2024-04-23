@@ -9,7 +9,7 @@ import "./style.css";
 const ServiceOnDemand = (props) => {
 
     const { location, whichWebsite } = props;
-    const onDemandImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-On-Demand.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png");
+    const onDemandImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-On-Demand.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-On-Demand.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-On-Demand.png");
     const onDemandURL = whichWebsite(location, "https://www.zuse.com/services/print-on-demand", "https://www.americancontractprinting.com/services/print-on-demand", "https://www.americanunionprint.com/services/print-on-demand");
 
     return (

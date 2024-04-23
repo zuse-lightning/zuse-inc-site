@@ -18,7 +18,7 @@ const ServiceShopifyStore = (props) => {
 
     const { screenWidth, location, whichWebsite } = props;
     let shopifyBanner = screenWidth >= 992 ? "https://zuse-inc-bucket.s3.amazonaws.com/banners/shopify-banner.png" : "https://zuse-inc-bucket.s3.amazonaws.com/banners/shopify-banner-mobile.png";
-    const ecommerceImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Ecommerce.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Ecommerce.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Ecommerce.png");
+    const ecommerceImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Ecommerce.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Ecommerce.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Ecommerce.png");
     const ecommerceURL = whichWebsite(location, "https://www.zuse.com/services/ecommerce", "https://www.americancontractprinting.com/services/ecommerce", "https://www.americanunionprint.com/services/ecommerce");
 
     return (

@@ -17,7 +17,7 @@ const Services = (props) => {
 
     const { screenWidth, location, whichWebsite } = props;
     const { pathname } = useLocation();
-    const servicesImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Services.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Services.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Services.png");
+    const servicesImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Services.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Services.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Services.png");
     const servicesURL = whichWebsite(location, "https://www.zuse.com/services", "https://www.americancontractprinting.com/services", "https://www.zuse.com/services");
 
     return (

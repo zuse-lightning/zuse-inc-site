@@ -19,7 +19,7 @@ const screenPrintingResults = [
 const ServiceScreenPrinting = (props) => {
 
     const { location, whichWebsite } = props;
-    const screenPrintingImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Screenprinting.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-ScreenPrinting.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Screenprinting.png");
+    const screenPrintingImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Screenprinting.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-ScreenPrinting.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-ScreenPrinting.png");
     const screenPrintingURL = whichWebsite(location, "https://www.zuse.com/services/screenprinting", "https://www.americancontractprinting.com/services/screenprinting", "https://www.americanunionprint.com/services/screenprinting");
 
     return (

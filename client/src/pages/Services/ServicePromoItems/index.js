@@ -11,7 +11,7 @@ const ServicePromoItems = (props) => {
 
     const desktopBanner = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/banners/promo-items.png", "https://zuse-inc-bucket.s3.amazonaws.com/banners/ACP-Promo-Items.png", "https://zuse-inc-bucket.s3.amazonaws.com/banners/Union-Promo-Items.png");
     const mobileBanner = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/banners/promo-items-mobile.png", "https://zuse-inc-bucket.s3.amazonaws.com/banners/promo-items-mobile.png", "https://zuse-inc-bucket.s3.amazonaws.com/banners/Union-Promo-Items-Mobile.png");
-    const promoItemsImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Promo-Items.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Promo-Items.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Promo-Items.png");
+    const promoItemsImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Promo-Items.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Promo-Items.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Promo-Items.png");
     const promoItemsURL = whichWebsite(location, "https://www.zuse.com/services/promo-items", "https://www.americancontractprinting.com/services/promo-items", "https://www.americanunionprint.com/services/promo-items");
 
     return (

@@ -6,7 +6,7 @@ class About extends Component {
     render() {
 
         const { location, whichWebsite } = this.props;
-        const aboutImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-About.png", "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png");
+        const aboutImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-About.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-About.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-About.png");
         const aboutURL = whichWebsite(location, "https://www.zuse.com/about", "https://www.americancontractprinting.com/about", "https://www.americanunionprint.com/about");
 
         return (
