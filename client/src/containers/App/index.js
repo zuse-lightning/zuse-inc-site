@@ -42,16 +42,12 @@ const useCurrentUrl = () => {
 
 const whichWebsite = (url, zuseElement, contractElement, unionElement) => {
   if (url.includes("zuse.com")) {
-    console.log("The function is working on Zuse.");
     return zuseElement;
   } else if (url.includes("americancontractprinting.com")) {
-    console.log("The function is working on American Contract Printing.");
     return contractElement;
   } else if (url.includes("americanunionprint.com")) {
-    console.log("The function is working on American Union Print.");
     return unionElement;
   } else if (url.includes("localhost")) {
-    console.log("The function is working locally.");
     return zuseElement;
   }
 };
