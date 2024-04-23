@@ -16,6 +16,7 @@ const ContactForm = (props) => {
     const { register } = useForm();
     
     const FORM_ENDPOINT = whichWebsite(location, ZUSE_ENDPOINT, ACP_ENDPOINT, UNION_ENDPOINT);
+    const contactAddress = whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -67,7 +68,7 @@ const ContactForm = (props) => {
                         <Header id="contact-phone-number" as="h4"><Icon id="contact-phone-icon" name="phone" />Call: 203-458-3295</Header>
                     </div>
                     <div className="form-field-col">
-                        <Header id="contact-address" as="h4"><Icon id="contact-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
+                        <Header id="contact-address" as="h4"><Icon id="contact-map-icon" name="map pin" />{contactAddress}</Header>
                     </div>
                     <div className="form-field-col">
                         <input id="name-input" type="text" placeholder="Name (required)" name="name" required />

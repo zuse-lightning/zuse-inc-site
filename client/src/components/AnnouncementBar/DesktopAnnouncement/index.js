@@ -7,8 +7,9 @@ import "../style.css";
 
 const DesktopAnnouncment = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, whichWebsite, location } = props;
     const { currentUser, logout } = props.auth;
+    const address = whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471");
 
     return (
         <div id="announcement-container">
@@ -16,7 +17,7 @@ const DesktopAnnouncment = (props) => {
                 <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />Call: 203-458-3295</Header>
             </div>
             <div className="announce-col">
-                <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />54 East Industrial Road, Branford, CT 06405</Header>
+                <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header>
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
