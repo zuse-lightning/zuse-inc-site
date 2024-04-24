@@ -1,11 +1,36 @@
 const db = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { getUserByEmail, setUserData, getUser } = require("../../models/users");
+const { zuse, acp, union } = require("../../models/users");
+
+let getUser;
+let setUserData;
+let getUserByEmail;
+
+const handleRequest = (url) => {
+    if (url === "/api/zuse/auth") {
+        getUser = zuse.getUser;
+        setUserData = zuse.setUserData;
+        getUserByEmail = zuse.getUserByEmail;
+    } else if (url === "/api/acp/auth") {
+        getUser = acp.getUser;
+        setUserData = acp.setUserData;
+        getUserByEmail = acp.getUserByEmail;
+    } else if (url === "/api/union/auth") {
+        getUser = union.getUser;
+        setUserData = union.setUserData;
+        getUserByEmail = union.getUserByEmail;
+    };
+    return {
+        getUser,
+        setUserData,
+        getUserByEmail
+    };
+};
 
 module.exports = {
     register: (req, res) => {
-        console.log(req.baseUrl);
+        handleRequest(req.baseUrl);
         db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
             if (err) return console.log(err);
             if (!req.body.first_name || !req.body.last_name) console.log("Didn't get a first or last name, somehow");
@@ -32,7 +57,7 @@ module.exports = {
         });
     },
     login: (req, res) => {
-        console.log(req.baseUrl);
+        handleRequest(req.baseUrl);
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
@@ -49,7 +74,7 @@ module.exports = {
         });
     },
     logout: (req, res) => {
-        console.log(req.baseUrl);
+        handleRequest(req.baseUrl);
         res.clearCookie("access_token", {
             sameSite: "none",
             secure: true
