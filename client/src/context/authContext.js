@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { whichWebsite, useCurrentUrl } from "../containers/App";
 import axios from "axios";
 
 export const AuthContext = createContext();
@@ -7,6 +8,7 @@ export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("currentUser")) || null);
     const navigate = useNavigate();
+    const site = whichWebsite(useCurrentUrl(), "zuse", "acp", "union");
 
     const notAuthorized = () => {
         if(!currentUser) {
@@ -15,12 +17,12 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     const login = async (inputs) => {
-        const res = await axios.post("/auth/login", inputs);
+        const res = await axios.post(`${site}/auth/login`, inputs);
         setCurrentUser(res.data);
     };
 
     const logout = async () => {
-        await axios.post("/auth/logout/");
+        await axios.post(`${site}/auth/logout/`);
         setCurrentUser(null);
         navigate("/");
     };

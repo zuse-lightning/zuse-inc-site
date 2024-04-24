@@ -26,7 +26,7 @@ const getWindowDimensions = () => {
   }
 }
 
-const useCurrentUrl = () => {
+export const useCurrentUrl = () => {
   const [currentUrl, setCurrentUrl] = useState(window.location.href);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const useCurrentUrl = () => {
   return currentUrl;
 }
 
-const whichWebsite = (url, zuseElement, contractElement, unionElement) => {
+export const whichWebsite = (url, zuseElement, contractElement, unionElement) => {
   if (url.includes("zuse.com")) {
     return zuseElement;
   } else if (url.includes("americancontractprinting.com")) {
@@ -48,7 +48,7 @@ const whichWebsite = (url, zuseElement, contractElement, unionElement) => {
   } else if (url.includes("americanunionprint.com")) {
     return unionElement;
   } else if (url.includes("localhost")) {
-    return zuseElement;
+    return contractElement;
   }
 };
 
@@ -84,7 +84,7 @@ const App = () => {
               <Route exact path="/catalogs" element={<Catalogs location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
-              <Route exact path="/register" element={<Register auth={auth} />} />
+              <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
               <Route exact path="/reviews" element={<Reviews auth={auth} />} />
             </Routes>

@@ -6,7 +6,7 @@ import axios from "axios";
 import "./style.css";
 
 const Register = (props) => {
-
+    const { whichWebsite } = props;
     const { currentUser, notAuthorized } = props.auth;
     const [inputs, setInputs] = useState({ 
         first_name: "", 
@@ -14,9 +14,10 @@ const Register = (props) => {
         email: "", 
         password: "" 
     });
-
     const [err, setError] = useState(null);
     const navigate = useNavigate();
+
+    const site = whichWebsite(window.location.href, "zuse", "acp", "union");
 
     const handleChange = async (e) => {
         setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -25,8 +26,7 @@ const Register = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            console.log(inputs);
-            await axios.post("/auth/register", inputs);
+            await axios.post(`${site}/auth/register`, inputs);
             navigate("/login");
         } catch (err) {
             console.error(err.response.data);

@@ -5,6 +5,7 @@ const { getUserByEmail, setUserData, getUser } = require("../../models/users");
 
 module.exports = {
     register: (req, res) => {
+        console.log(req.baseUrl);
         db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
             if (err) return console.log(err);
             if (!req.body.first_name || !req.body.last_name) console.log("Didn't get a first or last name, somehow");
@@ -31,6 +32,7 @@ module.exports = {
         });
     },
     login: (req, res) => {
+        console.log(req.baseUrl);
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
@@ -47,6 +49,7 @@ module.exports = {
         });
     },
     logout: (req, res) => {
+        console.log(req.baseUrl);
         res.clearCookie("access_token", {
             sameSite: "none",
             secure: true
