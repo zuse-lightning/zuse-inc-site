@@ -26,9 +26,9 @@ const Login = (props) => {
         };
     };
 
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => {
+    //     notAuthorized();
+    // }, [currentUser]);
 
     return (
         <div id="login-container">

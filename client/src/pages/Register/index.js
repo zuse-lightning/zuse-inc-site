@@ -34,9 +34,9 @@ const Register = (props) => {
         };
     };
 
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => {
+    //     notAuthorized();
+    // }, [currentUser]);
 
     return (
         <div id="register-container">
