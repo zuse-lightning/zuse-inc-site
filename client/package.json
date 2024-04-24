@@ -41,12 +41,11 @@
       "last 1 safari version"
     ]
   },
-  "options": {
-    "allowedHosts": [
-      "https://www.zuse.com/",
-      "https://www.americancontractprinting.com/",
-      "https://www.americanunionprint.com/"
-    ],
-    "proxy": "http://localhost:3001/api/"
-  }
+  "allowedHosts": [
+    "https://www.zuse.com/",
+    "https://www.americancontractprinting.com/",
+    "https://www.americanunionprint.com/",
+    "localhost"
+  ],
+  "proxy": "http://localhost:3001/api/"
 }
