@@ -19,7 +19,7 @@ const ServiceDyeSub = (props) => {
                 whichWebsite={whichWebsite}
                 title="Dye Sublimation"
                 description="Our dye sublimation process begins working closely with our clients to understand their vision and requirements for their printed products."
-                keywords="Dye Sublimation, Sublimation Printer, Heat Press, Sublimation Ink, Transfer Paper, Substrate, Vibrant Colors, High-Resolution Printing"
+                keywords={`Dye Sublimation, Sublimation Printer, Heat Press, Sublimation Ink, Transfer Paper, Substrate, Vibrant Colors, High-Resolution Printing, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={dyeSubImage}
                 url={dyeSubURL}

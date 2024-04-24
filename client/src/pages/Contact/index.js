@@ -22,7 +22,7 @@ class Contact extends Component {
                     whichWebsite={whichWebsite}
                     title="Contact"
                     description="Call us or send us a message with your info and a potential design."
-                    keywords="Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"
+                    keywords={`Contact, Screen Printing, Embroidery, Banners, Promotional Items, Shopify Web Stores, Decals, Custom Apparel,${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                     type="website"
                     image={contactImage}
                     url={contactURL}

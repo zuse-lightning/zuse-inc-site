@@ -32,7 +32,7 @@ const ServiceDirectTransfer = (props) => {
                 whichWebsite={whichWebsite}
                 title="Direct Transfer"
                 description="Our DTG process involves printing directly onto garments using specialized InkJet technology. From T-shirts and hoodies to tote bags and hats, DTG allows for vibrant, high-quality prints with intricate details and vibrant colors."
-                keywords="DTG, DTF, Direct Transfer, Direct to Garment, Direct to Film, Printing, InkJet, Apparel, T-Shirts, Hoodies, Tote Bags, Hats"
+                keywords={`DTG, DTF, Direct Transfer, Direct to Garment, Direct to Film, Printing, InkJet, Apparel, T-Shirts, Hoodies, Tote Bags, Hats, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={directTransferImage}
                 url={directTransferURL}

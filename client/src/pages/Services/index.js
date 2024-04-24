@@ -27,7 +27,7 @@ const Services = (props) => {
                 whichWebsite={whichWebsite}
                 title="Services"
                 description="We offer 10 main services, Screen Printing, Embroidery, Promotional Items, Fulfillment, E-Commerce, Graphic Design, Print On-Demand, Sewing, Dye Sublimation, and Direct Transfer."
-                keywords="Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel"
+                keywords={`Services, Branford, New Haven, CT, Screen Printing, Embroidery, Banners, Fulfillment, Promotional Items, Shopify Web Stores, Decals, Custom Apparel, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={servicesImage}
                 url={servicesURL}

@@ -19,7 +19,7 @@ const ServiceGraphicDesign = (props) => {
                 title="Graphic Design"
                 description="The designing process begins with a thorough understanding for your design goals, target audience, and brand identity. We'll work closely with you to brainstorm ideas, discuss concepts,
                 and explore different design options until we have a clear understanding of your vision."
-                keywords="Graphic Design, Branford, New Haven, CT, Custom Apparel, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
+                keywords={`Graphic Design, Branford, New Haven, CT, Custom Apparel, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={graphicDesignImage}
                 url={graphicDesignURL}

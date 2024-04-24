@@ -23,7 +23,7 @@ const ServicePromoItems = (props) => {
                 description="Need to boost brand visibility? With our extensive range of promotional items,
                 from branded merchandise to unique giveaways, we help you create memorable
                 experiences for your audience."
-                keywords="Promotional Items, Branford, New Haven, CT, Custom Apparel, Branding, Marketing, Giveaways, Trade Shows, Employee Incentives, Customer Appreciation, Screen Printing, Embroidery, DTG Printing, Apparel, Accessories, Tech Gadgets, Office Supplies"
+                keywords={`Promotional Items, Branford, New Haven, CT, Custom Apparel, Branding, Marketing, Giveaways, Trade Shows, Employee Incentives, Customer Appreciation, Screen Printing, Embroidery, DTG Printing, Apparel, Accessories, Tech Gadgets, Office Supplies, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={promoItemsImage}
                 url={promoItemsURL}

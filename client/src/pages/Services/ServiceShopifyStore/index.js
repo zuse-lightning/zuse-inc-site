@@ -13,7 +13,6 @@ const shopifyResults = [
     { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/wpra-screenshot.png", link: "https://wpra.store/" }
 ];
 
-
 const ServiceShopifyStore = (props) => {
 
     const { screenWidth, location, whichWebsite } = props;
@@ -28,7 +27,7 @@ const ServiceShopifyStore = (props) => {
                 whichWebsite={whichWebsite}
                 title="E-Commerce"
                 description="Take your business online with our Shopify store creation services."
-                keywords="E-Commerce, Branford, Web Development, New Haven, CT, Shopify, Store, Creation, Online, Sales, Print-On-Demand, Brand, Designs, Stock, Fluctuations, Marketplace, Brand Loyalty, Zuse Inc."
+                keywords={`E-Commerce, Branford, Web Development, New Haven, CT, Shopify, Store, Creation, Online, Sales, Print-On-Demand, Brand, Designs, Stock, Fluctuations, Marketplace, Brand Loyalty, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={ecommerceImage}
                 url={ecommerceURL}

@@ -20,7 +20,7 @@ const ServiceOnDemand = (props) => {
                 title="Print On-Demand"
                 description="We offer fast and high-quality printing solutions to meet the diverse needs of our clients. Through our streamlined process, customers can easily place orders through our user-friendly
                 online platform or directly with our dedicated team."
-                keywords="Print On-Demand, Branford, New Haven, CT, Fulfillment, Custom Apparel, T-Shirts, Hoodies, Stationary, Printing, On-Demand, Customization, Quality Control, Fast Turnaround, Shipping, Packaging, Customer Service"
+                keywords={`Print On-Demand, Branford, New Haven, CT, Fulfillment, Custom Apparel, T-Shirts, Hoodies, Stationary, Printing, On-Demand, Customization, Quality Control, Fast Turnaround, Shipping, Packaging, Customer Service, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={onDemandImage}
                 url={onDemandURL}

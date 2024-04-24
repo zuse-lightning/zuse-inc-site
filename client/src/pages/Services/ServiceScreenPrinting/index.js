@@ -29,7 +29,7 @@ const ServiceScreenPrinting = (props) => {
                 whichWebsite={whichWebsite}
                 title="Screen Printing"
                 description="From sleek hoodies to casual tees, our expertise in screen printing ensures that your brand stands out with high-quality prints that capture attention and leave a lasting impression."
-                keywords="Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies"
+                keywords={`Screen Printing, Branford, New Haven, CT, Fulfillment, Promotional Items, Custom Apparel, T-Shirts, Hoodies, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={screenPrintingImage}
                 url={screenPrintingURL}

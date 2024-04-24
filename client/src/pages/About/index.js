@@ -16,7 +16,7 @@ class About extends Component {
                     whichWebsite={whichWebsite}
                     title="About"
                     description="Manufacturing company that offers screen printed or embroidered custom apparel, promotional items, and web stores for various companies, organizations, and special events."
-                    keywords="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
+                    keywords={`${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}, Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items`}
                     type="website"
                     image={aboutImage}
                     url={aboutURL}

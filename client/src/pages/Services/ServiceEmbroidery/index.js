@@ -30,7 +30,7 @@ const ServiceEmbroidery = (props) => {
                 whichWebsite={whichWebsite}
                 title="Embroidery"
                 description="Our precision embroidery services add a touch of sophistication to your apparel, hats, and accessories."
-                keywords="Embroidery, Branford, New Haven, CT, Custom Apparel, Hats, Patches, Polos, Precision, Professionalism, Elegance, Sophistication"
+                keywords={`Embroidery, Branford, New Haven, CT, Custom Apparel, Hats, Patches, Polos, Precision, Professionalism, Elegance, Sophistication, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={embroideryImage}
                 url={embroideryURL}

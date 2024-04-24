@@ -18,7 +18,7 @@ const ServiceSewing = (props) => {
                 whichWebsite={whichWebsite}
                 title="Sewing"
                 description="We're here to make your sewing projects a breeze. Whether you need alterations, repairs, or custom creations, we've got you covered."
-                keywords="Sewing, Alterations, Repairs, Custom Creations, Seamstresses, Tailors, Fabric Selection, Delivery"
+                keywords={`Sewing, Alterations, Repairs, Custom Creations, Seamstresses, Tailors, Fabric Selection, Delivery, ${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}`}
                 type="website"
                 image={sewingImage}
                 url={sewingURL}

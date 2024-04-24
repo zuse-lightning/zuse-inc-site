@@ -16,7 +16,7 @@ class Catalogs extends Component {
                     whichWebsite={whichWebsite}
                     title="Catalogs"
                     description="Browse our top catalogs for your ideal product bases."
-                    keywords="Zuse Inc., Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items"
+                    keywords={`${whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}, Branford, New Haven, Screen Printing, CT, Custom Apparel, Embroidery, Banners, Decals, Fulfillment, Shopify Stores, Promotional Items`}
                     type="website"
                     image={catalogsImage}
                     url={catalogsURL}
