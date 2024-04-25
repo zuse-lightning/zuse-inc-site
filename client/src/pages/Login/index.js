@@ -34,13 +34,13 @@ const Login = (props) => {
         <div id="login-container">
             <Header id="login-header" as="h1">Login</Header>
             <form onSubmit={handleSubmit} id="login-form">
-                <input required onChange={handleChange} value={inputs.email} name="email" type="email" placeholder="email" />
-                <input required onChange={handleChange} value={inputs.password} name="password" type="password" placeholder="password" />
-                <Button type="submit">Login</Button>
-                <Message>
+                <input id="email-input" required onChange={handleChange} value={inputs.email} name="email" type="email" placeholder="email" />
+                <input id="password-input" required onChange={handleChange} value={inputs.password} name="password" type="password" placeholder="password" />
+                <Button id="submit-btn" type="submit">Login</Button>
+                <Message id="reg-msg">
                     Don't have an account? <Link to="/register">Register</Link>
                 </Message>
-                {err ? <Message error>{err}</Message> : null}
+                {err ? <Message id="err-msg" error>{err}</Message> : null}
             </form>
         </div>
     );

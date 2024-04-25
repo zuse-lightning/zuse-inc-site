@@ -48,7 +48,7 @@ export const whichWebsite = (url, zuseElement, contractElement, unionElement) =>
   } else if (url.includes("americanunionprint.com")) {
     return unionElement;
   } else if (url.includes("localhost")) {
-    return unionElement;
+    return zuseElement;
   }
 };
 
