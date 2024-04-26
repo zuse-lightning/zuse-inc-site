@@ -8,8 +8,6 @@ import TopCatalogs from "../../components/TopCatalogs";
 import HomeContactForm from "../../components/HomeContactForm";
 import SEO from "../../components/SEO";
 
-import "./style.css";
-
 class Home extends Component {
     render() {
 
