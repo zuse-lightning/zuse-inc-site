@@ -43,16 +43,16 @@ const Register = (props) => {
             <Header id="register-header" as="h1">Register</Header>
             <form onSubmit={handleSubmit} id="register-form">
                 <div className="register-form-col">
-                    <input id="register-first-name-input" onChange={handleChange} name="first_name" type="text" placeholder="First Name" />
+                    <input required id="register-first-name-input" onChange={handleChange} name="first_name" type="text" placeholder="First Name" />
                 </div>
                 <div className="register-form-col">
-                    <input id="register-last-name-input" onChange={handleChange} name="last_name" type="text" placeholder="Last Name" />
+                    <input required id="register-last-name-input" onChange={handleChange} name="last_name" type="text" placeholder="Last Name" />
                 </div>
                 <div className="register-form-col">
-                    <input id="register-email-input" onChange={handleChange} name="email" type="email" placeholder="Email" />
+                    <input required id="register-email-input" onChange={handleChange} name="email" type="email" placeholder="Email" />
                 </div>
                 <div className="register-form-col">
-                    <input id="register-password-input" onChange={handleChange} name="password" type="password" placeholder="Password" />
+                    <input required id="register-password-input" onChange={handleChange} name="password" type="password" placeholder="Password" />
                 </div>
                 <div className="register-form-col">
                     <Button id="register-submit-btn" fluid type="submit">Register</Button>
