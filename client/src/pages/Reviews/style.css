@@ -1,0 +1,28 @@
+#reviews-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    border: solid 1px #fefcfd;
+}
+
+#reviews-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
+
+#reviews {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 2% 3%;
+}
+
+.review-card {
+    border: solid 1px #d2caca;
+    border-radius: 5px;
+    padding: 5%;
+    transition: transform .5s;
+}
