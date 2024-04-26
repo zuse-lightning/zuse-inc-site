@@ -7,7 +7,7 @@ import "./style.css";
 
 const Login = (props) => {
 
-    const { currentUser, notAuthorized, login } = props.auth;
+    const { currentUser, notAuthorized, alreadyLoggedIn, login } = props.auth;
     const [inputs, setInputs] = useState({ email: "", password: "" });
     const [err, setError] = useState(null);
     const navigate = useNavigate();
@@ -26,9 +26,9 @@ const Login = (props) => {
         };
     };
 
-    // useEffect(() => {
-    //     notAuthorized();
-    // }, [currentUser]);
+    useEffect(() => {
+        alreadyLoggedIn();
+    }, [currentUser]);
 
     return (
         <div id="login-container">

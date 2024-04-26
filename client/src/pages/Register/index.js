@@ -7,7 +7,7 @@ import "./style.css";
 
 const Register = (props) => {
     const { whichWebsite } = props;
-    const { currentUser, notAuthorized } = props.auth;
+    const { currentUser, notAuthorized, alreadyLoggedIn } = props.auth;
     const [inputs, setInputs] = useState({
         first_name: "",
         last_name: "",
@@ -34,9 +34,9 @@ const Register = (props) => {
         };
     };
 
-    // useEffect(() => {
-    //     notAuthorized();
-    // }, [currentUser]);
+    useEffect(() => {
+        alreadyLoggedIn();
+    }, [currentUser]);
 
     return (
         <div id="register-container">

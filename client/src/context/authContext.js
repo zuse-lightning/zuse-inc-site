@@ -16,6 +16,12 @@ export const AuthContextProvider = ({ children }) => {
         }
     };
 
+    const alreadyLoggedIn = () => {
+        if(currentUser) {
+            navigate("/");
+        }
+    };
+
     const login = async (inputs) => {
         const res = await axios.post(`${site}/auth/login`, inputs);
         setCurrentUser(res.data);
@@ -32,7 +38,7 @@ export const AuthContextProvider = ({ children }) => {
     }, [currentUser]);
 
     return (
-        <AuthContext.Provider value={{ currentUser, login, logout, notAuthorized }}>
+        <AuthContext.Provider value={{ currentUser, login, logout, notAuthorized, alreadyLoggedIn }}>
             {children}
         </AuthContext.Provider>
     );
