@@ -32,15 +32,25 @@ const Login = (props) => {
 
     return (
         <div id="login-container">
-            <Header id="login-header" as="h1">Login</Header>
+            <Header id="login-header" as="h1">Log In</Header>
             <form onSubmit={handleSubmit} id="login-form">
-                <input id="email-input" required onChange={handleChange} value={inputs.email} name="email" type="email" placeholder="email" />
-                <input id="password-input" required onChange={handleChange} value={inputs.password} name="password" type="password" placeholder="password" />
-                <Button id="submit-btn" type="submit">Login</Button>
-                <Message id="reg-msg">
-                    Don't have an account? <Link to="/register">Register</Link>
-                </Message>
-                {err ? <Message id="err-msg" error>{err}</Message> : null}
+                <div className="login-form-col">
+                    <input id="login-email-input" required onChange={handleChange} value={inputs.email} name="email" type="email" placeholder="Email" />
+                </div>
+                <div className="login-form-col">
+                    <input id="login-password-input" required onChange={handleChange} value={inputs.password} name="password" type="password" placeholder="Password" />
+                </div>
+                <div className="login-form-col">
+                    <Button id="login-submit-btn" fluid type="submit">Log In</Button>
+                </div>
+                <div className="login-form-col">
+                    <Message id="reg-msg">
+                        Don't have an account? <Link to="/register">Register here</Link>
+                    </Message>
+                </div>
+                <div className="login-form-col">
+                    {err ? <Message id="err-msg" error>{err}</Message> : null}
+                </div>
             </form>
         </div>
     );

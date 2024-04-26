@@ -8,11 +8,11 @@ import "./style.css";
 const Register = (props) => {
     const { whichWebsite } = props;
     const { currentUser, notAuthorized } = props.auth;
-    const [inputs, setInputs] = useState({ 
-        first_name: "", 
-        last_name: "", 
-        email: "", 
-        password: "" 
+    const [inputs, setInputs] = useState({
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: ""
     });
     const [err, setError] = useState(null);
     const navigate = useNavigate();
@@ -42,15 +42,29 @@ const Register = (props) => {
         <div id="register-container">
             <Header id="register-header" as="h1">Register</Header>
             <form onSubmit={handleSubmit} id="register-form">
-                <input onChange={handleChange} name="first_name" type="text" placeholder="First Name" />
-                <input onChange={handleChange} name="last_name" type="text" placeholder="Last Name" />
-                <input onChange={handleChange} name="email" type="email" placeholder="Email" />
-                <input onChange={handleChange} name="password" type="password" placeholder="Password" />
-                <Button type="submit">Register</Button>
-                <Message>
-                    Already have an account? <Link to="/login">Login</Link>
-                </Message>
-                {err ? <Message error>{err}</Message> : null}
+                <div className="register-form-col">
+                    <input id="register-first-name-input" onChange={handleChange} name="first_name" type="text" placeholder="First Name" />
+                </div>
+                <div className="register-form-col">
+                    <input id="register-last-name-input" onChange={handleChange} name="last_name" type="text" placeholder="Last Name" />
+                </div>
+                <div className="register-form-col">
+                    <input id="register-email-input" onChange={handleChange} name="email" type="email" placeholder="Email" />
+                </div>
+                <div className="register-form-col">
+                    <input id="register-password-input" onChange={handleChange} name="password" type="password" placeholder="Password" />
+                </div>
+                <div className="register-form-col">
+                    <Button id="register-submit-btn" fluid type="submit">Register</Button>
+                </div>
+                <div className="register-form-col">
+                    <Message>
+                        Already have an account? <Link to="/login">Log In</Link>
+                    </Message>
+                </div>
+                <div className="register-form-col">
+                    {err ? <Message error>{err}</Message> : null}
+                </div>
             </form>
         </div>
     );

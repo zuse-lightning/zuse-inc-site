@@ -33,10 +33,9 @@ module.exports = {
         handleRequest(req.baseUrl);
         db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
             if (err) return console.log(err);
-            if (!req.body.first_name || !req.body.last_name) console.log("Didn't get a first or last name, somehow");
             if (data.length) return res.json("User already exists");
 
-            console.log(data);
+            console.log(data.length);
 
             const salt = bcrypt.genSaltSync(10);
             const hash = bcrypt.hashSync(req.body.password, salt);

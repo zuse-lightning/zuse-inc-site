@@ -29,7 +29,7 @@ const Reviews = (props) => {
 
     return (
         <div id="reviews-container">
-            <h1>Reviews</h1>
+            <h1 id="reviews-header">Reviews</h1>
         </div>
     );
 };
