@@ -1,12 +1,15 @@
 #social-links-container {
     background-color: #fefcfd;
     padding: 2% 0;
+    
+}
+
+#social-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 20%;
     margin: 0 40%;
 }
-
 .social-col:nth-child(1) {
     grid-column: span 2;
 }
@@ -29,35 +32,35 @@
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    #social-links-container {
+    #social-links {
         width: 30%;
         margin: 0 35%;
     }
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
-    #social-links-container {
+    #social-links {
         width: 30%;
         margin: 0 35%;
     }
 }
 
 @media (max-width: 800px) and (min-width: 768px) {
-    #social-links-container {
+    #social-links {
         width: 30%;
         margin: 0 35%;
     }
 }
 
 @media (max-width: 767px) and (min-width: 362px) {
-    #social-links-container {
+    #social-links {
         width: 60%;
         margin: 0 20%;
     }
 }
 
 @media (max-width: 361px) {
-    #social-links-container {
+    #social-links {
         width: 70%;
         margin: 0 15%;
     }

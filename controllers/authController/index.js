@@ -32,10 +32,10 @@ module.exports = {
     register: (req, res) => {
         handleRequest(req.baseUrl);
         db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
-            if (err) return console.log(err);
+            if (err) return res.json(err);
             if (data.length) return res.json("User already exists");
 
-            console.log(data.length);
+            if (req.body.password.length < 8) return res.status(403).json("Password must be at least 8 characters long!");
 
             const salt = bcrypt.genSaltSync(10);
             const hash = bcrypt.hashSync(req.body.password, salt);
