@@ -8,21 +8,17 @@ import "./style.css";
 const Reviews = (props) => {
 
     const testData = [
-        { id: 1, rating: 5, text: "This is a test review.", author: "John Doe", date: "2021-01-01" },
-        { id: 2, rating: 4, text: "This is a test review.", author: "Jane Doe", date: "2021-01-02" },
-        { id: 3, rating: 3, text: "This is a test review.", author: "John Smith", date: "2021-01-03" },
-        { id: 4, rating: 2, text: "This is a test review.", author: "Jane Smith", date: "2021-01-04" },
-        { id: 5, rating: 1, text: "This is a test review.", author: "John Doe", date: "2021-01-05" },
-        { id: 6, rating: 5, text: "This is a test review.", author: "Jane Doe", date: "2021-01-06" },
-        { id: 7, rating: 4, text: "This is a test review.", author: "John Smith", date: "2021-01-07" },
-        { id: 8, rating: 3, text: "This is a test review.", author: "Jane Smith", date: "2021-01-08" },
-        { id: 9, rating: 2, text: "This is a test review.", author: "John Doe", date: "2021-01-09" },
-        { id: 10, rating: 1, text: "This is a test review.", author: "Jane Doe", date: "2021-01-10" }
+        { id: 1, rating: 5, text: "This is a test review.", author: "John Doe", date: "2021-01-01", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-Bull.png" },
+        { id: 2, rating: 4, text: "This is a test review.", author: "Jane Doe", date: "2021-01-02", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-BullStar.png" },
+        { id: 3, rating: 3, text: "This is a test review.", author: "John Smith", date: "2021-01-03", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-PBR.png" },
+        { id: 4, rating: 2, text: "This is a test review.", author: "Jane Smith", date: "2021-01-04", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-PBRStar.png" },
+        { id: 5, rating: 1, text: "This is a test review.", author: "John Doe", date: "2021-01-05", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Blue-Jersey-Polo-BullStar.png" },
+        { id: 6, rating: 5, text: "This is a test review.", author: "Jane Doe", date: "2021-01-06", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Blue-Jersey-Polo-PBR.png" },
+        { id: 7, rating: 4, text: "This is a test review.", author: "John Smith", date: "2021-01-07", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Blue-Jersey-Polo-PBRStar.png" },
+        { id: 8, rating: 3, text: "This is a test review.", author: "Jane Smith", date: "2021-01-08", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Grey-Jersey-Polo-Bull.png" },
+        { id: 9, rating: 2, text: "This is a test review.", author: "John Doe", date: "2021-01-09", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Grey-Jersey-Polo-BullStar.png" },
+        { id: 10, rating: 1, text: "This is a test review.", author: "Jane Doe", date: "2021-01-10", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Grey-Jersey-Polo-PBR.png" }
     ];
-
-    testData.map((review) => {
-        console.log(review);
-    });
 
     const { currentUser, notAuthorized } = props.auth;
     const [reviews, setReviews] = useState([]);
@@ -44,13 +40,22 @@ const Reviews = (props) => {
 
     return (
         <div id="reviews-container">
-            <h1 id="reviews-header">Reviews</h1>
+            <div id="reviews-headers-container">
+                <div className="reviews-headers-col">
+                    <h1 id="reviews-header">Reviews</h1>
+                </div>
+                <div className="reviews-headers-col">
+                    <Button as={Link} to="/reviews/write" size="massive"  icon labelPosition="right" id="write-review-btn">Write A Review<Icon id="write-icon" name="edit" /></Button>
+                </div>
+            </div>
+            <p className="reviews-text">Don't take our word for it, listen to our satisfied customers!</p>
             <div id="reviews">
                 {testData.map((review) => {
                     return (
                         <div key={review.id} className="review-col">
                             <div className="review-card">
-                                <Rating maxRating={5} rating={review.rating} icon="star" size="huge" />
+                                <Image src={review.image} />
+                                <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
                                 <div className="review-card-text">{review.text}</div>
                                 <div className="review-card-author">{review.author}</div>
                                 <div className="review-card-date">{review.date}</div>
