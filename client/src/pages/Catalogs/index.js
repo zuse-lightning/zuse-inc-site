@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import { Routes, Route } from "react-router-dom";
 import TopCatalogs from "../../components/TopCatalogs";
+import CatalogSanMar from "./CatalogSanMar";
+import CatalogSSActivewear from "./CatalogSSActivewear";
 import SEO from "../../components/SEO";
+
 
 class Catalogs extends Component {
     render() {
@@ -21,7 +25,11 @@ class Catalogs extends Component {
                     image={catalogsImage}
                     url={catalogsURL}
                 />
-                <TopCatalogs location={location} />
+                <Routes>
+                    <Route exact path="/" element={<TopCatalogs location={location} />} />
+                    <Route exact path="/sanmar" element={<CatalogSanMar location={location} />} />
+                    <Route exact path="/ssactivewear" element={<CatalogSSActivewear location={location} />} />
+                </Routes>
             </>
         );
     }

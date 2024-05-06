@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const AWS = require("aws-sdk");
 const s3 = new AWS.S3();
@@ -15,6 +16,7 @@ const PORT = process.env.PORT || 3001;
 //Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 app.use(cookieParser());
 
 //Uploading files
