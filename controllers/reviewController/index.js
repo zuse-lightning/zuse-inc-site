@@ -1,21 +1,52 @@
 const db = require("../../config");
 const jwt = require("jsonwebtoken");
-const { getAllReviews, getReviewByIds, addUserReview, deleteUserReview, updateUserReview } = require("../../models/reviews");
+const { zuse, acp, union } = require("../../models/reviews");
+
+let getAllReviews;
+let getReviewByIds;
+let addUserReview;
+let deleteUserReview;
+let updateUserReview;
+
+const handleRequest = (url) => {
+    if (url === "/api/zuse/reviews") {
+        getAllReviews = zuse.getAllReviews;
+        getReviewByIds = zuse.getReviewByIds;
+        addUserReview = zuse.addUserReview;
+        deleteUserReview = zuse.deleteUserReview;
+        updateUserReview = zuse.updateUserReview;
+    } else if (url === "/api/acp/reviews") {
+        getAllReviews = acp.getAllReviews;
+        getReviewByIds = acp.getReviewByIds;
+        addUserReview = acp.addUserReview;
+        deleteUserReview = acp.deleteUserReview;
+        updateUserReview = acp.updateUserReview;
+    } else if (url === "/api/union/reviews") {
+        getAllReviews = union.getAllReviews;
+        getReviewByIds = union.getReviewByIds;
+        addUserReview = union.addUserReview;
+        deleteUserReview = union.deleteUserReview;
+        updateUserReview = union.updateUserReview;
+    }
+};
 
 module.exports = {
     getReviews: (req, res) => {
+        handleRequest(req.baseUrl);
         db.query(getAllReviews, (err, data) => {
             if (err) return res.status(500).json(err);
             return res.status(200).json(data);
         });
     },
     getReview: (req, res) => {
+        handleRequest(req.baseUrl);
         db.query(getReviewByIds, [req.params.id], (err, data) => {
             if (err) return res.status(500).json(err);
             return res.status(200).json(data[0]);
         });
     },
     addReview: (req, res) => {
+        handleRequest(req.baseUrl);
         const token = req.cookies.access_token;
         if (!token) return res.status(401).json("Not authenticated!");
 
@@ -36,6 +67,7 @@ module.exports = {
         });
     },
     deleteReview: (req, res) => {
+        handleRequest(req.baseUrl);
         const token = req.cookies.access_token;
         if (!token) return res.status(401).json("Not authenticated!");
 
@@ -51,6 +83,7 @@ module.exports = {
         });
     },
     updateReview: (req, res) => {
+        handleRequest(req.baseUrl);
         const token = req.cookies.access_token;
         if (!token) return res.status(401).json("Not authenticated!");
 
