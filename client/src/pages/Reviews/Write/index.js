@@ -10,18 +10,26 @@ const Write = (props) => {
 
     const [rating, setRating] = useState(0);
 
-    useEffect(() => {
-        setRating({ rating });
-    });
+    const handleRate = async () => {
+        const reviewRating = document.getElementById("review-rating");
+        Object.keys(reviewRating.children).forEach(key => {
+            reviewRating.children[key].addEventListener("click", () => {
+                setRating(reviewRating.children[key].getAttribute("aria-posinset"));
+            });
+        });
+    };
 
-    console.log()
+    useEffect(() => {
+        handleRate();
+    }, [rating]);    
+
     return (
         <div id="write-container">
             <Header as="h1" id="reviews-header">Tell Us How We Did</Header>
             <form id="write-form">
                 <div className="write-form-row">
-                    <label htmlFor="write-rating">Rating:</label>
-                    <Rating maxRating={5} rating={rating} icon="star" size="huge" />
+                    <label htmlFor="write-rating">Rating: {rating}</label>
+                    <Rating id="review-rating" maxRating={5} rating={rating} icon="star" size="huge" />
                 </div>
                 <div className="write-form-row">
                     <label htmlFor="write-text">Review:</label>
@@ -33,6 +41,6 @@ const Write = (props) => {
             </form>
         </div>
     );
-}
+};
 
 export default Write;
