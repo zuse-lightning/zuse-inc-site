@@ -42,7 +42,7 @@ const Main = (props) => {
         <div id="reviews-container">
             <div id="reviews-headers-container">
                 <div className="reviews-headers-col">
-                    <h1 id="reviews-header">Reviews</h1>
+                    <Header as="h1" id="reviews-header">Reviews</Header>
                 </div>
                 <div className="reviews-headers-col">
                     <Button as={Link} to="/reviews/write" size="massive"  icon labelPosition="right" id="write-review-btn">Write A Review<Icon id="write-icon" name="edit" /></Button>

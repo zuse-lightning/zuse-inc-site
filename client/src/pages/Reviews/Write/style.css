@@ -1,0 +1,20 @@
+#write-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    border: solid 1px #fefcfd;
+}
+
+#write-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
+
+.write-text {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 18px;
+    text-align: center;
+}
