@@ -44,7 +44,7 @@ const Main = (props) => {
             <div id="reviews">
                 {reviews.map((review) => {
                     return (
-                        <div key={review.id} className="review-col">
+                        review.rating < 1 ? null : <div key={review.id} className="review-col">
                             <Link to={`/reviews/${review.id}`}>
                                 <div className="review-card">
                                     <Image src={review.image} />
