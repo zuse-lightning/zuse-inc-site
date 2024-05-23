@@ -32,6 +32,7 @@ const Main = (props) => {
                 console.log(err);
             };
         };
+        fetchData();
     }, []);
 
     useEffect(() => {
@@ -50,7 +51,7 @@ const Main = (props) => {
             </div>
             <p className="reviews-text">Don't take our word for it, listen to our satisfied customers!</p>
             <div id="reviews">
-                {testData.map((review) => {
+                {reviews.map((review) => {
                     return (
                         <div key={review.id} className="review-col">
                             <div className="review-card">

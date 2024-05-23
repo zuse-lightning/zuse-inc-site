@@ -86,7 +86,7 @@ const App = () => {
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
-              <Route exact path="/reviews/*" element={<Reviews auth={auth} />} />
+              <Route exact path="/reviews/*" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
             </Routes>
           </div>
         </Sidebar.Pusher>

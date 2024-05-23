@@ -9,15 +9,15 @@ import "./style.css";
 
 const Reviews = (props) => {
 
-    const { auth } = props;
+    const { auth, whichWebsite } = props;
     
     return (
         <>
             <Routes>
-                <Route exact path="/" element={<Main auth={auth} />} />
-                <Route exact path="/write" element={<Write auth={auth} />} />
-                <Route exact path="/edit/:id" element={<Edit auth={auth} />} />
-                <Route exact path="/:id" element={<Review auth={auth} />} />
+                <Route exact path="/" element={<Main auth={auth} whichWebsite={whichWebsite} />} />
+                <Route exact path="/write" element={<Write auth={auth} whichWebsite={whichWebsite} />} />
+                <Route exact path="/edit/:id" element={<Edit auth={auth} whichWebsite={whichWebsite} />} />
+                <Route exact path="/:id" element={<Review auth={auth} whichWebsite={whichWebsite} />} />
             </Routes>
         </>
     );
