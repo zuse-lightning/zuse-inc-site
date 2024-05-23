@@ -50,6 +50,10 @@
     transition: transform .5s;
 }
 
+.review-card-text, .review-card-date {
+    color: black;
+}
+
 #write-review-btn {
     background-color: #f11515 !important;
     color: white !important; 

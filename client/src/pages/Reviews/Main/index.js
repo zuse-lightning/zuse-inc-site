@@ -45,13 +45,15 @@ const Main = (props) => {
                 {reviews.map((review) => {
                     return (
                         <div key={review.id} className="review-col">
-                            <div className="review-card">
-                                <Image src={review.image} />
-                                <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
-                                <div className="review-card-text">{review.text}</div>
-                                <div className="review-card-author">{review.author}</div>
-                                <div className="review-card-date">{review.date}</div>
-                            </div>
+                            <Link to={`/reviews/${review.id}`}>
+                                <div className="review-card">
+                                    <Image src={review.image} />
+                                    <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
+                                    <div className="review-card-text">{review.text}</div>
+                                    <div className="review-card-author">{review.author}</div>
+                                    <div className="review-card-date">{review.date}</div>
+                                </div>
+                            </Link>
                         </div>
                     );
                 })}
