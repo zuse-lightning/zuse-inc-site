@@ -4,29 +4,20 @@ import { Button, Header, Image, Icon, Rating } from "semantic-ui-react";
 import axios from "axios";
 
 import "../style.css";
+import { whichWebsite } from "../../../containers/App";
 
 const Main = (props) => {
-    const testData = [
-        { id: 1, rating: 5, text: "This is a test review.", author: "John Doe", date: "2021-01-01", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-Bull.png" },
-        { id: 2, rating: 4, text: "This is a test review.", author: "Jane Doe", date: "2021-01-02", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-BullStar.png" },
-        { id: 3, rating: 3, text: "This is a test review.", author: "John Smith", date: "2021-01-03", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-PBR.png" },
-        { id: 4, rating: 2, text: "This is a test review.", author: "Jane Smith", date: "2021-01-04", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Black-Jersey-Polo-PBRStar.png" },
-        { id: 5, rating: 1, text: "This is a test review.", author: "John Doe", date: "2021-01-05", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Blue-Jersey-Polo-BullStar.png" },
-        { id: 6, rating: 5, text: "This is a test review.", author: "Jane Doe", date: "2021-01-06", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Blue-Jersey-Polo-PBR.png" },
-        { id: 7, rating: 4, text: "This is a test review.", author: "John Smith", date: "2021-01-07", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Blue-Jersey-Polo-PBRStar.png" },
-        { id: 8, rating: 3, text: "This is a test review.", author: "Jane Smith", date: "2021-01-08", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Grey-Jersey-Polo-Bull.png" },
-        { id: 9, rating: 2, text: "This is a test review.", author: "John Doe", date: "2021-01-09", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Grey-Jersey-Polo-BullStar.png" },
-        { id: 10, rating: 1, text: "This is a test review.", author: "Jane Doe", date: "2021-01-10", image: "https://zuse-inc-bucket.s3.amazonaws.com/test-review-imgs/Grey-Jersey-Polo-PBR.png" }
-    ];
 
     const { currentUser, notAuthorized } = props.auth;
 
     const [reviews, setReviews] = useState([]);
 
+    const site = whichWebsite(window.location.href, "zuse", "acp", "union");
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("/reviews");
+                const res = await axios.get(`${site}/reviews`);
                 setReviews(res.data);
             } catch (err) {
                 console.log(err);
