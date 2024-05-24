@@ -33,6 +33,7 @@ const handleRequest = (url) => {
 module.exports = {
     getReviews: (req, res) => {
         handleRequest(req.baseUrl);
+        console.log("getting all reviews");
         db.query(getAllReviews, (err, data) => {
             if (err) return res.status(500).json(err);
             return res.status(200).json(data);
@@ -40,6 +41,7 @@ module.exports = {
     },
     getReview: (req, res) => {
         handleRequest(req.baseUrl);
+        console.log("getting review by id");
         db.query(getReviewByIds, [req.params.id], (err, data) => {
             if (err) return res.status(500).json(err);
             return res.status(200).json(data[0]);
@@ -59,6 +61,8 @@ module.exports = {
                 req.body.rating,
                 req.body.date 
             ];
+            
+            console.log("adding review with " + values);
 
             db.query(addUserReview, [values], (err, data) => {
                 if (err) return res.status(500).json(err);
@@ -76,6 +80,8 @@ module.exports = {
 
             const reviewId = req.params.id;
 
+            console.log("deleting review with id " + reviewId + " and user id " + userInfo.id);
+
             db.query(deleteUserReview, [reviewId, userInfo.id], (err, data) => {
                 if (err) return res.status(500).json("You can only delete your own reviews!");
                 return res.json("Review deleted");
@@ -92,6 +98,8 @@ module.exports = {
 
             const reviewId = req.params.id;
             const values = [req.body.text, req.body.rating];
+
+            console.log("updating review with id " + reviewId + " and user id " + userInfo.id);
 
             db.query(updateUserReview, [...values, reviewId, userInfo.id], (err, data) => {
                 if (err) return res.status(500).json(err);
