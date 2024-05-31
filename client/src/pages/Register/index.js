@@ -35,6 +35,10 @@ const Register = (props) => {
     };
 
     useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
+
+    useEffect(() => {
         alreadyLoggedIn();
     }, [currentUser]);
 

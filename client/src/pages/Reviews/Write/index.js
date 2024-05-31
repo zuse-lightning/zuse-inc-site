@@ -21,6 +21,12 @@ const Write = (props) => {
         });
     };
 
+    const { currentUser, notAuthorized } = props.auth;
+    
+    useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
+
     useEffect(() => {
         handleRate();
     }, [rating]);

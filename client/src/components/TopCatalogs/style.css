@@ -26,19 +26,19 @@
 }
 
 .catalog-col:has(#charles-river) {
-    margin-top: 3%;
+    margin-top: 12%;
 }
 
 .catalog-col:has(#citadel-brands) {
-    margin-top: 8%;
+    margin-top: 18%;
 }
 
-.catalog-col:has(#stormtech) {
-    margin-top: -9%;
+.catalog-col:has(#cutter-buck) {
+    margin-top: 10%;
 }
 
 .catalog-col:has(#edwards) {
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 .catalog-img {

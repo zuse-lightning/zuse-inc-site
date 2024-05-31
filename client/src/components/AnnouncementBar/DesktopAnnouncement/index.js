@@ -8,7 +8,7 @@ import "../style.css";
 const DesktopAnnouncment = (props) => {
 
     const { screenWidth, whichWebsite, location } = props;
-    const { currentUser, logout } = props.auth;
+    // const { currentUser, logout } = props.auth;
     const address = whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471");
 
     return (
@@ -20,7 +20,7 @@ const DesktopAnnouncment = (props) => {
                 <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header>
             </div>
             <div className="announce-col">
-                {/* <div className="announce-social-icon-wrapper">
+                <div className="announce-social-icon-wrapper">
                     <Image
                         as={Link}
                         target=":blank"
@@ -39,12 +39,12 @@ const DesktopAnnouncment = (props) => {
                         id="announce-instagram-icon"
                         src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon-white.png"
                     />
-                </div> */}
-                {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
+                </div>
+                {/* {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null} */}
             </div>
-            <div className="announce-col">
+            {/* <div className="announce-col">
                 {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
-            </div>
+            </div> */}
         </div>
     );
 };

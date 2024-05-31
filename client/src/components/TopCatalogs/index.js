@@ -17,7 +17,7 @@ const TopCatalogs = (props) => {
         { id: "charles-river", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/charles-river.png", link: "https://www.charlesriverapparel.com/" },
         { id: "citadel-brands", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/citadel-brands.jpg", link: "https://www.citadelbrands.com/home_page" },
         { id: "cutter-buck", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/cutter-buck.png", link: "https://cutterbuck.com/" },
-        { id: "stormtech", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/stormtech-blue.png", link: "https://www.stormtechusa.com/" },
+        { id: "blue-gen", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/blue-gen.png", link: "https://www.bluegeneration.com/" },
         { id: "edwards", image: "https://zuse-inc-bucket.s3.amazonaws.com/catalogs/edwards.png", link: "https://www.edwardsgarment.com/" }
     ];
 
