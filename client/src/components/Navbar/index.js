@@ -33,7 +33,7 @@ const Navbar = (props) => {
         { name: "Charles River Apparel", link: "https://www.charlesriverapparel.com/" },
         { name: "Citadel Brands", link: "https://www.citadelbrands.com/home_page" },
         { name: "Cutter and Buck", link: "https://cutterbuck.com/" },
-        { name: "Stormtech USA", link: "https://www.stormtechusa.com/" },
+        { name: "Blue Generation", link: "https://www.bluegeneration.com/" },
         { name: "Edwards Garment", link: "https://www.edwardsgarment.com/" }
     ];
     
