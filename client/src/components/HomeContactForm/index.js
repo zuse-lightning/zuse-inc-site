@@ -105,8 +105,8 @@ const HomeContactForm = (props) => {
                     <Grid.Column width={contactFormColumns[0]}>
                         <Header as="h1" id="home-contact-header">Request A Call Back</Header>
                         <Header as="h3" id="home-contact-subheader">If you have any further questions, feel free to fill out your information and let us know!</Header>
-                        <Header id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />Call: 203-458-3295</Header>
-                        <Header id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />{homeContactAddress}</Header>
+                        <p id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />203-458-3295</p>
+                        <p id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />{homeContactAddress}</p>
                     </Grid.Column>
                     <Grid.Column width={contactFormColumns[1]}>
                         <form

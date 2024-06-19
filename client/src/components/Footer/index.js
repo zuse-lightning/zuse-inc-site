@@ -50,7 +50,7 @@ const Footer = (props) => {
                     <Header id="copyright" as="h4">© 2024 {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}</Header>
                 </div>
                 <div className="footer-col">
-                    <Header id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />Call: 203-458-3295</Header>
+                    <p id="phone-number" as="h4"><Icon id="phone-icon" name="phone" />203-458-3295</p>
                 </div>
             </div>
         </div>

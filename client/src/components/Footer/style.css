@@ -26,6 +26,10 @@
     color: white!important;
 }
 
+#phone-number {
+    font-weight: 600;
+}
+
 @media (max-width: 1699px) and (min-width: 1200px) {
     .footer-col:nth-child(1) {
         grid-column: span 3;
