@@ -11,7 +11,7 @@ const MobileAnnouncment = (props) => {
     return (
         <div id="announcement-container">
             <div className="announce-col">
-                <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />203-458-3295</Header>
+                <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />203-458-3295</p>
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
