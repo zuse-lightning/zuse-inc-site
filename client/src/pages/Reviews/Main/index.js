@@ -26,9 +26,9 @@ const Main = (props) => {
         fetchData();
     }, []);
 
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => {
+    //     notAuthorized();
+    // }, [currentUser]);
 
     return (
         <div id="reviews-container">

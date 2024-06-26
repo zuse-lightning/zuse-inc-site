@@ -7,9 +7,9 @@ const Edit = (props) => {
 
     const { currentUser, notAuthorized } = props.auth;
     
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => {
+    //     notAuthorized();
+    // }, [currentUser]);
 
     return (
         <h1>Edit</h1>

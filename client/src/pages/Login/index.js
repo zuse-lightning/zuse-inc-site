@@ -26,9 +26,9 @@ const Login = (props) => {
         };
     };
 
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => {
+    //     notAuthorized();
+    // }, [currentUser]);
 
     useEffect(() => {
         alreadyLoggedIn();

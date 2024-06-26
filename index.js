@@ -28,17 +28,17 @@ app.use(cors());
 app.use(cookieParser());
 
 //Uploading files
-// const upload = multer({
-//     storage: multerS3({
-//         s3: s3,
-//         acl: "public-read",
-//         bucket: process.env.BUCKET_NAME,
-//         key: (req, file, cb) => {
-//             console.log(file);
-//             cb(null, Date.now().toString() + "-" + file.originalname);
-//         }
-//     })
-// });
+const upload = multer({
+    storage: multerS3({
+        s3: s3,
+        acl: "public-read",
+        bucket: process.env.BUCKET_NAME,
+        key: (req, file, cb) => {
+            console.log(file);
+            cb(null, Date.now().toString() + "-" + file.originalname);
+        }
+    })
+});
 
 app.use(routes);
 
@@ -49,18 +49,18 @@ if (process.env.NODE_ENV === "production") {
     });
 };
 
-// app.post("/upload", upload.array("upl", 25), (req, res, next) => {
-//     res.send({
-//         message: "Files uploaded successfully",
-//         urls: req.files.map(file => {
-//             return {
-//                 url: file.location,
-//                 name: file.key,
-//                 type: file.mimetype,
-//                 size: file.size
-//             }   
-//         })
-//     });
-// });
+app.post("/upload", upload.array("upl", 25), (req, res, next) => {
+    res.send({
+        message: "Files uploaded successfully",
+        urls: req.files.map(file => {
+            return {
+                url: file.location,
+                name: file.key,
+                type: file.mimetype,
+                size: file.size
+            }   
+        })
+    });
+});
 
 server.listen(PORT, () => console.log(`Server started on port ${PORT}`));

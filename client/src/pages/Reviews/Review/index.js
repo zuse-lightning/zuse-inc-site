@@ -7,9 +7,9 @@ const Review = (props) => {
 
     const { currentUser, notAuthorized } = props.auth;
     
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => {
+    //     notAuthorized();
+    // }, [currentUser]);
     
     return (
         <h1>Review</h1>
