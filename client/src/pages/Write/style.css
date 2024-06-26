@@ -18,3 +18,40 @@
     font-size: 18px;
     text-align: center;
 }
+
+#write-form-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 20px;
+    width: 60%;
+    margin: 2% 20%;
+}
+
+.write-form-col {
+    grid-column: span 12;
+}
+
+.write-form-col:nth-child(2), .write-form-col:nth-child(3) {
+    grid-column: span 3;
+}
+
+#write-text {
+    resize: none;
+    width: 100%;
+    height: 300px;
+}
+
+#rating-label, #write-upload-label,
+#write-review-label {
+    font-size: 20px;
+}
+
+#write-submit-btn {
+    width: 20%;
+    height: 60px;
+    background-color: #f11515;
+    border: solid 1px transparent;
+    color: #fefcfd;
+    font-family: "Lato", "Helvetica Neuve";
+    cursor: pointer !important
+}

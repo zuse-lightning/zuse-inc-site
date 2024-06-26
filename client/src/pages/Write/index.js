@@ -27,9 +27,9 @@ const Write = (props) => {
 
     const { currentUser, notAuthorized } = props.auth;
     
-    // useEffect(() => {
-    //     notAuthorized();
-    // }, [currentUser]);
+    useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
 
     useEffect(() => {
         handleRate();
@@ -41,21 +41,23 @@ const Write = (props) => {
             <form id="write-form">
                 <div id="write-form-container">
                     <div className="write-form-col">
-                        <label htmlFor="write-rating">Rating: {rating}</label>
+                        <label id="rating-label" htmlFor="write-rating">Rating: {rating}</label>
                         <Rating id="review-rating" name="rating" value={rating} maxRating={5} rating={rating} icon="star" size="huge" />
                     </div>
                     <div className="write-form-col">
-                        <label htmlFor="art-file">Upload Your Design:</label>
+                        <label id="write-upload-label" htmlFor="art-file">Upload Product Image:</label>
                     </div>
                     <div className="write-form-col">
-                        <input type="file" id="write-file" name="writeFile" accept=".png, .jpg, .jpeg" multiple />
+                        <input type="file" id="write-file" name="writeFile" accept=".png, .jpg, .jpeg" />
                     </div>
                     <div className="write-form-col">
-                        <label htmlFor="write-text">Review:</label>
-                        <textarea id="write-text" name="write-text" required value={inputs.review} />
+                        <label id="write-review-label" htmlFor="write-text">Review:</label>
+                        <br />
+                        <br />
+                        <textarea id="write-text" name="write-text" required />
                     </div>
                     <div className="write-form-col">
-                        <button type="submit" id="write-submit-btn">Submit</button>
+                        <button type="submit" id="write-submit-btn">Submit Review</button>
                     </div>
                 </div>
             </form>
