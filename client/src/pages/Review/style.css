@@ -1,0 +1,38 @@
+#review-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    border: solid 1px #fefcfd;
+}
+
+#review-header {
+    padding: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}
+
+.review-text {
+    width: 80%;
+    margin: 0 10%;
+    font-size: 18px;
+    text-align: center;
+}
+
+#review {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 2% 3%;
+}
+
+/* #write-review-btn {
+    background-color: #f11515 !important;
+    color: white !important; 
+    font-size: 18px!important
+}
+
+#write-icon {
+    margin-left: 2%;
+} */

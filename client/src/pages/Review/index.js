@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
+import { Header } from "semantic-ui-react";
+
+import "./style.css";
 
 const Review = (props) => {
 
@@ -13,12 +16,11 @@ const Review = (props) => {
     const location = useLocation();
     const navigate = useNavigate();
     const reviewId = location.pathname.split("/")[2];
-    console.log(reviewId);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`reviews/${reviewId}`);
+                const res = await axios.get(`http://localhost:3001/api/${site}/reviews/${reviewId}`);
                 setReview(res.data);
             } catch (err) {
                 console.log(err);
@@ -41,7 +43,10 @@ const Review = (props) => {
     // }, [currentUser]);
     
     return (
-        <h1>Review</h1>
+        <div id="review-container">
+            <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
+            <p id="review-text">{review.text}</p>
+        </div>
     );
 }
 

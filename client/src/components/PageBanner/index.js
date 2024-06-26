@@ -8,6 +8,7 @@ const PageBanner = (props) => {
 
     const { location, whichWebsite } = props;
     const { pathname } = useLocation();
+    const reviewId = pathname.split("/")[2];
 
     let pageBannerName;
     let pageBannerBreadcrumbs;
@@ -53,6 +54,14 @@ const PageBanner = (props) => {
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
                 { name: "REVIEWS", link: "/reviews" }
+            ];
+            break;
+        case `/review/${reviewId}`:
+            pageBannerName = "CUSTOMER REVIEW";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "REVIEWS", link: "/reviews" },
+                { name: "CUSTOMER REVIEW", link: `/review/${reviewId}` }
             ];
             break;
         case "/write":
