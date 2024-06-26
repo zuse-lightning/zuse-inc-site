@@ -7,7 +7,7 @@ const zuse = {
 };
 
 const acp = {
-    getAllReviews: "SELECT * FROM american_contract.reviews;",
+    getAllReviews: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date` FROM american_contract.users u JOIN american_contract.reviews r ON u.id = r.uid;",
     getReviewByIds: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date` FROM american_contract.users u JOIN american_contract.reviews r ON u.id = r.uid WHERE r.id = ?;",
     addUserReview: "INSERT INTO american_contract.reviews (`uid`, `text`, `rating`, `date`) VALUES (?);",
     deleteUserReview: "DELETE FROM american_contract.reviews WHERE `id` = ? AND `uid` = ?;",
@@ -15,7 +15,7 @@ const acp = {
 };
 
 const union = {
-    getAllReviews: "SELECT * FROM union_print.reviews;",
+    getAllReviews: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date` FROM union_print.users u JOIN union_print.reviews r ON u.id = r.uid;",
     getReviewByIds: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date` FROM union_print.users u JOIN union_print.reviews r ON u.id = r.uid WHERE r.id = ?;",
     addUserReview: "INSERT INTO union_print.reviews (`uid`, `text`, `rating`, `date`) VALUES (?);",
     deleteUserReview: "DELETE FROM union_print.reviews WHERE `id` = ? AND `uid` = ?;",
