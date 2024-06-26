@@ -12,6 +12,9 @@ import Contact from "../../pages/Contact";
 import Login from "../../pages/Login";
 import Register from "../../pages/Register";
 import Reviews from "../../pages/Reviews";
+import Review from "../../pages/Review";
+import Write from "../../pages/Write";
+import Edit from "../../pages/Edit";
 import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
@@ -87,6 +90,9 @@ const App = () => {
               <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
               <Route exact path="/reviews/*" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/review/:id" element={<Review auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/write" element={<Write auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/edit/:id" element={<Edit auth={auth} whichWebsite={whichWebsite} />} />
             </Routes>
           </div>
         </Sidebar.Pusher>
