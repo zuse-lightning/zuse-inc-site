@@ -42,7 +42,7 @@ module.exports = {
     getReview: (req, res) => {
         handleRequest(req.baseUrl);
         console.log("getting review by id");
-        
+
         db.query(getReviewByIds, [req.params.id], (err, data) => {
             if (err) return res.status(500).json(err);
             return res.status(200).json(data[0]);
