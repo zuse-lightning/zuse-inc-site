@@ -50,8 +50,13 @@
     transition: transform .5s;
 }
 
-.review-card-text, .review-card-date {
+.review-card-image, .review-card-rating {
+    margin: 2% 0;
+}
+
+.review-card-text, .review-card-date, .review-card-author {
     color: black;
+    margin: 5% 0;
 }
 
 #write-review-btn {

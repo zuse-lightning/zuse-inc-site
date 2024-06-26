@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import  { Rating } from "semantic-ui-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
@@ -45,6 +46,8 @@ const Review = (props) => {
     return (
         <div id="review-container">
             <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
+            <p id="review-date">{moment(review.date).format("MMMM Do YYYY")}</p>
+            <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
             <p id="review-text">{review.text}</p>
         </div>
     );
