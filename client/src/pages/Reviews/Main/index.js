@@ -4,11 +4,11 @@ import { Button, Header, Image, Icon, Rating } from "semantic-ui-react";
 import axios from "axios";
 
 import "../style.css";
-import { whichWebsite } from "../../../containers/App";
 
 const Main = (props) => {
 
     const { currentUser, notAuthorized } = props.auth;
+    const { whichWebsite } = props;
 
     const [reviews, setReviews] = useState([]);
 

@@ -9,6 +9,10 @@ import "./style.css";
 const Write = (props) => {
 
     const [rating, setRating] = useState(0);
+    const [inputs, setInputs] = useState({
+        rating: 0,
+        review: ""
+    })
 
     const navigate = useNavigate();
 
@@ -38,7 +42,7 @@ const Write = (props) => {
                 <div id="write-form-container">
                     <div className="write-form-col">
                         <label htmlFor="write-rating">Rating: {rating}</label>
-                        <Rating id="review-rating" maxRating={5} rating={rating} icon="star" size="huge" />
+                        <Rating id="review-rating" name="rating" value={rating} maxRating={5} rating={rating} icon="star" size="huge" />
                     </div>
                     <div className="write-form-col">
                         <label htmlFor="art-file">Upload Your Design:</label>
@@ -48,7 +52,7 @@ const Write = (props) => {
                     </div>
                     <div className="write-form-col">
                         <label htmlFor="write-text">Review:</label>
-                        <textarea id="write-text" name="write-text" required />
+                        <textarea id="write-text" name="write-text" required value={inputs.review} />
                     </div>
                     <div className="write-form-col">
                         <button type="submit" id="write-submit-btn">Submit</button>
