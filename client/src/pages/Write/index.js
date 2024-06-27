@@ -8,13 +8,29 @@ import "./style.css";
 
 const Write = (props) => {
 
+    const { whichWebsite } = props;
+    const { currentUser, notAuthorized } = props.auth;
     const [rating, setRating] = useState(0);
-    const [inputs, setInputs] = useState({
-        rating: 0,
-        review: ""
-    })
+    const [text, setText] = useState("");
+    const [file, setFile] = useState(null);
 
+    console.log(rating);
+    console.log(text);
+    console.log(file);
+    const site = whichWebsite(window.location.href, "zuse", "acp", "union");
     const navigate = useNavigate();
+
+    const upload = async () => {
+        try {
+            const formData = new FormData();
+            console.log(file);
+            formData.append("file", file);
+            const res = await axios.post("http://localhost:3001/upload", formData);
+            return res.data;
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     const handleRate = async () => {
         const reviewRating = document.getElementById("review-rating");
@@ -25,8 +41,22 @@ const Write = (props) => {
         });
     };
 
-    const { currentUser, notAuthorized } = props.auth;
-    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const imgUrl = await upload();
+        console.log(imgUrl);
+        try {
+            const res = await axios.post(`${site}/reviews`, {
+                rating: rating,
+                text: text,
+                date: moment().format("YYYY-MM-DD"),
+                imgUrl: imgUrl
+            });
+        } catch (err) {
+            console.log(err);
+        };
+    };
+
     useEffect(() => {
         notAuthorized();
     }, [currentUser]);
@@ -37,7 +67,10 @@ const Write = (props) => {
 
     return (
         <div id="write-container">
-            <Header as="h1" id="reviews-header">Tell Us How We Did</Header>
+            <Header as="h1" id="write-header">Tell Us How We Did</Header>
+            <p className="write-text">
+                We appreciate your feedback. Please take a moment to rate and write a review of your experience with us. 
+            </p>
             <form id="write-form">
                 <div id="write-form-container">
                     <div className="write-form-col">
@@ -48,16 +81,16 @@ const Write = (props) => {
                         <label id="write-upload-label" htmlFor="art-file">Upload Product Image:</label>
                     </div>
                     <div className="write-form-col">
-                        <input type="file" id="write-file" name="writeFile" accept=".png, .jpg, .jpeg" />
+                        <input type="file" id="write-file" name="writeFile" accept=".png, .jpg, .jpeg" required onChange={(e) => setFile(e.target.files[0])} />
                     </div>
                     <div className="write-form-col">
                         <label id="write-review-label" htmlFor="write-text">Review:</label>
                         <br />
                         <br />
-                        <textarea id="write-text" name="write-text" required />
+                        <textarea id="write-review" name="write-text" placeholder="Write a review..." value={text} onChange={(e) => setText(e.target.value)} required />
                     </div>
                     <div className="write-form-col">
-                        <button type="submit" id="write-submit-btn">Submit Review</button>
+                        <button onClick={handleSubmit} type="submit" id="write-submit-btn">Submit Review</button>
                     </div>
                 </div>
             </form>

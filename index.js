@@ -50,6 +50,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 app.post("/upload", upload.array("upl", 25), (req, res, next) => {
+    console.log("uploading file");
     res.send({
         message: "Files uploaded successfully",
         urls: req.files.map(file => {
