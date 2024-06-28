@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import  { Rating } from "semantic-ui-react";
+import { Rating, Image } from "semantic-ui-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
@@ -32,23 +32,30 @@ const Review = (props) => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`/reviews/${reviewId}`);
+            await axios.delete(`http://localhost:3001/api/${site}/reviews/${reviewId}`);
             navigate("/");
         } catch (err) {
             console.log(err);
         }
     }
-    
+
     // useEffect(() => {
     //     notAuthorized();
     // }, [currentUser]);
-    
+
     return (
         <div id="review-container">
             <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
-            <p id="review-date">{moment(review.date).format("MMMM Do YYYY")}</p>
-            <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
-            <p id="review-text">{review.text}</p>
+            <div id="review">
+                <div className="review-col">
+                    <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
+                    <p id="review-text">{review.text}</p>
+                    <p id="review-date">{moment(review.date).format("MMMM Do YYYY")}</p>
+                </div>
+                <div className="review-col">
+                    <Image src={review.image} />
+                </div>
+            </div>
         </div>
     );
 }
