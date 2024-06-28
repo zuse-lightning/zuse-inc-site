@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const { zuse, acp, union } = require("../../models/reviews");
 
 let getAllReviews;
-let getReviewByIds;
+let getReviewById;
 let addUserReview;
 let deleteUserReview;
 let updateUserReview;
@@ -11,19 +11,19 @@ let updateUserReview;
 const handleRequest = (url) => {
     if (url === "/api/zuse/reviews") {
         getAllReviews = zuse.getAllReviews;
-        getReviewByIds = zuse.getReviewByIds;
+        getReviewById = zuse.getReviewById;
         addUserReview = zuse.addUserReview;
         deleteUserReview = zuse.deleteUserReview;
         updateUserReview = zuse.updateUserReview;
     } else if (url === "/api/acp/reviews") {
         getAllReviews = acp.getAllReviews;
-        getReviewByIds = acp.getReviewByIds;
+        getReviewById = acp.getReviewById;
         addUserReview = acp.addUserReview;
         deleteUserReview = acp.deleteUserReview;
         updateUserReview = acp.updateUserReview;
     } else if (url === "/api/union/reviews") {
         getAllReviews = union.getAllReviews;
-        getReviewByIds = union.getReviewByIds;
+        getReviewById = union.getReviewById;
         addUserReview = union.addUserReview;
         deleteUserReview = union.deleteUserReview;
         updateUserReview = union.updateUserReview;
@@ -43,7 +43,7 @@ module.exports = {
         handleRequest(req.baseUrl);
         console.log("getting review by id");
 
-        db.query(getReviewByIds, [req.params.id], (err, data) => {
+        db.query(getReviewById, [req.params.id], (err, data) => {
             if (err) return res.status(500).json(err);
             return res.status(200).json(data[0]);
         });
