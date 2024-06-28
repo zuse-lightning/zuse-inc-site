@@ -24,7 +24,7 @@ const Write = (props) => {
         try {
             const formData = new FormData();
             console.log(file);
-            formData.append("file", file);
+            formData.append("writeFile", file);
             const res = await axios.post("http://localhost:3001/upload", formData);
             return res.data;
         } catch (err) {
@@ -50,7 +50,7 @@ const Write = (props) => {
                 rating: rating,
                 text: text,
                 date: moment().format("YYYY-MM-DD"),
-                imgUrl: imgUrl
+                image: imgUrl.url
             });
         } catch (err) {
             console.log(err);
@@ -78,7 +78,7 @@ const Write = (props) => {
                         <Rating id="review-rating" name="rating" value={rating} maxRating={5} rating={rating} icon="star" size="huge" />
                     </div>
                     <div className="write-form-col">
-                        <label id="write-upload-label" htmlFor="art-file">Upload Product Image:</label>
+                        <label id="write-upload-label" htmlFor="writeFile">Upload Product Image:</label>
                     </div>
                     <div className="write-form-col">
                         <input type="file" id="write-file" name="writeFile" accept=".png, .jpg, .jpeg" required onChange={(e) => setFile(e.target.files[0])} />
