@@ -48,7 +48,7 @@ const Reviews = (props) => {
                         review.rating < 3 ? null : <div key={review.id} className="review-col">
                             <Link to={`/review/${review.id}`}>
                                 <div className="review-card">
-                                    <Image className="review-card-image" src={"https://zuse-inc-bucket.s3.amazonaws.com/ACP-DirectTransfer.png"} />
+                                    <Image className="review-card-image" src={review.image} />
                                     <Rating className="review-card-rating" maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
                                     <div className="review-card-text">{review.text}</div>
                                     <div className="review-card-author">{review.first_name} {review.last_name}</div>

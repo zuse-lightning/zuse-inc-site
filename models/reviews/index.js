@@ -1,7 +1,7 @@
 const zuse = {
-    getAllReviews: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date` FROM zuse.users u JOIN zuse.reviews r ON u.id = r.uid;",
-    getReviewByIds: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date` FROM zuse.users u JOIN zuse.reviews r ON u.id = r.uid WHERE r.id = ?;",
-    addUserReview: "INSERT INTO zuse.reviews (`uid`, `text`, `rating`, `date`) VALUES (?);",
+    getAllReviews: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date`, `image` FROM zuse.users u JOIN zuse.reviews r ON u.id = r.uid;",
+    getReviewByIds: "SELECT r.id, `first_name`, `last_name`, `text`, `rating`, `date`, `image` FROM zuse.users u JOIN zuse.reviews r ON u.id = r.uid WHERE r.id = ?;",
+    addUserReview: "INSERT INTO zuse.reviews (`uid`, `text`, `rating`, `date`, `image`) VALUES (?);",
     deleteUserReview: "DELETE FROM zuse.reviews WHERE `id` = ? AND `uid` = ?;",
     updateUserReview: "UPDATE zuse.reviews SET `text` = ?, `rating` = ? WHERE `id` = ? AND `uid` = ?;"    
 };

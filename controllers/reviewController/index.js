@@ -60,7 +60,8 @@ module.exports = {
                 userInfo.id,
                 req.body.text,
                 req.body.rating,
-                req.body.date 
+                req.body.date,
+                req.body.image 
             ];
             
             console.log("adding review with " + values);
