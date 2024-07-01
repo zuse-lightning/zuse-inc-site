@@ -32,8 +32,9 @@ const Review = (props) => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3001/api/${site}/reviews/${reviewId}`);
-            navigate("/");
+            if (currentUser.id !== review.uid) alert("You cannot delete someone else's review!");
+            await axios.delete(`http://localhost:3001/api/${site}/reviews/${reviewId}`, { withCredentials: true });
+            navigate("/reviews");
         } catch (err) {
             console.log(err);
         }

@@ -51,6 +51,7 @@ module.exports = {
     addReview: (req, res) => {
         handleRequest(req.baseUrl);
         const token = req.cookies.access_token;
+        console.log(token);
         if (!token) return res.status(401).json("Not authenticated!");
 
         jwt.verify(token, process.env.SECRET, (err, userInfo) => {
@@ -75,7 +76,7 @@ module.exports = {
     deleteReview: (req, res) => {
         handleRequest(req.baseUrl);
         const token = req.cookies.access_token;
-        console.log(req);
+        console.log(token);
         if (!token) return res.status(401).json("Not authenticated!");
 
         jwt.verify(token, process.env.SECRET, (err, userInfo) => {

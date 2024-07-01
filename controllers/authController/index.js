@@ -70,14 +70,17 @@ module.exports = {
             res.cookie("access_token", token, {
                 httpOnly: true
             }).status(200).json(other);
+            console.log(token);
         });
     },
     logout: (req, res) => {
         handleRequest(req.baseUrl);
+        console.log(req.cookies.access_token);
         res.clearCookie("access_token", {
             sameSite: "none",
             secure: true
         }).status(200).json("User logged out");
+        console.log(req.cookies.access_token);
     },
     test: (req, res) => {
         res.json("Test route");

@@ -23,12 +23,12 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     const login = async (inputs) => {
-        const res = await axios.post(`${site}/auth/login`, inputs);
+        const res = await axios.post(`${site}/auth/login`, inputs, { withCredentials: true });
         setCurrentUser(res.data);
     };
 
     const logout = async () => {
-        await axios.post(`http://localhost:3001/api/${site}/auth/logout/`);
+        await axios.post(`http://localhost:3001/api/${site}/auth/logout/`, {}, { withCredentials: true });
         setCurrentUser(null);
         navigate("/");
     };
