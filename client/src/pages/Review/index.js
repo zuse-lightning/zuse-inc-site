@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Rating, Image } from "semantic-ui-react";
+import { Rating, Image, Button, Icon } from "semantic-ui-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
@@ -45,7 +45,19 @@ const Review = (props) => {
 
     return (
         <div id="review-container">
-            <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
+            <div id="review-header-container">
+                <div className="review-header-col">
+                    <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
+                </div>
+                <div className="review-header-col">
+                    <Button id="review-edit-btn" as={Link} to={`/edit/${review.id}`} icon>
+                        <Icon name="edit outline" />
+                    </Button>
+                    <Button id="review-delete-btn" onClick={handleDelete} icon>
+                        <Icon name="x" />
+                    </Button>
+                </div>
+            </div>
             <div id="review">
                 <div className="review-col">
                     <Rating id="review-rating" maxRating={5} rating={review.rating} icon="star" size="massive" disabled />

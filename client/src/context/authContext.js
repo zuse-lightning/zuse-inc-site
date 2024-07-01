@@ -28,7 +28,7 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     const logout = async () => {
-        await axios.post(`${site}/auth/logout/`);
+        await axios.post(`http://localhost:3001/api/${site}/auth/logout/`);
         setCurrentUser(null);
         navigate("/");
     };

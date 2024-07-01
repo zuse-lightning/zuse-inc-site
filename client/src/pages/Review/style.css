@@ -5,8 +5,19 @@
     border: solid 1px #fefcfd;
 }
 
+#review-header-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 20px;
+    width: 96%;
+    margin: 2% 2%;
+}
+.review-header-col:nth-child(1) {
+    grid-column: 1 / span 11;
+}
+
 #review-header {
-    padding: 2%;
+    /* padding: 2%; */
     text-decoration: underline;
     text-underline-offset: 20px;
     text-decoration-color: #f11515;
