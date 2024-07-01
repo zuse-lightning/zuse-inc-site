@@ -48,7 +48,7 @@ const Review = (props) => {
             <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
             <div id="review">
                 <div className="review-col">
-                    <Rating maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
+                    <Rating id="review-rating" maxRating={5} rating={review.rating} icon="star" size="massive" disabled />
                     <p id="review-text">{review.text}</p>
                     <p id="review-date">{moment(review.date).format("MMMM Do YYYY")}</p>
                 </div>

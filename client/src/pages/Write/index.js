@@ -14,16 +14,12 @@ const Write = (props) => {
     const [text, setText] = useState("");
     const [file, setFile] = useState(null);
 
-    console.log(rating);
-    console.log(text);
-    console.log(file);
     const site = whichWebsite(window.location.href, "zuse", "acp", "union");
     const navigate = useNavigate();
 
     const upload = async () => {
         try {
             const formData = new FormData();
-            console.log(file);
             formData.append("writeFile", file);
             const res = await axios.post("http://localhost:3001/upload", formData);
             return res.data;
@@ -44,7 +40,6 @@ const Write = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const imgUrl = await upload();
-        console.log(imgUrl);
         try {
             const res = await axios.post(`${site}/reviews`, {
                 rating: rating,
@@ -52,6 +47,7 @@ const Write = (props) => {
                 date: moment().format("YYYY-MM-DD"),
                 image: imgUrl.url
             });
+            navigate("/reviews");
         } catch (err) {
             console.log(err);
         };
