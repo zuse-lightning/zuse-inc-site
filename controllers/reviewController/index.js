@@ -95,6 +95,7 @@ module.exports = {
     updateReview: (req, res) => {
         handleRequest(req.baseUrl);
         const token = req.cookies.access_token;
+        console.log(token);
         if (!token) return res.status(401).json("Not authenticated!");
 
         jwt.verify(token, process.env.SECRET, (err, userInfo) => {

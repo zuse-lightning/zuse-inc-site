@@ -28,7 +28,7 @@ const Review = (props) => {
             };
         };
         fetchData();
-    }, [reviewId])
+    }, [reviewId]);
 
     const handleDelete = async () => {
         try {
@@ -38,7 +38,7 @@ const Review = (props) => {
         } catch (err) {
             console.log(err);
         }
-    }
+    };
 
     // useEffect(() => {
     //     notAuthorized();
