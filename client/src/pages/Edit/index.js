@@ -44,6 +44,7 @@ const Edit = (props) => {
         e.preventDefault();
         const imgUrl = await upload();
         try {
+            if (currentUser.id !== review.uid) alert("You cannot edit someone else's review!");
             const res = await axios.put(`http://localhost:3001/api/${site}/reviews/${reviewId}`, {
                 rating: rating,
                 text: text,
@@ -56,6 +57,15 @@ const Edit = (props) => {
         };
     };
 
+    // const handleAccess = () => {
+    //     if (currentUser.id !== review.uid) {
+    //         alert("You cannot edit someone else's review!");
+    //         navigate("/reviews");
+    //     } else {
+    //         handleSubmit();
+    //     }
+    // };
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -67,16 +77,17 @@ const Edit = (props) => {
         };
         fetchData();
     }, [reviewId]);
-    
-    useEffect(() => {
-        notAuthorized();
-    }, [currentUser]);
 
     useEffect(() => {
         setText(review.text);
         setRating(review.rating);
         setFile(review.image);
     }, [review]);
+
+    useEffect(() => {
+        notAuthorized();
+    }, [currentUser]);
+
 
     useEffect(() => {
         handleRate();

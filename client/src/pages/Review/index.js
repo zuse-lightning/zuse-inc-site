@@ -30,6 +30,15 @@ const Review = (props) => {
         fetchData();
     }, [reviewId]);
 
+    const handleAccess = async () => {
+        if (currentUser.id !== review.uid) {
+            alert("You cannot edit someone else's review!");
+        } else {
+            navigate(`/edit/${reviewId}`);
+        }
+    };
+
+    
     const handleDelete = async () => {
         try {
             if (currentUser.id !== review.uid) alert("You cannot delete someone else's review!");
@@ -51,9 +60,7 @@ const Review = (props) => {
                     <Header as="h1" id="review-header">{review.first_name} {review.last_name} Said</Header>
                 </div>
                 <div className="review-header-col">
-                    <Button id="review-edit-btn" onClick={() => {
-                        if (currentUser.id !== review.uid) alert("You cannot edit someone else's review!"); else navigate(`/edit/${review.id}`);
-                    }} icon>
+                    <Button id="review-edit-btn" onClick={handleAccess} icon>
                         <Icon name="edit outline" />
                     </Button>
                     <Button id="review-delete-btn" onClick={handleDelete} icon>
