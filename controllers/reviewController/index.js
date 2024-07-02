@@ -102,7 +102,7 @@ module.exports = {
             if (err) return res.status(403).json("Token is not valid.");
 
             const reviewId = req.params.id;
-            const values = [req.body.text, req.body.rating];
+            const values = [req.body.text, req.body.rating, req.body.image];
 
             console.log("updating review with id " + reviewId + " and user id " + userInfo.id);
 

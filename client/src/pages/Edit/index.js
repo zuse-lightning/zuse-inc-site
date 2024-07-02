@@ -44,12 +44,12 @@ const Edit = (props) => {
         e.preventDefault();
         const imgUrl = await upload();
         try {
-            const res = await axios.post(`${site}/reviews`, {
+            const res = await axios.put(`http://localhost:3001/api/${site}/reviews/${reviewId}`, {
                 rating: rating,
                 text: text,
                 date: moment().format("YYYY-MM-DD"),
                 image: imgUrl.url
-            });
+            }, { withCredentials: true });
             navigate("/reviews");
         } catch (err) {
             console.log(err);
