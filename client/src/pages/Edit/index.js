@@ -59,7 +59,7 @@ const Edit = (props) => {
     };
 
     const handleAccess = () => {
-        if (rating) {
+        if (userId) {
             if (currentUser.id !== userId) {
                 alert("You cannot edit someone else's review!");
                 navigate("/reviews");
