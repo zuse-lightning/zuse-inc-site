@@ -28,9 +28,9 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
-
 app.use(cors({ credentials: true, origin: "http://localhost:3000"}));
 app.use(cookieParser());
+
 //Uploading files
 const upload = multer({
     storage: multerS3({
@@ -39,7 +39,8 @@ const upload = multer({
         bucket: process.env.BUCKET_NAME,
         key: (req, file, cb) => {
             console.log(file);
-            cb(null, file.originalname);
+            const fullPath = `review-images/${file.originalname}`;
+            cb(null, fullPath);
         }
     })
 });
