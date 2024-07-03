@@ -39,7 +39,6 @@ module.exports = {
         db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
             if (err) return res.json(err);
             if (data.length) return res.json("User already exists");
-
             if (req.body.password.length < 8) return res.status(403).json("Password must be at least 8 characters long!");
 
             const salt = bcrypt.genSaltSync(10);
