@@ -38,7 +38,6 @@ const Review = (props) => {
         }
     };
 
-    
     const handleDelete = async () => {
         try {
             if (currentUser.id !== review.uid) alert("You cannot delete someone else's review!");

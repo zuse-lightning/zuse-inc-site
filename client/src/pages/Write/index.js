@@ -54,7 +54,10 @@ const Write = (props) => {
     };
 
     useEffect(() => {
-        notAuthorized();
+        if (!currentUser) {
+            alert("You must be logged in to write a review.");
+            navigate("/reviews");
+        }
     }, [currentUser]);
 
     useEffect(() => {
@@ -65,7 +68,7 @@ const Write = (props) => {
         <div id="write-container">
             <Header as="h1" id="write-header">Tell Us How We Did</Header>
             <p className="write-text">
-                We appreciate your feedback. Please take a moment to rate and write a review of your experience with us. 
+                We appreciate your feedback. Please take a moment to rate and write a review of your experience with us.
             </p>
             <form id="write-form">
                 <div id="write-form-container">
