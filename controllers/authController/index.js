@@ -6,25 +6,30 @@ const { zuse, acp, union } = require("../../models/users");
 let getUser;
 let setUserData;
 let getUserByEmail;
+let resetUserPassword;
 
 const handleRequest = (url) => {
     if (url === "/api/zuse/auth") {
         getUser = zuse.getUser;
         setUserData = zuse.setUserData;
         getUserByEmail = zuse.getUserByEmail;
+        resetUserPassword = zuse.resetUserPassword;
     } else if (url === "/api/acp/auth") {
         getUser = acp.getUser;
         setUserData = acp.setUserData;
         getUserByEmail = acp.getUserByEmail;
+        resetUserPassword = acp.resetUserPassword;
     } else if (url === "/api/union/auth") {
         getUser = union.getUser;
         setUserData = union.setUserData;
         getUserByEmail = union.getUserByEmail;
+        resetUserPassword = union.resetUserPassword;
     };
     return {
         getUser,
         setUserData,
-        getUserByEmail
+        getUserByEmail,
+        resetUserPassword
     };
 };
 
