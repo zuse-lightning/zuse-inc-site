@@ -14,6 +14,7 @@ const Edit = (props) => {
     const [rating, setRating] = useState(0);
     const [text, setText] = useState("");
     const [file, setFile] = useState(null);
+    const [userId, setUserId] = useState(null);
 
     const site = whichWebsite(window.location.href, "zuse", "acp", "union");
     const location = useLocation();
@@ -57,14 +58,15 @@ const Edit = (props) => {
         };
     };
 
-    // const handleAccess = () => {
-    //     if (currentUser.id !== review.uid) {
-    //         alert("You cannot edit someone else's review!");
-    //         navigate("/reviews");
-    //     } else {
-    //         handleSubmit();
-    //     }
-    // };
+    const handleAccess = () => {
+        if (rating) {
+            console.log(userId, currentUser.id);
+            if (currentUser.id !== userId) {
+                alert("You cannot edit someone else's review!");
+                navigate("/reviews");
+            }
+        }
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -82,6 +84,7 @@ const Edit = (props) => {
         setText(review.text);
         setRating(review.rating);
         setFile(review.image);
+        setUserId(review.uid);
     }, [review]);
 
     useEffect(() => {
@@ -92,6 +95,10 @@ const Edit = (props) => {
     useEffect(() => {
         handleRate();
     }, [rating]);
+
+    useEffect(() => {
+        handleAccess();
+    }, [userId]);
 
     return (
         <div id="edit-container">

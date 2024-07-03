@@ -15,7 +15,7 @@ export const AuthContextProvider = ({ children }) => {
             navigate("/");
         }
     };
-
+    
     const alreadyLoggedIn = () => {
         if(currentUser) {
             navigate("/");
