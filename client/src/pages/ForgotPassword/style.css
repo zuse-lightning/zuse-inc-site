@@ -1,0 +1,15 @@
+#forgot-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    padding: 4% 0;
+    border: solid 1px #fefcfd;
+}
+
+#forgot-header {
+    padding: 2%;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+}

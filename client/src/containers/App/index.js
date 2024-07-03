@@ -11,6 +11,8 @@ import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import Login from "../../pages/Login";
 import Register from "../../pages/Register";
+import ResetPassword from "../../pages/ResetPassword";
+import ForgotPassword from "../../pages/ForgotPassword";
 import Profile from "../../pages/Profile";
 import Reviews from "../../pages/Reviews";
 import Review from "../../pages/Review";
@@ -90,6 +92,8 @@ const App = () => {
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
+              <Route exact path="/reset" element={<ResetPassword auth={auth} />} />
+              <Route exact path="/forogt" element={<ForgotPassword auth={auth} />} />
               <Route exact path="/profile/:id" element={<Profile auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/reviews" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/review/:id" element={<Review auth={auth} whichWebsite={whichWebsite} />} />
