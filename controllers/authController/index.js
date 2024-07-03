@@ -75,14 +75,36 @@ module.exports = {
     },
     logout: (req, res) => {
         handleRequest(req.baseUrl);
-        console.log(req.cookies.access_token);
         res.clearCookie("access_token", {
             sameSite: "none",
             secure: true
         }).status(200).json("User logged out");
-        console.log(req.cookies.access_token);
     },
-    test: (req, res) => {
-        res.json("Test route");
+    resetPassword: (req, res) => {
+        handleRequest(req.baseUrl);
+        const token = req.cookies.access_token;
+        console.log(token);
+        if (!token) return res.status(401).json("Not authenticated!");
+
+        jwt.verify(token, process.env.SECRET, (err, userInfo) => {
+            if (err) return res.status(403).json("Invalid token!");
+
+            db.query(getUserByEmail, [req.body.email], (err, data) => {
+                if (err) return res.json(err);
+                if (data.length === 0) return res.status(404).json("User not found");
+
+                const salt = bcrypt.genSaltSync(10);
+                const hash = bcrypt.hashSync(req.body.password, salt);
+
+                db.query(resetUserPassword, [hash, req.body.email], (err, data) => {
+                    if (err) return res.json(err);
+                    return res.status(200).json("Password reset");
+                });
+            });
+        });
+    },
+    forgotPassword: (req, res) => {
+        handleRequest(req.baseUrl);
+        res.json("forgot password");
     }
 };
