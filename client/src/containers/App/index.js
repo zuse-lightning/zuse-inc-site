@@ -11,6 +11,7 @@ import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
 import Login from "../../pages/Login";
 import Register from "../../pages/Register";
+import Profile from "../../pages/Profile";
 import Reviews from "../../pages/Reviews";
 import Review from "../../pages/Review";
 import Write from "../../pages/Write";
@@ -89,7 +90,8 @@ const App = () => {
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
-              <Route exact path="/reviews/*" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/profile/:id" element={<Profile auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/reviews" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/review/:id" element={<Review auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/write" element={<Write auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/edit/:id" element={<Edit auth={auth} whichWebsite={whichWebsite} />} />
