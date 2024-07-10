@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, Header, Message } from "semantic-ui-react";
-import { AuthContext } from "../../context/authContext";
 
 import "./style.css";
 
