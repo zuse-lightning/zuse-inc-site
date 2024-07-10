@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const helmet = require("helmet");
 const { S3Client } = require("@aws-sdk/client-s3");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
@@ -30,6 +31,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors({ credentials: true, origin: "http://localhost:3000"}));
 app.use(cookieParser());
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+            "img-src": ["'self'", "s3.amazonaws.com"],
+        }
+    }
+}));
 
 //Uploading files
 const upload = multer({
