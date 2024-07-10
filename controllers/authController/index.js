@@ -97,10 +97,12 @@ module.exports = {
                 if (err) return res.json(err);
                 if (data.length === 0) return res.status(404).json("User not found");
 
+                console.log(userInfo.id);
+
                 const salt = bcrypt.genSaltSync(10);
                 const hash = bcrypt.hashSync(req.body.password, salt);
 
-                db.query(resetUserPassword, [hash, req.body.email], (err, data) => {
+                db.query(resetUserPassword, [req.body.email, hash ], (err, data) => {
                     if (err) return res.json(err);
                     return res.status(200).json("Password reset");
                 });
