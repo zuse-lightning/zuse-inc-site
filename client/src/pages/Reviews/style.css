@@ -81,6 +81,12 @@
     font-size: 18px !important;
     width: 20%;
     float: right;
+    transition: ease 0.5s !important;
+}
+
+#write-review-btn:hover {
+    background-color: #243557 !important;
+    transition: ease 0.5s !important;
 }
 
 #write-icon {
