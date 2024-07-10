@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Rating, Image, Button, Icon } from "semantic-ui-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import DeleteReviewModal from "../../components/DeleteReviewModal";
 import axios from "axios";
 import moment from "moment";
 import { Header } from "semantic-ui-react";
@@ -62,9 +63,7 @@ const Review = (props) => {
                     <Button id="review-edit-btn" onClick={handleAccess} icon>
                         <Icon name="edit outline" />
                     </Button>
-                    <Button id="review-delete-btn" onClick={handleDelete} icon>
-                        <Icon name="x" />
-                    </Button>
+                    <DeleteReviewModal handleDelete={handleDelete} />
                 </div>
             </div>
             <div id="review">

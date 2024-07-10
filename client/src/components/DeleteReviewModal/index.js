@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Header, Modal } from "semantic-ui-react";
+import { Button, Header, Modal, Icon } from "semantic-ui-react";
 
 import "./style.css";
 
@@ -30,7 +30,7 @@ const DeleteReviewModal = (props) => {
                     Cancel
                 </Button>
                 <Button
-                    content="Log Out"
+                    content="Delete"
                     labelPosition='right'
                     icon='x'
                     onClick={handleDelete}

@@ -47,6 +47,18 @@
     margin-left: 10%;
     margin-top: 2%;
 }
+
+#review-edit-btn, #review-delete-btn {
+    background-color: #f11515 !important;
+    color: white !important;
+    /* font-size: 18px!important; */
+    transition: ease 0.5s !important;
+}
+
+#review-edit-btn:hover, #review-delete-btn:hover {
+    background-color: #243557  !important;
+    transition: ease 0.5s !important;
+}
 /* #write-review-btn {
     background-color: #f11515 !important;
     color: white !important; 
