@@ -17,6 +17,7 @@ const ForgotPassword = (props) => {
 
     const handleChange = (e) => {
         setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
+        console.log(e.target.value);
     };
 
     const handleSubmit = async (e) => {

@@ -24,7 +24,7 @@
     grid-column: 5 / span 4;
 }
 
-#reset-email-input {
+.reset-password-input {
     width: 100% !important;
     padding: 0 4%;
     font-family: "Lato", "Helvetica Neuve";
