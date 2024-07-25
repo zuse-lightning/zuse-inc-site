@@ -80,6 +80,20 @@ const PageBanner = (props) => {
                 { name: "EDIT REVIEW", link: `/edit/${reviewId}` }
             ];
             break;
+        case "/forgot":
+            pageBannerName = "FORGOT PASSWORD";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "FORGOT PASSWORD", link: "/forgot" }
+            ];
+            break;
+        case "/reset":
+            pageBannerName = "RESET PASSWORD";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "RESET PASSWORD", link: "/reset" }
+            ];
+            break;
         case "/services/screenprinting":
             pageBannerName = "SCREEN PRINTING";
             pageBannerBreadcrumbs = [

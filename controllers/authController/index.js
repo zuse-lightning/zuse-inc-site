@@ -112,5 +112,6 @@ module.exports = {
     forgotPassword: (req, res) => {
         handleRequest(req.baseUrl);
         res.json("forgot password");
+        console.log("uh, submitted email, or something, uh huh huh huh");
     }
 };

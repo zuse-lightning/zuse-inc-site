@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Header, Button, Message} from "semantic-ui-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "./style.css";
@@ -10,8 +10,9 @@ const ForgotPassword = (props) => {
     const { whichWebsite } = props;
     const { currentUser, notAuthorized } = props.auth;
     const [inputs, setInputs] = useState({ email: "" });
+    const [submitted, setSubmitted] = useState(false);
     const [err, setError] = useState(null);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const site = whichWebsite(window.location.href, "zuse", "acp", "union");
 
     const handleChange = (e) => {
@@ -22,7 +23,7 @@ const ForgotPassword = (props) => {
         e.preventDefault();
         try {
             await axios.post(`${site}/auth/forgot`, inputs);
-            navigate("/");
+            setSubmitted(true);
         } catch (err) {
             setError(err.response.data);
         };
@@ -31,6 +32,15 @@ const ForgotPassword = (props) => {
     useEffect(() => { 
         notAuthorized();
     }, [currentUser]);
+
+    if (submitted) {
+        return (
+            <div id="forgot-container">
+                <Header as="h1" id="forgot-header">Forgot Password</Header>
+                <Message id="forgot-msg">If an account with that email exists, a password reset link has been sent.</Message>
+            </div>
+        );
+    };
 
     return (
         <div id="forgot-container">
