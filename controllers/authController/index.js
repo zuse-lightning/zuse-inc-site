@@ -85,32 +85,53 @@ module.exports = {
             secure: true
         }).status(200).json("User logged out");
     },
-    resetPassword: (req, res) => {
+    resetPassword: (req, res, email, resetToken, origin) => {
         handleRequest(req.baseUrl);
         res.json("reset password");
         console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
-        const token = req.cookies.access_token;
-        console.log(token);
-        if (!token) return res.status(401).json("Not authenticated!");
-        console.log("token verified");
-        jwt.verify(token, process.env.SECRET, (err, userInfo) => {
-            if (err) return res.status(403).json("Invalid token!");
 
-            db.query(getUserByEmail, [req.body.email], (err, data) => {
-                if (err) return res.json(err);
-                if (data.length === 0) return res.status(404).json("User not found");
+        let message;
 
-                console.log(userInfo.id);
+        if (origin) {
+            const resetUrl = `${origin}/reset?token=${resetToken}email=${email}`;
+            message = `
+                <p>Please click the below link to reset your password, the following link will be valid for only 1 hour:</p>
+                <p><a href="${resetUrl}">${resetUrl}</a></p>
+            `;
+        } else {
+            message = `
+                <p>Please use the below token to reset your password with the <strong>/reset</strong> route:</p>
+                <p><strong>Token:</strong> ${resetToken}</p>
+            `;
+        }
 
-                const salt = bcrypt.genSaltSync(10);
-                const hash = bcrypt.hashSync(req.body.password, salt);
-
-                db.query(resetUserPassword, [req.body.email, hash ], (err, data) => {
-                    if (err) return res.json(err);
-                    return res.status(200).json("Password reset");
-                });
-            });
+        sendEmail({
+            email: req.body.email,
+            subject: "Password Reset",
+            message: message
         });
+        // const token = req.cookies.access_token;
+        // console.log(token);
+        // if (!token) return res.status(401).json("Not authenticated!");
+        // console.log("token verified");
+        // jwt.verify(token, process.env.SECRET, (err, userInfo) => {
+        //     if (err) return res.status(403).json("Invalid token!");
+
+        //     db.query(getUserByEmail, [req.body.email], (err, data) => {
+        //         if (err) return res.json(err);
+        //         if (data.length === 0) return res.status(404).json("User not found");
+
+        //         console.log(userInfo.id);
+
+        //         const salt = bcrypt.genSaltSync(10);
+        //         const hash = bcrypt.hashSync(req.body.password, salt);
+
+        //         db.query(resetUserPassword, [req.body.email, hash ], (err, data) => {
+        //             if (err) return res.json(err);
+        //             return res.status(200).json("Password reset");
+        //         });
+        //     });
+        // });
     },
     forgotPassword: (req, res) => {
         handleRequest(req.baseUrl);
@@ -119,16 +140,8 @@ module.exports = {
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
-            
-            let message;
 
-            
 
-            sendEmail({
-                email: req.body.email,
-                subject: "Password Reset",
-                message: mailTemplate()
-            });
         });
     }
 };
