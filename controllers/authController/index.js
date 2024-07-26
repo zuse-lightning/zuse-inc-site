@@ -88,32 +88,37 @@ module.exports = {
         handleRequest(req.baseUrl);
         res.json("reset password");
         console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
-        // const token = req.cookies.access_token;
-        // console.log(token);
-        // if (!token) return res.status(401).json("Not authenticated!");
+        const token = req.cookies.access_token;
+        console.log(token);
+        if (!token) return res.status(401).json("Not authenticated!");
+        console.log("token verified");
+        jwt.verify(token, process.env.SECRET, (err, userInfo) => {
+            if (err) return res.status(403).json("Invalid token!");
 
-        // jwt.verify(token, process.env.SECRET, (err, userInfo) => {
-        //     if (err) return res.status(403).json("Invalid token!");
+            db.query(getUserByEmail, [req.body.email], (err, data) => {
+                if (err) return res.json(err);
+                if (data.length === 0) return res.status(404).json("User not found");
 
-        //     db.query(getUserByEmail, [req.body.email], (err, data) => {
-        //         if (err) return res.json(err);
-        //         if (data.length === 0) return res.status(404).json("User not found");
+                console.log(userInfo.id);
 
-        //         console.log(userInfo.id);
+                const salt = bcrypt.genSaltSync(10);
+                const hash = bcrypt.hashSync(req.body.password, salt);
 
-        //         const salt = bcrypt.genSaltSync(10);
-        //         const hash = bcrypt.hashSync(req.body.password, salt);
-
-        //         db.query(resetUserPassword, [req.body.email, hash ], (err, data) => {
-        //             if (err) return res.json(err);
-        //             return res.status(200).json("Password reset");
-        //         });
-        //     });
-        // });
+                db.query(resetUserPassword, [req.body.email, hash ], (err, data) => {
+                    if (err) return res.json(err);
+                    return res.status(200).json("Password reset");
+                });
+            });
+        });
     },
     forgotPassword: (req, res) => {
         handleRequest(req.baseUrl);
         res.json("forgot password");
         console.log("uh, submitted email, or something, uh huh huh huh");
+        db.query(getUserByEmail, [req.body.email], (err, data) => {
+            if (err) return res.json(err);
+            if (data.length === 0) return res.status(404).json("User not found");
+            console.log(data[0]);
+        });
     }
 };

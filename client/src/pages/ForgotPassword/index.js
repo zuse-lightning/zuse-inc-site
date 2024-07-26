@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Header, Button, Message} from "semantic-ui-react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import "./style.css";
@@ -17,7 +17,6 @@ const ForgotPassword = (props) => {
 
     const handleChange = (e) => {
         setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
-        console.log(e.target.value);
     };
 
     const handleSubmit = async (e) => {
