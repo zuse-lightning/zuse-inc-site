@@ -5,7 +5,8 @@ module.exports = {
     sendEmail: async (option) => {
         try {
             const transporter = nodemailer.createTransport({
-                service: "gmail",
+                host: "smtp.ethereal.email",
+                port: 587,
                 auth: {
                     user: process.env.EMAIL_USER,
                     pass: process.env.EMAIL_PASSWORD
@@ -19,13 +20,14 @@ module.exports = {
             };
             await transporter.sendMail(mailOption, (err, info) => {
                 if (err) console.log(err);
+                console.log("Email sent");
                 console.log(info);
             });
         } catch (err) {
             console.log(err);
         };
     },
-    mailTemplate: (content, buttonUrl, buttonText) => {
+    mailTemplate: () => {
         return `<!DOCTYPE html>
   <html>
   <body style="text-align: center; font-family: 'Verdana', serif; color: #000;">
@@ -39,9 +41,9 @@ module.exports = {
       "
     >
       <p style="text-align: left;">
-        ${content}
+        Use this link to reset your password. This link will expire in 1 hour.
       </p>
-      <a href="${buttonUrl}" target="_blank">
+      <a href="/reset" target="_blank">
         <button
           style="
             background-color: #444394;
@@ -52,15 +54,15 @@ module.exports = {
             color: #fff;
           "
         >
-          ${buttonText}
+          Reset Password
         </button>
       </a>
       <p style="text-align: left;">
         If you are unable to click the above button, copy paste the below URL into your address bar
       </p>
-      <a href="${buttonUrl}" target="_blank">
+      <a href="/reset" target="_blank">
           <p style="margin: 0px; text-align: left; font-size: 10px; text-decoration: none;">
-            ${buttonUrl}
+            /reset
           </p>
       </a>
     </div>

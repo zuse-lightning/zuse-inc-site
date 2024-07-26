@@ -56,6 +56,7 @@ const ForgotPassword = (props) => {
                     {err ? <Message id="err-msg" error>{err}</Message> : null}
                 </div>
             </form>
+            
         </div>
     );
 };

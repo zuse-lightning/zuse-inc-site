@@ -2,6 +2,7 @@ const db = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { zuse, acp, union } = require("../../models/users");
+const { sendEmail, mailTemplate } = require("../../controllers/emailController");
 
 let getUser;
 let setUserData;
@@ -118,7 +119,16 @@ module.exports = {
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
-            console.log(data[0]);
+            
+            let message;
+
+            
+
+            sendEmail({
+                email: req.body.email,
+                subject: "Password Reset",
+                message: mailTemplate()
+            });
         });
     }
 };
