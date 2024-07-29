@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { zuse, acp, union } = require("../../models/users");
-const { sendEmail, mailTemplate, sendPasswordResetEmail } = require("../../controllers/emailController");
+const { sendEmail, sendPasswordResetEmail } = require("../../controllers/emailController");
 
 let getUser;
 let setUserData;

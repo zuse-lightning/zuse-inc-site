@@ -1,5 +1,21 @@
 const db = require("../../config");
 const nodemailer = require("nodemailer");
+const { zuse, acp, union } = require("../../models/users");
+
+let findValidToken;
+
+const handleRequest = (url) => {
+  if (url === "/api/zuse/auth") {
+    findValidToken = zuse.findValidToken;
+  } else if (url === "/api/acp/auth") {
+    findValidToken = acp.findValidToken;
+  } else if (url === "/api/union/auth") {
+    findValidToken = union.findValidToken;
+  }
+  return {
+    findValidToken
+  };
+};
 
 module.exports = {
     sendEmail: async (option) => {
@@ -49,6 +65,8 @@ module.exports = {
       });
     },
     validateResetToken: async (req, res, next) => {
+      handleRequest(req.baseUrl);
+      console.log(req.baseUrl);
 
       const email = req.body.email;
       const resetToken = req.body.token;
@@ -59,5 +77,13 @@ module.exports = {
 
       const currentTime = new Date(Date.now());
       
+      const token = await db.query(findValidToken, [email, token, currentTime], (err, data) => {
+        if (err) return res.json(err);
+        return data[0];
+      });
+
+      if (!token) return res.status(400).json({ message: "Invalid token!" });
+
+      next();
     }
 }
