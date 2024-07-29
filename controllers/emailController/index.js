@@ -48,46 +48,16 @@ module.exports = {
           <p>If you did not request a password reset, no further action is required.</p>`
       });
     },
-    mailTemplate: () => {
-        return `<!DOCTYPE html>
-  <html>
-  <body style="text-align: center; font-family: 'Verdana', serif; color: #000;">
-    <div
-      style="
-        max-width: 400px;
-        margin: 10px;
-        background-color: #fafafa;
-        padding: 25px;
-        border-radius: 20px;
-      "
-    >
-      <p style="text-align: left;">
-        Use this link to reset your password. This link will expire in 1 hour.
-      </p>
-      <a href="/reset" target="_blank">
-        <button
-          style="
-            background-color: #444394;
-            border: 0;
-            width: 200px;
-            height: 30px;
-            border-radius: 6px;
-            color: #fff;
-          "
-        >
-          Reset Password
-        </button>
-      </a>
-      <p style="text-align: left;">
-        If you are unable to click the above button, copy paste the below URL into your address bar
-      </p>
-      <a href="http://localhost:3000/reset" target="_blank">
-          <p style="margin: 0px; text-align: left; font-size: 10px; text-decoration: none;">
-            /reset
-          </p>
-      </a>
-    </div>
-  </body>
-</html>`;
+    validateResetToken: async (req, res, next) => {
+
+      const email = req.body.email;
+      const resetToken = req.body.token;
+
+      if (!resetToken || !email) {
+        return res.status(400).json({ message: "Token and email are required!" });
+      }
+
+      const currentTime = new Date(Date.now());
+      
     }
 }

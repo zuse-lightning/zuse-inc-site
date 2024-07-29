@@ -3,12 +3,14 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { zuse, acp, union } = require("../../models/users");
-const { sendEmail, mailTemplate } = require("../../controllers/emailController");
+const { sendEmail, mailTemplate, sendPasswordResetEmail } = require("../../controllers/emailController");
 
 let getUser;
 let setUserData;
 let getUserByEmail;
 let resetUserPassword;
+let expireOldTokens;
+let insertResetToken;
 
 const handleRequest = (url) => {
     if (url === "/api/zuse/auth") {
@@ -16,16 +18,22 @@ const handleRequest = (url) => {
         setUserData = zuse.setUserData;
         getUserByEmail = zuse.getUserByEmail;
         resetUserPassword = zuse.resetUserPassword;
+        expireOldTokens = zuse.expireOldTokens;
+        insertResetToken = zuse.insertResetToken;
     } else if (url === "/api/acp/auth") {
         getUser = acp.getUser;
         setUserData = acp.setUserData;
         getUserByEmail = acp.getUserByEmail;
         resetUserPassword = acp.resetUserPassword;
+        expireOldTokens = acp.expireOldTokens;
+        insertResetToken = acp.insertResetToken;
     } else if (url === "/api/union/auth") {
         getUser = union.getUser;
         setUserData = union.setUserData;
         getUserByEmail = union.getUserByEmail;
         resetUserPassword = union.resetUserPassword;
+        expireOldTokens = union.expireOldTokens;
+        insertResetToken = union.insertResetToken;
     };
     return {
         getUser,
@@ -119,7 +127,6 @@ module.exports = {
         handleRequest(req.baseUrl);
         res.json("forgot password");
         console.log("uh, submitted email, or something, uh huh huh huh");
-
         try {
             const email = req.body.email;
             const origin = req.header("Origin");
@@ -131,20 +138,28 @@ module.exports = {
             });
 
             if (!user) return res.json({ status: "ok"});
-            
+            await db.query(expireOldTokens, [used, email], (err, data) => {
+                if (err) return res.json(err);
+                data[0].used = 1;
+                return data;
+            });
+
+            const resetToken = crypto.randomBytes(40).toString("hex");
+            const resetTokenExpires = new Date(Date.now() + 3600000);
+            const createdAt = new Date(Date.now());
+            const expiredAt = resetTokenExpires;
+
+            await db.query(insertResetToken, [email, resetToken, createdAt, expiredAt, used], (err, data) => {
+                if (err) return res.json(err);
+                data[0].used = 0;
+                return data;
+            });
+
+            await sendPasswordResetEmail(email, resetToken, origin);
+            res.json({ message: "Please check email for a new password"});
+            console.log("Check email for new password");
         } catch (err) {
             console.log(err);
-        }
-
-
-        db.query(getUserByEmail, [req.body.email], (err, data) => {
-            if (err) return res.json(err);
-            if (data.length === 0) return res.status(404).json("User not found");
-            sendEmail({
-                email: req.body.email,
-                subject: "Password Reset",
-                message: mailTemplate()
-            });
-        });
+        };
     }
 };
