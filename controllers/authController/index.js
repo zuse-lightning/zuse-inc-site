@@ -1,6 +1,7 @@
 const db = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 const { zuse, acp, union } = require("../../models/users");
 const { sendEmail, mailTemplate } = require("../../controllers/emailController");
 
@@ -114,10 +115,28 @@ module.exports = {
         //     });
         // });
     },
-    forgotPassword: (req, res) => {
+    forgotPassword: async (req, res, next) => {
         handleRequest(req.baseUrl);
         res.json("forgot password");
         console.log("uh, submitted email, or something, uh huh huh huh");
+
+        try {
+            const email = req.body.email;
+            const origin = req.header("Origin");
+
+            const user = await db.query(getUserByEmail, [email], (err, data) => {
+                if (err) return res.json(err);
+                if (data.length === 0) return res.status(404).json("User not found");
+                return data;
+            });
+
+            if (!user) return res.json({ status: "ok"});
+            
+        } catch (err) {
+            console.log(err);
+        }
+
+
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
