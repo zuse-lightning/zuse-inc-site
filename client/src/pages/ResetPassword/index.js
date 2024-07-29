@@ -28,7 +28,7 @@ const ResetPassword = (props) => {
                 setError("Passwords do not match.");
                 return;
             }
-            await axios.post(`${site}/auth/reset`, inputs);
+            await axios.post(`http://localhost:3001/api/${site}/auth/reset`, inputs, { withCredentials: true });
             setSubmitted(true);
         } catch (err) {
             setError(err.response.data);

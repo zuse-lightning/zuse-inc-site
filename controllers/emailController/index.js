@@ -13,7 +13,7 @@ module.exports = {
                 }
             });
             const mailOption = {
-                from: process.env.EMAIL_USER,
+                from: process.env.EMAIL_FROM,
                 to: option.email,
                 subject: option.subject,
                 html: option.message
@@ -26,6 +26,27 @@ module.exports = {
         } catch (err) {
             console.log(err);
         };
+    },
+    sendPasswordResetEmail: async (req, res, email, resetToken, origin) => {
+      let message;
+
+      if (origin) {
+        const resetUrl = `${origin}/api/${site}/auth/reset?token=${resetToken}&email=${email}`;
+        message = `<p>Please click the following link to reset your password: <a href="${resetUrl}">${resetUrl}</a></p>`;
+      } else {
+        message = `<p>Please use the following token to reset your password with the <code>/api/${site}/auth/reset</code> api route:</p>
+        <p><code>${resetToken}</code></p>`;
+      }
+
+      await sendEmail({
+        from: process.env.EMAIL_FROM,
+        to: email,
+        subject: "Password Reset Request",
+        html: `<h4>Password Reset Request</h4>
+          <p>Hello,</p>
+          ${message}
+          <p>If you did not request a password reset, no further action is required.</p>`
+      });
     },
     mailTemplate: () => {
         return `<!DOCTYPE html>
@@ -60,7 +81,7 @@ module.exports = {
       <p style="text-align: left;">
         If you are unable to click the above button, copy paste the below URL into your address bar
       </p>
-      <a href="/reset" target="_blank">
+      <a href="http://localhost:3000/reset" target="_blank">
           <p style="margin: 0px; text-align: left; font-size: 10px; text-decoration: none;">
             /reset
           </p>

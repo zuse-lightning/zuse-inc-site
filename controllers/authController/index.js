@@ -85,31 +85,12 @@ module.exports = {
             secure: true
         }).status(200).json("User logged out");
     },
-    resetPassword: (req, res, email, resetToken, origin) => {
+    resetPassword: (req, res) => {
         handleRequest(req.baseUrl);
         res.json("reset password");
         console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
 
-        let message;
 
-        if (origin) {
-            const resetUrl = `${origin}/reset?token=${resetToken}email=${email}`;
-            message = `
-                <p>Please click the below link to reset your password, the following link will be valid for only 1 hour:</p>
-                <p><a href="${resetUrl}">${resetUrl}</a></p>
-            `;
-        } else {
-            message = `
-                <p>Please use the below token to reset your password with the <strong>/reset</strong> route:</p>
-                <p><strong>Token:</strong> ${resetToken}</p>
-            `;
-        }
-
-        sendEmail({
-            email: req.body.email,
-            subject: "Password Reset",
-            message: message
-        });
         // const token = req.cookies.access_token;
         // console.log(token);
         // if (!token) return res.status(401).json("Not authenticated!");
@@ -140,8 +121,11 @@ module.exports = {
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
-
-
+            sendEmail({
+                email: req.body.email,
+                subject: "Password Reset",
+                message: mailTemplate()
+            });
         });
     }
 };
