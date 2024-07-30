@@ -3,47 +3,56 @@ const nodemailer = require("nodemailer");
 const { zuse, acp, union } = require("../../models/users");
 
 let findValidToken;
+let site;
 
 const handleRequest = (url) => {
   if (url === "/api/zuse/auth") {
     findValidToken = zuse.findValidToken;
+    site = "zuse";
   } else if (url === "/api/acp/auth") {
     findValidToken = acp.findValidToken;
+    site = "acp";
   } else if (url === "/api/union/auth") {
     findValidToken = union.findValidToken;
+    site = "union";
   }
   return {
-    findValidToken
+    findValidToken,
+    site
+  };
+};
+
+const sendEmail = async (option) => {
+  try {
+      const transporter = nodemailer.createTransport({
+          host: "smtp.ethereal.email",
+          port: 587,
+          auth: {
+              user: process.env.EMAIL_USER,
+              pass: process.env.EMAIL_PASSWORD
+          }
+      });
+      const mailOption = {
+          from: process.env.EMAIL_FROM,
+          to: option.email,
+          subject: option.subject,
+          html: option.message
+      };
+      await transporter.sendMail(mailOption, (err, info) => {
+          if (err) console.log(err);
+          console.log("Email sent");
+          console.log(info);
+      });
+  } catch (err) {
+      console.log(err);
   };
 };
 
 module.exports = {
-    sendEmail: async (option) => {
-        try {
-            const transporter = nodemailer.createTransport({
-                host: "smtp.ethereal.email",
-                port: 587,
-                auth: {
-                    user: process.env.EMAIL_USER,
-                    pass: process.env.EMAIL_PASSWORD
-                }
-            });
-            const mailOption = {
-                from: process.env.EMAIL_FROM,
-                to: option.email,
-                subject: option.subject,
-                html: option.message
-            };
-            await transporter.sendMail(mailOption, (err, info) => {
-                if (err) console.log(err);
-                console.log("Email sent");
-                console.log(info);
-            });
-        } catch (err) {
-            console.log(err);
-        };
-    },
     sendPasswordResetEmail: async (req, res, email, resetToken, origin) => {
+      handleRequest(req.baseUrl);
+      console.log(req.baseUrl);
+
       let message;
 
       if (origin) {
@@ -53,7 +62,7 @@ module.exports = {
         message = `<p>Please use the following token to reset your password with the <code>/api/${site}/auth/reset</code> api route:</p>
         <p><code>${resetToken}</code></p>`;
       }
-
+      
       await sendEmail({
         from: process.env.EMAIL_FROM,
         to: email,

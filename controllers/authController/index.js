@@ -123,29 +123,6 @@ module.exports = {
         } catch (err) {
             console.log(err);
         };
-
-        // const token = req.cookies.access_token;
-        // console.log(token);
-        // if (!token) return res.status(401).json("Not authenticated!");
-        // console.log("token verified");
-        // jwt.verify(token, process.env.SECRET, (err, userInfo) => {
-        //     if (err) return res.status(403).json("Invalid token!");
-
-        //     db.query(getUserByEmail, [req.body.email], (err, data) => {
-        //         if (err) return res.json(err);
-        //         if (data.length === 0) return res.status(404).json("User not found");
-
-        //         console.log(userInfo.id);
-
-        //         const salt = bcrypt.genSaltSync(10);
-        //         const hash = bcrypt.hashSync(req.body.password, salt);
-
-        //         db.query(resetUserPassword, [req.body.email, hash ], (err, data) => {
-        //             if (err) return res.json(err);
-        //             return res.status(200).json("Password reset");
-        //         });
-        //     });
-        // });
     },
     forgotPassword: async (req, res, next) => {
         handleRequest(req.baseUrl);
@@ -158,13 +135,14 @@ module.exports = {
             const user = await db.query(getUserByEmail, [email], (err, data) => {
                 if (err) return res.json(err);
                 if (data.length === 0) return res.status(404).json("User not found");
-                return data;
+                return data.values;
             });
 
+            console.log(user.values[0]);
+
             if (!user) return res.json({ status: "ok"});
-            await db.query(expireOldTokens, [used, email], (err, data) => {
+            await db.query(expireOldTokens, [email, req.body.used], (err, data) => {
                 if (err) return res.json(err);
-                data[0].used = 1;
                 return data;
             });
 
@@ -173,9 +151,8 @@ module.exports = {
             const createdAt = new Date(Date.now());
             const expiredAt = resetTokenExpires;
 
-            await db.query(insertResetToken, [email, resetToken, createdAt, expiredAt, used], (err, data) => {
+            await db.query(insertResetToken, [email, resetToken, createdAt, expiredAt, req.body.used], (err, data) => {
                 if (err) return res.json(err);
-                data[0].used = 0;
                 return data;
             });
 
