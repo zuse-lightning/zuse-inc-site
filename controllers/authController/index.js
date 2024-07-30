@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { zuse, acp, union } = require("../../models/users");
-const { sendEmail, sendPasswordResetEmail } = require("../../controllers/emailController");
+const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
 
 let getUser;
 let setUserData;
@@ -94,11 +94,35 @@ module.exports = {
             secure: true
         }).status(200).json("User logged out");
     },
-    resetPassword: (req, res) => {
+    resetPassword: async (req, res) => {
         handleRequest(req.baseUrl);
         res.json("reset password");
         console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
 
+        try {
+            const newPassword = req.body.newPassword;
+            const confirmPassword = req.body.confirmPassword;
+            const email = req.body.email;
+
+            if (newPassword !== confirmPassword) return res.status(400).json("Passwords do not match!");
+            if (!newPassword || !confirmPassword) return res.status(400).json("Password is required!");
+
+            const user = db.query(getUserByEmail, [email], (err, data) => {
+                if (err) return res.json(err);
+                if (data.length === 0) return res.status(404).json("User not found");
+                return data;
+            });
+
+            const salt = bcrypt.genSaltSync(10);
+            const password = bcrypt.hashSync(newPassword, salt);
+
+            await db.query(resetUserPassword, [password, email], (err, data) => {
+                if (err) return res.json(err);
+                return res.status(200).json("Password reset");
+            });
+        } catch (err) {
+            console.log(err);
+        };
 
         // const token = req.cookies.access_token;
         // console.log(token);
