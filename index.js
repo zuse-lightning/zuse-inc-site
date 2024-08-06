@@ -7,6 +7,7 @@ const helmet = require("helmet");
 const { S3Client } = require("@aws-sdk/client-s3");
 const multer = require("multer");
 const multerS3 = require("multer-s3");
+const { mongo } = require("./config");
 
 let s3 = new S3Client({
     region: process.env.AWS_REGION,
@@ -24,6 +25,8 @@ const server = require("http").createServer(app);
 const path = require("path");
 const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
+
+mongo();
 
 //Middlewares
 app.use(express.urlencoded({ extended: true }));
