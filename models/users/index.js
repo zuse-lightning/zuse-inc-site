@@ -1,3 +1,29 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const Joi = require("joi");
+
+const userSchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    }
+});
+
+const User = mongoose.model("user", userSchema);
+
+const validate = (user) => {
+    const schema = Joi.object({
+        name: Joi.string().required(),
+        email: Joi.string().required()
+    });
+
+    return schema.validate(user);
+};
+
 const zuse = {
     getUserByEmail: "SELECT * FROM zuse.users WHERE email = ?",
     setUserData: "INSERT INTO zuse.users (first_name, last_name, email, password) VALUES (?)",
