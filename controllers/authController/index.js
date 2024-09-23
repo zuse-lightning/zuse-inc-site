@@ -2,6 +2,7 @@ const { db } = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
+const { v4: uuidv4 } = require("uuid");
 const { zuse, acp, union } = require("../../models/users");
 // const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
 
@@ -51,10 +52,14 @@ module.exports = {
             if (data.length) return res.json("User already exists");
             if (req.body.password.length < 8) return res.status(403).json("Password must be at least 8 characters long!");
 
+            console.log(data);
+
             const salt = bcrypt.genSaltSync(10);
             const hash = bcrypt.hashSync(req.body.password, salt);
+            const user_id = uuidv4();
 
             const values = [
+                user_id,
                 req.body.first_name,
                 req.body.last_name,
                 req.body.email,

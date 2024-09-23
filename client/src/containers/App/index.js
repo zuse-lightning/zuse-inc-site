@@ -92,7 +92,7 @@ const App = () => {
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
-              <Route exact path="/reset" element={<ResetPassword auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/reset/:id/:token" element={<ResetPassword auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/forgot" element={<ForgotPassword auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/profile/:id" element={<Profile auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/reviews" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />

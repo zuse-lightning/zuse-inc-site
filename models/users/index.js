@@ -26,7 +26,7 @@ const validate = (user) => {
 
 const zuse = {
     getUserByEmail: "SELECT * FROM zuse.users WHERE email = ?",
-    setUserData: "INSERT INTO zuse.users (first_name, last_name, email, password) VALUES (?)",
+    setUserData: "INSERT INTO zuse.users (user_id, first_name, last_name, email, password) VALUES (?)",
     getUser: "SELECT * FROM zuse.users WHERE email = ? OR (first_name = ? AND last_name = ?)",
     resetUserPassword: "UPDATE zuse.users SET password = ? WHERE email = ?",
     insertResetToken: "INSERT INTO zuse.reset_password (email, token_value, created_at, expired_at, used) VALUES (?)",
