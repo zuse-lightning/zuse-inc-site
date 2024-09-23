@@ -1,9 +1,9 @@
-const db = require("../../config");
+const { db } = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const { zuse, acp, union } = require("../../models/users");
-const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
+// const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
 
 let getUser;
 let setUserData;
@@ -71,6 +71,7 @@ module.exports = {
     },
     login: (req, res) => {
         handleRequest(req.baseUrl);
+        console.log("Trying to login");
         db.query(getUserByEmail, [req.body.email], (err, data) => {
             if (err) return res.json(err);
             if (data.length === 0) return res.status(404).json("User not found");
