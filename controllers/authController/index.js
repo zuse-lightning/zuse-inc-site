@@ -7,6 +7,7 @@ const { zuse, acp, union } = require("../../models/users");
 // const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
 
 let getUser;
+let getUserIds;
 let setUserData;
 let getUserByEmail;
 let resetUserPassword;
@@ -16,6 +17,7 @@ let insertResetToken;
 const handleRequest = (url) => {
     if (url === "/api/zuse/auth") {
         getUser = zuse.getUser;
+        getUserIds = zuse.getUserIds;
         setUserData = zuse.setUserData;
         getUserByEmail = zuse.getUserByEmail;
         resetUserPassword = zuse.resetUserPassword;
@@ -47,30 +49,36 @@ const handleRequest = (url) => {
 module.exports = {
     register: (req, res) => {
         handleRequest(req.baseUrl);
-        db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
+        const user_id = uuidv4();
+        db.query(getUserIds, (err, data) => {
             if (err) return res.json(err);
-            if (data.length) return res.json("User already exists");
-            if (req.body.password.length < 8) return res.status(403).json("Password must be at least 8 characters long!");
-
-            console.log(data);
-
-            const salt = bcrypt.genSaltSync(10);
-            const hash = bcrypt.hashSync(req.body.password, salt);
-            const user_id = uuidv4();
-
-            const values = [
-                user_id,
-                req.body.first_name,
-                req.body.last_name,
-                req.body.email,
-                hash
-            ];
-
-            console.log(values);
-
-            db.query(setUserData, [values], (err, data) => {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].user_id === user_id) {
+                    return res.json("User ID already exists");
+                }
+            };
+            db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
                 if (err) return res.json(err);
-                return res.status(200).json("User registered");
+                if (data.length) return res.json("User already exists");
+                if (req.body.password.length < 8) return res.status(403).json("Password must be at least 8 characters long!");
+
+                const salt = bcrypt.genSaltSync(10);
+                const hash = bcrypt.hashSync(req.body.password, salt);
+
+                const values = [
+                    user_id,
+                    req.body.first_name,
+                    req.body.last_name,
+                    req.body.email,
+                    hash
+                ];
+
+                console.log(values);
+
+                db.query(setUserData, [values], (err, data) => {
+                    if (err) return res.json(err);
+                    return res.status(200).json("User registered");
+                });
             });
         });
     },
@@ -146,7 +154,7 @@ module.exports = {
 
             console.log(user.values[0]);
 
-            if (!user) return res.json({ status: "ok"});
+            if (!user) return res.json({ status: "ok" });
             await db.query(expireOldTokens, [email, req.body.used], (err, data) => {
                 if (err) return res.json(err);
                 return data;
@@ -163,7 +171,7 @@ module.exports = {
             });
 
             await sendPasswordResetEmail(email, resetToken, origin);
-            res.json({ message: "Please check email for a new password"});
+            res.json({ message: "Please check email for a new password" });
             console.log("Check email for new password");
         } catch (err) {
             console.log(err);
