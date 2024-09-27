@@ -3,7 +3,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { v4: uuidv4 } = require("uuid");
 const { zuse, acp, union } = require("../../models/users");
-// const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
+const sendEmail = require("../../utils/sendEmail.js");
+console.log(sendEmail);
 
 let getUser;
 let getUserIds;
@@ -146,6 +147,9 @@ module.exports = {
                 if (err) return res.json(err);
                 if (data.length === 0) return res.status(404).json("User not found");
                 console.log(data[0].user_id);
+
+                const token = jwt.sign({ id: data[0].user_id }, process.env.SECRET, { expiresIn: "1h" });
+                sendEmail(req.body.email, "Password Reset", `http://localhost:3000/reset/${data[0].user_id}/${token}`);
             });
         } catch (err) {
             console.log(err);
