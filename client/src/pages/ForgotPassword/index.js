@@ -29,9 +29,9 @@ const ForgotPassword = (props) => {
         };
     };
 
-    useEffect(() => { 
-        notAuthorized();
-    }, [currentUser]);
+    // useEffect(() => { 
+    //     notAuthorized();
+    // }, [currentUser]);
 
     if (submitted) {
         return (

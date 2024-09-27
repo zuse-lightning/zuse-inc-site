@@ -1,7 +1,6 @@
 const { db } = require("../../config");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const crypto = require("crypto");
 const { v4: uuidv4 } = require("uuid");
 const { zuse, acp, union } = require("../../models/users");
 // const { sendEmail, sendPasswordResetEmail, validateResetToken } = require("../../controllers/emailController");
@@ -143,36 +142,11 @@ module.exports = {
         res.json("forgot password");
         console.log("uh, submitted email, or something, uh huh huh huh");
         try {
-            const email = req.body.email;
-            const origin = req.header("Origin");
-
-            const user = await db.query(getUserByEmail, [email], (err, data) => {
+            db.query(getUserByEmail, [req.body.email], (err, data) => {
                 if (err) return res.json(err);
                 if (data.length === 0) return res.status(404).json("User not found");
-                return data.values;
+                console.log(data[0].user_id);
             });
-
-            console.log(user.values[0]);
-
-            if (!user) return res.json({ status: "ok" });
-            await db.query(expireOldTokens, [email, req.body.used], (err, data) => {
-                if (err) return res.json(err);
-                return data;
-            });
-
-            const resetToken = crypto.randomBytes(40).toString("hex");
-            const resetTokenExpires = new Date(Date.now() + 3600000);
-            const createdAt = new Date(Date.now());
-            const expiredAt = resetTokenExpires;
-
-            await db.query(insertResetToken, [email, resetToken, createdAt, expiredAt, req.body.used], (err, data) => {
-                if (err) return res.json(err);
-                return data;
-            });
-
-            await sendPasswordResetEmail(email, resetToken, origin);
-            res.json({ message: "Please check email for a new password" });
-            console.log("Check email for new password");
         } catch (err) {
             console.log(err);
         };
