@@ -4,15 +4,14 @@ const jwt = require("jsonwebtoken");
 const { v4: uuidv4 } = require("uuid");
 const { zuse, acp, union } = require("../../models/users");
 const sendEmail = require("../../utils/sendEmail.js");
-console.log(sendEmail);
 
 let getUser;
+let getUserById;
 let getUserIds;
 let setUserData;
 let getUserByEmail;
 let resetUserPassword;
-let expireOldTokens;
-let insertResetToken;
+
 
 const handleRequest = (url) => {
     if (url === "/api/zuse/auth") {
@@ -21,28 +20,25 @@ const handleRequest = (url) => {
         setUserData = zuse.setUserData;
         getUserByEmail = zuse.getUserByEmail;
         resetUserPassword = zuse.resetUserPassword;
-        expireOldTokens = zuse.expireOldTokens;
-        insertResetToken = zuse.insertResetToken;
+        getUserById = zuse.getUserById;
     } else if (url === "/api/acp/auth") {
         getUser = acp.getUser;
         setUserData = acp.setUserData;
         getUserByEmail = acp.getUserByEmail;
         resetUserPassword = acp.resetUserPassword;
-        expireOldTokens = acp.expireOldTokens;
-        insertResetToken = acp.insertResetToken;
     } else if (url === "/api/union/auth") {
         getUser = union.getUser;
         setUserData = union.setUserData;
         getUserByEmail = union.getUserByEmail;
         resetUserPassword = union.resetUserPassword;
-        expireOldTokens = union.expireOldTokens;
-        insertResetToken = union.insertResetToken;
     };
     return {
         getUser,
         setUserData,
         getUserByEmail,
-        resetUserPassword
+        resetUserPassword,
+        getUserIds,
+        getUserById
     };
 };
 
@@ -108,37 +104,52 @@ module.exports = {
             secure: true
         }).status(200).json("User logged out");
     },
-    resetPassword: async (req, res) => {
+    resetPassword: (req, res) => {
         handleRequest(req.baseUrl);
         res.json("reset password");
         console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
 
         try {
-            const newPassword = req.body.newPassword;
-            const confirmPassword = req.body.confirmPassword;
-            const email = req.body.email;
-
-            if (newPassword !== confirmPassword) return res.status(400).json("Passwords do not match!");
-            if (!newPassword || !confirmPassword) return res.status(400).json("Password is required!");
-
-            const user = db.query(getUserByEmail, [email], (err, data) => {
+            db.query(getUserById, [req.params.id], (err, data) => {
                 if (err) return res.json(err);
-                if (data.length === 0) return res.status(404).json("User not found");
-                return data;
-            });
+                console.log(req.body);
+                const { id, token } = req.params;
+                console.log(data);
+                if (id !== data[0].user_id) return res.status(403).json("Invalid user ID");
+                console.log("validated user ID");
+                if (req.body.newPassword !== req.body.confirmPassword) return res.status(400).json("Passwords do not match");
+                if (!req.body.newPassword || !req.body.confirmPassword) return res.status(400).json("Password is required");
 
-            const salt = bcrypt.genSaltSync(10);
-            const password = bcrypt.hashSync(newPassword, salt);
+                jwt.verify(token, process.env.SECRET, (err, decoded) => {
+                    if (err) return res.status(403).json("Invalid token");
+                    
+                    console.log(req.body.newPassword);
+                    const salt = bcrypt.genSaltSync(10);
+                    const hash = bcrypt.hashSync(req.body.newPassword, salt);
 
-            await db.query(resetUserPassword, [password, email], (err, data) => {
-                if (err) return res.json(err);
-                return res.status(200).json("Password reset");
+                    console.log("hashed out password");
+
+                    const values = [
+                        data[0].user_id,
+                        data[0].email,
+                        hash
+                    ];
+
+                    console.log(values);
+                    console.log("successfully set values");
+
+                    db.query(resetUserPassword, [values], (err, data) => {
+                        console.log("resetting password");
+                        if (err) return res.json(err);
+                        return res.status(200).json("Password reset");
+                    });
+                });
             });
         } catch (err) {
             console.log(err);
         };
     },
-    forgotPassword: async (req, res, next) => {
+    forgotPassword: (req, res) => {
         handleRequest(req.baseUrl);
         res.json("forgot password");
         console.log("uh, submitted email, or something, uh huh huh huh");

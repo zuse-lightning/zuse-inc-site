@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Breadcrumb } from "semantic-ui-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import "./style.css";
 
@@ -9,6 +9,7 @@ const PageBanner = (props) => {
     const { location, whichWebsite } = props;
     const { pathname } = useLocation();
     const reviewId = pathname.split("/")[2];
+    const { id, token } = useParams();
 
     let pageBannerName;
     let pageBannerBreadcrumbs;
@@ -91,7 +92,7 @@ const PageBanner = (props) => {
             pageBannerName = "RESET PASSWORD";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
-                { name: "RESET PASSWORD", link: "/reset" }
+                { name: "RESET PASSWORD", link: `/reset/${id}/${token}` }
             ];
             break;
         case "/services/screenprinting":

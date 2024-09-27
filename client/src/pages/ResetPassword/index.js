@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Header, Button, Message} from "semantic-ui-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 import "./style.css";
@@ -13,6 +13,7 @@ const ResetPassword = (props) => {
     const [submitted, setSubmitted] = useState(false);
     const [err, setError] = useState(null);
     const navigate = useNavigate();
+    const { id, token } = useParams();
     const site = whichWebsite(window.location.href, "zuse", "acp", "union");
 
     console.log(inputs);
@@ -28,7 +29,7 @@ const ResetPassword = (props) => {
                 setError("Passwords do not match.");
                 return;
             }
-            await axios.post(`http://localhost:3001/api/${site}/auth/reset`, inputs, { withCredentials: true });
+            await axios.post(`http://localhost:3001/api/${site}/auth/reset/${id}/${token}`, inputs, { withCredentials: true });
             setSubmitted(true);
         } catch (err) {
             setError(err.response.data);
