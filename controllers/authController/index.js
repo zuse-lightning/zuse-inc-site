@@ -106,9 +106,7 @@ module.exports = {
     },
     resetPassword: (req, res) => {
         handleRequest(req.baseUrl);
-        res.json("reset password");
         console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
-
         try {
             db.query(getUserById, [req.params.id], (err, data) => {
                 if (err) return res.json(err);
@@ -130,9 +128,9 @@ module.exports = {
                     console.log("hashed out password");
 
                     const values = [
-                        data[0].user_id,
+                        hash,
                         data[0].email,
-                        hash
+                        data[0].user_id
                     ];
 
                     console.log(values);
@@ -151,14 +149,12 @@ module.exports = {
     },
     forgotPassword: (req, res) => {
         handleRequest(req.baseUrl);
-        res.json("forgot password");
         console.log("uh, submitted email, or something, uh huh huh huh");
         try {
             db.query(getUserByEmail, [req.body.email], (err, data) => {
                 if (err) return res.json(err);
                 if (data.length === 0) return res.status(404).json("User not found");
                 console.log(data[0].user_id);
-
                 const token = jwt.sign({ id: data[0].user_id }, process.env.SECRET, { expiresIn: "1h" });
                 sendEmail(req.body.email, "Password Reset", `http://localhost:3000/reset/${data[0].user_id}/${token}`);
             });
