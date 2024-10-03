@@ -30,7 +30,7 @@ const zuse = {
     getUserIds: "SELECT user_id FROM zuse.users",
     setUserData: "INSERT INTO zuse.users (user_id, first_name, last_name, email, password) VALUES (?)",
     getUser: "SELECT * FROM zuse.users WHERE email = ? OR (first_name = ? AND last_name = ?)",
-    resetUserPassword: "UPDATE zuse.users SET `password` = ? WHERE `email` = ? AND `user_id` = ?",
+    resetUserPassword: "UPDATE zuse.users SET `password` = ? WHERE `id` = ?",
 };
 
 const acp = {

@@ -127,16 +127,10 @@ module.exports = {
 
                     console.log("hashed out password");
 
-                    const values = [
-                        hash,
-                        data[0].email,
-                        data[0].user_id
-                    ];
-
-                    console.log(values);
+                    console.log(hash, data[0].id);
                     console.log("successfully set values");
 
-                    db.query(resetUserPassword, [values], (err, data) => {
+                    db.query(resetUserPassword, [hash, data[0].id], (err, data) => {
                         console.log("resetting password");
                         if (err) return res.json(err);
                         return res.status(200).json("Password reset");
