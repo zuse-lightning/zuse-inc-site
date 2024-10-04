@@ -22,14 +22,18 @@ const handleRequest = (url) => {
         getUserById = zuse.getUserById;
     } else if (url === "/api/acp/auth") {
         getUser = acp.getUser;
+        getUserIds = acp.getUserIds;
         setUserData = acp.setUserData;
         getUserByEmail = acp.getUserByEmail;
         resetUserPassword = acp.resetUserPassword;
+        getUserById = acp.getUserById;
     } else if (url === "/api/union/auth") {
         getUser = union.getUser;
+        getUserIds = union.getUserIds;
         setUserData = union.setUserData;
         getUserByEmail = union.getUserByEmail;
         resetUserPassword = union.resetUserPassword;
+        getUserById = union.getUserById;
     };
     return {
         getUser,
