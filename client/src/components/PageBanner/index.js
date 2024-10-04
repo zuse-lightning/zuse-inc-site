@@ -8,8 +8,8 @@ const PageBanner = (props) => {
 
     const { location, whichWebsite } = props;
     const { pathname } = useLocation();
-    const reviewId = pathname.split("/")[2];
-    const { id, token } = useParams();
+    const pathId = pathname.split("/")[2];
+    const pathToken = pathname.split("/")[3];
 
     let pageBannerName;
     let pageBannerBreadcrumbs;
@@ -57,12 +57,12 @@ const PageBanner = (props) => {
                 { name: "REVIEWS", link: "/reviews" }
             ];
             break;
-        case `/review/${reviewId}`:
+        case `/review/${pathId}`:
             pageBannerName = "CUSTOMER REVIEW";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
                 { name: "REVIEWS", link: "/reviews" },
-                { name: "CUSTOMER REVIEW", link: `/review/${reviewId}` }
+                { name: "CUSTOMER REVIEW", link: `/review/${pathId}` }
             ];
             break;
         case "/write":
@@ -73,12 +73,12 @@ const PageBanner = (props) => {
                 { name: "WRITE", link: "/write" }
             ];
             break;
-        case `/edit/${reviewId}`:
+        case `/edit/${pathId}`:
             pageBannerName = "EDIT REVIEW";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
                 { name: "REVIEWS", link: "/reviews" },
-                { name: "EDIT REVIEW", link: `/edit/${reviewId}` }
+                { name: "EDIT REVIEW", link: `/edit/${pathId}` }
             ];
             break;
         case "/forgot":
@@ -88,11 +88,11 @@ const PageBanner = (props) => {
                 { name: "FORGOT PASSWORD", link: "/forgot" }
             ];
             break;
-        case "/reset":
+        case `/reset/${pathId}/${pathToken}`:
             pageBannerName = "RESET PASSWORD";
             pageBannerBreadcrumbs = [
                 { name: "HOME", link: "/" },
-                { name: "RESET PASSWORD", link: `/reset/${id}/${token}` }
+                { name: "RESET PASSWORD", link: `/reset/${pathId}/${pathToken}` }
             ];
             break;
         case "/services/screenprinting":

@@ -106,7 +106,6 @@ module.exports = {
     },
     resetPassword: (req, res) => {
         handleRequest(req.baseUrl);
-        console.log("heh, yeah, reset password and stuff, heh heh, cool, heh");
         try {
             db.query(getUserById, [req.params.id], (err, data) => {
                 if (err) return res.json(err);
@@ -143,7 +142,6 @@ module.exports = {
     },
     forgotPassword: (req, res) => {
         handleRequest(req.baseUrl);
-        console.log("uh, submitted email, or something, uh huh huh huh");
         try {
             db.query(getUserByEmail, [req.body.email], (err, data) => {
                 if (err) return res.json(err);
