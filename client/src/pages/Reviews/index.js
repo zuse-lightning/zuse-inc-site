@@ -41,7 +41,10 @@ const Reviews = (props) => {
                     <Button as={Link} to="/write" size="massive" icon labelPosition="right" id="write-review-btn">Write A Review<Icon id="write-icon" name="edit" /></Button>
                 </div>
             </div>
-            <p className="reviews-text">Don't take our word for it, listen to our satisfied customers!</p>
+            <p className="reviews-text">{reviews.length > 0 ? "Don't take our word for it, listen to our satisfied customers!" : "Looks like we don't have any reviews yet, you could be the first!"}</p>
+            {reviews.length > 0 ? null : <div id="reviews-no-result-container">
+                <Image id="reviews-no-result-image" src="https://zuse-inc-bucket.s3.amazonaws.com/no-results-blue.png" />
+            </div>}
             <div id="reviews">
                 {reviews.map((review) => {
                     return (

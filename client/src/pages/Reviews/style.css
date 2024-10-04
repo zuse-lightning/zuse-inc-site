@@ -43,6 +43,17 @@
     padding: 2% 3%;
 }
 
+#reviews-no-result-container {
+    width: 30%;
+    margin: 5% 35%;
+    text-align: center;
+}
+
+#reviews-no-result-image {
+    width: 60%;
+    margin: 0 20%;
+}
+
 .review-card {
     border: solid 1px #d2caca;
     border-radius: 5px;
