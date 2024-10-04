@@ -12,7 +12,6 @@ let setUserData;
 let getUserByEmail;
 let resetUserPassword;
 
-
 const handleRequest = (url) => {
     if (url === "/api/zuse/auth") {
         getUser = zuse.getUser;

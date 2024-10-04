@@ -16,8 +16,6 @@ const ResetPassword = (props) => {
     const { id, token } = useParams();
     const site = whichWebsite(window.location.href, "zuse", "acp", "union");
 
-    console.log(inputs);
-
     const handleChange = (e) => {
         setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
     };
