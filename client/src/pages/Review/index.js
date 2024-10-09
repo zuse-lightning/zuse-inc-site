@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Rating, Image, Button, Icon } from "semantic-ui-react";
+import { Header, Rating, Image, Button, Icon } from "semantic-ui-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import DeleteReviewModal from "../../components/DeleteReviewModal";
 import axios from "axios";
 import moment from "moment";
-import { Header } from "semantic-ui-react";
 
 import "./style.css";
 
