@@ -1,4 +1,4 @@
-const { db } = require("../../config");
+const db = require("../../config");
 const jwt = require("jsonwebtoken");
 const { zuse, acp, union } = require("../../models/reviews");
 
