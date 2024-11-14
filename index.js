@@ -30,7 +30,8 @@ const allowedOrigins = [
     "http://localhost:3001",
     "https://www.zuse.com",
     "https://www.americancontractprinting.com",
-    "https://www.americanunionprint.com"
+    "https://www.americanunionprint.com",
+    "https://zuse-inc-site-f7c4b104cb54.herokuapp.com"
 ];
 const PORT = process.env.PORT || 3001;
 

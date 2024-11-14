@@ -15,6 +15,7 @@ const HomeContactForm = (props) => {
 
     const FORM_ENDPOINT = whichWebsite(location, ZUSE_ENDPOINT, ACP_ENDPOINT, UNION_ENDPOINT);
     const homeContactAddress = whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471");
+    const homeContactPhone = whichWebsite(location, "203-458-3295", "203-458-3295", "203-410-8574");
 
     let contactFormColumns = new Array(8);
     for (let i = 0; i < contactFormColumns.length; i++) {
@@ -105,7 +106,7 @@ const HomeContactForm = (props) => {
                     <Grid.Column width={contactFormColumns[0]}>
                         <Header as="h1" id="home-contact-header">Request A Call Back</Header>
                         <Header as="h3" id="home-contact-subheader">If you have any further questions, feel free to fill out your information and let us know!</Header>
-                        <p id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />203-458-3295</p>
+                        <p id="home-contact-phone-number" as="h4"><Icon id="home-contact-phone-icon" name="phone" />{homeContactPhone}</p>
                         <p id="home-contact-address" as="h4"><Icon id="home-contact-map-icon" name="map pin" />{homeContactAddress}</p>
                     </Grid.Column>
                     <Grid.Column width={contactFormColumns[1]}>
