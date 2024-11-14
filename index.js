@@ -1,8 +1,10 @@
 require("dotenv").config();
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const crypto = require("crypto");
 const helmet = require("helmet");
 const { S3Client } = require("@aws-sdk/client-s3");
 const multer = require("multer");
@@ -22,20 +24,47 @@ let s3 = new S3Client({
 const app = express();
 const server = require("http").createServer(app);
 const path = require("path");
-const routes = require("./routes");
+// const routes = require("./routes");
+const allowedOrigins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://www.zuse.com",
+    "https://www.americancontractprinting.com",
+    "https://www.americanunionprint.com"
+];
 const PORT = process.env.PORT || 3001;
 
 //Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors({
+    origin: (origin, callback) => {
+        if (allowedOrigins.includes(origin) || !origin) {
+            callback(null, true);
+        } else {
+            callback(new Error("Origin not allowed by CORS"));
+        }
+    },
+    credentials: true
+}));
 app.use(bodyParser.json());
-app.use(cors({ credentials: true, origin: "http://localhost:3000"}));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use(helmet({
     contentSecurityPolicy: {
         directives: {
             ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-            "img-src": ["'self'", "s3.amazonaws.com"],
+            "connect-src": [
+                "'self'",
+                "www.zuse.com",
+                "www.americancontractprinting.com",
+                "www.americanunionprint.com"
+            ],
+            "img-src": [
+                "'self'",
+                "zuse-inc-bucket.s3.amazonaws.com",
+                "zuse-inc-bucket.s3.us-east-1.amazonaws.com"
+            ],
         }
     }
 }));
@@ -54,7 +83,7 @@ const upload = multer({
     })
 });
 
-app.use(routes);
+// app.use(routes);
 
 app.post("/upload", upload.single("writeFile"), (req, res) => {
     console.log("uploading file");
