@@ -9,7 +9,7 @@ const AnnouncementBar = (props) => {
     return (
         <>
             {screenWidth >= 768 ? <DesktopAnnouncment auth={auth} screenWidth={screenWidth} whichWebsite={whichWebsite} location={location} /> : null}
-            {screenWidth <= 767 ? <MobileAnnouncment auth={auth} screenWidth={screenWidth} /> : null}
+            {screenWidth <= 767 ? <MobileAnnouncment auth={auth} screenWidth={screenWidth} whichWebsite={whichWebsite} location={location} /> : null}
         </>
     );
 };

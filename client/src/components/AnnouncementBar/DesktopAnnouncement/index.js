@@ -10,11 +10,12 @@ const DesktopAnnouncment = (props) => {
     const { screenWidth, whichWebsite, location } = props;
     const { currentUser, logout } = props.auth;
     const address = whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471");
+    const phoneNumber = whichWebsite(location, "203-458-3295", "203-458-3295", "203-410-8574");
 
     return (
         <div id="announcement-container">
             <div className="announce-col">
-                <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />203-458-3295</Header>
+                <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</Header>
             </div>
             <div className="announce-col">
                 <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header>

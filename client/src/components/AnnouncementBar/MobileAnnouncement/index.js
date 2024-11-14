@@ -6,12 +6,13 @@ import "../style.css";
 
 const MobileAnnouncment = (props) => {
 
-    const { screenWidth } = props;
+    const { screenWidth, whichWebsite, location } = props;
+    const phoneNumber = whichWebsite(location, "203-458-3295", "203-458-3295", "203-410-8574");
 
     return (
         <div id="announcement-container">
             <div className="announce-col">
-                <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />203-458-3295</p>
+                <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</p>
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
