@@ -17,7 +17,7 @@ const upload = multer({
     storage: multerS3({
         s3: s3,
         acl: "public-read",
-        bucket: process.env.AWS_BUCKET_NAME,
+        bucket: process.env.BUCKET_NAME,
         key: (req, file, cb) => {
             console.log(file);
             const fullPath = `review-images/${file.originalname}`;
