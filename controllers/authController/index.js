@@ -11,6 +11,7 @@ let getUserIds;
 let setUserData;
 let getUserByEmail;
 let resetUserPassword;
+let site;
 
 const handleRequest = (url) => {
     if (url === "/api/zuse/auth") {
@@ -20,6 +21,7 @@ const handleRequest = (url) => {
         getUserByEmail = zuse.getUserByEmail;
         resetUserPassword = zuse.resetUserPassword;
         getUserById = zuse.getUserById;
+        site = "https://www.zuse.com";
     } else if (url === "/api/acp/auth") {
         getUser = acp.getUser;
         getUserIds = acp.getUserIds;
@@ -27,6 +29,7 @@ const handleRequest = (url) => {
         getUserByEmail = acp.getUserByEmail;
         resetUserPassword = acp.resetUserPassword;
         getUserById = acp.getUserById;
+        site = "https://www.americancontractprinting.com";
     } else if (url === "/api/union/auth") {
         getUser = union.getUser;
         getUserIds = union.getUserIds;
@@ -34,6 +37,7 @@ const handleRequest = (url) => {
         getUserByEmail = union.getUserByEmail;
         resetUserPassword = union.resetUserPassword;
         getUserById = union.getUserById;
+        site = "https://www.americanunionprint.com";
     };
     return {
         getUser,
@@ -41,7 +45,8 @@ const handleRequest = (url) => {
         getUserByEmail,
         resetUserPassword,
         getUserIds,
-        getUserById
+        getUserById,
+        site
     };
 };
 
@@ -151,7 +156,7 @@ module.exports = {
                 if (data.length === 0) return res.status(404).json("User not found");
                 console.log(data[0].user_id);
                 const token = jwt.sign({ id: data[0].user_id }, process.env.SECRET, { expiresIn: "1h" });
-                sendEmail(req.body.email, "Password Reset", `http://localhost:3000/reset/${data[0].user_id}/${token}`);
+                sendEmail(req.body.email, "Password Reset", `${site}/reset/${data[0].user_id}/${token}`);
             });
         } catch (err) {
             console.log(err);
