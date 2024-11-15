@@ -24,7 +24,7 @@ let s3 = new S3Client({
 const app = express();
 const server = require("http").createServer(app);
 const path = require("path");
-// const routes = require("./routes");
+const routes = require("./routes");
 const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:3001",
@@ -84,7 +84,7 @@ const upload = multer({
     })
 });
 
-// app.use(routes);
+app.use(routes);
 
 app.post("/upload", upload.single("writeFile"), (req, res) => {
     console.log("uploading file");
