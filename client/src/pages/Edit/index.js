@@ -25,7 +25,7 @@ const Edit = (props) => {
         try {
             const formData = new FormData();
             formData.append("writeFile", file);
-            const res = await axiosInstance.post("/upload", formData);
+            const res = await axiosInstance.post(`${site}/upload`, formData);
             return res.data;
         } catch (err) {
             console.log(err);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Header, Button, Message } from "semantic-ui-react";
-import axios from "axios";
+import { axiosInstance } from "../../utils/api";
 
 import "./style.css";
 
@@ -26,7 +26,7 @@ const Register = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${site}/auth/register`, inputs);
+            await axiosInstance.post(`${site}/auth/register`, inputs);
             navigate("/login");
         } catch (err) {
             console.error(err.response.data);

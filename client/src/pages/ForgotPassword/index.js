@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Header, Button, Message} from "semantic-ui-react";
 // import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { axiosInstance } from "../../utils/api";
 
 import "./style.css";
 
@@ -22,7 +22,7 @@ const ForgotPassword = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${site}/auth/forgot`, inputs);
+            await axiosInstance.post(`${site}/auth/forgot`, inputs);
             setSubmitted(true);
         } catch (err) {
             setError(err.response.data);

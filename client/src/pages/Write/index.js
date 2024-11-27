@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Header, Rating } from "semantic-ui-react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { axiosInstance } from "../../utils/api";
 import moment from "moment";
 
 import "./style.css";
@@ -21,7 +21,7 @@ const Write = (props) => {
         try {
             const formData = new FormData();
             formData.append("writeFile", file);
-            const res = await axios.post("http://localhost:3001/upload", formData);
+            const res = await axiosInstance.post(`${site}/upload`, formData);
             return res.data;
         } catch (err) {
             console.log(err);
@@ -41,7 +41,7 @@ const Write = (props) => {
         e.preventDefault();
         const imgUrl = await upload();
         try {
-            const res = await axios.post(`${site}/reviews`, {
+            const res = await axiosInstance.post(`${site}/reviews`, {
                 rating: rating,
                 text: text,
                 date: moment().format("YYYY-MM-DD"),

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Header, Rating, Image, Button, Icon } from "semantic-ui-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import DeleteReviewModal from "../../components/DeleteReviewModal";
-import axios from "axios";
+import { axiosInstance } from "../../utils/api";
 import moment from "moment";
 
 import "./style.css";
@@ -21,7 +21,7 @@ const Review = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`http://localhost:3001/api/${site}/reviews/${reviewId}`);
+                const res = await axiosInstance.get(`${site}/reviews/${reviewId}`);
                 setReview(res.data);
             } catch (err) {
                 console.log(err);
@@ -41,7 +41,7 @@ const Review = (props) => {
     const handleDelete = async () => {
         try {
             if (currentUser.id !== review.uid) alert("You cannot delete someone else's review!");
-            await axios.delete(`http://localhost:3001/api/${site}/reviews/${reviewId}`, { withCredentials: true });
+            await axiosInstance.delete(`${site}/reviews/${reviewId}`);
             navigate("/reviews");
         } catch (err) {
             console.log(err);
