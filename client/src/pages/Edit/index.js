@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Header, Rating } from "semantic-ui-react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { axiosInstance } from "../../utils/api";
 import moment from "moment";
 
 import "./style.css";
@@ -25,7 +25,7 @@ const Edit = (props) => {
         try {
             const formData = new FormData();
             formData.append("writeFile", file);
-            const res = await axios.post("http://localhost:3001/upload", formData);
+            const res = await axiosInstance.post("/upload", formData);
             return res.data;
         } catch (err) {
             console.log(err);
@@ -46,7 +46,7 @@ const Edit = (props) => {
         const imgUrl = await upload();
         try {
             if (currentUser.id !== review.uid) alert("You cannot edit someone else's review!");
-            const res = await axios.put(`http://localhost:3001/api/${site}/reviews/${reviewId}`, {
+            const res = await axiosInstance.put(`${site}/reviews/${reviewId}`, {
                 rating: rating,
                 text: text,
                 date: moment().format("YYYY-MM-DD"),
@@ -70,7 +70,7 @@ const Edit = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`http://localhost:3001/api/${site}/reviews/${reviewId}`);
+                const res = await axiosInstance.get(`${site}/reviews/${reviewId}`);
                 setReview(res.data);
             } catch (err) {
                 console.log(err);

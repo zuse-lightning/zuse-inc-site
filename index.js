@@ -49,7 +49,6 @@ app.use(cors({
     credentials: true
 }));
 app.use(bodyParser.json());
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.use(helmet({
     contentSecurityPolicy: {

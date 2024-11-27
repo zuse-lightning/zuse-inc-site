@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { whichWebsite, useCurrentUrl } from "../containers/App";
-import axios from "axios";
+import { axiosInstance } from "../utils/api";
 
 export const AuthContext = createContext();
 
@@ -23,12 +23,12 @@ export const AuthContextProvider = ({ children }) => {
     };
 
     const login = async (inputs) => {
-        const res = await axios.post(`${site}/auth/login`, inputs, { withCredentials: true });
+        const res = await axiosInstance.post(`${site}/auth/login`, inputs, { withCredentials: true });
         setCurrentUser(res.data);
     };
 
     const logout = async () => {
-        await axios.post(`http://localhost:3001/api/${site}/auth/logout/`, {}, { withCredentials: true });
+        await axiosInstance.post(`${site}/auth/logout/`, {}, { withCredentials: true });
         setCurrentUser(null);
         navigate("/");
     };

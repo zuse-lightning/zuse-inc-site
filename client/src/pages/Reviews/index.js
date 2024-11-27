@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button, Header, Image, Icon, Rating } from "semantic-ui-react";
-import axios from "axios";
+import { axiosInstance } from "../../utils/api";
 import moment from "moment";
 
 import "./style.css";
@@ -18,7 +18,7 @@ const Reviews = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${site}/reviews`);
+                const res = await axiosInstance.get(`${site}/reviews`);
                 setReviews(res.data);
             } catch (err) {
                 console.log(err);
