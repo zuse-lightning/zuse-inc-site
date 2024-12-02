@@ -17,6 +17,7 @@ const Review = (props) => {
     const location = useLocation();
     const navigate = useNavigate();
     const reviewId = location.pathname.split("/")[2];
+    console.log(currentUser, review.uid);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -31,7 +32,7 @@ const Review = (props) => {
     }, [reviewId]);
 
     const handleAccess = async () => {
-        if (currentUser.id !== review.uid) {
+        if (currentUser === null || currentUser.id !== review.uid) {
             alert("You cannot edit someone else's review!");
         } else {
             navigate(`/edit/${reviewId}`);
@@ -40,7 +41,7 @@ const Review = (props) => {
 
     const handleDelete = async () => {
         try {
-            if (currentUser.id !== review.uid) alert("You cannot delete someone else's review!");
+            if (currentUser === null || currentUser.id !== review.uid) alert("You cannot delete someone else's review!");
             await axiosInstance.delete(`${site}/reviews/${reviewId}`);
             navigate("/reviews");
         } catch (err) {
