@@ -72,7 +72,7 @@ const Review = (props) => {
                     <p id="review-date">{moment(review.date).format("MMMM Do YYYY")}</p>
                 </div>
                 <div className="review-col">
-                    <Image src={review.image} />
+                    <Image src={review.image} draggable="false" />
                 </div>
             </div>
         </div>

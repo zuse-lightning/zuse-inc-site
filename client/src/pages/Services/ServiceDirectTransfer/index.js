@@ -39,7 +39,7 @@ const ServiceDirectTransfer = (props) => {
             />
             <div id="dtg-dtf-container">
                 <Header as="h1" id="dtg-dtf-header">Direct Transfer</Header>
-                <Image fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/dtg-dtf-textless.png" />
+                <Image fluid src="https://zuse-inc-bucket.s3.amazonaws.com/banners/dtg-dtf-textless.png" draggable="false" />
                 <br />
                 <Header as="h2" className="dtg-dtf-subheader">How It Works</Header>
                 <br />
