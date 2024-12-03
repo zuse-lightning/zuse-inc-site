@@ -10,7 +10,7 @@ import "./style.css";
 const Review = (props) => {
 
     const { currentUser, notAuthorized } = props.auth;
-    const { whichWebsite } = props;
+    const { whichWebsite, screenWidth } = props;
     const [review, setReview] = useState({});
     const site = whichWebsite(window.location.href, "zuse", "acp", "union");
 
@@ -61,9 +61,10 @@ const Review = (props) => {
                 </div>
                 <div className="review-header-col">
                     <Button id="review-edit-btn" onClick={handleAccess} icon>
+                        {screenWidth <= 516 ? "Edit " : null}
                         <Icon name="edit outline" />
                     </Button>
-                    <DeleteReviewModal handleDelete={handleDelete} />
+                    <DeleteReviewModal handleDelete={handleDelete} screenWidth={screenWidth} />
                 </div>
             </div>
             <div id="review">

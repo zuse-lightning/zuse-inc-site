@@ -96,7 +96,7 @@ const App = () => {
               <Route exact path="/forgot" element={<ForgotPassword auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/profile/:id" element={<Profile auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/reviews" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
-              <Route exact path="/review/:id" element={<Review auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/review/:id" element={<Review auth={auth} whichWebsite={whichWebsite} screenWidth={width} />} />
               <Route exact path="/write" element={<Write auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/edit/:id" element={<Edit auth={auth} whichWebsite={whichWebsite} />} />
             </Routes>

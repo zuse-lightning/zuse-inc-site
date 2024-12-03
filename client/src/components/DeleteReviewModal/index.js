@@ -5,7 +5,7 @@ import "./style.css";
 
 const DeleteReviewModal = (props) => {
 
-    const { handleDelete } = props;
+    const { handleDelete, screenWidth } = props;
     const [open, setOpen] = useState(false);
 
     return (
@@ -15,6 +15,7 @@ const DeleteReviewModal = (props) => {
             open={open}
             trigger={
                 <Button id="review-delete-btn" icon>
+                    {screenWidth <= 516 ? "Delete " : null}
                     <Icon name="x" />
                 </Button>
             }
