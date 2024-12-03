@@ -81,6 +81,7 @@
     #review-container {
         width: 70%;
         margin: 0 15%;
+        padding: 2%;
     }
 
     .review-col:nth-child(1) {
@@ -90,6 +91,10 @@
     .review-col:nth-child(2) {
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
+    }
+
+    #review-header-container {
+        margin: 2% 2% 5%;
     }
 }
 
