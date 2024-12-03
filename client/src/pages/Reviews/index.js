@@ -48,7 +48,7 @@ const Reviews = (props) => {
             <div id="reviews">
                 {reviews.map((review) => {
                     return (
-                        review.rating < 3 ? null : <div key={review.id} className="review-col">
+                        review.rating < 3 ? null : <div key={review.id} className="review-card-col">
                             <Link to={`/review/${review.id}`}><div className="review-card">
                                 <Image className="review-card-image" src={review.image} draggable="false" />
                                 <Rating className="review-card-rating" maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
