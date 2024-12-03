@@ -205,6 +205,13 @@
     }
 }
 
+@media (max-width: 516px) {
+    #register-container {
+        width: 100%;
+        margin: 5% 0%;
+    }
+}
+
 @media (max-width: 361px) {
     .register-form-col:nth-child(1) {
         grid-column: 2 / span 10;
