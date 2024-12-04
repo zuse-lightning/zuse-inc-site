@@ -59,7 +59,7 @@ const ServiceShopifyStore = (props) => {
                     but exceed their expectations, leaving a lasting impression that fosters brand loyalty.
                 </p>
                 <br />
-                <Header as="h2" className="shopify-subheader">What You'll Get</Header>
+                <Header as="h2" className="shopify-subheader" id="shopify-subheader2">What You'll Get</Header>
                 <p className="shopify-text">Select one of our Shopify sites below to see for yourself!</p>
                 <div id="shopify-results-container">
                     {shopifyResults.map((result, index) => (

@@ -61,10 +61,12 @@
         grid-template-columns: repeat(2, 1fr);
         row-gap: 20px;
     }
+    #shopify-subheader2 {
+        margin-bottom: 5%;
+    }
 }
 
-@media (max-width: 767px) and (min-width: 362px),
-(max-width: 361px) {
+@media (max-width: 767px) and (min-width: 517px) {
     #shopify-container {
         width: 70%;
         margin: 0 15%;
@@ -74,6 +76,25 @@
         row-gap: 20px;
     }
     #shopify-header {
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 516px) {
+    #shopify-container {
+        width: 100%;
+        margin: 0%;
+        padding: 5%;
+    }
+    #shopify-results-container { 
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+    #shopify-header {
+        margin-bottom: 10%;
+    }
+
+    #shopify-subheader2 {
         margin-bottom: 10%;
     }
 }
