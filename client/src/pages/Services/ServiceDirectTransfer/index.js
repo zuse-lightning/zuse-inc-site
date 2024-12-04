@@ -70,7 +70,7 @@ const ServiceDirectTransfer = (props) => {
                     high-quality solutions. Let us bring your designs to life with precision and expertise.
                 </p>
                 <br />
-                <Header as="h2" className="dtg-dtf-subheader">What You'll Get With DTG</Header>
+                <Header as="h2" className="dtg-dtf-subheader" id="dtg-dtf-subheader2">What You'll Get With DTG</Header>
                 <div className="dtg-dtf-results-container">
                     {DTGResults.map((result, index) => (
                         <div className="dtg-dtf-result-col" key={index}>
@@ -78,7 +78,7 @@ const ServiceDirectTransfer = (props) => {
                         </div>
                     ))}
                 </div>
-                <Header as="h2" className="dtg-dtf-subheader">What You'll Get With DTF</Header>
+                <Header as="h2" className="dtg-dtf-subheader" id="dtg-dtf-subheader3">What You'll Get With DTF</Header>
                 <div className="dtg-dtf-results-container">
                     {DTFResults.map((result, index) => (
                         <div className="dtg-dtf-result-col" key={index}>
