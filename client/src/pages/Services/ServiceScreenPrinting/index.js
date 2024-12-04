@@ -16,6 +16,8 @@ const screenPrintingResults = [
     "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen10.jpg"
 ];
 
+console.log(document.getElementsByClassName("screen-printing-subheader"));
+
 const ServiceScreenPrinting = (props) => {
 
     const { location, whichWebsite } = props;
@@ -68,7 +70,7 @@ const ServiceScreenPrinting = (props) => {
                     Whether you're looking to create custom apparel for your team, promotional items for your business, or branded merchandise for your event, our screen printing services offer a reliable and cost-effective solution.
                 </p>
                 <br />
-                <Header as="h2" className="screen-printing-subheader">What You'll Get</Header>
+                <Header as="h2" className="screen-printing-subheader" id="screen-printing-subheader2">What You'll Get</Header>
                 <div id="screen-printing-results-container">
                     {screenPrintingResults.map((result, index) => (
                         <div className="screen-printing-result-col" key={index}>

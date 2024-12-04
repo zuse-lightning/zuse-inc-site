@@ -37,6 +37,7 @@
 .screen-printing-result-img {
     width: 80%!important;
     height: auto!important;
+    margin: 0 10%;
 }
 
 @media (max-width: 2030px) and (min-width: 1700px),
@@ -58,10 +59,13 @@
         grid-template-columns: repeat(2, 1fr);
         row-gap: 20px;
     }
+
+    #screen-printing-subheader2 {
+        margin-bottom: 5%;
+    }
 }
 
-@media (max-width: 767px) and (min-width: 362px),
-(max-width: 361px) {
+@media (max-width: 767px) and (min-width: 517px) {
     #screen-printing-container {
         width: 70%;
         margin: 0 15%;
@@ -72,5 +76,24 @@
     }
     #screen-printing-header {
         margin-bottom: 10%;
+    }
+}
+@media (max-width: 516px) {
+    #screen-printing-container {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+
+    #screen-printing-results-container { 
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+    #screen-printing-header {
+        margin-bottom: 10%;
+    }
+
+    #screen-printing-subheader2 {
+        margin-bottom: 15%;
     }
 }

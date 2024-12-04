@@ -158,7 +158,7 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 362px) {
+@media (max-width: 767px) and (min-width: 517px) {
     #our-services-container {
         width: 70%;
         margin: 0 15%;
@@ -189,12 +189,38 @@
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 516px) {
     #our-services-container {
-        width: 70%;
-        margin: 0 15%;
+        width: 100%;
+        margin: 5% 0;
     }
 
+    #our-services-header {
+        text-align: center;
+        margin: 4% 0 10%;
+    }
+
+    #services-container {
+        grid-template-columns: repeat(1, 1fr); 
+        width: 80%;
+        margin: 5% 10%;
+    }
+
+    .services-card-image { 
+        width: 30%;
+        margin: 0 35%;
+    }
+
+    .services-card-header {
+        margin: 5% 0;
+    }
+    .services-card-btn {
+        width: 100%!important;
+        margin: 0 0%!important;
+    }
+}
+
+@media (max-width: 361px) {
     #our-services-header {
         text-align: center;
         margin-top: 4%;
