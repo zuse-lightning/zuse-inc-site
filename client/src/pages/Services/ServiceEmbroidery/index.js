@@ -71,7 +71,7 @@ const ServiceEmbroidery = (props) => {
                     our embroidery services will deliver exceptional results that you'll be proud to wear and display.
                 </p>
                 <br />
-                <Header as="h2" className="embroidery-subheader">What You'll Get</Header>
+                <Header as="h2" className="embroidery-subheader" id="embroidery-subheader2">What You'll Get</Header>
                 <div id="embroidery-results-container">
                     {embroideryResults.map((result, index) => (
                         <div className="embroidery-result-col" key={index}>
