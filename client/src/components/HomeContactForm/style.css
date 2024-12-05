@@ -213,7 +213,7 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 362px) {
+@media (max-width: 767px) and (min-width: 517px) {
 
     #home-contact-form-container,
     #home-thank-you-container {
@@ -283,12 +283,12 @@
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 516px) {
 
     #home-contact-form-container,
     #home-thank-you-container {
-        width: 70%;
-        margin: 0 15%;
+        width: 100%;
+        margin: 0%;
     }
 
     #home-form-field-row:nth-child(1) {

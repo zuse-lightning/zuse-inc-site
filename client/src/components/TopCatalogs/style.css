@@ -101,15 +101,17 @@
     #catalogs-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .catalog-col:has(#charles-river) {
         margin-top: 11%;
     }
+
     #top-catalogs-header {
         text-align: center;
     }
 }
 
-@media (max-width: 767px) and (min-width: 362px) {
+@media (max-width: 767px) and (min-width: 517px) {
     #top-catalogs-container {
         width: 70%;
         margin: 0 15%;
@@ -119,18 +121,20 @@
     #catalogs-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .catalog-col:has(#charles-river) {
         margin-top: 11%;
     }
+
     #top-catalogs-header {
         text-align: center;
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 516px) {
     #top-catalogs-container {
-        width: 70%;
-        margin: 0 15%;
+        width: 100%;
+        margin: 0%;
         padding-bottom: 3%;
     }
 

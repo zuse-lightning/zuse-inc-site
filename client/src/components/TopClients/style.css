@@ -89,7 +89,7 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 362px) {
+@media (max-width: 767px) and (min-width: 517px) {
     #top-clients-container {
         width: 70%;
         margin: 0 15%;
@@ -107,10 +107,10 @@
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 516px) {
     #top-clients-container {
-        width: 70%;
-        margin: 0 15%;
+        width: 100%;
+        margin: 0%;
     }
 
     #clients-container {

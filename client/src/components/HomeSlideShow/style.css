@@ -88,7 +88,7 @@
     }
 }
 
-@media (max-width: 767px) and (min-width: 362px) {
+@media (max-width: 767px) and (min-width: 517px) {
     .home-slideshow-dots {
         width: 70%;
         margin: 0 15%;
@@ -102,10 +102,10 @@
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width: 516px) {
     .home-slideshow-dots {
-        width: 70%;
-        margin: 0 15%;
+        width: 100%;
+        margin: 0%;
     }
     .home-slideshow-slider {
         margin-bottom: -1.3%;
