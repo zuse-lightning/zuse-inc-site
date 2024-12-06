@@ -25,7 +25,8 @@
      margin: 0;
  }
 
- .announce-social-icon-wrapper, .announce-contact-wrapper {
+ .announce-social-icon-wrapper,
+ .announce-contact-wrapper {
      display: flex;
  }
 
@@ -44,14 +45,10 @@
 
  @media (max-width: 2053px) and (min-width: 1700px) {
      .announce-col:nth-child(1) {
-         grid-column: 2 / span 1;
+         grid-column: 3 / span 6;
      }
 
      .announce-col:nth-child(2) {
-         grid-column: span 6;
-     }
-
-     .announce-col:nth-child(3) {
          grid-column: span 2;
      }
 
@@ -67,43 +64,31 @@
 
  @media (max-width: 1699px) and (min-width: 1200px) {
      .announce-col:nth-child(1) {
-         grid-column: 3 / span 2;
+         grid-column: 3 / span 6;
      }
 
      .announce-col:nth-child(2) {
-         grid-column: span 5;
-     }
-
-     .announce-col:nth-child(3) {
-         grid-column: span 2;
+         grid-column: span 3;
      }
  }
 
  @media (max-width: 1199px) and (min-width: 992px) {
      .announce-col:nth-child(1) {
-         grid-column: 3 / span 3;
+         grid-column: 2 / span 7;
      }
 
      .announce-col:nth-child(2) {
-         grid-column: span 5;
-     }
-
-     .announce-col:nth-child(3) {
-         grid-column: span 2;
+         grid-column: span 3;
      }
  }
 
- @media (max-width: 991px) and (min-width: 801px) {
+ @media (max-width: 991px) and (min-width: 849px) {
      .announce-col:nth-child(1) {
-         grid-column: 2 / span 3;
+         grid-column: 2 / span 7;
      }
 
      .announce-col:nth-child(2) {
-         grid-column: span 6;
-     }
-
-     .announce-col:nth-child(3) {
-         grid-column: span 2;
+         grid-column: span 3;
      }
 
      #announce-facebook-icon {
@@ -116,18 +101,14 @@
      }
  }
 
- @media (max-width: 800px) and (min-width: 768px) {
-     .announce-col:nth-child(1) {
-         grid-column: 2 / span 3;
-     }
+ @media (max-width: 848px) and (min-width: 768px) {
+    .announce-col:nth-child(1) {
+        grid-column: 2 / span 6;
+    }
 
-     .announce-col:nth-child(2) {
-         grid-column: span 6;
-     }
-
-     .announce-col:nth-child(3) {
-         grid-column: span 2;
-     }
+    .announce-col:nth-child(2) {
+        grid-column: span 4;
+    }
 
      #announce-facebook-icon {
          width: 15%;
@@ -140,7 +121,6 @@
  }
 
  @media (max-width: 767px) and (min-width: 362px) {
-
      #announcement-container {
          padding: 3%;
      }
@@ -164,7 +144,6 @@
  }
 
  @media (max-width: 361px) {
-
      #announcement-container {
          padding: 3%;
      }

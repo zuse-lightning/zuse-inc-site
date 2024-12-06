@@ -2,9 +2,3 @@
     margin: 0;
     font-weight: 600;
 }
-
-@media (max-width: 1700px) and (min-width: 1200px) {
-    #login-btn, #logout-btn {
-        margin-top: -1%!important;
-    }
-}

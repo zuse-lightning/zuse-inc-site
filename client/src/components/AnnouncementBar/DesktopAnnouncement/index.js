@@ -17,7 +17,7 @@ const DesktopAnnouncment = (props) => {
             <div className="announce-col">
                 <div className="announce-contact-wrapper">
                     <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</Header>
-                    <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header>
+                    {screenWidth >= 992 ? <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header> : null}
                 </div>
             </div>
             <div className="announce-col">
@@ -43,7 +43,6 @@ const DesktopAnnouncment = (props) => {
                     {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
                     {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
                 </div>
-
             </div>
             {/* <div className="announce-col">
                 {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}

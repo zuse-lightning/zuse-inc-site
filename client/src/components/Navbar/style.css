@@ -76,6 +76,10 @@
     #main-menu {
         padding: 1% 5%;
     }
+
+    .header-nav-item {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 767px) and (min-width: 362px) {
