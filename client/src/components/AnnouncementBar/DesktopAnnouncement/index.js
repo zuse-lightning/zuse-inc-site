@@ -15,10 +15,10 @@ const DesktopAnnouncment = (props) => {
     return (
         <div id="announcement-container">
             <div className="announce-col">
-                <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</Header>
-            </div>
-            <div className="announce-col">
-                <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header>
+                <div className="announce-contact-wrapper">
+                    <Header id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</Header>
+                    <Header id="announce-address" as="h4"><Icon id="announce-map-icon" name="map pin" />{address}</Header>
+                </div>
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
@@ -40,10 +40,10 @@ const DesktopAnnouncment = (props) => {
                         id="announce-instagram-icon"
                         src="https://zuse-inc-bucket.s3.amazonaws.com/instagram-icon-white.png"
                     /> */}
-                {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
-                {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
+                    {currentUser ? <Header id="welcome-user" as="h4">Welcome, {currentUser?.first_name} {currentUser?.last_name}</Header> : null}
+                    {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
                 </div>
-                
+
             </div>
             {/* <div className="announce-col">
                 {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
