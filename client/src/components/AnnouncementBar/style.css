@@ -6,7 +6,7 @@
  }
 
  .announce-col:nth-child(1) {
-     grid-column: 3 / span 5;
+     grid-column: 3 / span 6;
  }
 
  .announce-col:nth-child(2) {
@@ -17,7 +17,7 @@
      color: white;
      font-weight: 600;
      font-size: 16px;
-     margin: 0 6% 0 0;
+     margin: 0 4% 0 0;
  }
 
  #announce-address {
