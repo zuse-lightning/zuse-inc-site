@@ -33,7 +33,7 @@ const Edit = (props) => {
     }
 
     const handleRate = async () => {
-        const reviewRating = document.getElementById("review-rating");
+        const reviewRating = document.getElementById("edit-review-rating");
         Object.keys(reviewRating.children).forEach(key => {
             reviewRating.children[key].addEventListener("click", () => {
                 setRating(reviewRating.children[key].getAttribute("aria-posinset"));
@@ -108,8 +108,8 @@ const Edit = (props) => {
             <form id="edit-form">
                 <div id="edit-form-container">
                     <div className="edit-form-col">
-                        <label id="rating-label" htmlFor="edit-rating">Rating: {rating}</label>
-                        <Rating id="review-rating" name="rating" value={rating} maxRating={5} rating={rating} icon="star" size="huge" />
+                        <label id="rating-label" htmlFor="edit-rating">Rating:</label>
+                        <Rating id="edit-review-rating" name="rating" value={rating} maxRating={5} rating={rating} icon="star" size="huge" />
                     </div>
                     <div className="edit-form-col">
                         <label id="edit-upload-label" htmlFor="writeFile">Upload Product Image:</label>

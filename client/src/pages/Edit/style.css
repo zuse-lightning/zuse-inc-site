@@ -7,6 +7,7 @@
 
 #edit-header {
     padding: 2%;
+    margin-top: 2%;
     text-decoration: underline;
     text-underline-offset: 20px;
     text-decoration-color: #f11515;
@@ -15,7 +16,7 @@
 
 .edit-text {
     width: 80%;
-    margin: 0 10%;
+    margin: 0 10% 5%;
     font-size: 18px;
     text-align: center;
 }
@@ -42,6 +43,11 @@
     height: 300px;
 }
 
+#edit-review-rating {
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
 #rating-label, #edit-upload-label,
 #edit-review-label {
     font-size: 20px;
@@ -49,10 +55,83 @@
 
 #edit-submit-btn {
     width: 20%;
+    margin: 0 40%;
     height: 60px;
     background-color: #f11515;
+    transition: ease 0.5s !important;
     border: solid 1px transparent;
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
-    cursor: pointer !important
+    cursor: pointer !important;
+}
+
+#edit-submit-btn:hover {
+    background-color: #243557 !important;
+    transition: ease 0.5s !important;
+}
+
+@media (max-width: 2300px) and (min-width: 1954px) {
+    #edit-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media (max-width: 1953px) and (min-width: 1700px) {
+    #edit-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #edit-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #edit-form-container {
+        width: 80%;
+        margin: 2% 10%;
+    }
+
+    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #edit-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #edit-form-container {
+        width: 80%;
+        margin: 2% 10%;
+    }
+
+    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #edit-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #edit-form-container {
+        width: 95%;
+        margin: 2% 2.5%;
+    }
+
+    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
+        grid-column: span 4;
+    }
 }
