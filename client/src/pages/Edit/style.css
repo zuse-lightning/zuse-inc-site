@@ -16,7 +16,7 @@
 
 .edit-text {
     width: 80%;
-    margin: 0 10% 5%;
+    margin: 0% 10% 5%;
     font-size: 18px;
     text-align: center;
 }
@@ -33,10 +33,6 @@
     grid-column: span 12;
 }
 
-.edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
-    grid-column: span 3;
-}
-
 #edit-review {
     resize: none;
     width: 100%;
@@ -51,6 +47,7 @@
 #rating-label, #edit-upload-label,
 #edit-review-label {
     font-size: 20px;
+    font-weight: 600;
 }
 
 #edit-submit-btn {
@@ -82,10 +79,6 @@
         width: 70%;
         margin: 0 15%;
     }
-
-    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
-        grid-column: span 4;
-    }
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
@@ -97,10 +90,6 @@
     #edit-form-container {
         width: 80%;
         margin: 2% 10%;
-    }
-
-    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
-        grid-column: span 4;
     }
 }
 
@@ -114,10 +103,6 @@
         width: 80%;
         margin: 2% 10%;
     }
-
-    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
-        grid-column: span 4;
-    }
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
@@ -130,8 +115,84 @@
         width: 95%;
         margin: 2% 2.5%;
     }
+}
 
-    .edit-form-col:nth-child(2), .edit-form-col:nth-child(3) {
-        grid-column: span 4;
+@media (max-width: 800px) and (min-width: 768px) {
+    #edit-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #edit-form-container {
+        width: 95%;
+        margin: 2% 2.5%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 517px) {
+    #edit-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #edit-form-container {
+        width: 95%;
+        margin: 2% 2.5%;
+    }
+
+    #edit-submit-btn {
+        width: 40%;
+        margin: 0 30%;
+    }
+}
+
+@media (max-width: 516px) and (min-width: 362px) {
+    #edit-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #edit-header {
+        margin-top: 5%;
+    }
+
+    .edit-text {
+        margin-bottom: 10%;
+    }
+
+    #edit-form-container {
+        width: 90%;
+        margin: 2% 5%;
+    }
+
+    #edit-submit-btn {
+        width: 40%;
+        margin: 0 30% 5%;
+    }
+}
+
+@media (max-width: 361px) {
+    #edit-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #edit-header {
+        margin-top: 5%;
+        font-size: 24px;
+    }
+
+    .edit-text {
+        margin-bottom: 10%;
+    }
+
+    #edit-form-container {
+        width: 90%;
+        margin: 2% 5%;
+    }
+
+    #edit-submit-btn {
+        width: 60%;
+        margin: 0 20% 5%;
     }
 }
