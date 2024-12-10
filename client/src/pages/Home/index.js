@@ -5,13 +5,14 @@ import HomeAbout from "../../components/HomeAbout";
 import HomeTrustBadges from "../../components/HomeTrustBadges";
 import OurServices from "../../components/OurServices";
 import TopCatalogs from "../../components/TopCatalogs";
+import HomeReviews from "../../components/HomeReviews";
 import HomeContactForm from "../../components/HomeContactForm";
 import SEO from "../../components/SEO";
 
 class Home extends Component {
     render() {
 
-        const { screenWidth, location, whichWebsite } = this.props;
+        const { auth, screenWidth, location, whichWebsite } = this.props;
         const homeImage = whichWebsite(location, "https://zuse-inc-bucket.s3.amazonaws.com/Zuse-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/ACP-Home.png", "https://zuse-inc-bucket.s3.amazonaws.com/Union-Home.png");
         const homeURL = whichWebsite(location, "https://www.zuse.com", "https://www.americancontractprinting.com", "https://www.americanunionprint.com");
         
@@ -33,6 +34,7 @@ class Home extends Component {
                 <HomeTrustBadges />
                 <OurServices />
                 <TopCatalogs />
+                {1 === 2 ? <HomeReviews auth={auth} location={location} whichWebsite={whichWebsite} /> : null}
                 <HomeContactForm location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />
             </>
         );
