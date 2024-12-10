@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const zuse = {
-    getAllReviews: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.zuse_users u JOIN ${database}.zuse_reviews r ON u.id = r.uid WHERE rating >= 3;`,
+    getAllReviews: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.zuse_users u JOIN ${database}.zuse_reviews r ON u.id = r.uid WHERE rating >= ?;`,
     getReviewById: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.zuse_users u JOIN ${database}.zuse_reviews r ON u.id = r.uid WHERE r.id = ?;`,
     addUserReview: `INSERT INTO ${database}.zuse_reviews (uid, text, rating, date, image) VALUES (?);`,
     deleteUserReview: `DELETE FROM ${database}.zuse_reviews WHERE id = ? AND uid = ?;`,
@@ -15,7 +15,7 @@ const zuse = {
 };
 
 const acp = {
-    getAllReviews: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.acp_users u JOIN ${database}.acp_reviews r ON u.id = r.uid WHERE rating >= 3;`,
+    getAllReviews: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.acp_users u JOIN ${database}.acp_reviews r ON u.id = r.uid WHERE rating >= ?;`,
     getReviewById: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.acp_users u JOIN ${database}.acp_reviews r ON u.id = r.uid WHERE r.id = ?;`,
     addUserReview: `INSERT INTO ${database}.acp_reviews (uid, text, rating, date, image) VALUES (?);`,
     deleteUserReview: `DELETE FROM ${database}.acp_reviews WHERE id = ? AND uid = ?;`,
@@ -23,7 +23,7 @@ const acp = {
 };
 
 const union = {
-    getAllReviews: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.union_users u JOIN ${database}.union_reviews r ON u.id = r.uid WHERE rating >= 3;`,
+    getAllReviews: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.union_users u JOIN ${database}.union_reviews r ON u.id = r.uid WHERE rating >= ?;`,
     getReviewById: `SELECT r.id, r.uid, first_name, last_name, text, rating, date, image FROM ${database}.union_users u JOIN ${database}.union_reviews r ON u.id = r.uid WHERE r.id = ?;`,
     addUserReview: `INSERT INTO ${database}.union_reviews (uid, text, rating, date, image) VALUES (?);`,
     deleteUserReview: `DELETE FROM ${database}.union_reviews WHERE id = ? AND uid = ?;`,
