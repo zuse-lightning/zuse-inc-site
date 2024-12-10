@@ -34,7 +34,7 @@ class Home extends Component {
                 <HomeTrustBadges />
                 <OurServices />
                 <TopCatalogs />
-                {1 === 2 ? <HomeReviews auth={auth} location={location} whichWebsite={whichWebsite} /> : null}
+                {1 === 1 ? <HomeReviews auth={auth} location={location} whichWebsite={whichWebsite} /> : null}
                 <HomeContactForm location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />
             </>
         );

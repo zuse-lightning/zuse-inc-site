@@ -18,7 +18,7 @@ const HomeReviews = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axiosInstance.get(`${site}/reviews/home`);
+                const res = await axiosInstance.get(`${site}/reviews`);
                 setReviews(res.data);
             } catch (err) {
                 console.log(err);
@@ -42,9 +42,9 @@ const HomeReviews = (props) => {
                 <Image id="home-reviews-no-result-image" src="https://zuse-inc-bucket.s3.amazonaws.com/no-results-blue.png" draggable="false" />
             </div>}
             <div id="home-reviews">
-                {reviews.map((review) => {
+                {reviews.map((review, index) => {
                     return (
-                        review.rating < 3 ? null : <div key={review.id} className="home-review-card-col">
+                        (review.rating < 3 || index >= 10) ? null : <div key={review.id} className="home-review-card-col">
                             <Link to={`/review/${review.id}`}><div className="home-review-card">
                                 <Image className="home-review-card-image" src={review.image} draggable="false" />
                                 <Rating className="home-review-card-rating" maxRating={5} rating={review.rating} icon="star" size="huge" disabled />

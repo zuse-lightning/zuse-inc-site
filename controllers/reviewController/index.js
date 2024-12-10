@@ -33,7 +33,6 @@ const handleRequest = (url) => {
 module.exports = {
     getReviews: (req, res) => {
         handleRequest(req.baseUrl);
-        console.log(req.hostname);
         console.log("getting all reviews");
         db.query(getAllReviews, [3], (err, data) => {
             if (err) return res.status(500).json(err);
