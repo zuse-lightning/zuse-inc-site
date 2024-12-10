@@ -86,36 +86,20 @@
     margin: 5% 0;
 }
 
-#write-home-review-btn {
-    background-color: #f11515 !important;
+#home-reviews-btn {
+    background-color: transparent !important;
     color: white !important;
+    border: solid #fefcfd !important;
     font-size: 18px !important;
     width: 20%;
-    float: right;
+    margin: 0 40% 2%;
     transition: ease 0.5s !important;
 }
 
-#write-home-review-btn:hover {
-    background-color: #243557 !important;
+#home-reviews-btn:hover {
+    background-color: #fefcfd !important;
+    color: #f11515 !important;
     transition: ease 0.5s !important;
-}
-
-#write-icon {
-    margin-left: 2%;
-}
-
-@media (max-width: 2416px) and (min-width: 2054px) {
-    #write-home-review-btn {
-        width: 25%;
-    }
-
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 2;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 3 / span 10;
-    }
 }
 
 @media (max-width: 2053px) and (min-width: 1700px) {

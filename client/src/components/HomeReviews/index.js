@@ -49,6 +49,7 @@ const HomeReviews = (props) => {
                     );
                 })}
             </div>
+            <Button as={Link} to="/reviews" size="massive" id="home-reviews-btn">See More Reviews</Button>
         </div>
     );
 };
