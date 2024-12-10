@@ -7,6 +7,7 @@
 
 #write-header {
     padding: 2%;
+    margin-top: 2%;
     text-decoration: underline;
     text-underline-offset: 20px;
     text-decoration-color: #f11515;
@@ -15,7 +16,7 @@
 
 .write-text {
     width: 80%;
-    margin: 0 10%;
+    margin: 0% 10% 5%;
     font-size: 18px;
     text-align: center;
 }
@@ -32,27 +33,166 @@
     grid-column: span 12;
 }
 
-.write-form-col:nth-child(2), .write-form-col:nth-child(3) {
-    grid-column: span 3;
-}
-
 #write-review {
     resize: none;
     width: 100%;
     height: 300px;
 }
 
+#write-review-rating {
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
 #rating-label, #write-upload-label,
 #write-review-label {
     font-size: 20px;
+    font-weight: 600;
 }
 
 #write-submit-btn {
     width: 20%;
+    margin: 0 40%;
     height: 60px;
     background-color: #f11515;
+    transition: ease 0.5s !important;
     border: solid 1px transparent;
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
-    cursor: pointer !important
+    cursor: pointer !important;
+}
+
+#write-submit-btn:hover {
+    background-color: #243557 !important;
+    transition: ease 0.5s !important;
+}
+
+@media (max-width: 2300px) and (min-width: 1954px) {
+    #write-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media (max-width: 1953px) and (min-width: 1700px) {
+    #write-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #write-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+
+    #write-form-container {
+        width: 80%;
+        margin: 2% 10%;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #write-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #write-form-container {
+        width: 80%;
+        margin: 2% 10%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #write-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #write-form-container {
+        width: 95%;
+        margin: 2% 2.5%;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #write-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #write-form-container {
+        width: 95%;
+        margin: 2% 2.5%;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 517px) {
+    #write-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    #write-form-container {
+        width: 95%;
+        margin: 2% 2.5%;
+    }
+
+    #write-submit-btn {
+        width: 40%;
+        margin: 0 30%;
+    }
+}
+
+@media (max-width: 516px) and (min-width: 362px) {
+    #write-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #write-header {
+        margin-top: 5%;
+    }
+
+    .write-text {
+        margin-bottom: 10%;
+    }
+
+    #write-form-container {
+        width: 90%;
+        margin: 2% 5%;
+    }
+
+    #write-submit-btn {
+        width: 40%;
+        margin: 0 30% 5%;
+    }
+}
+
+@media (max-width: 361px) {
+    #write-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #write-header {
+        margin-top: 5%;
+        font-size: 24px;
+    }
+
+    .write-text {
+        margin-bottom: 10%;
+    }
+
+    #write-form-container {
+        width: 90%;
+        margin: 2% 5%;
+    }
+
+    #write-submit-btn {
+        width: 60%;
+        margin: 0 20% 5%;
+    }
 }

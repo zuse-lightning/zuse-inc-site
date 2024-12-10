@@ -46,6 +46,10 @@ app.use(helmet({
                 "www.americancontractprinting.com",
                 "www.americanunionprint.com"
             ],
+            "frame-src": [
+                "'self'",
+                "www.google.com"
+            ],
             "img-src": [
                 "'self'",
                 "zuse-inc-bucket.s3.amazonaws.com",
