@@ -1,4 +1,4 @@
-#write-container {
+#write-container, #other-reviews-container {
     background-color: #fefcfd;
     width: 60%;
     margin: 0 20%;
@@ -68,21 +68,21 @@
 }
 
 @media (max-width: 2300px) and (min-width: 1954px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 70%;
         margin: 0 15%;
     }
 }
 
 @media (max-width: 1953px) and (min-width: 1700px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 70%;
         margin: 0 15%;
     }
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 70%;
         margin: 0 15%;
     }
@@ -94,7 +94,7 @@
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 80%;
         margin: 0 10%;
     }
@@ -106,7 +106,7 @@
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 80%;
         margin: 0 10%;
     }
@@ -118,7 +118,7 @@
 }
 
 @media (max-width: 800px) and (min-width: 768px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 80%;
         margin: 0 10%;
     }
@@ -130,7 +130,7 @@
 }
 
 @media (max-width: 767px) and (min-width: 517px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 80%;
         margin: 0 10%;
     }
@@ -147,7 +147,7 @@
 }
 
 @media (max-width: 516px) and (min-width: 362px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 100%;
         margin: 0;
     }
@@ -172,7 +172,7 @@
 }
 
 @media (max-width: 361px) {
-    #write-container {
+    #write-container, #other-reviews-container {
         width: 100%;
         margin: 0;
     }
