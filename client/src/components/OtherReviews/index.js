@@ -1,4 +1,6 @@
 import React from "react";
+import { Header, Image } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 import "./style.css";
 
@@ -29,7 +31,7 @@ const OtherReviews = () => {
                     <div className="other-review-col">
                         <Image
                             className="other-review-img"
-                            src="https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/other-reviews-sites/Glassdoor-logo.svg.png"
+                            src="https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/other-reviews-sites/glassdoor-logo.png"
                             as={Link}
                             to={`https://www.glassdoor.com/mz-survey/employer/collectReview_input.htm?i=1051460&j=true&y=&c=PAGE_INFOSITE_TOP`}
                             target="_blank"
@@ -47,7 +49,7 @@ const OtherReviews = () => {
                     <div className="other-review-col">
                         <Image
                             className="other-review-img"
-                            src="https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/other-reviews-sites/Better-Business-Bureau-Logo.png"
+                            src="https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/other-reviews-sites/Better-Business-Bureau-Emblem.png"
                             as={Link}
                             to={`https://www.bbb.org/us/ct/branford/profile/garments-printing-lettering/all-weather-high-viz-0111-5002063/customer-reviews#leave-a-review`}
                             target="_blank"

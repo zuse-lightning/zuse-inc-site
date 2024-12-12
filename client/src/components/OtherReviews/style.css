@@ -5,10 +5,27 @@
     border: solid 1px #fefcfd;
 }
 
+#other-reviews-header {
+    padding: 2%;
+    margin-top: 2%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+    text-align: center;
+}
+
+.other-reviews-text {
+    width: 80%;
+    margin: 0% 10% 5%;
+    font-size: 18px;
+    text-align: center;
+}
+
 #other-reviews {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     row-gap: 20px;
+    column-gap: 40px;
     width: 70%;
     margin: 2% 15%;
 }
@@ -17,6 +34,19 @@
     grid-column: span 2;
 }
 
+.other-review-col:nth-child(2) {
+    margin-top: 4%;
+}
+
+.other-review-col:nth-child(3) {
+    margin-top: 10%;
+}
+
 .other-review-col:nth-child(4) {
     grid-column: 2 /span 2;
+}
+
+.other-review-img {
+    width: 100%!important;
+    object-fit: cover!important;
 }
