@@ -8,9 +8,6 @@
 #other-reviews-header {
     padding: 2%;
     margin-top: 2%;
-    text-decoration: underline;
-    text-underline-offset: 20px;
-    text-decoration-color: #f11515;
     text-align: center;
 }
 
@@ -49,4 +46,14 @@
 .other-review-img {
     width: 100%!important;
     object-fit: cover!important;
+}
+
+@media (max-width: 768px) {
+    .other-review-col {
+        grid-column: span 6;
+    }
+
+    .other-review-col:nth-child(4) {
+        grid-column: span 6;
+    }
 }

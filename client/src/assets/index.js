@@ -75,3 +75,7 @@ export const unionSlidesMobile = [
     "https://zuse-inc-bucket.s3.amazonaws.com/banners/Union-Dye-Sub-Mobile.png",
     "https://zuse-inc-bucket.s3.amazonaws.com/banners/Union-DTG-DTF-Mobile.png"
 ];
+
+export const zuseReviewLinks = {
+    google: ""
+};
