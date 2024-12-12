@@ -1,0 +1,179 @@
+Name: Sarah Peterson
+Email: sarah.peterson@example.com
+Rating: 5/5
+Review: "The custom hoodie I ordered exceeded my expectations! The fabric is so soft, and the print is vibrant. I’ll definitely order again."
+Date Published: 2024-12-01
+
+Name: Michael Thompson
+Email: michael.thompson@example.com
+Rating: 4/5
+Review: "Great quality and fast delivery. The only issue was the limited color options for t-shirts."
+Date Published: 2024-11-30
+
+Name: Jessica Rodriguez
+Email: jessica.rodriguez@example.com
+Rating: 5/5
+Review: "Absolutely loved the tote bags I ordered! Perfect for gifting and the print quality is fantastic."
+Date Published: 2024-12-05
+
+Name: David Kim
+Email: david.kim@example.com
+Rating: 2/5
+Review: "The mug I ordered arrived chipped. Customer service was slow to respond."
+Date Published: 2024-12-03
+
+Name: Emily White
+Email: emily.white@example.com
+Rating: 3/5
+Review: "The t-shirts are decent, but the sizing runs a bit small. Order one size up."
+Date Published: 2024-11-28
+
+Name: John Lewis
+Email: john.lewis@example.com
+Rating: 4/5
+Review: "The embroidered caps were perfect! My team loved them. Will reorder for next year’s event."
+Date Published: 2024-12-04
+
+Name: Anna Carter
+Email: anna.carter@example.com
+Rating: 5/5
+Review: "Fantastic customer service and amazing product quality. My design turned out beautifully on the sweatshirt!"
+Date Published: 2024-12-06
+
+Name: Daniel Martin
+Email: daniel.martin@example.com
+Rating: 1/5
+Review: "Terrible experience. My order was delayed by weeks, and no one informed me about it."
+Date Published: 2024-12-01
+
+Name: Rachel Flores
+Email: rachel.flores@example.com
+Rating: 4/5
+Review: "The water bottles I ordered were great, but a couple had small scratches."
+Date Published: 2024-11-25
+
+Name: Chris Parker
+Email: chris.parker@example.com
+Rating: 3/5
+Review: "The custom printing was good, but the hat material feels a bit cheap for the price."
+Date Published: 2024-11-29
+
+Name: Olivia Harris
+Email: olivia.harris@example.com
+Rating: 5/5
+Review: "Love my custom laptop sleeve! The design looks sharp, and it fits perfectly."
+Date Published: 2024-12-02
+
+Name: Noah Vincent
+Email: noah.vincent@example.com
+Rating: 5/5
+Review: "Fast shipping and incredible quality. I’m a repeat customer and will keep coming back!"
+Date Published: 2024-12-07
+
+Name: Ethan Johnson
+Email: ethan.johnson@example.com
+Rating: 2/5
+Review: "The design was off-center on my sweatshirt. Disappointing for the price."
+Date Published: 2024-11-26
+
+Name: Sophia King
+Email: sophia.king@example.com
+Rating: 4/5
+Review: "Loved the quality of the canvas bags! Just wish there were more font choices for customization."
+Date Published: 2024-11-27
+
+Name: Liam Brown
+Email: liam.brown@example.com
+Rating: 3/5
+Review: "Decent quality, but the delivery took longer than expected."
+Date Published: 2024-11-30
+
+Name: Ava Nichols
+Email: ava.nichols@example.com
+Rating: 5/5
+Review: "Ordered custom jerseys for my soccer team, and everyone loved them! Great fit and quality."
+Date Published: 2024-12-01
+
+Name: Isabella Garcia
+Email: isabella.garcia@example.com
+Rating: 4/5
+Review: "The design tool on the website was easy to use, and the final product looked great."
+Date Published: 2024-11-28
+
+Name: Mason Walker
+Email: mason.walker@example.com
+Rating: 5/5
+Review: "Perfect experience from start to finish. My custom backpack looks amazing!"
+Date Published: 2024-12-05
+
+Name: Harper Evans
+Email: harper.evans@example.com
+Rating: 3/5
+Review: "The sweatshirt is nice, but the color wasn’t exactly what I expected from the photos."
+Date Published: 2024-12-06
+
+Name: Lucas Scott
+Email: lucas.scott@example.com
+Rating: 4/5
+Review: "Good quality overall. The print was slightly darker than I wanted, but it’s still great."
+Date Published: 2024-12-04
+
+Name: Grace Taylor
+Email: grace.taylor@example.com
+Rating: 1/5
+Review: "The custom tote bag had the wrong design printed on it. Very disappointed."
+Date Published: 2024-11-24
+
+Name: Amelia Howard
+Email: amelia.howard@example.com
+Rating: 5/5
+Review: "My custom notebook turned out beautifully. The colors are vibrant and exactly what I wanted."
+Date Published: 2024-12-03
+
+Name: Henry Davis
+Email: henry.davis@example.com
+Rating: 4/5
+Review: "The mugs I ordered were great, but the packaging could be improved to avoid damages."
+Date Published: 2024-11-29
+
+Name: Chloe Robinson
+Email: chloe.robinson@example.com
+Rating: 3/5
+Review: "Nice design, but the material of the tote bag isn’t as sturdy as I hoped."
+Date Published: 2024-12-02
+
+Name: William Carter
+Email: william.carter@example.com
+Rating: 5/5
+Review: "Amazing quality and fast turnaround. Will recommend Zuse Inc. to everyone I know!"
+Date Published: 2024-12-06
+
+Name: Abigail Baker
+Email: abigail.baker@example.com
+Rating: 2/5
+Review: "The design looked great, but the print started peeling after just one wash."
+Date Published: 2024-11-26
+
+Name: Elijah Owens
+Email: elijah.owens@example.com
+Rating: 5/5
+Review: "Fantastic product! My custom mouse pad is perfect for my desk setup."
+Date Published: 2024-12-07
+
+Name: Mia Zimmerman
+Email: mia.zimmerman@example.com
+Rating: 4/5
+Review: "Happy with my order, but the shipping cost felt a bit high for smaller items."
+Date Published: 2024-12-01
+
+Name: Logan Harris
+Email: logan.harris@example.com
+Rating: 3/5
+Review: "The printing was good, but the color of the shirt faded after a few washes."
+Date Published: 2024-12-04
+
+Name: Lily Jackson
+Email: lily.jackson@example.com
+Rating: 5/5
+Review: "The custom blankets were a hit at my family reunion! Soft, warm, and beautifully printed."
+Date Published: 2024-12-03

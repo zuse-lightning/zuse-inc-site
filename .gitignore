@@ -8,7 +8,7 @@
 /.pnp
 .pnp.js
 .env
-/note.txt
+# /note.txt
 
 # testing
 /coverage
