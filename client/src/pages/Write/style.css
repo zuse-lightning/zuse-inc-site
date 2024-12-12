@@ -29,6 +29,22 @@
     margin: 2% 20%;
 }
 
+#other-reviews {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 20px;
+    width: 70%;
+    margin: 2% 15%;
+}
+
+.other-review-col {
+    grid-column: span 2;
+}
+
+.other-review-col:nth-child(4) {
+    grid-column: 2 /span 2;
+}
+
 .write-form-col {
     grid-column: span 12;
 }
