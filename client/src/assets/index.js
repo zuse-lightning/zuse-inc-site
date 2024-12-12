@@ -77,5 +77,25 @@ export const unionSlidesMobile = [
 ];
 
 export const zuseReviewLinks = {
-    google: ""
+    google: "https://www.google.com/search?q=Zuse+Inc.&rlz=1C5CHFA_enUS1106US1106&oq=zuse+inc.&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGEAyCAgCEEUYJxg7MggIAxAAGBYYHjIICAQQABgWGB4yBggFEEUYPDIGCAYQRRg9MgYIBxBFGD3SAQgxNzU5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x89e7d57560352e67:0xcf283c3f97c78848,3,,,,",
+    indeed: "https://www.indeed.com/survey/mc?cid=eaf15519bbee0117&pkind=comp%3Aheader%3Awrite-a-review-button__targeted",
+    glassdoor: "https://www.glassdoor.com/mz-survey/employer/collectReview_input.htm?i=1051460&j=true&y=&c=PAGE_INFOSITE_TOP",
+    yelp: "https://www.yelp.com/writeareview/biz/9XC1FlGhffp6lrnWQkriYg?return_url=%2Fbiz%2F9XC1FlGhffp6lrnWQkriYg&review_origin=biz-details-war-button",
+    bbb: "https://www.bbb.org/us/ct/branford/profile/garments-printing-lettering/all-weather-high-viz-0111-5002063/customer-reviews#leave-a-review"
+};
+
+export const ACPReviewLinks = {
+    google: "https://www.google.com/search?q=american+contract+printing&rlz=1C5CHFA_enUS1106US1106&oq=american+c&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIQCAEQLhjHARixAxjRAxiABDIGCAIQRRg5MhAIAxAuGMcBGLEDGNEDGIAEMgoIBBAuGLEDGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMjU3NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x89e7d4f4c9400001:0x55db33df08210da6,3,,,,",
+    indeed: "",
+    glassdoor: "",
+    yelp: "",
+    bbb: ""
+};
+
+export const unionReviewLinks = {
+    google: "https://www.google.com/search?q=american+union+printing&oq=american+union+print&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyEAgBEC4YrwEYxwEYgAQYjgUyBggCEEUYOTIKCAMQABgKGBYYHjINCAQQABiGAxiABBiKBTIKCAUQABiABBiiBDIKCAYQABiABBiiBDIHCAcQABjvBTIKCAgQABiABBiiBNIBCDM3ODFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x89e7d3ba295994a7:0x480271da4b5b5a62,3,,,,",
+    indeed: "",
+    glassdoor: "",
+    yelp: "",
+    bbb: ""
 };
