@@ -16,8 +16,6 @@ const screenPrintingResults = [
     "https://zuse-inc-bucket.s3.amazonaws.com/examples/Screen10.jpg"
 ];
 
-console.log(document.getElementsByClassName("screen-printing-subheader"));
-
 const ServiceScreenPrinting = (props) => {
 
     const { location, whichWebsite } = props;
