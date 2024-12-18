@@ -8,7 +8,7 @@
     "npm": "10.x"
   },
   "scripts": {
-    "start":"if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "NODE_ENV=production node index.js",
     "start:dev": "NODE_ENV=development concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",

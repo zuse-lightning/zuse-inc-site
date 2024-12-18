@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const { v4: uuidv4 } = require("uuid");
 const { zuse, acp, union } = require("../../models/users");
 const sendEmail = require("../../utils/sendEmail.js");
+console.log(uuidv4());
 
 let getUser;
 let getUserById;
@@ -62,6 +63,7 @@ module.exports = {
                 }
             };
             db.query(getUser, [req.body.email, req.body.first_name, req.body.last_name], (err, data) => {
+                console.log(getUser);
                 if (err) return res.json(err);
                 if (data.length) return res.json("User already exists");
                 if (req.body.password.length < 8) return res.status(403).json("Password must be at least 8 characters long!");
@@ -86,7 +88,7 @@ module.exports = {
             });
         });
     },
-    login: (req, res) => {
+   login: (req, res) => {
         handleRequest(req.baseUrl);
         console.log("Trying to login");
         db.query(getUserByEmail, [req.body.email], (err, data) => {
@@ -127,7 +129,7 @@ module.exports = {
 
                 jwt.verify(token, process.env.SECRET, (err, decoded) => {
                     if (err) return res.status(403).json("Invalid token");
-                    
+
                     console.log(req.body.newPassword);
                     const salt = bcrypt.genSaltSync(10);
                     const hash = bcrypt.hashSync(req.body.newPassword, salt);
