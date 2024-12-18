@@ -31,7 +31,7 @@ const HomeReviews = (props) => {
         <div id="home-reviews-container">
             <p className="home-reviews-text">{reviews.length > 0 ? "Don't take our word for it, listen to our satisfied customers!" : "Looks like we don't have any reviews yet, you could be the first!"}</p>
             {reviews.length > 0 ? null : <div id="home-reviews-no-result-container">
-                <Image id="home-reviews-no-result-image" src="https://zuse-inc-bucket.s3.amazonaws.com/no-results-blue.png" draggable="false" />
+                <Image id="home-reviews-no-result-image" src="https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/no-results-white.png" draggable="false" />
             </div>}
             <div id="home-reviews">
                 {reviews.map((review, index) => {
