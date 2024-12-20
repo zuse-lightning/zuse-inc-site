@@ -39,7 +39,7 @@ const HomeReviews = (props) => {
                         (review.rating < 3 || index >= 5) ? null : <div key={review.id} className="home-review-card-col">
                             <Link to={`/review/${review.id}`}><div className="home-review-card">
                                 <Image className="home-review-card-image" src={review.image} draggable="false" />
-                                <Rating className="home-review-card-rating" maxRating={5} rating={review.rating} icon="star" size="huge" disabled />
+                                <Rating className="home-review-card-rating" maxRating={5} rating={review.rating} size="huge" disabled />
                                 <div className="home-review-card-text">{review.text}</div>
                                 <div className="home-review-card-author">{review.first_name} {review.last_name}</div>
                                 <div className="home-review-card-date">{moment(review.date).format("MMMM Do YYYY")}</div>

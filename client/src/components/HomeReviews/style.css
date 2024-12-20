@@ -36,12 +36,12 @@
 }
 
 .home-review-card {
-    border: solid 1px #d2caca;
+    border: solid 1px #ff0000;
     border-radius: 5px;
     padding: 5%;
     transition: transform .5s;
     height: 460px;
-    background-color: #fff;
+    background-color: #d40000;
 }
 
 .home-review-card:hover {
@@ -54,7 +54,7 @@
 }
 
 .home-review-card-icon {
-    color: black;
+    color: white;
 }
 
 .home-review-card-image {
@@ -62,12 +62,19 @@
     height: 200px;
     object-fit: contain;
     border-radius: 5px;
+    margin-bottom: 10%!important;
 }
 
 .home-review-card-image,
 .home-review-card-rating {
     margin: 2% 0;
 }
+
+.ui.rating .active.icon {
+    color: #fff!important;
+}
+
+
 
 .home-review-card-text {
     -webkit-box-orient: vertical;
@@ -82,7 +89,7 @@
 .home-review-card-text,
 .home-review-card-date,
 .home-review-card-author {
-    color: black;
+    color: white;
     margin: 5% 0;
 }
 
@@ -109,14 +116,8 @@
 
     #home-reviews {
         grid-template-columns: repeat(5, 1fr);
-    }
-
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 2;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 3 / span 10;
+        width: 70%;
+        margin: 0 15%;
     }
 }
 
