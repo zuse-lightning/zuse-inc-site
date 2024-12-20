@@ -41,7 +41,7 @@
     padding: 5%;
     transition: transform .5s;
     height: 460px;
-    background-color: #fefcfd;
+    background-color: #fff;
 }
 
 .home-review-card:hover {
@@ -89,7 +89,7 @@
 #home-reviews-btn {
     background-color: transparent !important;
     color: white !important;
-    border: solid #fefcfd !important;
+    border: solid #fff !important;
     font-size: 18px !important;
     width: 20%;
     margin: 0 40% 2%;
@@ -103,17 +103,12 @@
 }
 
 @media (max-width: 2053px) and (min-width: 1700px) {
-    #home-reviews-container {
-        width: 80%;
-        margin: 0 10%;
-    }
-
     #write-home-review-btn {
         width: 25%;
     }
 
     #home-reviews {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .home-reviews-headers-col:nth-child(1) {
@@ -149,11 +144,6 @@
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    #home-reviews-container {
-        width: 80%;
-        margin: 0 10%;
-    }
-
     #write-home-review-btn {
         width: 40%;
     }
@@ -176,11 +166,6 @@
 }
 
 @media (max-width: 991px) and (min-width: 801px) {
-    #home-reviews-container {
-        width: 80%;
-        margin: 0 10%;
-    }
-
     #write-home-review-btn {
         width: 45%;
     }
@@ -203,11 +188,6 @@
 }
 
 @media (max-width: 800px) and (min-width: 768px) {
-    #home-reviews-container {
-        width: 80%;
-        margin: 0 10%;
-    }
-
     #write-home-review-btn {
         width: 50%;
     }
