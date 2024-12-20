@@ -122,25 +122,14 @@
 }
 
 @media (max-width: 1699px) and (min-width: 1200px) {
-    #home-reviews-container {
-        width: 80%;
-        margin: 0 10%;
-    }
-
     #write-home-review-btn {
         width: 30%;
     }
 
     #home-reviews {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 2;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 3 / span 10;
+        grid-template-columns: repeat(5, 1fr);
+        width: 90%;
+        margin: 0 5%;
     }
 }
 
@@ -154,15 +143,22 @@
     }
 
     #home-reviews {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        width: 90%;
+        margin: 0 5%;
     }
 
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 2;
+    .home-review-card-col:nth-child(4) {
+        grid-column: 2 / span 2!important;
     }
 
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 3 / span 10;
+    .home-review-card-col {
+        grid-column: span 2;
+    }
+
+    #home-reviews-btn {
+        width: 30%;
+        margin: 0 35% 2%;
     }
 }
 
@@ -177,14 +173,13 @@
 
     #home-reviews {
         grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        margin: 0 10%;
     }
 
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 2;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 3 / span 10;
+    #home-reviews-btn {
+        width: 30%;
+        margin: 0 35% 2%;
     }
 }
 
@@ -199,63 +194,34 @@
 
     #home-reviews {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 2;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 3 / span 10;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 517px) {
-    #home-reviews-container {
         width: 80%;
         margin: 0 10%;
     }
 
-    #home-reviews-headers-container {
-        row-gap: 40px;
+    #home-reviews-btn {
+        width: 30%;
+        margin: 0 35% 2%;
     }
+}
 
-    #write-home-review-btn {
-        width: 80%;
-        float: none;
-    }
-
+@media (max-width: 767px) and (min-width: 517px) {
     .home-reviews-text {
         margin: 5% 10% 3%;
     }
 
     #home-reviews {
         grid-template-columns: repeat(1, 1fr);
+        width: 70%;
+        margin: 0 15%;
     }
 
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 12;
-        text-align: center;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 1 / span 12;
-        text-align: center;
-        margin-bottom: 3%;
+    #home-reviews-btn {
+        width: 40%;
+        margin: 0 30% 2%;
     }
 }
 
 @media (max-width: 516px) and (min-width: 362px) {
-    #home-reviews-container {
-        width: 100%;
-        margin: 0%;
-        padding: 0 5%;
-    }
-
-    #home-reviews-headers-container {
-        row-gap: 40px;
-    }
-
     #write-home-review-btn {
         width: 80%;
         float: none;
@@ -267,17 +233,13 @@
 
     #home-reviews {
         grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin: 0 10%;
     }
 
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 12;
-        text-align: center;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 1 / span 12;
-        text-align: center;
-        margin-bottom: 3%;
+    #home-reviews-btn {
+        width: 50%;
+        margin: 0 25% 2%;
     }
 }
 

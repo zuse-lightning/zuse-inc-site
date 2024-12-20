@@ -9,7 +9,7 @@ import "./style.css";
 const HomeReviews = (props) => {
 
     const { currentUser, notAuthorized } = props.auth;
-    const { whichWebsite } = props;
+    const { whichWebsite, screenWidth } = props;
 
     const [reviews, setReviews] = useState([]);
 
@@ -35,8 +35,9 @@ const HomeReviews = (props) => {
             </div>}
             <div id="home-reviews">
                 {reviews.map((review, index) => {
+                    const reviewIndex = screenWidth > 768 ? 5 : 6;
                     return (
-                        (review.rating < 3 || index >= 5) ? null : <div key={review.id} className="home-review-card-col">
+                        (review.rating < 3 || index >= reviewIndex) ? null : <div key={review.id} className="home-review-card-col">
                             <Link to={`/review/${review.id}`}><div className="home-review-card">
                                 <Image className="home-review-card-image" src={review.image} draggable="false" />
                                 <Rating className="home-review-card-rating" maxRating={5} rating={review.rating} size="huge" disabled />

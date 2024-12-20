@@ -70,7 +70,7 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .catalog-col:has(#stormtech) {
+    .catalog-col:has(#blue-gen) {
         grid-column: 2 / span 1;
     }
 }
