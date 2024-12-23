@@ -77,11 +77,18 @@
     width: 40%;
     height: 60px;
     background-color: #f11515;
+    transition: ease 0.5s !important;
     border: solid 1px transparent;
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
     margin: 6% 30% 0;
-    cursor: pointer !important
+    cursor: pointer !important;
+    border-radius: .28571429rem;
+}
+
+#home-submit-btn:hover {
+    background-color: #243557;
+    transition: ease 0.5s !important;
 }
 
 @media (max-width: 2030px) and (min-width: 1700px) {
