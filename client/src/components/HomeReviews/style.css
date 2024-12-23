@@ -238,42 +238,24 @@
     }
 
     #home-reviews-btn {
-        width: 50%;
-        margin: 0 25% 2%;
+        width: 60%;
+        margin: 3% 20% 5%;
     }
 }
 
 @media (max-width: 361px) {
-    #home-reviews-container {
-        width: 100%;
-        margin: 0%;
-    }
-
-    #home-reviews-headers-container {
-        row-gap: 40px;
-    }
-
-    #write-home-review-btn {
-        width: 80%;
-        float: none;
-    }
-
     .home-reviews-text {
         margin: 5% 10% 3%;
     }
 
     #home-reviews {
         grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        margin: 0 5%;
     }
 
-    .home-reviews-headers-col:nth-child(1) {
-        grid-column: 1 / span 12;
-        text-align: center;
-    }
-
-    .home-reviews-headers-col:nth-child(2) {
-        grid-column: 1 / span 12;
-        text-align: center;
-        margin-bottom: 3%;
+    #home-reviews-btn {
+        width: 70%;
+        margin: 3% 15% 5%;
     }
 }
