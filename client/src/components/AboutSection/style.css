@@ -33,10 +33,16 @@
     width: 30%;
     height: 60px;
     background-color: #f11515;
+    transition: ease 0.5s !important;
     border: solid 1px transparent;
     color: #fefcfd;
     font-family: "Lato", "Helvetica Neuve";
     margin: 6% 35% 0;
+}
+
+#contact-us-btn:hover {
+    background-color: #243557;
+    transition: ease 0.5s !important;
 }
 
 @media (min-width: 1700px) {
