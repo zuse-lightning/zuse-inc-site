@@ -90,7 +90,7 @@ const App = () => {
               <Route exact path="/catalogs/*" element={<Catalogs location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
-              {/* <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
+              <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
               <Route exact path="/reset/:id/:token" element={<ResetPassword auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/forgot" element={<ForgotPassword auth={auth} whichWebsite={whichWebsite} />} />
@@ -98,7 +98,7 @@ const App = () => {
               <Route exact path="/reviews" element={<Reviews auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/review/:id" element={<Review auth={auth} whichWebsite={whichWebsite} screenWidth={width} />} />
               <Route exact path="/write" element={<Write auth={auth} whichWebsite={whichWebsite} />} />
-              <Route exact path="/edit/:id" element={<Edit auth={auth} whichWebsite={whichWebsite} />} /> */}
+              <Route exact path="/edit/:id" element={<Edit auth={auth} whichWebsite={whichWebsite} />} />
             </Routes>
           </div>
         </Sidebar.Pusher>
