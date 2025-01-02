@@ -30,6 +30,12 @@ module.exports = {
     upload: upload.single("writeFile"),
     handleUpload: (req, res) => {
         console.log(req.file);
+        if (req.file.location.length > 0 || req.file.location.length <= 255) {
+            console.log("File url length is: " + req.file.location.length);
+        } else {
+            console.log("File url has exceeded or does not meet the length requirements.");
+            return res.status(400).json("File URL is invalid");
+        }
         res.send({
             message: "Image uploaded successfully",
             url: req.file.location,
