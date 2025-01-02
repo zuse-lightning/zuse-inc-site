@@ -14,8 +14,8 @@ const MobileAnnouncment = (props) => {
     return (
         <div id="announcement-container">
             <div className="announce-col">
-                {/* {screenWidth >= 664 ? <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</p> : null} */}
-                <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</p>
+                {screenWidth >= 664 ? <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</p> : null}
+                {/* <p id="announce-phone-number" as="h4"><Icon id="announce-phone-icon" name="phone" />{phoneNumber}</p> */}
             </div>
             <div className="announce-col">
                 <div className="announce-social-icon-wrapper">
@@ -41,7 +41,6 @@ const MobileAnnouncment = (props) => {
                     {currentUser ? <LogoutModal logout={logout} /> : <Link id="login-btn" to="/login">Log In</Link>}
                 </div>
             </div>
-
         </div>
     );
 };

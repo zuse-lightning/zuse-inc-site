@@ -77,7 +77,7 @@ const MobileNavbar = (props) => {
                 >
                     Services
                 </Menu.Item>
-                {/* <Menu.Item
+                <Menu.Item
                     className="header-nav-item"
                     as={Link}
                     onClick={(e) => setMainVisible(false)}
@@ -85,7 +85,7 @@ const MobileNavbar = (props) => {
                     name="reviews"
                 >
                     Reviews
-                </Menu.Item> */}
+                </Menu.Item>
                 <Menu.Item
                     className="header-nav-item"
                     as={Link}
