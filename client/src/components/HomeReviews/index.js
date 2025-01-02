@@ -35,7 +35,7 @@ const HomeReviews = (props) => {
             </div>}
             <div id="home-reviews">
                 {reviews.map((review, index) => {
-                    const reviewIndex = screenWidth > 768 ? 5 : 6;
+                    const reviewIndex = screenWidth > 1199 ? 5 : 6;
                     return (
                         (review.rating < 3 || index >= reviewIndex) ? null : <div key={review.id} className="home-review-card-col">
                             <Link to={`/review/${review.id}`}><div className="home-review-card">
