@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Button, Header, Image, Icon, Rating } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import { Button, Image, Rating } from "semantic-ui-react";
 import { axiosInstance } from "../../utils/api";
 import moment from "moment";
 
 import "./style.css";
 
 const HomeReviews = (props) => {
-
-    const { currentUser, notAuthorized } = props.auth;
+    
     const { whichWebsite, screenWidth } = props;
 
     const [reviews, setReviews] = useState([]);
@@ -38,13 +37,14 @@ const HomeReviews = (props) => {
                     const reviewIndex = screenWidth > 1199 ? 5 : 6;
                     return (
                         (review.rating < 3 || index >= reviewIndex) ? null : <div key={review.id} className="home-review-card-col">
-                            <Link to={`/review/${review.id}`}><div className="home-review-card">
-                                <Image className="home-review-card-image" src={review.image} draggable="false" />
-                                <Rating className="home-review-card-rating" maxRating={5} rating={review.rating} size="huge" disabled />
-                                <div className="home-review-card-text">{review.text}</div>
-                                <div className="home-review-card-author">{review.first_name} {review.last_name}</div>
-                                <div className="home-review-card-date">{moment(review.date).format("MMMM Do YYYY")}</div>
-                            </div>
+                            <Link to={`/review/${review.id}`}>
+                                <div className="home-review-card">
+                                    <Image className="home-review-card-image" src={review.image} draggable="false" />
+                                    <Rating className="home-review-card-rating" maxRating={5} rating={review.rating} size="huge" disabled />
+                                    <div className="home-review-card-text">{review.text}</div>
+                                    <div className="home-review-card-author">{review.first_name} {review.last_name}</div>
+                                    <div className="home-review-card-date">{moment(review.date).format("MMMM Do YYYY")}</div>
+                                </div>
                             </Link>
                         </div>
                     );
