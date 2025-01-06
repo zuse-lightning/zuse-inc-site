@@ -58,14 +58,14 @@ const DesktopNavbar = (props) => {
                     ))}
                 </Dropdown.Menu>
             </Menu.Item>
-            <Menu.Item
+            {/* <Menu.Item
                 className="header-nav-item"
                 as={Link}
                 to="/reviews"
                 name="reviews"
             >
                 Reviews
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item
                 className="header-nav-item"
                 as={Link}
