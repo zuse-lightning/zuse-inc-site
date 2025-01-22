@@ -9,7 +9,7 @@ const clients = [
     "https://zuse-inc-bucket.s3.amazonaws.com/clients/mlb.png", 
     "https://zuse-inc-bucket.s3.amazonaws.com/clients/47-brand.png", 
     "https://zuse-inc-bucket.s3.amazonaws.com/clients/ncaa.png", 
-    // "https://zuse-inc-bucket.s3.amazonaws.com/clients/lego.png", 
+    "https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/clients/lenny-and-joes-logo.png", 
     "https://zuse-inc-bucket.s3.amazonaws.com/clients/dunkin.png", 
     "https://zuse-inc-bucket.s3.amazonaws.com/clients/nike.png", 
     "https://zuse-inc-bucket.s3.amazonaws.com/clients/nba.png", 
