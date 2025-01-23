@@ -29,9 +29,9 @@ class Home extends Component {
                     image={homeImage}
                     url={homeURL}
                 />
-                {whichWebsite(location, <HomeSlideShow location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />, null, null)}
+                <HomeSlideShow location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />
                 <TopClients />
-                <HomeVideo />
+                {whichWebsite(location, <HomeVideo />, null, null)}
                 <HomeAbout />
                 <HomeTrustBadges />
                 <OurServices />
