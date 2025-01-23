@@ -1,0 +1,13 @@
+#home-video-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    border: solid 1px #fefcfd;
+    padding: 2%;
+}
+
+#home-video-iframe {
+    width: 60%;
+    margin: 0 20%;
+    height: 500px;
+}

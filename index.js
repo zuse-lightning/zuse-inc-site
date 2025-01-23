@@ -48,7 +48,8 @@ app.use(helmet({
             ],
             "frame-src": [
                 "'self'",
-                "www.google.com"
+                "www.google.com",
+                "www.youtube.com"
             ],
             "img-src": [
                 "'self'",

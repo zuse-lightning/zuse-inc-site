@@ -8,6 +8,7 @@ import TopCatalogs from "../../components/TopCatalogs";
 import HomeReviews from "../../components/HomeReviews";
 import HomeContactForm from "../../components/HomeContactForm";
 import SEO from "../../components/SEO";
+import HomeVideo from "../../components/HomeVideo";
 
 class Home extends Component {
     render() {
@@ -28,8 +29,9 @@ class Home extends Component {
                     image={homeImage}
                     url={homeURL}
                 />
-                <HomeSlideShow location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />
+                {whichWebsite(location, <HomeSlideShow location={location} screenWidth={screenWidth} whichWebsite={whichWebsite} />, null, null)}
                 <TopClients />
+                <HomeVideo />
                 <HomeAbout />
                 <HomeTrustBadges />
                 <OurServices />
