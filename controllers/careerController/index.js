@@ -75,9 +75,50 @@ module.exports = {
         });
     },
     deleteJob: (req, res) => {
+        handleRequest(req.baseUrl);
+        const token = req.cookies.access_token;
+        console.log(token);
+        if (!token) return res.status(401).json("Not authenticated!");
 
+        jwt.verify(token, process.env.SECRET, (err, data) => {
+            if (err) return res.status(403).json("Token is not valid!");
+
+            const jobId = req.params.id;
+
+            console.log("deleting job with id " + jobId);
+
+            db.query(deleteJobListing, [jobId], (err, data) => {
+                if (err) return res.status(500).json("Error deleting job");
+                return res.status(200).json("Job deleted!");
+            });
+        });
     },
     updateJob: (req, res) => {
+        handleRequest(req.baseUrl);
+        const token = req.cookies.access_token;
+        console.log(token);
+        if (!token) return res.status(401).json("Not authenticated!");
 
+        jwt.verify(token, process.env.SECRET, (err, data) => {
+            if (err) return res.status(403).json("Token is not valid!");
+
+            const jobId = req.params.id;
+
+            const values = [
+                req.body.title,
+                req.body.description,
+                req.body.location,
+                req.body.salary,
+                req.body.requirements,
+                req.body.responsibilities
+            ];
+
+            console.log("updating job with " + values);
+
+            db.query(updateJobListing, [...values, jobId], (err, data) => {
+                if (err) return res.status(500).json("Error updating job");
+                return res.status(200).json("Job updated!");
+            });
+        });
     }
 };
