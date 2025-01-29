@@ -36,6 +36,13 @@ const PageBanner = (props) => {
                 { name: "SERVICES", link: "/services" }
             ];
             break;
+        case "/careers":
+            pageBannerName = "CAREERS";
+            pageBannerBreadcrumbs = [
+                { name: "HOME", link: "/" },
+                { name: "CAREERS", link: "/careers" }
+            ];
+            break;
         case "/login":
             pageBannerName = "LOG IN";
             pageBannerBreadcrumbs = [
