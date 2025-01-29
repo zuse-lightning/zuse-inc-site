@@ -5,6 +5,12 @@
     border: solid 1px #fefcfd;
 }
 
+.careers-job-list-item {
+    width: 80%;
+    margin: 0 10%;
+    padding: 5%;
+}
+
 .careers-job-list-divider {
     width: 50%!important;
     margin: 3% 25%!important;

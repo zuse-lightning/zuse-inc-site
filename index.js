@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const crypto = require("crypto");
 const helmet = require("helmet");
+const { mongo } = require("./config");
 
 const app = express();
 const server = require("http").createServer(app);
@@ -61,6 +62,7 @@ app.use(helmet({
 }));
 
 app.use(routes);
+mongo();
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
