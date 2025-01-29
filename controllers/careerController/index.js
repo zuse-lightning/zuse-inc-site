@@ -120,5 +120,9 @@ module.exports = {
                 return res.status(200).json("Job updated!");
             });
         });
+    },
+    careerRouteTest: (req, res) => {
+        res.status(200).json("Career route works!");
+        console.log("Career route works!");
     }
 };
