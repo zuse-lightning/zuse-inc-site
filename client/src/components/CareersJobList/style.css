@@ -1,0 +1,13 @@
+#careers-job-list-container {
+    background-color: #fefcfd;
+    width: 60%;
+    margin: 0 20%;
+    border: solid 1px #fefcfd;
+}
+
+.careers-job-list-divider {
+    width: 50%!important;
+    margin: 3% 25%!important;
+    border-top: 1px solid #f11515!important;
+    border-bottom: 1px solid #f11515!important;
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "semantic-ui-react";
+import { Button, Divider } from "semantic-ui-react";
 
 import "./style.css";
 
 const CareersJobList = (props) => {
 
-const jobs = [
+  const jobs = [
     {
       id: 1,
       title: "Software Engineer",
@@ -27,18 +27,21 @@ const jobs = [
       title: "Graphic Designer",
       location: "Los Angeles, CA",
     },
-];
+  ];
 
   return (
-    <div className="careers-job-list">
-      {jobs.map((job) => (
-        <div key={job.id} className="careers-job-list-item">
-          <h3>{job.title}</h3>
-          <p>{job.location}</p>
-          <Link to={`/careers/${job.id}`}>
-            <Button>Learn More</Button>
-          </Link>
-        </div>
+    <div id="careers-job-list-container">
+      {jobs.map((job, index) => (
+        <>
+          <div key={job.id} className="careers-job-list-item">
+            <h3>{job.title}</h3>
+            <p>{job.location}</p>
+            <Link to={`/careers/${job.id}`}>
+              <Button>Learn More</Button>
+            </Link>
+          </div>
+          {index === jobs.length - 1 ? null : <Divider className="careers-job-list-divider" />}
+        </>
       ))}
     </div>
   );
