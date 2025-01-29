@@ -22,6 +22,7 @@ import SocialLinks from "../../components/SocialLinks";
 import Footer from "../../components/Footer";
 
 import "./style.css";
+import Careers from "../../pages/Careers";
 
 const getWindowDimensions = () => {
   const page = document.querySelector("html");
@@ -89,6 +90,7 @@ const App = () => {
               <Route exact path="/about" element={<About location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/catalogs/*" element={<Catalogs location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
+              <Route exact path="/careers" element={<Careers auth={auth} location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
