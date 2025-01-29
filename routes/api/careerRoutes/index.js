@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { addJob, getJobs, getJob, updateJob, deleteJob } = require("../../../controllers/careerController");
+const { addJob, getJobs, getJob, updateJob, deleteJob, careerRouteTest } = require("../../../controllers/careerController");
 
 router.get("/", getJobs);
 router.get("/:id", getJob);
