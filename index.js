@@ -62,7 +62,7 @@ app.use(helmet({
 }));
 
 app.use(routes);
-mongo();
+// mongo();
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
