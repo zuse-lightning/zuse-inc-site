@@ -1,3 +1,11 @@
+#careers-header {
+    padding: 4%;
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #f11515;
+    text-align: center;
+}
+
 #careers-job-list-container {
     background-color: #fefcfd;
     width: 60%;

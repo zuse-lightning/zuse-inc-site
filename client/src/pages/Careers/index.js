@@ -14,7 +14,7 @@ const Careers = (props) => {
         const fetchData = async () => {
             try {
                 const res = await axiosInstance.get(`${site}/careers`);
-                console.log(res.data);
+                setJobs(res.data);
             } catch (err) {
                 console.log(err);
             };
@@ -23,7 +23,7 @@ const Careers = (props) => {
     }, []);
 
     return (
-        <CareersJobList />
+        <CareersJobList jobs={jobs} />
     );
 };
 
