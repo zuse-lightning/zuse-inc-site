@@ -58,6 +58,10 @@ app.use(helmet({
                 "zuse-inc-bucket.s3.amazonaws.com",
                 "zuse-inc-bucket.s3.us-east-1.amazonaws.com"
             ],
+            "form-action": [
+                "'self'",
+                "www.formbackend.com"
+            ]
         }
     }
 }));
