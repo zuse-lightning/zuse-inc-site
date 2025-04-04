@@ -61,6 +61,10 @@ app.use(helmet({
             "form-action": [
                 "'self'",
                 "www.formbackend.com"
+            ],
+            "script-src": [
+                "'self'",
+                "widgets.leadconnectorhq.com"
             ]
         }
     }
