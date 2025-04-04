@@ -46,7 +46,8 @@ app.use(helmet({
                 "www.zuse.com",
                 "www.formbackend.com",
                 "www.americancontractprinting.com",
-                "www.americanunionprint.com"
+                "www.americanunionprint.com",
+                "services.leadconnectorhq.com"
             ],
             "frame-src": [
                 "'self'",
