@@ -47,7 +47,8 @@ app.use(helmet({
                 "www.formbackend.com",
                 "www.americancontractprinting.com",
                 "www.americanunionprint.com",
-                "services.leadconnectorhq.com"
+                "services.leadconnectorhq.com",
+                "widgets.leadconnectorhq.com"
             ],
             "frame-src": [
                 "'self'",
@@ -57,7 +58,8 @@ app.use(helmet({
             "img-src": [
                 "'self'",
                 "zuse-inc-bucket.s3.amazonaws.com",
-                "zuse-inc-bucket.s3.us-east-1.amazonaws.com"
+                "zuse-inc-bucket.s3.us-east-1.amazonaws.com",
+                "images.leadconnectorhq.com"
             ],
             "form-action": [
                 "'self'",
@@ -65,7 +67,9 @@ app.use(helmet({
             ],
             "script-src": [
                 "'self'",
-                "widgets.leadconnectorhq.com"
+                "widgets.leadconnectorhq.com",
+                "stcdn.leadconnectorhq.com",
+                "services.leadconnectorhq.com"
             ]
         }
     }
