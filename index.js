@@ -48,7 +48,8 @@ app.use(helmet({
                 "www.americancontractprinting.com",
                 "www.americanunionprint.com",
                 "services.leadconnectorhq.com",
-                "widgets.leadconnectorhq.com"
+                "widgets.leadconnectorhq.com",
+                "services.msgsndr.com"
             ],
             "frame-src": [
                 "'self'",
