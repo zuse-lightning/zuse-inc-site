@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "semantic-ui-react";
+import { Header, Divider } from "semantic-ui-react";
 import SEO from "../../components/SEO";
 import { useLocation } from "react-router-dom";
 
