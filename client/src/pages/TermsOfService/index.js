@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "../../components/Header";
+import { Header } from "semantic-ui-react";
 import SEO from "../../components/SEO";
 import { useLocation } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const TermsOfService = (props) => {
         <div id="terms-service-container">
             <Header id="terms-service-header" as="h1">Terms of Service</Header>
             <div id="terms-service">
-
+                <Header id="terms-last-updated" as="h5">Last updated: 4/8/2025</Header>
             </div>
         </div>
     );

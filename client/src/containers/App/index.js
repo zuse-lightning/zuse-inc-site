@@ -9,6 +9,8 @@ import About from "../../pages/About";
 import Catalogs from "../../pages/Catalogs";
 import Services from "../../pages/Services";
 import Contact from "../../pages/Contact";
+import TermsOfService from "../../pages/TermsOfService";
+import PrivacyPolicy from "../../pages/PrivacyPolicy";
 import Login from "../../pages/Login";
 import Register from "../../pages/Register";
 import ResetPassword from "../../pages/ResetPassword";
@@ -92,6 +94,8 @@ const App = () => {
               <Route exact path="/services/*" element={<Services location={useCurrentUrl()} whichWebsite={whichWebsite} screenWidth={width} />} />
               {/* <Route exact path="/careers" element={<Careers auth={auth} location={useCurrentUrl()} whichWebsite={whichWebsite} />} /> */}
               <Route exact path="/contact" element={<Contact location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
+              <Route exact path="/terms" element={<TermsOfService location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
+              <Route exact path="/privacy" element={<PrivacyPolicy location={useCurrentUrl()} whichWebsite={whichWebsite} />} />
               {/* <Route exact path="/register" element={<Register auth={auth} whichWebsite={whichWebsite} />} />
               <Route exact path="/login" element={<Login auth={auth} />} />
               <Route exact path="/reset/:id/:token" element={<ResetPassword auth={auth} whichWebsite={whichWebsite} />} />
