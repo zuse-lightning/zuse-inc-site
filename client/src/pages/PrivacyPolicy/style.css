@@ -11,3 +11,63 @@
     text-underline-offset: 20px;
     text-decoration-color: #f11515;
 }
+
+#privacy-policy {
+    padding: 2%;
+    width: 80%;
+    margin: 0 10%;
+}
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #privacy-policy-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #privacy-policy-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #privacy-policy-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #privacy-policy-header {
+        margin: 5% 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #privacy-policy-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #privacy-policy-header {
+        margin: 5% 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #privacy-policy-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #privacy-policy-header {
+        margin: 5% 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 516px) {
+    #privacy-policy-container {
+        width: 100%;
+        margin: 5% 0;
+    }
+}
