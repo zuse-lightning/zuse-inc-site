@@ -309,14 +309,26 @@ const TermsOfService = (props) => {
                     </p>
                     <List id="terms-sms-list" as="ol">
                         <List.Header className="terms-sms-list-header" as="h4"></List.Header>
-                        <List.Item className="terms-sms-list-item" as="li" value="">
-                            Program Description: Our messaging program includes service-related notifications such as appointment reminders 
+                        <List.Item className="terms-sms-list-item" as="li" value="–">
+                            Program Description: Our messaging program includes service-related notifications such as appointment reminders
                             and confirmations.
                         </List.Item>
-                        <List.Item className="terms-sms-list-item" as="li" value=" ">
-                            Opt-Out: You may cancel the SMS service at any time. Simply text “STOP” to the shortcode. After sending “STOP,” 
-                            you will receive a one-time confirmation message. You will no longer receive SMS messages unless you re-enroll 
+                        <List.Item className="terms-sms-list-item" as="li" value="–">
+                            Opt-Out: You may cancel the SMS service at any time. Simply text “STOP” to the shortcode. After sending “STOP,”
+                            you will receive a one-time confirmation message. You will no longer receive SMS messages unless you re-enroll
                             through our booking process.
+                        </List.Item>
+                        <List.Item className="terms-sms-list-item" as="li" value="–">
+                            Support & Help: If you experience issues with the messaging program, reply with the keyword HELP, or contact us
+                            at customersupport@zuse.com for assistance.
+                        </List.Item>
+                        <List.Item className="terms-sms-list-item" as="li" value="–">
+                            Message Rates & Carrier Info: Message and data rates may apply. Message frequency may vary. Carriers are not
+                            liable for delayed or undelivered messages. For questions about your text or data plan, contact your wireless
+                            provider.
+                        </List.Item>
+                        <List.Item className="terms-sms-list-item" as="li" value="–">
+                            Privacy: For more information on how we handle personal data, please review our full Privacy Policy.
                         </List.Item>
                     </List>
                 </div>

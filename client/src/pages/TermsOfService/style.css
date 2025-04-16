@@ -17,3 +17,57 @@
     width: 80%;
     margin: 0 10%;
 }
+
+@media (max-width: 1699px) and (min-width: 1200px) {
+    #terms-service-container {
+        width: 70%;
+        margin: 0 15%;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #terms-service-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 801px) {
+    #terms-service-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #terms-service-header {
+        margin: 5% 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 768px) {
+    #terms-service-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #terms-service-header {
+        margin: 5% 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #terms-service-container {
+        width: 80%;
+        margin: 0 10%;
+    }
+    #terms-service-header {
+        margin: 5% 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 516px) {
+    #terms-service-container {
+        width: 100%;
+        margin: 5% 0;
+    }
+}
