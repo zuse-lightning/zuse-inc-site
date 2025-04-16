@@ -44,9 +44,9 @@ const TermsOfService = (props) => {
                         </List.Item>
                     </List>
                     <p className="terms-text">
-                        This website is operated by {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")}
-                        Throughout the site, the terms “we”, “us” and “our” refer to {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")}
-                        {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} offers this website, including all information, tools, and Services available from this site to you,
+                        This website is operated by {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")} 
+                        Throughout the site, the terms “we”, “us” and “our” refer to {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")} {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} 
+                        offers this website, including all information, tools, and Services available from this site to you,
                         the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
                     </p>
                     <p className="terms-text">
@@ -264,8 +264,8 @@ const TermsOfService = (props) => {
                 <div className="terms-service-section">
                     <Header id="terms-service-section-header" as="h3">SECTION XVII – ENTIRE AGREEMENT</Header>
                     <p className="terms-text">
-                        These Terms, together with our Privacy Policy, constitute the entire agreement between you and {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}
-                        regarding the use of the Site.
+                        These Terms, together with our Privacy Policy, constitute the entire agreement between you and 
+                        {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} regarding the use of the Site.
                     </p>
                 </div>
                 <Divider className="terms-divider" />
