@@ -6,6 +6,9 @@ import { useLocation, Link } from "react-router-dom";
 import "./style.css";
 
 const TermsOfService = (props) => {
+
+    const { location, whichWebsite } = props;
+
     return (
         <div id="terms-service-container">
             <Header id="terms-service-header" as="h1">Terms of Service</Header>
@@ -26,7 +29,7 @@ const TermsOfService = (props) => {
                         </List.Item>
                         <List.Item className="terms-overview-list-item">
                             If you experience issues with the messaging program, reply with the keyword HELP for more
-                            assistance, or reach out directly to customersupport@zuse.com.
+                            assistance, or reach out directly to {whichWebsite(location, "customersupport@zuse.com.", "customersupport@americancontractprinting.com.", "customersupport@americanunionprint.com.")}
                         </List.Item>
                         <List.Item className="terms-overview-list-item">
                             Carriers are not liable for delayed or undelivered messages.
@@ -41,8 +44,9 @@ const TermsOfService = (props) => {
                         </List.Item>
                     </List>
                     <p className="terms-text">
-                        This website is operated by Zuse Inc. Throughout the site, the terms “we”, “us” and “our” refer to Zuse Inc.
-                        Zuse Inc. offers this website, including all information, tools, and Services available from this site to you,
+                        This website is operated by {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")}
+                        Throughout the site, the terms “we”, “us” and “our” refer to {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")}
+                        {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} offers this website, including all information, tools, and Services available from this site to you,
                         the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
                     </p>
                     <p className="terms-text">
@@ -111,7 +115,7 @@ const TermsOfService = (props) => {
                 <div className="terms-service-section">
                     <Header id="terms-service-section-header" as="h3">SECTION V – SERVICES</Header>
                     <p className="terms-text">
-                        Zuse Inc. does not sell products through this website. All Services offered are custom in nature and begin with an
+                        {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} does not sell products through this website. All Services offered are custom in nature and begin with an
                         appointment or inquiry. Final pricing, production timelines, and project requirements are communicated on a case-by-case
                         basis, based on individual client needs.
                     </p>
@@ -159,7 +163,7 @@ const TermsOfService = (props) => {
                 <div className="terms-service-section">
                     <Header id="terms-service-section-header" as="h3">SECTION IX – USER COMMENTS, FEEDBACK, AND OTHER SUBMISSIONS</Header>
                     <p className="terms-text">
-                        If you submit testimonials, project ideas, or feedback (collectively “comments”), you grant Zuse Inc. the right to use,
+                        If you submit testimonials, project ideas, or feedback (collectively “comments”), you grant {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} the right to use,
                         reproduce, publish, and distribute them in any medium without obligation.
                     </p>
                     <p className="terms-text">
@@ -229,7 +233,7 @@ const TermsOfService = (props) => {
                         The Site and any content made available through it are provided “as is” and “as available” without warranties of any kind.
                     </p>
                     <p className="terms-text">
-                        In no case shall Zuse Inc., its employees, contractors, or affiliates be liable for any damages resulting from your use of
+                        In no case shall {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}, its employees, contractors, or affiliates be liable for any damages resulting from your use of
                         the Site or your inability to use the Services, including indirect or consequential losses.
                     </p>
                 </div>
@@ -237,7 +241,7 @@ const TermsOfService = (props) => {
                 <div className="terms-service-section">
                     <Header id="terms-service-section-header" as="h3">SECTION XIV – INDEMNIFICATION</Header>
                     <p className="terms-text">
-                        You agree to indemnify and hold harmless Zuse Inc. and its affiliates, employees, and contractors from any claim or demand
+                        You agree to indemnify and hold harmless {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} and its affiliates, employees, and contractors from any claim or demand
                         made by a third party due to your breach of these Terms or your violation of any law or third-party rights.
                     </p>
                 </div>
@@ -260,7 +264,7 @@ const TermsOfService = (props) => {
                 <div className="terms-service-section">
                     <Header id="terms-service-section-header" as="h3">SECTION XVII – ENTIRE AGREEMENT</Header>
                     <p className="terms-text">
-                        These Terms, together with our Privacy Policy, constitute the entire agreement between you and Zuse Inc.
+                        These Terms, together with our Privacy Policy, constitute the entire agreement between you and {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}
                         regarding the use of the Site.
                     </p>
                 </div>
@@ -289,7 +293,7 @@ const TermsOfService = (props) => {
                     </p>
                     <List id="terms-contact-list" as="ol">
                         <List.Item className="terms-contact-list-item" as="li" value=" ">
-                            Email: customersupport@zuse.com
+                            Email: {whichWebsite(location, "customersupport@zuse.com.", "customersupport@americancontractprinting.com.", "customersupport@americanunionprint.com.")}
                         </List.Item>
                         <List.Item className="terms-contact-list-item" as="li" value=" ">
                             Mailing Address: 54 East Industrial Road, Branford, CT 06405
@@ -300,11 +304,11 @@ const TermsOfService = (props) => {
                 <div className="terms-service-section">
                     <Header id="terms-service-section-header" as="h3">SECTION XXI – SMS TERMS & CONDITIONS</Header>
                     <p className="terms-text">
-                        Zuse Inc. offers a mobile messaging service to help keep you updated with appointment reminders, confirmations,
+                        {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} offers a mobile messaging service to help keep you updated with appointment reminders, confirmations,
                         and follow-ups related to our digital printing and print-on-demand services.
                     </p>
                     <p className="terms-text">
-                        By signing up to receive text messages from Zuse Inc., you agree to these SMS Terms and Conditions, in addition
+                        By signing up to receive text messages from {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")}, you agree to these SMS Terms and Conditions, in addition
                         to our general Terms of Service and Privacy Policy.
                     </p>
                     <List id="terms-sms-list" as="ol">
