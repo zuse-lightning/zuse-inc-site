@@ -294,7 +294,7 @@ const TermsOfService = (props) => {
                             Email: {whichWebsite(location, "customersupport@zuse.com.", "customersupport@americancontractprinting.com.", "customersupport@americanunionprint.com.")}
                         </List.Item>
                         <List.Item className="terms-contact-list-item" as="li" value=" ">
-                            Mailing Address: 54 East Industrial Road, Branford, CT 06405
+                            Mailing Address: {whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471")}
                         </List.Item>
                     </List>
                 </div>
