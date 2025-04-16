@@ -44,8 +44,8 @@ const TermsOfService = (props) => {
                         </List.Item>
                     </List>
                     <p className="terms-text">
-                        This website is operated by {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")} Throughout the site, the terms “we”, “us” and “our” refer to {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")} {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} 
-                        offers this website, including all information, tools, and Services available from this site to you,
+                        This website is operated by {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")} Throughout the site, the terms “we”, “us” and “our” refer to {whichWebsite(location, "Zuse Inc.", "American Contract Printing.", "American Union Print.")} {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} offers 
+                        this website, including all information, tools, and Services available from this site to you,
                         the user, conditioned upon your acceptance of all terms, conditions, policies, and notices stated here.
                     </p>
                     <p className="terms-text">
