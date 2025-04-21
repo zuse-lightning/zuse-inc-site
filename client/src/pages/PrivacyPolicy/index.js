@@ -6,6 +6,9 @@ import { useLocation, Link } from "react-router-dom";
 import "./style.css";
 
 const PrivacyPolicy = (props) => {
+
+    const { location, whichWebsite } = props;
+
     return (
         <div id="privacy-policy-container">
             <Header id="privacy-policy-header" as="h1">Privacy Policy</Header>
@@ -18,8 +21,8 @@ const PrivacyPolicy = (props) => {
                         exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
                     </p>
                     <p className="privacy-text">
-                        This Privacy Policy describes how Zuse Inc. (“Zuse”, “we”, “us”, or “our”) collects, uses, and discloses your personal
-                        information when you visit, interact with, or submit an inquiry through www.zuse.com (the “Site”) or otherwise engage
+                        This Privacy Policy describes how {whichWebsite(location, "Zuse Inc.", "American Contract Printing", "American Union Print")} (“{whichWebsite(location, 'Zuse', 'American Contract Printing', 'American Union Print')}”, “we”, “us”, or “our”) collects, uses, and discloses your personal
+                        information when you visit, interact with, or submit an inquiry through {whichWebsite(location, "www.zuse.com", "www.americancontractprinting.com", "www.americanunionprint.com")} (the “Site”) or otherwise engage
                         with us (collectively, the “Services”). For purposes of this Privacy Policy, “you” and “your” means you as the user of
                         the Services, whether you are submitting a custom printing inquiry, scheduling a call, or otherwise engaging with our
                         business.
@@ -112,7 +115,7 @@ const PrivacyPolicy = (props) => {
                         <List.Item as="li" value="*">Right to Withdraw Consent: Where we rely on consent, you may withdraw it at any time.</List.Item>
                     </List>
                     <p className="privacy-text">
-                        To exercise any of these rights, please email us at customersupport@zuse.com. We may need to verify your identity before processing your request.
+                        To exercise any of these rights, please email us at {whichWebsite(location, "customersupport@zuse.com", "customersupport@americancontractprinting.com", "customersupport@americanunionprint.com")}. We may need to verify your identity before processing your request.
                     </p>
                 </div>
                 <Divider className="privacy-divider" />
@@ -138,7 +141,7 @@ const PrivacyPolicy = (props) => {
                 <div className="privacy-policy-section">
                     <Header id="privacy-policy-section-header" as="h3">Third-Party Links</Header>
                     <p className="privacy-text">
-                        Our Site may contain links to third-party websites or services. These are not operated or controlled by Zuse, and we are not responsible for the content or privacy
+                        Our Site may contain links to third-party websites or services. These are not operated or controlled by {whichWebsite(location, "Zuse", "American Contract Printing", "American Union Print")}, and we are not responsible for the content or privacy
                         practices of any third-party platforms. We recommend reviewing their privacy policies separately.
                     </p>
                 </div>
@@ -161,10 +164,10 @@ const PrivacyPolicy = (props) => {
                 <Divider className="privacy-divider" />
                 <div className="privacy-policy-section">
                     <Header id="privacy-policy-section-header" as="h3">Contact Us</Header>
-                    <p className="privacy-text">
+                    <p className="privacy-text">c
                         If you have questions about this Privacy Policy or wish to exercise your rights, contact us at:<br /><br />
-                        Email: customersupport@zuse.com<br /><br />
-                        Mailing Address: 54 E. Industrial Road Branford CT, 06405<br /><br />
+                        Email: {whichWebsite(location, "customersupport@zuse.com", "customersupport@americancontractprinting.com", "customersupport@americanunionprint.com")}<br /><br />
+                        Mailing Address: {whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471")}
                     </p>
                 </div>
                 <Divider className="privacy-divider" />
