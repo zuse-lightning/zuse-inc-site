@@ -23,18 +23,18 @@ const Footer = (props) => {
                     <Menu.Item
                         className="footer-nav-item"
                         as={Link}
-                        to="/about"
-                        name="about"
+                        to="/privacy"
+                        name="privacy"
                     >
-                        About
+                        Privacy Policy
                     </Menu.Item>
                     <Menu.Item
                         className="footer-nav-item"
                         as={Link}
-                        to="/services"
-                        name="services"
+                        to="/terms"
+                        name="terms"
                     >
-                        Services
+                        Terms of Service
                     </Menu.Item>
                     <Menu.Item
                         className="footer-nav-item"

@@ -32,6 +32,7 @@
 
 .footer-nav-item {
     text-align: center!important;
+    margin: 0!important;
 }
 
 .footer-nav-item, #phone-icon, #phone-number, #copyright {
@@ -100,6 +101,9 @@
 }
 
 @media (max-width: 767px) and (min-width: 362px) {
+    .footer-nav-item {
+        padding: 1.5%!important;
+    }
     .footer-col:nth-child(1), .footer-col:nth-child(2) {
         grid-column: span 12;
     }
@@ -115,6 +119,9 @@
 }
 
 @media (max-width: 361px) {
+    .footer-nav-item {
+        padding: 1.5%!important;
+    }
     .footer-col:nth-child(1), .footer-col:nth-child(2) {
         grid-column: span 12;
     }
