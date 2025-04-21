@@ -164,7 +164,7 @@ const PrivacyPolicy = (props) => {
                 <Divider className="privacy-divider" />
                 <div className="privacy-policy-section">
                     <Header id="privacy-policy-section-header" as="h3">Contact Us</Header>
-                    <p className="privacy-text">c
+                    <p className="privacy-text">
                         If you have questions about this Privacy Policy or wish to exercise your rights, contact us at:<br /><br />
                         Email: {whichWebsite(location, "customersupport@zuse.com", "customersupport@americancontractprinting.com", "customersupport@americanunionprint.com")}<br /><br />
                         Mailing Address: {whichWebsite(location, "54 East Industrial Road, Branford, CT 06405", "54 East Industrial Road, Branford, CT 06405", "2 Commerce Drive, North Branford, CT 06471")}
