@@ -7,7 +7,7 @@ import SEO from "../../../components/SEO";
 import "./style.css";
 
 const shopifyResults = [
-    { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/pgw-screenshot.png", link: "https://progolfwarehouse.com/" },
+    { image: "https://zuse-inc-bucket.s3.us-east-1.amazonaws.com/screenshots/bpir-screenshot.png", link: "https://bpir.store/" },
     { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/thespot-screenshot.png", link: "https://thespotsupplyco.com/" },
     { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/ct-schools-screenshot.png", link: "https://ctschoolsstore.com/" },
     { image: "https://zuse-inc-bucket.s3.amazonaws.com/screenshots/wpra-screenshot.png", link: "https://wpra.store/" }
