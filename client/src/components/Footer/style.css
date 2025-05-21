@@ -61,6 +61,12 @@
     text-decoration: underline;
 }
 
+@media (max-width: 2053px) and (min-width: 1700px) {
+    .footer-col:nth-child(1) {
+        grid-column: span 8;
+    }
+}
+
 @media (max-width: 1699px) and (min-width: 1200px) {
     .footer-col:nth-child(1) {
         grid-column: span 8;
