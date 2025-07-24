@@ -61,13 +61,13 @@ const Footer = (props) => {
                     <List.Item className="footer-email-list-item" as="a" href={`mailto:ted${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
                         ted{whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}
                     </List.Item>
-                    <List.Item className="footer-email-list-item" as="a" href={`mailto:ted${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
+                    <List.Item className="footer-email-list-item" as="a" href={`mailto:jesse${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
                         jesse{whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}
                     </List.Item>
-                    <List.Item className="footer-email-list-item" as="a" href={`mailto:ted${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
+                    <List.Item className="footer-email-list-item" as="a" href={`mailto:bookkeeper${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
                         bookkeeper{whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}
                     </List.Item>
-                    <List.Item className="footer-email-list-item" as="a" href={`mailto:ted${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
+                    <List.Item className="footer-email-list-item" as="a" href={`mailto:customerservice${whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}`}>
                         customerservice{whichWebsite(location, "@zuse.com", "@americancontractprinting.com", "@americanunionprint.com")}
                     </List.Item>
                 </List>
